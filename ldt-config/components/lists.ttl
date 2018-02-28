@@ -1,0 +1,52 @@
+@prefix elmo: <http://bp4mc2.org/elmo/def#>.
+@prefix html: <http://www.w3.org/1999/xhtml/vocab#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix void: <http://rdfs.org/ns/void#>.
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
+@prefix stage: <http://localhost:8080/modeling/stage#>.
+
+stage:DocLists	a	elmo:Representation;
+	elmo:url-pattern	"/query/doc-lists$";
+	elmo:contains	stage:Menu;
+  elmo:fragment [
+    rdfs:label "Domain";
+    elmo:applies-to "node";
+    elmo:name "SUBJECT";
+  ];
+  elmo:fragment [
+    rdfs:label "Property URI";
+    elmo:applies-to "uri";
+    elmo:appearance elmo:GlobalLink;
+  ];
+  elmo:fragment [
+    rdfs:label "Used for class";
+    elmo:applies-to "class";
+    elmo:appearance elmo:GlobalLink;
+  ];
+  elmo:fragment [
+    rdfs:label "Vocabulary name";
+    elmo:applies-to "vocname";
+  ];
+  elmo:fragment [
+    rdfs:label "Vocabulary URI";
+    elmo:applies-to "vocuri"
+  ];
+  elmo:query '''
+    prefix containerlocal: <http://localhost:8080/modeling/container/>
+    select ?node ?uri ?uri_label ?class ?class_label ?vocname ?vocuri
+    where {
+      graph containerlocal:profiel {
+        ?shape sh:property ?prop.
+        ?shape sh:targetClass ?class.
+        ?shape sh:name ?class_label.
+        ?prop sh:path ?uri.
+        ?prop sh:name ?uri_label.
+        ?prop sh:node ?node.
+        ?node rdfs:label ?vocname.
+        OPTIONAL {?node sh:property/sh:hasValue ?vocuri}
+      }
+    }
+    order by ?node
+  '''
+.

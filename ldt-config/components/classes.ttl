@@ -6,6 +6,7 @@
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
 @prefix stage: <http://localhost:8080/modeling/stage#>.
 @prefix shxl: <http://bp4mc2.org/def/shacl-xl#>.
+@prefix sh: <http://www.w3.org/ns/shacl#>.
 
 stage:DocClass_Core a elmo:Representation;
   elmo:fragment [
@@ -43,7 +44,6 @@ stage:DocClass_Datatype a elmo:Representation;
   rdfs:seeAlso shxl:Datatype;
   elmo:query stage:DocClassQuery
 .
-
 stage:DocClassQuery a elmo:Query;
   elmo:query '''
     prefix containerlocal: <http://localhost:8080/modeling/container/>
@@ -58,6 +58,70 @@ stage:DocClassQuery a elmo:Query;
         ?shape sh:targetClass ?class.
         ?shape shxl:stereotype ?stereotype.
         ?shape sh:name ?class_label.
+        OPTIONAL {
+          ?shape skos:definition ?definition
+        }
+      }
+    }
+    order by ?class
+  '''
+.
+
+stage:DocClassSeverity_Violation a elmo:Representation;
+  elmo:fragment [
+    elmo:applies-to "class";
+    rdfs:label "class name";
+  ];
+  elmo:fragment [
+    elmo:applies-to "uri";
+    rdfs:label "URI";
+    elmo:appearance elmo:GlobalLink;
+  ];
+  rdfs:seeAlso sh:Violation;
+  elmo:query stage:DocClassSeverityQuery
+.
+stage:DocClassSeverity_Warning a elmo:Representation;
+  elmo:fragment [
+    elmo:applies-to "class";
+    rdfs:label "class name";
+  ];
+  elmo:fragment [
+    elmo:applies-to "uri";
+    rdfs:label "URI";
+    elmo:appearance elmo:GlobalLink;
+  ];
+  rdfs:seeAlso sh:Warning;
+  elmo:query stage:DocClassSeverityQuery
+.
+stage:DocClassSeverity_Info a elmo:Representation;
+  elmo:fragment [
+    elmo:applies-to "class";
+    rdfs:label "class name";
+  ];
+  elmo:fragment [
+    elmo:applies-to "uri";
+    rdfs:label "URI";
+    elmo:appearance elmo:GlobalLink;
+  ];
+  rdfs:seeAlso sh:Info;
+  elmo:query stage:DocClassSeverityQuery
+.
+stage:DocClassSeverityQuery a elmo:Query;
+  elmo:query '''
+    prefix containerlocal: <http://localhost:8080/modeling/container/>
+    prefix shxl: <http://bp4mc2.org/def/shacl-xl#>
+    select ?class ?uri ?uri_label ?definition
+    where {
+      graph <@STAGE@> {
+        <@REPRESENTATION@> rdfs:seeAlso ?severity
+      }
+      graph containerlocal:profiel {
+        ?shape a sh:NodeShape.
+        ?shape sh:targetClass ?uri.
+        ?shape sh:severity ?severity.
+        ?shape sh:name ?uri_label.
+        ?shape rdfs:label ?class.
+        FILTER (lang(?class)="en")
         OPTIONAL {
           ?shape skos:definition ?definition
         }

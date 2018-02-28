@@ -1,0 +1,53 @@
+@prefix elmo: <http://bp4mc2.org/elmo/def#>.
+@prefix html: <http://www.w3.org/1999/xhtml/vocab#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix void: <http://rdfs.org/ns/void#>.
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
+@prefix stage: <http://localhost:8080/modeling/stage#>.
+@prefix doc: <http://localhost:8080/modeling/doc#>.
+
+#
+# De inhoud van het document
+#
+doc:DCAT-AP-EU-v1.1 elmo:data (
+"# Profile documentation"
+[elmo:contains stage:DocProfile]
+"## Vocabularies and namespaces"
+"The following vocabularies are used:"
+[elmo:contains stage:ProfielVocabularies]
+[html:img "dcat-ap-eu-profile.png"]
+"## Application profile classes"
+"### Mandatory classes"
+[elmo:contains stage:DocClassSeverity_Violation]
+"### Recommended classes"
+[elmo:contains stage:DocClassSeverity_Warning]
+"### Optional classes"
+[elmo:contains stage:DocClassSeverity_Info]
+"## DCAT application profile properties per class"
+"### Catalogue"
+[elmo:contains stage:DocPropertiesSeverity_Catalog]
+"### Catalogue Record"
+[elmo:contains stage:DocPropertiesSeverity_CatalogRecord]
+"### Dataset"
+[elmo:contains stage:DocPropertiesSeverity_Dataset]
+"### Distribution"
+[elmo:contains stage:DocPropertiesSeverity_Distribution]
+"### Agent"
+[elmo:contains stage:DocPropertiesSeverity_Agent]
+"### Category scheme"
+[elmo:contains stage:DocPropertiesSeverity_ConceptScheme]
+"### Category"
+[elmo:contains stage:DocPropertiesSeverity_Concept]
+"### Checksum"
+[elmo:contains stage:DocPropertiesSeverity_Checksum]
+"### Identifier"
+[elmo:contains stage:DocPropertiesSeverity_Identifier]
+"### Licence document"
+[elmo:contains stage:DocPropertiesSeverity_LicenceDocument]
+"### Periode of time"
+[elmo:contains stage:DocPropertiesSeverity_PeriodOfTime]
+"## Controlled vocabularies"
+[elmo:contains stage:DocLists]
+)
+.

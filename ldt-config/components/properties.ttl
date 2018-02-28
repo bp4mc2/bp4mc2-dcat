@@ -1,10 +1,14 @@
 @prefix elmo: <http://bp4mc2.org/elmo/def#>.
 @prefix html: <http://www.w3.org/1999/xhtml/vocab#>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix dct: <http://purl.org/dc/terms/>.
 @prefix void: <http://rdfs.org/ns/void#>.
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
 @prefix stage: <http://localhost:8080/modeling/stage#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix spdx: <http://spdx.org/rdf/terms#>.
+@prefix adms: <http://www.w3.org/ns/adms#>.
 
 stage:DocProperties_Catalog a elmo:Representation;
 	elmo:url-pattern	"/query/doc-properties$";
@@ -34,7 +38,6 @@ stage:DocProperties_Distribution a elmo:Representation;
   rdfs:seeAlso dcat:Distribution;
   elmo:query stage:DocPropertiesQuery
 .
-
 stage:DocPropertiesQuery a elmo:Query;
   elmo:query '''
     prefix containerlocal: <http://localhost:8080/modeling/container/>
@@ -63,6 +66,110 @@ stage:DocPropertiesQuery a elmo:Query;
       }
     }
     order by ?index
+  '''
+.
+
+stage:DocPropertiesSeverity_Catalog a elmo:Representation;
+  rdfs:seeAlso dcat:Catalog;
+  elmo:query stage:DocPropertiesSeverityQuery
+.
+stage:DocPropertiesSeverity_CatalogRecord a elmo:Representation;
+  rdfs:seeAlso dcat:CatalogRecord;
+  elmo:query stage:DocPropertiesSeverityQuery
+.
+stage:DocPropertiesSeverity_Dataset a elmo:Representation;
+  rdfs:seeAlso dcat:Dataset;
+  elmo:query stage:DocPropertiesSeverityQuery
+.
+stage:DocPropertiesSeverity_Distribution a elmo:Representation;
+  rdfs:seeAlso dcat:Distribution;
+  elmo:query stage:DocPropertiesSeverityQuery
+.
+stage:DocPropertiesSeverity_Agent a elmo:Representation;
+  rdfs:seeAlso foaf:Agent;
+  elmo:query stage:DocPropertiesSeverityQuery
+.
+stage:DocPropertiesSeverity_ConceptScheme a elmo:Representation;
+  rdfs:seeAlso skos:ConceptScheme;
+  elmo:query stage:DocPropertiesSeverityQuery
+.
+stage:DocPropertiesSeverity_Concept a elmo:Representation;
+  rdfs:seeAlso skos:Concept;
+  elmo:query stage:DocPropertiesSeverityQuery
+.
+stage:DocPropertiesSeverity_Checksum a elmo:Representation;
+  rdfs:seeAlso spdx:Checksum;
+  elmo:query stage:DocPropertiesSeverityQuery
+.
+stage:DocPropertiesSeverity_Identifier a elmo:Representation;
+  rdfs:seeAlso adms:Identifier;
+  elmo:query stage:DocPropertiesSeverityQuery
+.
+stage:DocPropertiesSeverity_LicenceDocument a elmo:Representation;
+  rdfs:seeAlso dct:LicenseDocument;
+  elmo:query stage:DocPropertiesSeverityQuery
+.
+stage:DocPropertiesSeverity_PeriodOfTime a elmo:Representation;
+  rdfs:seeAlso dct:PeriodOfTime;
+  elmo:query stage:DocPropertiesSeverityQuery
+.
+stage:DocPropertiesSeverityQuery a elmo:Query;
+  elmo:query '''
+    prefix containerlocal: <http://localhost:8080/modeling/container/>
+    prefix shxl: <http://bp4mc2.org/def/shacl-xl#>
+    select distinct
+           (if(?severity=sh:Violation,
+               "M",
+               if(?severity=sh:Warning,
+                  "R",
+                  if(?severity=sh:Info,
+                     "O",
+                     "?"
+                  )
+               )
+            )
+           ) as ?man
+           ?property ?uri ?uri_label ?range ?range_label ?definition
+           (if(bound(?mincount),
+               if(bound(?maxcount),
+                  concat(?mincount,"..",?maxcount),
+                  concat(?mincount,"..n")
+               ),
+               if(bound(?maxcount),
+                  concat("0..",?maxcount),
+                  "0..n"
+               )
+            )
+           ) as ?card
+    where {
+      graph <@STAGE@> {
+        <@REPRESENTATION@> rdfs:seeAlso ?class
+      }
+      graph containerlocal:profiel {
+        ?shape sh:targetClass ?class.
+        ?shape sh:property ?pred.
+        ?pred sh:path ?uri.
+        ?pred sh:name ?uri_label.
+        ?pred rdfs:label ?property.
+        ?pred sh:severity ?severity.
+        FILTER (lang(?property)="en")
+        OPTIONAL {
+          ?pred skos:definition ?definition
+        }
+        OPTIONAL {?pred sh:minCount ?mincount}
+        OPTIONAL {?pred sh:maxCount ?maxcount}
+        OPTIONAL {
+          ?pred sh:class ?range.
+          ?refshape sh:targetClass ?range.
+          ?refshape sh:name ?range_label
+        }
+        BIND (
+          if(?severity=sh:Violation,1,if(?severity=sh:Warning,2,3))
+          as ?index
+        )
+      }
+    }
+    order by ?index ?property
   '''
 .
 
