@@ -1,9 +1,9 @@
-@prefix stage: <http://localhost:8080/modelleren/stage#>.
+@prefix stage: <http://localhost:8080/modeling/stage#>.
 @prefix elmo: <http://bp4mc2.org/elmo/def#>.
 @prefix html: <http://www.w3.org/1999/xhtml/vocab#>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-@prefix container: <http://linkeddata.ordina.nl/modelleren/container/>.
-@prefix containerlocal: <http://localhost:8080/modelleren/container/>.
+@prefix container: <http://linkeddata.ordina.nl/modeling/container/>.
+@prefix containerlocal: <http://localhost:8080/modeling/container/>.
 
 container:profiel-xlsx a elmo:Container;
   rdfs:label "Upload Excel profiel";
@@ -33,7 +33,7 @@ containerlocal:profiel a elmo:Container;
 # - Create subclassing from shxl:parent
 stage:PostUploadQuery a elmo:Query;
   elmo:query '''
-    PREFIX container: <http://localhost:8080/modelleren/container/>
+    PREFIX container: <http://localhost:8080/modeling/container/>
     PREFIX shxl: <http://bp4mc2.org/def/shacl-xl#>
     INSERT INTO container:profiel {
       ?prop sh:minCount ?mincount
@@ -121,7 +121,7 @@ containerlocal:prefix a elmo:Container;
 .
 stage:PostUploadPrefixQuery a elmo:Query;
   elmo:query '''
-    PREFIX container: <http://localhost:8080/modelleren/container/>
+    PREFIX container: <http://localhost:8080/modeling/container/>
     INSERT INTO container:profiel {
       ?voc a owl:Ontology.
       ?voc sh:prefix ?prefix.

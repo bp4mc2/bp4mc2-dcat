@@ -20,6 +20,12 @@ The profile folders contain at least the following files:
 - A markdown file containing the documentation for the specification.
 
 ## Using the toolset
+Please go to the home page of the toolset (for example: http://localhost:8080/modeling).
+
+Upload the Excel file found in one of the profile folders:
+![](images/upload-excel.png)
+
+## Installing a local version of the toolset
 To create your own toolset, you need to install your own version of the Linked Data Theatre, and you need to install a triple store.
 
 See: [https://github.com/architolk/Linked-Data-Theatre](https://github.com/architolk/Linked-Data-Theatre) for detailed instructions.

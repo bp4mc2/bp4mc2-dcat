@@ -7,18 +7,20 @@
 @prefix stage: <http://localhost:8080/modelleren/stage#>.
 
 stage:Home	a	elmo:Representation;
-	elmo:url-pattern	"/modelleren(|/|\\..+)$";
+	elmo:url-pattern	"/modeling(|/|\\..+)$";
 	elmo:contains	stage:Menu;
 	elmo:contains	stage:Welkom;
 .
 stage:Menu elmo:appearance elmo:NavbarSearchAppearance;
 	elmo:index "~";
 	elmo:data [
-		rdfs:label "Modelleren";
-		html:link "/";
+		rdfs:label "Modeling"@en;
+		rdfs:label "Modelleren"@nl;
+		html:link "/modeling";
 		elmo:data [
 			elmo:index "1";
-			rdfs:label "Beheer";
+			rdfs:label "Beheer"@nl;
+			rdfs:label "Admin"@en;
       elmo:data [ elmo:index "1"; rdfs:label "Excel upload"; html:link "container/profiel-xlsx"];
       elmo:data [ elmo:index "2"; rdfs:label "Inhoud model"; html:link "container/profiel"];
       elmo:data [ elmo:index "3"; rdfs:label "Excel upload vocabularies"; html:link "container/prefix-xlsx"];
@@ -26,7 +28,8 @@ stage:Menu elmo:appearance elmo:NavbarSearchAppearance;
 		];
     elmo:data [
       elmo:index "2";
-      rdfs:label "Publicatie";
+      rdfs:label "Publicatie"@nl;
+      rdfs:label "Publication"@en;
       elmo:data [ elmo:index "1"; rdfs:label "Model"; html:link "query/profiel-vocabulaire"];
       elmo:data [ elmo:index "2"; rdfs:label "Used vocabularies"; html:link "query/profiel-vocabularies"];
       elmo:data [ elmo:index "3"; rdfs:label "Classlist"; html:link "query/profiel-classes"];
@@ -35,7 +38,8 @@ stage:Menu elmo:appearance elmo:NavbarSearchAppearance;
     ];
     elmo:data [
       elmo:index "3";
-      rdfs:label "Documentatie";
+      rdfs:label "Documentatie"@nl;
+      rdfs:label "Documentation"@en;
       elmo:data [ elmo:index "1"; rdfs:label "Document"; html:link "query/profiel-doc"];
       elmo:data [ elmo:index "2"; rdfs:label "Classes"; html:link "query/doc-classes"];
       elmo:data [ elmo:index "3"; rdfs:label "Properties"; html:link "query/doc-properties"];
