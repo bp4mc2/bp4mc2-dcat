@@ -1,0 +1,1109 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix shxl: <http://bp4mc2.org/def/shacl-xl#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix adms: <http://purl.org/adms/status/>.
+@prefix wl: <http://linkeddata.ordina.nl/waardelijst#>.
+@prefix profile: <http://linkeddata.ordina.nl/profiel#>.
+@prefix prefix: <http://linkeddata.ordina.nl/prefix#>.
+shxl:Datatype rdf:type shxl:Stereotype;
+    rdfs:label "Datatype"^^xsd:string;
+    shxl:index 3
+.
+shxl:Referentiegegeven rdf:type shxl:Stereotype;
+    rdfs:label "Referentiegegeven"^^xsd:string;
+    shxl:index 2
+.
+shxl:Uitwisselgegeven rdf:type shxl:Stereotype;
+    rdfs:label "Uitwisselgegeven"^^xsd:string;
+    shxl:index 1
+.
+prefix:adms rdf:type <http://www.w3.org/2002/07/owl#Ontology>;
+    sh:namespace "http://www.w3.org/ns/adms#"^^xsd:string;
+    sh:prefix "adms"^^xsd:string
+.
+prefix:dcat rdf:type <http://www.w3.org/2002/07/owl#Ontology>;
+    sh:namespace "http://www.w3.org/ns/dcat#"^^xsd:string;
+    sh:prefix "dcat"^^xsd:string
+.
+prefix:dct rdf:type <http://www.w3.org/2002/07/owl#Ontology>;
+    sh:namespace "http://purl.org/dc/terms/"^^xsd:string;
+    sh:prefix "dct"^^xsd:string
+.
+prefix:foaf rdf:type <http://www.w3.org/2002/07/owl#Ontology>;
+    sh:namespace "http://xmlns.com/foaf/0.1/"^^xsd:string;
+    sh:prefix "foaf"^^xsd:string
+.
+prefix:owl rdf:type <http://www.w3.org/2002/07/owl#Ontology>;
+    sh:namespace "http://www.w3.org/2002/07/owl#"^^xsd:string;
+    sh:prefix "owl"^^xsd:string
+.
+prefix:rdfs rdf:type <http://www.w3.org/2002/07/owl#Ontology>;
+    sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:string;
+    sh:prefix "rdfs"^^xsd:string
+.
+prefix:schema rdf:type <http://www.w3.org/2002/07/owl#Ontology>;
+    sh:namespace "http://schema.org/"^^xsd:string;
+    sh:prefix "schema"^^xsd:string
+.
+prefix:skos rdf:type <http://www.w3.org/2002/07/owl#Ontology>;
+    sh:namespace "http://www.w3.org/2004/02/skos/core#"^^xsd:string;
+    sh:prefix "skos"^^xsd:string
+.
+prefix:spdx rdf:type <http://www.w3.org/2002/07/owl#Ontology>;
+    sh:namespace "http://spdx.org/rdf/terms#"^^xsd:string;
+    sh:prefix "spdx"^^xsd:string
+.
+prefix:vcard rdf:type <http://www.w3.org/2002/07/owl#Ontology>;
+    sh:namespace "http://www.w3.org/2006/vcard/ns#"^^xsd:string;
+    sh:prefix "vcard"^^xsd:string
+.
+<http://linkeddata.ordina.nl/profiel#> rdf:type <http://www.w3.org/2002/07/owl#Ontology>;
+    rdfs:label "DCAT Application profile EU version 1.1"@en;
+    dct:conformsTo <https://joinup.ec.europa.eu/release/dcat-ap-v11>;
+    skos:notation "DCAT-AP-EU-v1.1"^^xsd:string
+.
+profile:Agent rdf:type sh:NodeShape;
+    rdfs:label "Agent"@en;
+    rdfs:label "Organisatie"@nl;
+    sh:name "foaf:Agent"^^xsd:string;
+    sh:property profile:Agent_name;
+    sh:property profile:Agent_type;
+    shxl:stereotype shxl:Referentiegegeven;
+    sh:targetClass <http://xmlns.com/foaf/0.1/Agent>
+.
+profile:Agent_name rdf:type sh:PropertyShape;
+    rdfs:label "naam"@nl;
+    rdfs:label "name"@en;
+    sh:name "foaf:name"^^xsd:string;
+    sh:datatype xsd:string;
+    sh:class rdfs:Literal;
+    shxl:index 60;
+    shxl:cardinality "1..n"^^xsd:string;
+    sh:path <http://xmlns.com/foaf/0.1/name>;
+    sh:minCount 1
+.
+profile:Agent_type rdf:type sh:PropertyShape;
+    rdfs:label "type"@nl;
+    rdfs:label "type"@en;
+    sh:name "dct:type"^^xsd:string;
+    sh:class skos:Concept;
+    shxl:index 61;
+    shxl:cardinality "0..1"^^xsd:string;
+    sh:path dct:type;
+    sh:maxCount 1
+.
+profile:Catalogue rdf:type sh:NodeShape;
+    rdfs:label "Catalogus"@nl;
+    rdfs:label "Catalogue"@en;
+    sh:name "dcat:Catalog"^^xsd:string;
+    sh:property profile:Catalogue_publisher;
+    sh:property profile:Catalogue_record;
+    sh:property profile:Catalogue_releasedate;
+    sh:property profile:Catalogue_rights;
+    sh:property profile:Catalogue_homepage;
+    sh:property profile:Catalogue_ispartof;
+    sh:property profile:Catalogue_language;
+    sh:property profile:Catalogue_licence;
+    sh:property profile:Catalogue_spatialgeographic;
+    sh:property profile:Catalogue_themes;
+    sh:property profile:Catalogue_title;
+    sh:property profile:Catalogue_updatemodificationdate;
+    sh:property profile:Catalogue_dataset;
+    sh:property profile:Catalogue_description;
+    sh:property profile:Catalogue_haspart;
+    shxl:stereotype shxl:Referentiegegeven;
+    sh:targetClass <http://www.w3.org/ns/dcat#Catalog>
+.
+profile:CatalogueRecord rdf:type sh:NodeShape;
+    rdfs:label "Catalogusrecord"@nl;
+    rdfs:label "Catalogue Record"@en;
+    sh:name "dcat:CatalogRecord"^^xsd:string;
+    sh:property profile:CatalogueRecord_applicationprofile;
+    sh:property profile:CatalogueRecord_changetype;
+    sh:property profile:CatalogueRecord_description;
+    sh:property profile:CatalogueRecord_language;
+    sh:property profile:CatalogueRecord_listingdate;
+    sh:property profile:CatalogueRecord_primarytopic;
+    sh:property profile:CatalogueRecord_sourcemetadata;
+    sh:property profile:CatalogueRecord_title;
+    sh:property profile:CatalogueRecord_updatemodificationdate;
+    shxl:stereotype shxl:Uitwisselgegeven;
+    sh:targetClass <http://www.w3.org/ns/dcat#CatalogRecord>
+.
+profile:CatalogueRecord_applicationprofile rdf:type sh:PropertyShape;
+    rdfs:label "application profile"@en;
+    rdfs:label "is conform"@nl;
+    sh:name "dct:conformsTo"^^xsd:string;
+    sh:class rdfs:Resource;
+    shxl:index 52;
+    shxl:cardinality "0..1"^^xsd:string;
+    sh:path dct:conformsTo;
+    sh:maxCount 1
+.
+profile:CatalogueRecord_changetype rdf:type sh:PropertyShape;
+    rdfs:label "md-soort wijziging"@nl;
+    rdfs:label "change type"@en;
+    sh:name "adms:status"^^xsd:string;
+    sh:class skos:Concept;
+    shxl:index 53;
+    shxl:cardinality "0..1"^^xsd:string;
+    sh:path <http://www.w3.org/ns/adms#status>;
+    sh:maxCount 1
+.
+profile:CatalogueRecord_description rdf:type sh:PropertyShape;
+    rdfs:label "description"@en;
+    rdfs:label "md-omschrijving"@nl;
+    sh:name "dct:description"^^xsd:string;
+    sh:datatype xsd:string;
+    sh:class rdfs:Literal;
+    shxl:index 55;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path dct:description
+.
+profile:CatalogueRecord_language rdf:type sh:PropertyShape;
+    rdfs:label "taal"@nl;
+    rdfs:label "language"@en;
+    sh:name "dct:language"^^xsd:string;
+    sh:class dct:LinguisticSystem;
+    shxl:index 56;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path dct:language
+.
+profile:CatalogueRecord_listingdate rdf:type sh:PropertyShape;
+    rdfs:label "listing date"@en;
+    rdfs:label "md-uitgiftedatum"@nl;
+    sh:name "dct:issued"^^xsd:string;
+    sh:datatype xsd:date;
+    sh:class rdfs:Literal;
+    shxl:index 54;
+    shxl:cardinality "0..1"^^xsd:string;
+    sh:path dct:issued;
+    sh:maxCount 1
+.
+profile:CatalogueRecord_primarytopic rdf:type sh:PropertyShape;
+    rdfs:label "dataset"@nl;
+    rdfs:label "primary topic"@en;
+    sh:name "foaf:primaryTopic"^^xsd:string;
+    sh:class <http://www.w3.org/ns/dcat#Dataset>;
+    shxl:index 50;
+    shxl:cardinality "1..1"^^xsd:string;
+    sh:path <http://xmlns.com/foaf/0.1/primaryTopic>;
+    sh:maxCount 1;
+    sh:minCount 1
+.
+profile:CatalogueRecord_sourcemetadata rdf:type sh:PropertyShape;
+    rdfs:label "bron"@nl;
+    rdfs:label "source metadata"@en;
+    sh:name "dct:source"^^xsd:string;
+    sh:class <http://www.w3.org/ns/dcat#CatalogRecord>;
+    shxl:index 57;
+    shxl:cardinality "0..1"^^xsd:string;
+    sh:path dct:source;
+    sh:maxCount 1
+.
+profile:CatalogueRecord_title rdf:type sh:PropertyShape;
+    rdfs:label "title"@en;
+    rdfs:label "md-titel"@nl;
+    sh:name "dct:title"^^xsd:string;
+    sh:datatype xsd:string;
+    sh:class rdfs:Literal;
+    shxl:index 58;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path dct:title
+.
+profile:CatalogueRecord_updatemodificationdate rdf:type sh:PropertyShape;
+    rdfs:label "update modification date"@en;
+    rdfs:label "md-wijzigingsdatum"@nl;
+    sh:name "dct:modified"^^xsd:string;
+    sh:datatype xsd:date;
+    sh:class rdfs:Literal;
+    shxl:index 51;
+    shxl:cardinality "1..1"^^xsd:string;
+    sh:path dct:modified;
+    sh:maxCount 1;
+    sh:minCount 1
+.
+profile:Catalogue_dataset rdf:type sh:PropertyShape;
+    rdfs:label "dataset"@nl;
+    rdfs:label "dataset"@en;
+    sh:name "dcat:dataset"^^xsd:string;
+    sh:class <http://www.w3.org/ns/dcat#Dataset>;
+    shxl:index 62;
+    shxl:cardinality "1..n"^^xsd:string;
+    sh:path <http://www.w3.org/ns/dcat#dataset>;
+    sh:minCount 1
+.
+profile:Catalogue_description rdf:type sh:PropertyShape;
+    rdfs:label "omschrijving"@nl;
+    rdfs:label "description"@en;
+    sh:name "dct:description"^^xsd:string;
+    sh:datatype xsd:string;
+    sh:class rdfs:Literal;
+    shxl:index 63;
+    shxl:cardinality "1..n"^^xsd:string;
+    sh:path dct:description;
+    sh:minCount 1
+.
+profile:Catalogue_haspart rdf:type sh:PropertyShape;
+    rdfs:label "heeft onderdeel"@nl;
+    rdfs:label "has part"@en;
+    sh:name "dct:hasPart"^^xsd:string;
+    sh:class <http://www.w3.org/ns/dcat#Catalog>;
+    shxl:index 72;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path dct:hasPart
+.
+profile:Catalogue_homepage rdf:type sh:PropertyShape;
+    rdfs:label "homepage"@en;
+    rdfs:label "homepage"@nl;
+    sh:name "foaf:homepage"^^xsd:string;
+    sh:class <http://xmlns.com/foaf/0.1/Document>;
+    shxl:index 66;
+    sh:nodeKind sh:BlankNode;
+    shxl:cardinality "0..1"^^xsd:string;
+    sh:path <http://xmlns.com/foaf/0.1/homepage>;
+    sh:maxCount 1
+.
+profile:Catalogue_ispartof rdf:type sh:PropertyShape;
+    rdfs:label "is part of"@en;
+    rdfs:label "is onderdeel van"@nl;
+    sh:name "dct:isPartOf"^^xsd:string;
+    sh:class <http://www.w3.org/ns/dcat#Catalog>;
+    shxl:index 73;
+    shxl:cardinality "0..1"^^xsd:string;
+    sh:path dct:isPartOf;
+    sh:maxCount 1
+.
+profile:Catalogue_language rdf:type sh:PropertyShape;
+    rdfs:label "taal"@nl;
+    rdfs:label "language"@en;
+    sh:name "dct:language"^^xsd:string;
+    sh:class dct:LinguisticSystem;
+    shxl:index 67;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path dct:language
+.
+profile:Catalogue_licence rdf:type sh:PropertyShape;
+    rdfs:label "licence"@en;
+    rdfs:label "licentie"@nl;
+    sh:name "dct:license"^^xsd:string;
+    sh:class dct:LicenseDocument;
+    shxl:index 68;
+    shxl:cardinality "0..1"^^xsd:string;
+    sh:path dct:license;
+    sh:maxCount 1
+.
+profile:Catalogue_publisher rdf:type sh:PropertyShape;
+    rdfs:label "beheerder"@nl;
+    rdfs:label "publisher"@en;
+    sh:name "dct:publisher"^^xsd:string;
+    sh:class <http://xmlns.com/foaf/0.1/Agent>;
+    shxl:index 64;
+    shxl:cardinality "1..1"^^xsd:string;
+    sh:path dct:publisher;
+    sh:maxCount 1;
+    sh:minCount 1
+.
+profile:Catalogue_record rdf:type sh:PropertyShape;
+    rdfs:label "record"@en;
+    rdfs:label "record"@nl;
+    sh:name "dcat:record"^^xsd:string;
+    sh:class <http://www.w3.org/ns/dcat#CatalogRecord>;
+    shxl:index 74;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path <http://www.w3.org/ns/dcat#record>
+.
+profile:Catalogue_releasedate rdf:type sh:PropertyShape;
+    rdfs:label "uitgiftedatum"@nl;
+    rdfs:label "release date"@en;
+    sh:name "dct:issued"^^xsd:string;
+    sh:datatype xsd:date;
+    sh:class rdfs:Literal;
+    shxl:index 69;
+    shxl:cardinality "0..1"^^xsd:string;
+    sh:path dct:issued;
+    sh:maxCount 1
+.
+profile:Catalogue_rights rdf:type sh:PropertyShape;
+    rdfs:label "rights"@en;
+    rdfs:label "rechten"@nl;
+    sh:name "dct:rights"^^xsd:string;
+    sh:class dct:RightsStatement;
+    shxl:index 75;
+    shxl:cardinality "0..1"^^xsd:string;
+    sh:path dct:rights;
+    sh:maxCount 1
+.
+profile:Catalogue_spatialgeographic rdf:type sh:PropertyShape;
+    rdfs:label "locatie"@nl;
+    rdfs:label "spatial geographic"@en;
+    sh:name "dct:spatial"^^xsd:string;
+    sh:class dct:Location;
+    shxl:index 76;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path dct:spatial
+.
+profile:Catalogue_themes rdf:type sh:PropertyShape;
+    rdfs:label "themes"@en;
+    rdfs:label "onderwerpindeling"@nl;
+    sh:name "dcat:themeTaxonomy"^^xsd:string;
+    sh:class skos:ConceptScheme;
+    shxl:index 70;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path <http://www.w3.org/ns/dcat#themeTaxonomy>
+.
+profile:Catalogue_title rdf:type sh:PropertyShape;
+    rdfs:label "title"@en;
+    rdfs:label "naam"@nl;
+    sh:name "dct:title"^^xsd:string;
+    sh:datatype xsd:string;
+    sh:class rdfs:Literal;
+    shxl:index 65;
+    shxl:cardinality "1..n"^^xsd:string;
+    sh:path dct:title;
+    sh:minCount 1
+.
+profile:Catalogue_updatemodificationdate rdf:type sh:PropertyShape;
+    rdfs:label "update modification date"@en;
+    rdfs:label "wijzigingsdatum"@nl;
+    sh:name "dct:modified"^^xsd:string;
+    sh:datatype xsd:date;
+    sh:class rdfs:Literal;
+    shxl:index 71;
+    shxl:cardinality "0..1"^^xsd:string;
+    sh:path dct:modified;
+    sh:maxCount 1
+.
+profile:Category rdf:type sh:NodeShape;
+    rdfs:label "Category"@en;
+    rdfs:label "Thema"@nl;
+    sh:name "skos:Concept"^^xsd:string;
+    sh:property profile:Category_preferredlabel;
+    shxl:stereotype shxl:Referentiegegeven;
+    sh:targetClass skos:Concept
+.
+profile:CategoryScheme rdf:type sh:NodeShape;
+    rdfs:label "Category Scheme"@en;
+    rdfs:label "Rubricering"@nl;
+    sh:name "skos:ConceptScheme"^^xsd:string;
+    shxl:stereotype shxl:Referentiegegeven;
+    sh:targetClass skos:ConceptScheme
+.
+profile:Category_preferredlabel rdf:type sh:PropertyShape;
+    rdfs:label "preferred label"@en;
+    rdfs:label "naam"@nl;
+    sh:name "skos:prefLabel"^^xsd:string;
+    sh:datatype xsd:string;
+    sh:class rdfs:Literal;
+    shxl:index 77;
+    shxl:cardinality "1..n"^^xsd:string;
+    sh:path skos:prefLabel;
+    sh:minCount 1
+.
+profile:Checksum rdf:type sh:NodeShape;
+    rdfs:label "Checksum"@en;
+    rdfs:label "Checksum"@nl;
+    sh:name "spdx:Checksum"^^xsd:string;
+    shxl:stereotype shxl:Datatype;
+    sh:targetClass <http://spdx.org/rdf/terms#Checksum>
+.
+profile:Dataset rdf:type sh:NodeShape;
+    rdfs:label "Dataset"@en;
+    rdfs:label "Dataset"@nl;
+    sh:name "dcat:Dataset"^^xsd:string;
+    sh:property profile:Dataset_temporalcoverage;
+    sh:property profile:Dataset_themecategory;
+    sh:property profile:Dataset_title;
+    sh:property profile:Dataset_updatemodificationdate;
+    sh:property profile:Dataset_landingpage;
+    sh:property profile:Dataset_language;
+    sh:property profile:Dataset_publisher;
+    sh:property profile:Dataset_spatialgeographicalcoverage;
+    sh:property profile:Dataset_documentation;
+    sh:property profile:Dataset_frequency;
+    sh:property profile:Dataset_identifier;
+    sh:property profile:Dataset_keywordtag;
+    sh:property profile:Dataset_conformsto;
+    sh:property profile:Dataset_contactpoint;
+    sh:property profile:Dataset_datasetdistribution;
+    sh:property profile:Dataset_description;
+    sh:property profile:Dataset_accessrights;
+    sh:property profile:Dataset_versionnotes;
+    sh:property profile:Dataset_sample;
+    sh:property profile:Dataset_source;
+    sh:property profile:Dataset_type;
+    sh:property profile:Dataset_version;
+    sh:property profile:Dataset_otheridentifier;
+    sh:property profile:Dataset_provenance;
+    sh:property profile:Dataset_relatedresource;
+    sh:property profile:Dataset_releasedate;
+    sh:property profile:Dataset_hasversion;
+    sh:property profile:Dataset_isversionof;
+    shxl:stereotype shxl:Uitwisselgegeven;
+    sh:targetClass <http://www.w3.org/ns/dcat#Dataset>
+.
+profile:Dataset_accessrights rdf:type sh:PropertyShape;
+    rdfs:label "access rights"@en;
+    rdfs:label "openbaarheid"@nl;
+    sh:name "dct:accessRights"^^xsd:string;
+    sh:class dct:RightsStatement;
+    shxl:index 15;
+    shxl:cardinality "0..1"^^xsd:string;
+    sh:path dct:accessRights;
+    sh:maxCount 1
+.
+profile:Dataset_conformsto rdf:type sh:PropertyShape;
+    rdfs:label "conforms to"@en;
+    rdfs:label "conform"@nl;
+    sh:name "dct:conformsTo"^^xsd:string;
+    sh:class dct:Standard;
+    shxl:index 16;
+    sh:nodeKind sh:BlankNode;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path dct:conformsTo
+.
+profile:Dataset_contactpoint rdf:type sh:PropertyShape;
+    rdfs:label "contact point"@en;
+    rdfs:label "aanmelder"@nl;
+    sh:name "dcat:contactPoint"^^xsd:string;
+    sh:datatype ""^^xsd:string;
+    sh:class <http://www.w3.org/2006/vcard/ns#Kind>;
+    shxl:index 6;
+    sh:nodeKind sh:BlankNode;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path <http://www.w3.org/ns/dcat#contactPoint>
+.
+profile:Dataset_datasetdistribution rdf:type sh:PropertyShape;
+    rdfs:label "dataset distribution"@en;
+    rdfs:label "distributie"@nl;
+    sh:name "dcat:distribution"^^xsd:string;
+    sh:class <http://www.w3.org/ns/dcat#Distribution>;
+    shxl:index 7;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path <http://www.w3.org/ns/dcat#distribution>
+.
+profile:Dataset_description rdf:type sh:PropertyShape;
+    rdfs:label "description"@en;
+    rdfs:label "omschrijving"@nl;
+    sh:name "dct:description"^^xsd:string;
+    sh:datatype xsd:string;
+    sh:class rdfs:Literal;
+    shxl:index 2;
+    shxl:cardinality "1..n"^^xsd:string;
+    sh:path dct:description;
+    sh:minCount 1
+.
+profile:Dataset_documentation rdf:type sh:PropertyShape;
+    rdfs:label "documentation"@en;
+    rdfs:label "documentatie"@nl;
+    sh:name "foaf:page"^^xsd:string;
+    sh:class <http://xmlns.com/foaf/0.1/Document>;
+    shxl:index 17;
+    sh:nodeKind sh:BlankNode;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path <http://xmlns.com/foaf/0.1/page>
+.
+profile:Dataset_frequency rdf:type sh:PropertyShape;
+    rdfs:label "frequency"@en;
+    rdfs:label "wijzigingsfrequentie"@nl;
+    sh:name "dct:accruelPeriodicity"^^xsd:string;
+    sh:class dct:Frequency;
+    shxl:index 18;
+    shxl:cardinality "0..1"^^xsd:string;
+    sh:path dct:accruelPeriodicity;
+    sh:maxCount 1
+.
+profile:Dataset_hasversion rdf:type sh:PropertyShape;
+    rdfs:label "heeft versie"@nl;
+    rdfs:label "has version"@en;
+    sh:name "dct:hasVersion"^^xsd:string;
+    sh:class <http://www.w3.org/ns/dcat#Dataset>;
+    shxl:index 19;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path dct:hasVersion
+.
+profile:Dataset_identifier rdf:type sh:PropertyShape;
+    rdfs:label "identifier"@en;
+    rdfs:label "globale ID"@nl;
+    sh:name "dct:identifier"^^xsd:string;
+    sh:datatype xsd:string;
+    sh:class rdfs:Literal;
+    shxl:index 1;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path dct:identifier
+.
+profile:Dataset_isversionof rdf:type sh:PropertyShape;
+    rdfs:label "is versie van"@nl;
+    rdfs:label "is version of"@en;
+    sh:name "dct:isVersionOf"^^xsd:string;
+    sh:class <http://www.w3.org/ns/dcat#Dataset>;
+    shxl:index 20;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path dct:isVersionOf
+.
+profile:Dataset_keywordtag rdf:type sh:PropertyShape;
+    rdfs:label "keyword tag"@en;
+    rdfs:label "trefwoord"@nl;
+    sh:name "dcat:keyword"^^xsd:string;
+    sh:datatype xsd:string;
+    sh:class rdfs:Literal;
+    shxl:index 8;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path <http://www.w3.org/ns/dcat#keyword>
+.
+profile:Dataset_landingpage rdf:type sh:PropertyShape;
+    rdfs:label "landing page"@en;
+    rdfs:label "landingspagina"@nl;
+    sh:name "dcat:landingPage"^^xsd:string;
+    sh:class <http://xmlns.com/foaf/0.1/Document>;
+    shxl:index 11;
+    sh:nodeKind sh:BlankNode;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path <http://www.w3.org/ns/dcat#landingPage>
+.
+profile:Dataset_language rdf:type sh:PropertyShape;
+    rdfs:label "taal (language)"@nl;
+    rdfs:label "language"@en;
+    sh:name "dct:language"^^xsd:string;
+    sh:datatype ""^^xsd:string;
+    sh:class dct:LinguisticSystem;
+    shxl:index 4;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path dct:language
+.
+profile:Dataset_otheridentifier rdf:type sh:PropertyShape;
+    rdfs:label "alternatieve identificatie"@nl;
+    rdfs:label "other identifier"@en;
+    sh:name "adms:identifier"^^xsd:string;
+    sh:class <http://www.w3.org/ns/adms#Identifier>;
+    shxl:index 21;
+    sh:nodeKind sh:BlankNode;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path <http://www.w3.org/ns/adms#identifier>
+.
+profile:Dataset_provenance rdf:type sh:PropertyShape;
+    rdfs:label "provenance"@en;
+    rdfs:label "totstandkoming"@nl;
+    sh:name "dct:provenance"^^xsd:string;
+    sh:class dct:ProvenanceStatement;
+    shxl:index 22;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path dct:provenance
+.
+profile:Dataset_publisher rdf:type sh:PropertyShape;
+    rdfs:label "verstrekker"@nl;
+    rdfs:label "publisher"@en;
+    sh:name "dct:publisher"^^xsd:string;
+    sh:class <http://xmlns.com/foaf/0.1/Agent>;
+    shxl:index 9;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path dct:publisher
+.
+profile:Dataset_relatedresource rdf:type sh:PropertyShape;
+    rdfs:label "heeft relatie met"@nl;
+    rdfs:label "related resource"@en;
+    sh:name "dct:relation"^^xsd:string;
+    sh:class rdfs:Resource;
+    shxl:index 23;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path dct:relation
+.
+profile:Dataset_releasedate rdf:type sh:PropertyShape;
+    rdfs:label "uitgiftedatum"@nl;
+    rdfs:label "release date"@en;
+    sh:name "dct:dct:issued"^^xsd:string;
+    sh:datatype xsd:date;
+    sh:class rdfs:Literal;
+    shxl:index 24;
+    shxl:cardinality "0..1"^^xsd:string;
+    sh:path <http://purl.org/dc/terms/dct:issued>;
+    sh:maxCount 1
+.
+profile:Dataset_sample rdf:type sh:PropertyShape;
+    rdfs:label "sample"@en;
+    rdfs:label "voorbeeld"@nl;
+    sh:name "adms:sample"^^xsd:string;
+    sh:class <http://www.w3.org/ns/dcat#Distribution>;
+    shxl:index 25;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path <http://www.w3.org/ns/adms#sample>
+.
+profile:Dataset_source rdf:type sh:PropertyShape;
+    rdfs:label "source"@en;
+    rdfs:label "brongegevens"@nl;
+    sh:name "dct:source"^^xsd:string;
+    sh:class <http://www.w3.org/ns/dcat#Dataset>;
+    shxl:index 26;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path dct:source
+.
+profile:Dataset_spatialgeographicalcoverage rdf:type sh:PropertyShape;
+    rdfs:label "locatie"@nl;
+    rdfs:label "spatial geographical coverage"@en;
+    sh:name "dct:spatial"^^xsd:string;
+    sh:class dct:Location;
+    shxl:index 12;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path dct:spatial
+.
+profile:Dataset_temporalcoverage rdf:type sh:PropertyShape;
+    rdfs:label "temporal coverage"@en;
+    rdfs:label "dekking in tijd"@nl;
+    sh:name "dct:temporal"^^xsd:string;
+    sh:class dct:PeriodOfTime;
+    shxl:index 13;
+    sh:nodeKind sh:BlankNode;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path dct:temporal
+.
+profile:Dataset_themecategory rdf:type sh:PropertyShape;
+    rdfs:label "thema"@nl;
+    rdfs:label "theme category"@en;
+    sh:name "dcat:theme"^^xsd:string;
+    sh:class skos:Concept;
+    shxl:index 10;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path <http://www.w3.org/ns/dcat#theme>
+.
+profile:Dataset_title rdf:type sh:PropertyShape;
+    rdfs:label "title"@en;
+    rdfs:label "titel"@nl;
+    sh:name "dct:title"^^xsd:string;
+    sh:datatype xsd:string;
+    sh:class rdfs:Literal;
+    shxl:index 3;
+    shxl:cardinality "1..n"^^xsd:string;
+    sh:path dct:title;
+    sh:minCount 1
+.
+profile:Dataset_type rdf:type sh:PropertyShape;
+    rdfs:label "type"@nl;
+    rdfs:label "type"@en;
+    sh:name "dct:type"^^xsd:string;
+    sh:class skos:Concept;
+    shxl:index 27;
+    shxl:cardinality "0..1"^^xsd:string;
+    sh:path dct:type;
+    sh:maxCount 1
+.
+profile:Dataset_updatemodificationdate rdf:type sh:PropertyShape;
+    rdfs:label "update modification date"@en;
+    rdfs:label "wijzigingsdatum"@nl;
+    sh:name "dct:modified"^^xsd:string;
+    sh:datatype xsd:dateTime;
+    sh:class rdfs:Literal;
+    shxl:index 5;
+    shxl:cardinality "0..1"^^xsd:string;
+    sh:path dct:modified;
+    sh:maxCount 1
+.
+profile:Dataset_version rdf:type sh:PropertyShape;
+    rdfs:label "versie"@nl;
+    rdfs:label "version"@en;
+    sh:name "owl:versionInfo"^^xsd:string;
+    sh:datatype xsd:string;
+    sh:class rdfs:Literal;
+    shxl:index 28;
+    shxl:cardinality "0..1"^^xsd:string;
+    sh:path <http://www.w3.org/2002/07/owl#versionInfo>;
+    sh:maxCount 1
+.
+profile:Dataset_versionnotes rdf:type sh:PropertyShape;
+    rdfs:label "version notes"@en;
+    rdfs:label "versietoelichting"@nl;
+    sh:name "adms:versionNotes"^^xsd:string;
+    sh:datatype xsd:string;
+    sh:class rdfs:Literal;
+    shxl:index 29;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path <http://www.w3.org/ns/adms#versionNotes>
+.
+profile:Distribution rdf:type sh:NodeShape;
+    rdfs:label "Distribution"@en;
+    rdfs:label "Distributie"@nl;
+    sh:name "dcat:Distribution"^^xsd:string;
+    sh:property profile:Distribution_accessURL;
+    sh:property profile:Distribution_bytesize;
+    sh:property profile:Distribution_checksum;
+    sh:property profile:Distribution_description;
+    sh:property profile:Distribution_documentation;
+    sh:property profile:Distribution_downloadURL;
+    sh:property profile:Distribution_format;
+    sh:property profile:Distribution_language;
+    sh:property profile:Distribution_licence;
+    sh:property profile:Distribution_linkedschemas;
+    sh:property profile:Distribution_mediatype;
+    sh:property profile:Distribution_releasedate;
+    sh:property profile:Distribution_rights;
+    sh:property profile:Distribution_status;
+    sh:property profile:Distribution_title;
+    sh:property profile:Distribution_updatemodificationdate;
+    shxl:stereotype shxl:Uitwisselgegeven;
+    sh:targetClass <http://www.w3.org/ns/dcat#Distribution>
+.
+profile:Distribution_accessURL rdf:type sh:PropertyShape;
+    rdfs:label "toegangs-URL"@nl;
+    rdfs:label "access URL"@en;
+    sh:name "dcat:accessURL"^^xsd:string;
+    sh:class rdfs:Resource;
+    shxl:index 34;
+    shxl:cardinality "1..n"^^xsd:string;
+    sh:path <http://www.w3.org/ns/dcat#accessURL>;
+    sh:minCount 1
+.
+profile:Distribution_bytesize rdf:type sh:PropertyShape;
+    rdfs:label "byte size"@en;
+    rdfs:label "grootte"@nl;
+    sh:name "dcat:byteSize"^^xsd:string;
+    sh:datatype xsd:decimal;
+    sh:class rdfs:Literal;
+    shxl:index 38;
+    shxl:cardinality "0..1"^^xsd:string;
+    sh:path <http://www.w3.org/ns/dcat#byteSize>;
+    sh:maxCount 1
+.
+profile:Distribution_checksum rdf:type sh:PropertyShape;
+    rdfs:label "checksum"@nl;
+    rdfs:label "checksum"@en;
+    sh:name "spdx:checksum"^^xsd:string;
+    sh:class <http://spdx.org/rdf/terms#Checksum>;
+    shxl:index 39;
+    sh:nodeKind sh:BlankNode;
+    shxl:cardinality "0..1"^^xsd:string;
+    sh:path <http://spdx.org/rdf/terms#checksum>;
+    sh:maxCount 1
+.
+profile:Distribution_description rdf:type sh:PropertyShape;
+    rdfs:label "description"@en;
+    rdfs:label "omschrijving"@nl;
+    sh:name "dct:description"^^xsd:string;
+    sh:datatype xsd:string;
+    sh:class rdfs:Literal;
+    shxl:index 35;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path dct:description
+.
+profile:Distribution_documentation rdf:type sh:PropertyShape;
+    rdfs:label "documentatie"@nl;
+    rdfs:label "documentation"@en;
+    sh:name "foaf:page"^^xsd:string;
+    sh:class <http://xmlns.com/foaf/0.1/Document>;
+    shxl:index 40;
+    sh:nodeKind sh:BlankNode;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path <http://xmlns.com/foaf/0.1/page>
+.
+profile:Distribution_downloadURL rdf:type sh:PropertyShape;
+    rdfs:label "download URL"@en;
+    rdfs:label "download-URL"@nl;
+    sh:name "dcat:downloadURL"^^xsd:string;
+    sh:class rdfs:Resource;
+    shxl:index 41;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path <http://www.w3.org/ns/dcat#downloadURL>
+.
+profile:Distribution_format rdf:type sh:PropertyShape;
+    rdfs:label "formaat"@nl;
+    rdfs:label "format"@en;
+    sh:name "dct:format"^^xsd:string;
+    sh:class dct:MediaTypeOrExtent;
+    shxl:index 36;
+    shxl:cardinality "0..1"^^xsd:string;
+    sh:path dct:format;
+    sh:maxCount 1
+.
+profile:Distribution_language rdf:type sh:PropertyShape;
+    rdfs:label "language"@en;
+    rdfs:label "taal"@nl;
+    sh:name "dct:language"^^xsd:string;
+    sh:class dct:LinguisticSystem;
+    shxl:index 42;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path dct:language
+.
+profile:Distribution_licence rdf:type sh:PropertyShape;
+    rdfs:label "licentie"@nl;
+    rdfs:label "licence"@en;
+    sh:name "dct:license"^^xsd:string;
+    sh:class dct:LicenseDocument;
+    shxl:index 37;
+    shxl:cardinality "0..1"^^xsd:string;
+    sh:path dct:license;
+    sh:maxCount 1
+.
+profile:Distribution_linkedschemas rdf:type sh:PropertyShape;
+    rdfs:label "voldoet aan"@nl;
+    rdfs:label "linked schemas"@en;
+    sh:name "dct:conformsTo"^^xsd:string;
+    sh:class dct:Standard;
+    shxl:index 43;
+    sh:nodeKind sh:BlankNode;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path dct:conformsTo
+.
+profile:Distribution_mediatype rdf:type sh:PropertyShape;
+    rdfs:label "media type"@nl;
+    rdfs:label "media type"@en;
+    sh:name "dcat:mediaType"^^xsd:string;
+    sh:class dct:MediaTypeOrExtent;
+    shxl:index 44;
+    shxl:cardinality "0..1"^^xsd:string;
+    sh:path <http://www.w3.org/ns/dcat#mediaType>;
+    sh:maxCount 1
+.
+profile:Distribution_releasedate rdf:type sh:PropertyShape;
+    rdfs:label "uitgiftedatum"@nl;
+    rdfs:label "release date"@en;
+    sh:name "dct:issued"^^xsd:string;
+    sh:datatype xsd:date;
+    sh:class rdfs:Literal;
+    shxl:index 45;
+    shxl:cardinality "0..1"^^xsd:string;
+    sh:path dct:issued;
+    sh:maxCount 1
+.
+profile:Distribution_rights rdf:type sh:PropertyShape;
+    rdfs:label "rechten"@nl;
+    rdfs:label "rights"@en;
+    sh:name "dct:rights"^^xsd:string;
+    sh:class dct:RightsStatement;
+    shxl:index 46;
+    shxl:cardinality "0..1"^^xsd:string;
+    sh:path dct:rights;
+    sh:maxCount 1
+.
+profile:Distribution_status rdf:type sh:PropertyShape;
+    rdfs:label "status"@nl;
+    rdfs:label "status"@en;
+    sh:name "adms:status"^^xsd:string;
+    sh:node wl:Status;
+    sh:class skos:Concept;
+    shxl:index 47;
+    shxl:cardinality "0..1"^^xsd:string;
+    sh:path <http://www.w3.org/ns/adms#status>;
+    sh:maxCount 1
+.
+profile:Distribution_title rdf:type sh:PropertyShape;
+    rdfs:label "titel"@nl;
+    rdfs:label "title"@en;
+    sh:name "dct:title"^^xsd:string;
+    sh:datatype xsd:string;
+    sh:class rdfs:Literal;
+    shxl:index 48;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path dct:title
+.
+profile:Distribution_updatemodificationdate rdf:type sh:PropertyShape;
+    rdfs:label "update modification date"@en;
+    rdfs:label "wijzigingsdatum"@nl;
+    sh:name "dct:modified"^^xsd:string;
+    sh:datatype xsd:date;
+    sh:class rdfs:Literal;
+    shxl:index 49;
+    shxl:cardinality "0..1"^^xsd:string;
+    sh:path dct:modified;
+    sh:maxCount 1
+.
+profile:Document rdf:type sh:NodeShape;
+    rdfs:label "Document"@en;
+    rdfs:label "Document"@nl;
+    sh:name "foaf:Document"^^xsd:string;
+    shxl:stereotype shxl:Datatype;
+    sh:targetClass <http://xmlns.com/foaf/0.1/Document>
+.
+profile:Frequency rdf:type sh:NodeShape;
+    rdfs:label "Frequency"@en;
+    rdfs:label "Frequentie"@nl;
+    sh:name "dct:Frequency"^^xsd:string;
+    shxl:stereotype shxl:Referentiegegeven;
+    sh:targetClass dct:Frequency
+.
+profile:Identifier rdf:type sh:NodeShape;
+    rdfs:label "Identifier"@nl;
+    rdfs:label "Identifier"@en;
+    sh:name "adms:Identifier"^^xsd:string;
+    sh:property profile:Identifier_notation;
+    shxl:stereotype shxl:Datatype;
+    sh:targetClass <http://www.w3.org/ns/adms#Identifier>
+.
+profile:Identifier_notation rdf:type sh:PropertyShape;
+    rdfs:label "code"@nl;
+    rdfs:label "notation"@en;
+    sh:name "skos:notation"^^xsd:string;
+    sh:datatype xsd:anyURI;
+    sh:class rdfs:Literal;
+    shxl:index 80;
+    shxl:cardinality "1.1"^^xsd:string;
+    sh:path skos:notation
+.
+profile:Kind rdf:type sh:NodeShape;
+    rdfs:label "Kind"@nl;
+    rdfs:label "Kind"@en;
+    sh:name "vcard:Kind"^^xsd:string;
+    sh:property profile:Kind_Emailaddress;
+    sh:property profile:Kind_Postaddress;
+    shxl:stereotype shxl:Datatype;
+    sh:targetClass <http://www.w3.org/2006/vcard/ns#Kind>
+.
+profile:Kind_Emailaddress rdf:type sh:PropertyShape;
+    rdfs:label "Emailaddress"@en;
+    rdfs:label "Email adres"@nl;
+    sh:name "vcard:hasEmail"^^xsd:string;
+    sh:datatype xsd:string;
+    sh:class rdfs:Literal;
+    shxl:index 82;
+    shxl:cardinality "1..1"^^xsd:string;
+    sh:path <http://www.w3.org/2006/vcard/ns#hasEmail>;
+    sh:maxCount 1;
+    sh:minCount 1
+.
+profile:Kind_Postaddress rdf:type sh:PropertyShape;
+    rdfs:label "Post adres"@nl;
+    rdfs:label "Postaddress"@en;
+    sh:name "vcard:address"^^xsd:string;
+    sh:datatype xsd:string;
+    sh:class rdfs:Literal;
+    shxl:index 83;
+    shxl:cardinality "0..1"^^xsd:string;
+    sh:path <http://www.w3.org/2006/vcard/ns#address>;
+    sh:maxCount 1
+.
+profile:LicenceDocument rdf:type sh:NodeShape;
+    rdfs:label "Licence Document"@en;
+    rdfs:label "Licentie"@nl;
+    sh:name "dct:LicenseDocument"^^xsd:string;
+    sh:property profile:LicenceDocument_licencetype;
+    shxl:stereotype shxl:Referentiegegeven;
+    sh:targetClass dct:LicenseDocument
+.
+profile:LicenceDocument_licencetype rdf:type sh:PropertyShape;
+    rdfs:label "licence type"@en;
+    rdfs:label "licentietype"@nl;
+    sh:name "dct:type"^^xsd:string;
+    sh:class skos:Concept;
+    shxl:index 78;
+    shxl:cardinality "0..1"^^xsd:string;
+    sh:path dct:type;
+    sh:maxCount 1
+.
+profile:LicenceType rdf:type sh:NodeShape;
+    rdfs:label "Licence Type"@en;
+    rdfs:label "Licentietype"@nl;
+    sh:name "skos:Concept"^^xsd:string;
+    shxl:stereotype shxl:Referentiegegeven;
+    sh:targetClass skos:Concept
+.
+profile:LinguisticSystem rdf:type sh:NodeShape;
+    rdfs:label "Taal"@nl;
+    rdfs:label "Linguistic System"@en;
+    sh:name "dct:LinguisticSystem"^^xsd:string;
+    shxl:stereotype shxl:Referentiegegeven;
+    sh:targetClass dct:LinguisticSystem
+.
+profile:Location rdf:type sh:NodeShape;
+    rdfs:label "Locatie"@nl;
+    rdfs:label "Location"@en;
+    sh:name "dct:Location"^^xsd:string;
+    shxl:stereotype shxl:Referentiegegeven;
+    sh:targetClass dct:Location
+.
+profile:MediaTypeOrExtent rdf:type sh:NodeShape;
+    rdfs:label "Media Type Or Extent"@en;
+    rdfs:label "Mediatype"@nl;
+    sh:name "dct:MediaTypeOrExtent"^^xsd:string;
+    shxl:stereotype shxl:Referentiegegeven;
+    sh:targetClass dct:MediaTypeOrExtent
+.
+profile:PeriodOfTime rdf:type sh:NodeShape;
+    rdfs:label "Period Of Time"@en;
+    rdfs:label "Periode"@nl;
+    sh:name "dct:PeriodOfTime"^^xsd:string;
+    sh:property profile:PeriodOfTime_startdatetime;
+    sh:property profile:PeriodOfTime_enddatetime;
+    shxl:stereotype shxl:Datatype;
+    sh:targetClass dct:PeriodOfTime
+.
+profile:PeriodOfTime_enddatetime rdf:type sh:PropertyShape;
+    rdfs:label "end date time"@en;
+    rdfs:label "einddatum"@nl;
+    sh:name "schema:endDate"^^xsd:string;
+    sh:datatype xsd:dateTime;
+    sh:class rdfs:Literal;
+    shxl:index 81;
+    shxl:cardinality "0..1"^^xsd:string;
+    sh:path <http://schema.org/endDate>;
+    sh:maxCount 1
+.
+profile:PeriodOfTime_startdatetime rdf:type sh:PropertyShape;
+    rdfs:label "start date time"@en;
+    rdfs:label "startdatum"@nl;
+    sh:name "schema:startDate"^^xsd:string;
+    sh:datatype xsd:dateTime;
+    sh:class rdfs:Literal;
+    shxl:index 81;
+    shxl:cardinality "0..1"^^xsd:string;
+    sh:path <http://schema.org/startDate>;
+    sh:maxCount 1
+.
+profile:PublisherType rdf:type sh:NodeShape;
+    rdfs:label "Soort verstrekker"@nl;
+    rdfs:label "Publisher Type"@en;
+    sh:name "skos:Concept"^^xsd:string;
+    shxl:stereotype shxl:Referentiegegeven;
+    sh:targetClass skos:Concept
+.
+profile:RightsStatement rdf:type sh:NodeShape;
+    rdfs:label "Rights Statement"@en;
+    rdfs:label "Openbaarheidsniveau"@nl;
+    sh:name "dct:RightsStatement"^^xsd:string;
+    shxl:stereotype shxl:Referentiegegeven;
+    sh:targetClass dct:RightsStatement
+.
+profile:Standard rdf:type sh:NodeShape;
+    rdfs:label "Standard"@en;
+    sh:name "dct:Standard"^^xsd:string;
+    shxl:stereotype shxl:Datatype;
+    sh:targetClass dct:Standard
+.
+profile:Status rdf:type sh:NodeShape;
+    rdfs:label "Status"@nl;
+    rdfs:label "Status"@en;
+    sh:name "skos:Concept"^^xsd:string;
+    shxl:stereotype shxl:Referentiegegeven;
+    sh:targetClass skos:Concept
+.
+wl:Status rdf:type sh:NodeShape;
+    sh:name "Status"^^xsd:string;
+    sh:property [
+        sh:path skos:inScheme;
+        sh:hasValue adms:1.0
+    ]
+.
+adms:Completed rdf:type skos:Concept;
+    rdfs:label "Completed"@en;
+    rdfs:label "Afgerond"@nl;
+    skos:inScheme adms:1.0;
+    skos:notation "Completed"^^xsd:string
+.
+adms:Deprecated rdf:type skos:Concept;
+    rdfs:label "Niet langer ondersteund"@nl;
+    rdfs:label "Deprecated"@en;
+    skos:inScheme adms:1.0;
+    skos:notation "Deprecated"^^xsd:string
+.
+adms:UnderDevelopment rdf:type skos:Concept;
+    rdfs:label "Under development"@en;
+    rdfs:label "In ontwikkeling"@nl;
+    skos:inScheme adms:1.0;
+    skos:notation "UnderDevelopment"^^xsd:string
+.
+adms:Withdrawn rdf:type skos:Concept;
+    rdfs:label "Withdrawn"@en;
+    rdfs:label "Teruggetrokken"@nl;
+    skos:inScheme adms:1.0;
+    skos:notation "Withdrawn"^^xsd:string
+.
