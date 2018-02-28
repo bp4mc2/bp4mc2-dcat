@@ -4,7 +4,7 @@
 @prefix dcterms: <http://purl.org/dc/terms/>.
 @prefix void: <http://rdfs.org/ns/void#>.
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
-@prefix stage: <http://localhost:8080/modelleren/stage#>.
+@prefix stage: <http://localhost:8080/modeling/stage#>.
 
 stage:DocProperties_Catalog a elmo:Representation;
 	elmo:url-pattern	"/query/doc-properties$";
@@ -37,7 +37,7 @@ stage:DocProperties_Distribution a elmo:Representation;
 
 stage:DocPropertiesQuery a elmo:Query;
   elmo:query '''
-    prefix containerlocal: <http://localhost:8080/modelleren/container/>
+    prefix containerlocal: <http://localhost:8080/modeling/container/>
     prefix shxl: <http://bp4mc2.org/def/shacl-xl#>
     select ?property ?property_label ?range ?range_label ?definition
     where {
@@ -71,7 +71,7 @@ stage:ProfielProperties	a	elmo:Representation;
 	elmo:contains	stage:Menu;
   elmo:query '''
     prefix shxl: <http://bp4mc2.org/def/shacl-xl#>
-    prefix containerlocal: <http://localhost:8080/modelleren/container/>
+    prefix containerlocal: <http://localhost:8080/modeling/container/>
     select ?nr
            (strafter(str(?shape),"#") as ?class)
            ?predicate

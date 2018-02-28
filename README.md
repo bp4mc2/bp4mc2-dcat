@@ -25,6 +25,14 @@ Please go to the home page of the toolset (for example: http://localhost:8080/mo
 Upload the Excel file found in one of the profile folders:
 ![](images/upload-excel.png)
 
+After upload, you can navigate to the *publication*, *documentation* or *download* items to generate all other files:
+- The turtle file can be generated via *download*;
+- The graphml file can be generated via *publication*/*model*, *graphml* tab (you need a copy of the free yEd application to view the result);
+- The png file can be generated via yEd;
+- The markdown file can be generated via *download*.
+
+If you have an appropriate browser (anything but IE), you can also view the markdown file as a Respec document, via *documentation*/*document*.
+
 ## Installing a local version of the toolset
 To create your own toolset, you need to install your own version of the Linked Data Theatre, and you need to install a triple store.
 

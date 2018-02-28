@@ -4,8 +4,8 @@
 @prefix dcterms: <http://purl.org/dc/terms/>.
 @prefix void: <http://rdfs.org/ns/void#>.
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
-@prefix stage: <http://localhost:8080/modelleren/stage#>.
-@prefix doc: <http://localhost:8080/modelleren/doc#>.
+@prefix stage: <http://localhost:8080/modeling/stage#>.
+@prefix doc: <http://localhost:8080/modeling/doc#>.
 
 #
 # De inhoud van het document
@@ -52,7 +52,7 @@ stage:ProfielDocument a elmo:Representation;
   elmo:contains stage:DocProperties_Dataset;
   elmo:contains stage:DocProperties_Distribution;
   elmo:query '''
-    prefix doc: <http://localhost:8080/modelleren/doc#>
+    prefix doc: <http://localhost:8080/modeling/doc#>
     construct {
       doc:profiel elmo:data ?data.
       ?item rdf:first ?first.
@@ -110,7 +110,7 @@ stage:ProfielDocumentRespec a elmo:Representation;
             <p>        
             </p>
           </section>  
-         <section data-format="markdown" data-include="/modelleren/query/profiel-doc.md"></section>
+         <section data-format="markdown" data-include="/modeling/query/profiel-doc.md"></section>
         </body>
     '''
 	]

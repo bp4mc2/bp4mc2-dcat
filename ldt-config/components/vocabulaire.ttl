@@ -4,12 +4,12 @@
 @prefix dcterms: <http://purl.org/dc/terms/>.
 @prefix void: <http://rdfs.org/ns/void#>.
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
-@prefix stage: <http://localhost:8080/modelleren/stage#>.
+@prefix stage: <http://localhost:8080/modeling/stage#>.
 
 stage:ProfielVocabulaireTTL a elmo:Representation;
   elmo:url-pattern "/query/profiel-vocabulaire.ttl$";
   elmo:query '''
-    prefix containerlocal: <http://localhost:8080/modelleren/container/>
+    prefix containerlocal: <http://localhost:8080/modeling/container/>
     construct {
       ?s ?p ?o
     }
@@ -27,7 +27,7 @@ stage:ProfielVocabulaire	a	elmo:Representation;
   elmo:appearance elmo:VocabularyAppearance;
   elmo:query '''
     prefix shxl: <http://bp4mc2.org/def/shacl-xl#>
-    prefix containerlocal: <http://localhost:8080/modelleren/container/>
+    prefix containerlocal: <http://localhost:8080/modeling/container/>
     construct {
       ?s ?p ?o.
       ?shape sh:property [
