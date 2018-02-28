@@ -6,6 +6,21 @@
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
 @prefix stage: <http://localhost:8080/modelleren/stage#>.
 
+stage:ProfielVocabulaireTTL a elmo:Representation;
+  elmo:url-pattern "/query/profiel-vocabulaire.ttl$";
+  elmo:query '''
+    prefix containerlocal: <http://localhost:8080/modelleren/container/>
+    construct {
+      ?s ?p ?o
+    }
+    where {
+      graph containerlocal:profiel {
+        ?s ?p ?o
+      }
+    }
+  '''
+.
+
 stage:ProfielVocabulaire	a	elmo:Representation;
 	elmo:url-pattern	"/query/profiel-vocabulaire$";
 	elmo:contains	stage:Menu;

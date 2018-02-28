@@ -1,0 +1,710 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix shxl: <http://bp4mc2.org/def/shacl-xl#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix profile: <http://linkeddata.ordina.nl/profiel#>.
+@prefix prefix: <http://linkeddata.ordina.nl/prefix#>.
+shxl:Datatype rdf:type shxl:Stereotype;
+    rdfs:label "Datatype"^^xsd:string;
+    shxl:index 3
+.
+shxl:Referentiegegeven rdf:type shxl:Stereotype;
+    rdfs:label "Referentiegegeven"^^xsd:string;
+    shxl:index 2
+.
+shxl:Uitwisselgegeven rdf:type shxl:Stereotype;
+    rdfs:label "Uitwisselgegeven"^^xsd:string;
+    shxl:index 1
+.
+prefix:dcat rdf:type <http://www.w3.org/2002/07/owl#Ontology>;
+    sh:namespace "http://www.w3.org/ns/dcat#"^^xsd:string;
+    sh:prefix "dcat"^^xsd:string
+.
+prefix:dct rdf:type <http://www.w3.org/2002/07/owl#Ontology>;
+    sh:namespace "http://purl.org/dc/terms/"^^xsd:string;
+    sh:prefix "dct"^^xsd:string
+.
+prefix:dctype rdf:type <http://www.w3.org/2002/07/owl#Ontology>;
+    sh:namespace "http://purl.org/dc/dcmitype/"^^xsd:string;
+    sh:prefix "dctype"^^xsd:string
+.
+prefix:foaf rdf:type <http://www.w3.org/2002/07/owl#Ontology>;
+    sh:namespace "http://xmlns.com/foaf/0.1/"^^xsd:string;
+    sh:prefix "foaf"^^xsd:string
+.
+prefix:rdfs rdf:type <http://www.w3.org/2002/07/owl#Ontology>;
+    sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:string;
+    sh:prefix "rdfs"^^xsd:string
+.
+prefix:skos rdf:type <http://www.w3.org/2002/07/owl#Ontology>;
+    sh:namespace "http://www.w3.org/2004/02/skos/core#"^^xsd:string;
+    sh:prefix "skos"^^xsd:string
+.
+prefix:vcard rdf:type <http://www.w3.org/2002/07/owl#Ontology>;
+    sh:namespace "http://www.w3.org/2006/vcard/ns#"^^xsd:string;
+    sh:prefix "vcard"^^xsd:string
+.
+<http://linkeddata.ordina.nl/profiel#> rdf:type <http://www.w3.org/2002/07/owl#Ontology>;
+    rdfs:label "Original W3C DCAT profile"@en;
+    dct:conformsTo <http://www.w3.org/TR/vocab-dcat/>;
+    skos:notation "W3C-DCAT"^^xsd:string
+.
+profile:Agent rdf:type sh:NodeShape;
+    rdfs:label "Agent"@en;
+    sh:name "foaf:Agent"^^xsd:string;
+    skos:definition "An agent (eg. person, group, software or physical artifact)."@en;
+    shxl:stereotype shxl:Referentiegegeven;
+    sh:targetClass foaf:Agent
+.
+profile:Catalog rdf:type sh:NodeShape;
+    rdfs:label "Catalog"@en;
+    sh:name "dcat:Catalog"^^xsd:string;
+    skos:definition "A data catalog is a curated collection of metadata about datasets."@en;
+    sh:property profile:Catalog_dataset;
+    sh:property profile:Catalog_description;
+    sh:property profile:Catalog_homepage;
+    sh:property profile:Catalog_issued;
+    sh:property profile:Catalog_title;
+    sh:property profile:Catalog_language;
+    sh:property profile:Catalog_license;
+    sh:property profile:Catalog_modified;
+    sh:property profile:Catalog_publisher;
+    sh:property profile:Catalog_record;
+    sh:property profile:Catalog_rights;
+    sh:property profile:Catalog_spatial;
+    sh:property profile:Catalog_themetaxonomy;
+    shxl:stereotype shxl:Uitwisselgegeven;
+    sh:targetClass dcat:Catalog
+.
+profile:CatalogRecord rdf:type sh:NodeShape;
+    rdfs:label "Catalog Record"@en;
+    sh:name "dcat:CatalogRecord"^^xsd:string;
+    skos:definition "A record in a data catalog, describing a single dataset."@en;
+    sh:property profile:CatalogRecord_description;
+    sh:property profile:CatalogRecord_issued;
+    sh:property profile:CatalogRecord_modified;
+    sh:property profile:CatalogRecord_primarytopic;
+    sh:property profile:CatalogRecord_title;
+    shxl:stereotype shxl:Uitwisselgegeven;
+    sh:targetClass dcat:CatalogRecord
+.
+profile:CatalogRecord_description rdf:type sh:PropertyShape;
+    rdfs:label "description"@en;
+    sh:name "dct:description"^^xsd:string;
+    sh:datatype xsd:string;
+    sh:class rdfs:Literal;
+    shxl:index 15;
+    skos:definition "free-text account of the record."@en;
+    sh:nodeKind sh:BlankNode;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path dct:description
+.
+profile:CatalogRecord_issued rdf:type sh:PropertyShape;
+    rdfs:label "issued"@en;
+    sh:name "dct:issued"^^xsd:string;
+    sh:datatype xsd:date;
+    sh:class rdfs:Literal;
+    shxl:index 16;
+    skos:definition "The date of listing the corresponding dataset in the catalog."@en;
+    sh:nodeKind sh:BlankNode;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path dct:issued
+.
+profile:CatalogRecord_modified rdf:type sh:PropertyShape;
+    rdfs:label "modified"@en;
+    sh:name "dct:modified"^^xsd:string;
+    sh:datatype xsd:date;
+    sh:class rdfs:Literal;
+    shxl:index 17;
+    skos:definition "Most recent date on which the catalog entry was changed, updated or modified."@en;
+    sh:nodeKind sh:BlankNode;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path dct:modified
+.
+profile:CatalogRecord_primarytopic rdf:type sh:PropertyShape;
+    rdfs:label "primary topic"@en;
+    sh:name "foaf:primaryTopic"^^xsd:string;
+    sh:class dcat:Dataset;
+    shxl:index 18;
+    skos:definition "Links the catalog record to the dcat:Dataset resource described in the record."@en;
+    shxl:cardinality "0..1"^^xsd:string;
+    sh:path foaf:primaryTopic;
+    sh:maxCount 1
+.
+profile:CatalogRecord_title rdf:type sh:PropertyShape;
+    rdfs:label "title"@en;
+    sh:name "dct:title"^^xsd:string;
+    sh:datatype xsd:string;
+    sh:class rdfs:Literal;
+    shxl:index 14;
+    skos:definition "A name given to the record."@en;
+    sh:nodeKind sh:BlankNode;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path dct:title
+.
+profile:Catalog_dataset rdf:type sh:PropertyShape;
+    rdfs:label "dataset"@en;
+    sh:name "dcat:dataset"^^xsd:string;
+    sh:class dcat:Dataset;
+    shxl:index 12;
+    skos:definition "A dataset that is part of the catalog."@en;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path dcat:dataset
+.
+profile:Catalog_description rdf:type sh:PropertyShape;
+    rdfs:label "description"@en;
+    sh:name "dct:description"^^xsd:string;
+    sh:datatype xsd:string;
+    sh:class rdfs:Literal;
+    shxl:index 2;
+    skos:definition "A free-text account of the catalog."@en;
+    sh:nodeKind sh:BlankNode;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path dct:description
+.
+profile:Catalog_homepage rdf:type sh:PropertyShape;
+    rdfs:label "homepage"@en;
+    sh:name "foaf:homepage"^^xsd:string;
+    sh:class foaf:Document;
+    shxl:index 6;
+    skos:definition "The homepage of the catalog."@en;
+    sh:nodeKind sh:BlankNode;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path foaf:homepage
+.
+profile:Catalog_issued rdf:type sh:PropertyShape;
+    rdfs:label "issued"@en;
+    sh:name "dct:issued"^^xsd:string;
+    sh:datatype xsd:date;
+    sh:class rdfs:Literal;
+    shxl:index 3;
+    skos:definition "Date of formal issuance (e.g., publication) of the catalog."@en;
+    sh:nodeKind sh:BlankNode;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path dct:issued
+.
+profile:Catalog_language rdf:type sh:PropertyShape;
+    rdfs:label "language"@en;
+    sh:name "dct:language"^^xsd:string;
+    sh:class dct:LinguisticSystem;
+    shxl:index 5;
+    skos:definition "The language of the catalog. This refers to the language used in the textual metadata describing titles, descriptions, etc. of the datasets in the catalog."@en;
+    sh:nodeKind sh:BlankNode;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path dct:language
+.
+profile:Catalog_license rdf:type sh:PropertyShape;
+    rdfs:label "license"@en;
+    sh:name "dct:license"^^xsd:string;
+    sh:class dct:LicenseDocument;
+    shxl:index 10;
+    skos:definition "This links to the license document under which the catalog is made available and not the datasets. Even if the license of the catalog applies to all of its datasets and distributions, it should be replicated on each distribution."@en;
+    sh:nodeKind sh:BlankNode;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path dct:license
+.
+profile:Catalog_modified rdf:type sh:PropertyShape;
+    rdfs:label "modified"@en;
+    sh:name "dct:modified"^^xsd:string;
+    sh:datatype xsd:date;
+    sh:class rdfs:Literal;
+    shxl:index 4;
+    skos:definition "Most recent date on which the catalog was changed, updated or modified."@en;
+    sh:nodeKind sh:BlankNode;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path dct:modified
+.
+profile:Catalog_publisher rdf:type sh:PropertyShape;
+    rdfs:label "publisher"@en;
+    sh:name "dct:publisher"^^xsd:string;
+    sh:class foaf:Agent;
+    shxl:index 7;
+    skos:definition "The entity responsible for making the catalog online."@en;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path dct:publisher
+.
+profile:Catalog_record rdf:type sh:PropertyShape;
+    rdfs:label "record"@en;
+    sh:name "dcat:record"^^xsd:string;
+    sh:class dcat:CatalogRecord;
+    shxl:index 13;
+    skos:definition "A catalog record that is part of the catalog."@en;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path dcat:record
+.
+profile:Catalog_rights rdf:type sh:PropertyShape;
+    rdfs:label "rights"@en;
+    sh:name "dct:rights"^^xsd:string;
+    sh:class dct:RightsStatement;
+    shxl:index 11;
+    skos:definition "This describes the rights under which the catalog can be used/reused and not the datasets. Even if theses rights apply to all the catalog datasets and distributions, it should be replicated on each distribution."@en;
+    sh:nodeKind sh:BlankNode;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path dct:rights
+.
+profile:Catalog_spatial rdf:type sh:PropertyShape;
+    rdfs:label "spatial"@en;
+    sh:name "dct:spatial"^^xsd:string;
+    sh:class dct:Location;
+    shxl:index 8;
+    skos:definition "The geographical area covered by the catalog."@en;
+    sh:nodeKind sh:BlankNode;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path dct:spatial
+.
+profile:Catalog_themetaxonomy rdf:type sh:PropertyShape;
+    rdfs:label "theme taxonomy"@en;
+    sh:name "dcat:themeTaxonomy"^^xsd:string;
+    sh:class skos:ConceptScheme;
+    shxl:index 9;
+    skos:definition "The knowledge organization system (KOS) used to classify catalog's datasets."@en;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path dcat:themeTaxonomy
+.
+profile:Catalog_title rdf:type sh:PropertyShape;
+    rdfs:label "title"@en;
+    sh:name "dct:title"^^xsd:string;
+    sh:datatype xsd:string;
+    sh:class rdfs:Literal;
+    shxl:index 1;
+    skos:definition "A name given to the catalog."@en;
+    sh:nodeKind sh:BlankNode;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path dct:title
+.
+profile:Concept rdf:type sh:NodeShape;
+    rdfs:label "Concept"@en;
+    sh:name "skos:Concept"^^xsd:string;
+    skos:definition "A category or a theme used to describe datasets in the catalog."@en;
+    sh:property profile:Concept_inscheme;
+    shxl:stereotype shxl:Referentiegegeven;
+    sh:targetClass skos:Concept
+.
+profile:Concept_inscheme rdf:type sh:PropertyShape;
+    rdfs:label "in scheme"@en;
+    sh:name "skos:inScheme"^^xsd:string;
+    sh:class skos:ConceptScheme;
+    shxl:index 45;
+    skos:definition "The ConceptScheme of a theme/category"@en;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path skos:inScheme
+.
+profile:Conceptscheme rdf:type sh:NodeShape;
+    rdfs:label "Concept scheme"@en;
+    sh:name "skos:ConceptScheme"^^xsd:string;
+    skos:definition "The knowledge organization system (KOS) used to represent themes/categories of datasets in the catalog."@en;
+    shxl:stereotype shxl:Referentiegegeven;
+    sh:targetClass skos:ConceptScheme
+.
+profile:Dataset rdf:type sh:NodeShape;
+    rdfs:label "Dataset"@en;
+    sh:name "dcat:Dataset"^^xsd:string;
+    shxl:parent "dctype:Dataset"^^xsd:string;
+    skos:definition "A collection of data, published or curated by a single agent, and available for access or download in one or more formats."@en;
+    sh:property profile:Dataset_title;
+    sh:property profile:Dataset_landingpage;
+    sh:property profile:Dataset_language;
+    sh:property profile:Dataset_publisher;
+    sh:property profile:Dataset_identifier;
+    sh:property profile:Dataset_contactpoint;
+    sh:property profile:Dataset_description;
+    sh:property profile:Dataset_temporal;
+    sh:property profile:Dataset_theme;
+    sh:property profile:Dataset_issued;
+    sh:property profile:Dataset_keyword;
+    sh:property profile:Dataset_modified;
+    sh:property profile:Dataset_spatial;
+    sh:property profile:Dataset_accrualPeriodicity;
+    sh:property profile:Dataset_distribution;
+    shxl:stereotype shxl:Uitwisselgegeven;
+    sh:targetClass dcat:Dataset
+.
+<http://linkeddata.ordina.nl/profiel#Dataset(dctype)> rdf:type sh:NodeShape;
+    rdfs:label "Dataset (dctype)"@en;
+    sh:name "dctype:Dataset"^^xsd:string;
+    skos:definition "Data encoded in a defined structure."@en;
+    shxl:stereotype shxl:Referentiegegeven;
+    sh:targetClass <http://purl.org/dc/dcmitype/Dataset>
+.
+profile:Dataset_accrualPeriodicity rdf:type sh:PropertyShape;
+    rdfs:label "accrualPeriodicity"@en;
+    sh:name "dct:accrualPeriodicity"^^xsd:string;
+    sh:class dct:Frequency;
+    shxl:index 25;
+    skos:definition "The frequency at which dataset is published."@en;
+    sh:nodeKind sh:BlankNode;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path dct:accrualPeriodicity
+.
+profile:Dataset_contactpoint rdf:type sh:PropertyShape;
+    rdfs:label "contact point"@en;
+    sh:name "dcat:contactPoint"^^xsd:string;
+    sh:class <http://www.w3.org/2006/vcard/ns#Kind>;
+    shxl:index 31;
+    skos:definition "Link a dataset to relevant contact information which is provided using VCard [vcard-rdf]."@en;
+    sh:nodeKind sh:BlankNode;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path dcat:contactPoint
+.
+profile:Dataset_description rdf:type sh:PropertyShape;
+    rdfs:label "description"@en;
+    sh:name "dct:description"^^xsd:string;
+    sh:datatype xsd:string;
+    sh:class rdfs:Literal;
+    shxl:index 20;
+    skos:definition "free-text account of the dataset."@en;
+    sh:nodeKind sh:BlankNode;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path dct:description
+.
+profile:Dataset_distribution rdf:type sh:PropertyShape;
+    rdfs:label "distribution"@en;
+    sh:name "dcat:distribution"^^xsd:string;
+    sh:class dcat:Distribution;
+    shxl:index 32;
+    skos:definition "Connects a dataset to its available distributions."@en;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path dcat:distribution
+.
+profile:Dataset_identifier rdf:type sh:PropertyShape;
+    rdfs:label "identifier"@en;
+    sh:name "dct:identifier"^^xsd:string;
+    sh:datatype xsd:string;
+    sh:class rdfs:Literal;
+    shxl:index 26;
+    skos:definition "A unique identifier of the dataset."@en;
+    sh:nodeKind sh:BlankNode;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path dct:identifier
+.
+profile:Dataset_issued rdf:type sh:PropertyShape;
+    rdfs:label "issued"@en;
+    sh:name "dct:issued"^^xsd:string;
+    sh:datatype xsd:date;
+    sh:class rdfs:Literal;
+    shxl:index 21;
+    skos:definition "Date of formal issuance (e.g., publication) of the dataset."@en;
+    sh:nodeKind sh:BlankNode;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path dct:issued
+.
+profile:Dataset_keyword rdf:type sh:PropertyShape;
+    rdfs:label "keyword"@en;
+    sh:name "dcat:keyword"^^xsd:string;
+    sh:datatype xsd:string;
+    sh:class rdfs:Literal;
+    shxl:index 30;
+    skos:definition "A keyword or tag describing the dataset."@en;
+    sh:nodeKind sh:BlankNode;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path dcat:keyword
+.
+profile:Dataset_landingpage rdf:type sh:PropertyShape;
+    rdfs:label "landing page"@en;
+    sh:name "dcat:landingPage"^^xsd:string;
+    sh:class foaf:Document;
+    shxl:index 33;
+    skos:definition "A Web page that can be navigated to in a Web browser to gain access to the dataset, its distributions and/or additional information."@en;
+    sh:nodeKind sh:BlankNode;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path dcat:landingPage
+.
+profile:Dataset_language rdf:type sh:PropertyShape;
+    rdfs:label "language"@en;
+    sh:name "dct:language"^^xsd:string;
+    sh:class dct:LinguisticSystem;
+    shxl:index 23;
+    skos:definition "The language of the dataset."@en;
+    sh:nodeKind sh:BlankNode;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path dct:language
+.
+profile:Dataset_modified rdf:type sh:PropertyShape;
+    rdfs:label "modified"@en;
+    sh:name "dct:modified"^^xsd:string;
+    sh:datatype xsd:date;
+    sh:class rdfs:Literal;
+    shxl:index 22;
+    skos:definition "Most recent date on which the dataset was changed, updated or modified."@en;
+    sh:nodeKind sh:BlankNode;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path dct:modified
+.
+profile:Dataset_publisher rdf:type sh:PropertyShape;
+    rdfs:label "publisher"@en;
+    sh:name "dct:publisher"^^xsd:string;
+    sh:class foaf:Agent;
+    shxl:index 24;
+    skos:definition "An entity responsible for making the dataset available."@en;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path dct:publisher
+.
+profile:Dataset_spatial rdf:type sh:PropertyShape;
+    rdfs:label "spatial"@en;
+    sh:name "dct:spatial"^^xsd:string;
+    sh:class dct:Location;
+    shxl:index 27;
+    skos:definition "Spatial coverage of the dataset."@en;
+    sh:nodeKind sh:BlankNode;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path dct:spatial
+.
+profile:Dataset_temporal rdf:type sh:PropertyShape;
+    rdfs:label "temporal"@en;
+    sh:name "dct:temporal"^^xsd:string;
+    sh:class dct:PeriodOfTime;
+    shxl:index 28;
+    skos:definition "The temporal period that the dataset covers."@en;
+    sh:nodeKind sh:BlankNode;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path dct:temporal
+.
+profile:Dataset_theme rdf:type sh:PropertyShape;
+    rdfs:label "theme"@en;
+    sh:name "dcat:theme"^^xsd:string;
+    sh:class skos:Concept;
+    shxl:index 29;
+    skos:definition "The main category of the dataset. A dataset can have multiple themes."@en;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path dcat:theme
+.
+profile:Dataset_title rdf:type sh:PropertyShape;
+    rdfs:label "title"@en;
+    sh:name "dct:title"^^xsd:string;
+    sh:datatype xsd:string;
+    sh:class rdfs:Literal;
+    shxl:index 19;
+    skos:definition "A name given to the dataset."@en;
+    sh:nodeKind sh:BlankNode;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path dct:title
+.
+profile:Distribution rdf:type sh:NodeShape;
+    rdfs:label "Distribution"@en;
+    sh:name "dcat:Distribution"^^xsd:string;
+    skos:definition "Represents a specific available form of a dataset. Each dataset might be available in different forms, these forms might represent different formats of the dataset or different endpoints. Examples of distributions include a downloadable CSV file, an API or an RSS feed"@en;
+    sh:property profile:Distribution_accessURL;
+    sh:property profile:Distribution_bytesize;
+    sh:property profile:Distribution_description;
+    sh:property profile:Distribution_downloadURL;
+    sh:property profile:Distribution_format;
+    sh:property profile:Distribution_mediatype;
+    sh:property profile:Distribution_rights;
+    sh:property profile:Distribution_title;
+    sh:property profile:Distribution_issued;
+    sh:property profile:Distribution_license;
+    sh:property profile:Distribution_modified;
+    shxl:stereotype shxl:Uitwisselgegeven;
+    sh:targetClass dcat:Distribution
+.
+profile:Distribution_accessURL rdf:type sh:PropertyShape;
+    rdfs:label "access URL"@en;
+    sh:name "dcat:accessURL"^^xsd:string;
+    sh:class rdfs:Resource;
+    shxl:index 40;
+    skos:definition "A landing page, feed, SPARQL endpoint or other type of resource that gives access to the distribution of the dataset"@en;
+    sh:nodeKind sh:BlankNode;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path dcat:accessURL
+.
+profile:Distribution_bytesize rdf:type sh:PropertyShape;
+    rdfs:label "byte size"@en;
+    sh:name "dcat:byteSize"^^xsd:string;
+    sh:datatype xsd:decimal;
+    sh:class rdfs:Literal;
+    shxl:index 42;
+    skos:definition "The size of a distribution in bytes."@en;
+    sh:nodeKind sh:BlankNode;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path dcat:byteSize
+.
+profile:Distribution_description rdf:type sh:PropertyShape;
+    rdfs:label "description"@en;
+    sh:name "dct:description"^^xsd:string;
+    sh:datatype xsd:string;
+    sh:class rdfs:Literal;
+    shxl:index 35;
+    skos:definition "free-text account of the distribution."@en;
+    sh:nodeKind sh:BlankNode;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path dct:description
+.
+profile:Distribution_downloadURL rdf:type sh:PropertyShape;
+    rdfs:label "download URL"@en;
+    sh:name "dcat:downloadURL"^^xsd:string;
+    sh:class rdfs:Resource;
+    shxl:index 41;
+    skos:definition "A file that contains the distribution of the dataset in a given format"@en;
+    sh:nodeKind sh:BlankNode;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path dcat:downloadURL
+.
+profile:Distribution_format rdf:type sh:PropertyShape;
+    rdfs:label "format"@en;
+    sh:name "dct:format"^^xsd:string;
+    sh:class dct:MediaTypeOrExtent;
+    shxl:index 44;
+    skos:definition "The file format of the distribution."@en;
+    sh:nodeKind sh:BlankNode;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path dct:format
+.
+profile:Distribution_issued rdf:type sh:PropertyShape;
+    rdfs:label "issued"@en;
+    sh:name "dct:issued"^^xsd:string;
+    sh:datatype xsd:date;
+    sh:class rdfs:Literal;
+    shxl:index 36;
+    skos:definition "Date of formal issuance (e.g., publication) of the distribution."@en;
+    sh:nodeKind sh:BlankNode;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path dct:issued
+.
+profile:Distribution_license rdf:type sh:PropertyShape;
+    rdfs:label "license"@en;
+    sh:name "dct:license"^^xsd:string;
+    sh:class dct:LicenseDocument;
+    shxl:index 38;
+    skos:definition "This links to the license document under which the distribution is made available."@en;
+    sh:nodeKind sh:BlankNode;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path dct:license
+.
+profile:Distribution_mediatype rdf:type sh:PropertyShape;
+    rdfs:label "media type"@en;
+    sh:name "dcat:mediaType"^^xsd:string;
+    sh:class dct:MediaTypeOrExtent;
+    shxl:index 43;
+    skos:definition "The media type of the distribution as defined by IANA."@en;
+    sh:nodeKind sh:BlankNode;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path dcat:mediaType
+.
+profile:Distribution_modified rdf:type sh:PropertyShape;
+    rdfs:label "modified"@en;
+    sh:name "dct:modified"^^xsd:string;
+    sh:datatype xsd:date;
+    sh:class rdfs:Literal;
+    shxl:index 37;
+    skos:definition "Most recent date on which the distribution was changed, updated or modified."@en;
+    sh:nodeKind sh:BlankNode;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path dct:modified
+.
+profile:Distribution_rights rdf:type sh:PropertyShape;
+    rdfs:label "rights"@en;
+    sh:name "dct:rights"^^xsd:string;
+    sh:class dct:RightsStatement;
+    shxl:index 39;
+    skos:definition "Information about rights held in and over the distribution."@en;
+    sh:nodeKind sh:BlankNode;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path dct:rights
+.
+profile:Distribution_title rdf:type sh:PropertyShape;
+    rdfs:label "title"@en;
+    sh:name "dct:title"^^xsd:string;
+    sh:datatype xsd:string;
+    sh:class rdfs:Literal;
+    shxl:index 34;
+    skos:definition "A name given to the distribution."@en;
+    sh:nodeKind sh:BlankNode;
+    shxl:cardinality "0..n"^^xsd:string;
+    sh:path dct:title
+.
+profile:Document rdf:type sh:NodeShape;
+    rdfs:label "Document"@en;
+    sh:name "foaf:Document"^^xsd:string;
+    shxl:stereotype shxl:Datatype;
+    sh:targetClass foaf:Document
+.
+profile:Frequency rdf:type sh:NodeShape;
+    rdfs:label "Frequency"@en;
+    sh:name "dct:Frequency"^^xsd:string;
+    shxl:stereotype shxl:Datatype;
+    sh:targetClass dct:Frequency
+.
+profile:Kind rdf:type sh:NodeShape;
+    rdfs:label "Kind"@en;
+    sh:name "vcard:Kind"^^xsd:string;
+    shxl:stereotype shxl:Datatype;
+    sh:targetClass <http://www.w3.org/2006/vcard/ns#Kind>
+.
+profile:Licensedocument rdf:type sh:NodeShape;
+    rdfs:label "License document"@en;
+    sh:name "dct:LicenseDocument"^^xsd:string;
+    shxl:stereotype shxl:Datatype;
+    sh:targetClass dct:LicenseDocument
+.
+profile:Linguisticsystem rdf:type sh:NodeShape;
+    rdfs:label "Linguistic system"@en;
+    sh:name "dct:LinguisticSystem"^^xsd:string;
+    shxl:stereotype shxl:Datatype;
+    sh:targetClass dct:LinguisticSystem
+.
+profile:Literal rdf:type sh:NodeShape;
+    rdfs:label "Literal"@en;
+    sh:name "rdfs:Literal"^^xsd:string;
+    shxl:stereotype shxl:Datatype;
+    sh:targetClass rdfs:Literal
+.
+profile:Location rdf:type sh:NodeShape;
+    rdfs:label "Location"@en;
+    sh:name "dct:Location"^^xsd:string;
+    shxl:stereotype shxl:Datatype;
+    sh:targetClass dct:Location
+.
+profile:MediaTypeOrExtent rdf:type sh:NodeShape;
+    rdfs:label "MediaTypeOrExtent"@en;
+    sh:name "dct:MediaTypeOrExtent"^^xsd:string;
+    shxl:stereotype shxl:Datatype;
+    sh:targetClass dct:MediaTypeOrExtent
+.
+profile:Organization rdf:type sh:NodeShape;
+    rdfs:label "Organization"@en;
+    sh:name "foaf:Organization"^^xsd:string;
+    shxl:parent "foaf:Agent"^^xsd:string;
+    skos:definition "An organization."@en;
+    shxl:stereotype shxl:Referentiegegeven;
+    sh:targetClass foaf:Organization
+.
+profile:Periodoftime rdf:type sh:NodeShape;
+    rdfs:label "Period of time"@en;
+    sh:name "dct:PeriodOfTime"^^xsd:string;
+    shxl:stereotype shxl:Datatype;
+    sh:targetClass dct:PeriodOfTime
+.
+profile:Person rdf:type sh:NodeShape;
+    rdfs:label "Person"@en;
+    sh:name "foaf:Person"^^xsd:string;
+    shxl:parent "foaf:Agent"^^xsd:string;
+    skos:definition "A person."@en;
+    shxl:stereotype shxl:Referentiegegeven;
+    sh:targetClass foaf:Person
+.
+profile:Resource rdf:type sh:NodeShape;
+    rdfs:label "Resource"@en;
+    sh:name "rdfs:Resource"^^xsd:string;
+    shxl:stereotype shxl:Datatype;
+    sh:targetClass rdfs:Resource
+.
+profile:RightsStatement rdf:type sh:NodeShape;
+    rdfs:label "RightsStatement"@en;
+    sh:name "dct:RightsStatement"^^xsd:string;
+    shxl:stereotype shxl:Datatype;
+    sh:targetClass dct:RightsStatement
+.
+dcat:Dataset rdf:type rdfs:Class;
+    rdfs:subClassOf <http://purl.org/dc/dcmitype/Dataset>
+.
+foaf:Organization rdf:type rdfs:Class;
+    rdfs:subClassOf foaf:Agent
+.
+foaf:Person rdf:type rdfs:Class;
+    rdfs:subClassOf foaf:Agent
+.
