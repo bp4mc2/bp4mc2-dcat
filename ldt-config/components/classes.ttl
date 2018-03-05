@@ -149,8 +149,10 @@ stage:ProfielClasses	a	elmo:Representation;
     where {
       graph containerlocal:profiel {
         ?shape a sh:NodeShape.
-        ?shape sh:targetClass ?shapeclass
-        BIND (replace(str(?shapeclass),"^([^ ]+)(#|/)([^#/]+)","$1$2") as ?prefix)
+        OPTIONAL {
+          ?shape sh:targetClass ?shapeclass
+          BIND (replace(str(?shapeclass),"^([^ ]+)(#|/)([^#/]+)","$1$2") as ?prefix)
+        }
         OPTIONAL {
           ?shape shxl:stereotype ?stereotype.
           ?stereotype shxl:index ?index

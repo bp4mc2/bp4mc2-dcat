@@ -1,0 +1,39 @@
+@prefix elmo: <http://bp4mc2.org/elmo/def#>.
+@prefix html: <http://www.w3.org/1999/xhtml/vocab#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix void: <http://rdfs.org/ns/void#>.
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
+@prefix stage: <http://localhost:8080/modeling/stage#>.
+
+stage:DocValues	a	elmo:Representation;
+	elmo:url-pattern	"/query/doc-values$";
+	elmo:contains	stage:Menu;
+  elmo:fragment [
+    elmo:applies-to "item";
+    elmo:name "SUBJECT";
+  ];
+  elmo:query '''
+    prefix containerlocal: <http://localhost:8080/modeling/container/>
+    select *
+    where {
+      graph containerlocal:profiel {
+        ?item skos:inScheme ?scheme.
+        ?scheme skos:prefLabel ?voc.
+        FILTER (lang(?voc)="en")
+        OPTIONAL {
+          ?item skos:notation ?value
+        }
+        OPTIONAL {
+          ?item dc:identifier ?identifier
+        }
+        ?item skos:prefLabel ?label_en.
+        FILTER (lang(?label_en)="en")
+        OPTIONAL {
+          ?item skos:prefLabel ?label_nl.
+          FILTER (lang(?label_nl)="nl")
+        }
+      }
+    }
+  '''
+.
