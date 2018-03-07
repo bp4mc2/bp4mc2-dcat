@@ -1,0 +1,1195 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix shxl: <http://bp4mc2.org/def/shacl-xl#>.
+@prefix guideline: <http://linkeddata.ordina.nl/id/guideline/>.
+guideline:ConformanceClass1 rdf:type skos:Concept;
+    rdfs:label "Conformance Class 1"@en;
+    rdfs:comment '''**Title**: INSPIRE data sets and data set series baseline metadata
+
+**Conformance subject**: Metadata records describing an INSPIRE data set or data set series encoded in ISO 19139 based XML format.
+
+A metadata record fulfilling all the TG Requirements of this Conformance Class is compliant with the INSPIRE metadata Implementation Rules for data sets and data set series as defined in [**Regulation 1205/2008**].
+
+This Conformance Class includes TG Requirements C.1 – C.22 and TG Requirements 1.1 – 1.11 from this specification.'''^^xsd:string;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#Dataset>;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 35;
+    skos:notation "metadata/2.0/datasets-and-series"^^xsd:string
+.
+guideline:ConformanceClass2 rdf:type skos:Concept;
+    rdfs:label "Conformance Class 2"@en;
+    rdfs:comment '''**Title**: INSPIRE data sets and data set series interoperability metadata
+
+**Conformance subject**: Metadata records describing INSPIRE data sets or data set series encoded in ISO 19139 based XML format.
+
+Metadata record fulfilling all the Requirements of this Conformance Class is compliant with the INSPIRE metadata Implementation Rules for data sets and data set series as defined in [Regulation 1205/2008] and Article 13 "Metadata required for Interoperability" of [Regulation 1089/2010] and its amendment [Regulation 1253/2013].
+
+This Conformance Class includes TG Requirements C.1 – C.22, TG Requirements 1.1 – 1.11 and TG Requirements 2.1 – 2.8 from this specification.'''^^xsd:string;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#Dataset>;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 61;
+    skos:notation "metadata/2.0/isdss"^^xsd:string
+.
+guideline:ConformanceClass3 rdf:type skos:Concept;
+    rdfs:label "Conformance Class 3"@en;
+    rdfs:comment '''**Title**: INSPIRE Spatial Data Service baseline metadata
+
+**Conformance subject**: Metadata records describing INSPIRE Spatial Data Services encoded in ISO 19139 based XML format.
+
+Metadata record fulfilling all the Requirements of this Conformance Class is compliant with the INSPIRE metadata Implementation Rules for Spatial Data Services as defined in [**Regulation 1205/2008**].
+
+This Conformance Class includes TG Requirements C.1 – C.22 and TG Requirements 3.1 – 3.8 of this specification.'''^^xsd:string;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#Service>;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 77;
+    skos:notation "metadata/2.0/sds"^^xsd:string
+.
+guideline:ConformanceClass4 rdf:type skos:Concept;
+    rdfs:label "Conformance Class 4"@en;
+    rdfs:comment '''**Title**: INSPIRE Network Services metadata
+
+**Conformance subject**: metadata record describing an INSPIRE Network Service encoded in ISO 19139 based XML format.
+
+Metadata record fulfilling all the Requirements of this Conformance Class is compliant with the INSPIRE metadata Implementation Rules for Spatial Data Services as defined in [**Regulation 1205/2008**]. (The [Regulation 976/2009] containing Implementing Rules for Network services does not contain any additional requirements for metadata. The requirements in this Requirements Class originate from the Network Services specific parts of [Regulation 1205/2008].)
+
+This Conformance Class includes TG Requirements C.1 – C.22, TG Requirements 3.1 – 3.8, and TG Requirement 4.1 of this specification.'''^^xsd:string;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#Service>;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 91;
+    skos:notation "metadata/2.0/ns"^^xsd:string
+.
+guideline:ConformanceClass5 rdf:type skos:Concept;
+    rdfs:label "Conformance Class 5"@en;
+    rdfs:comment '''**Title**: INSPIRE Invocable Spatial Data Services metadata
+
+**Conformance subject**: metadata record describing a Spatial Data Service encoded in ISO 19139 based XML format.
+
+Metadata record fulfilling all the Requirements of this Conformance Class is compliant with the INSPIRE metadata Implementation Rules for Spatial Data Services as defined in [**Regulation 1205/2008**], and the Article 14b "Interoperability arrangements and harmonisation requirements for invocable spatial data services" of amendment [Regulation 1312/2014] to [Regulation 1089/2010] adding its Annex V.
+
+This Conformance Class includes TG Requirements C.1 – C.22, TG Requirements 3.1 – 3.8, and TG Requirements 5.1 – 5.5 of this specification.'''^^xsd:string;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#Service>;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 96;
+    skos:notation "metadata/2.0/sds-invocable"^^xsd:string
+.
+guideline:ConformanceClass6 rdf:type skos:Concept;
+    rdfs:label "Conformance Class 6"@en;
+    rdfs:comment '''**Title: INSPIRE Interoperable Spatial Data Services metadata**
+**Conformance subject**: metadata record describing a Spatial Data Service encoded in ISO 19139 based XML format.
+
+Metadata record fulfilling all the Requirements of this Conformance Class is compliant with the INSPIRE metadata Implementation Rules for Spatial Data Services as defined in [**Regulation 1205/2008**], and the Article 14b "Interoperability arrangements and harmonisation requirements for invocable spatial data services" of amendment [Regulation 1312/2014] to [Regulation 1089/2010] adding its Annex VI.
+
+This Conformance Class includes TG Requirements C.1 – C.22, TG Requirements 3.1 – 3.8, TG Requirements 5.1 – 5.5, and TG Requirements 6.1 – 6.5 of this specification.'''^^xsd:string;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#Service>;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 106;
+    skos:notation "metadata/2.0/sds-interoperable"^^xsd:string
+.
+guideline:ConformanceClass7 rdf:type skos:Concept;
+    rdfs:label "Conformance Class 7"@en;
+    rdfs:comment '''**Title: INSPIRE Harmonised Spatial Data Services metadata**
+
+**Conformance subject**: metadata record describing a Spatial Data Service encoded in ISO 19139 based XML format.
+
+Metadata record fulfilling all the Requirements of this Conformance Class is compliant with the INSPIRE metadata Implementation Rules for Spatial Data Services as defined in [**Regulation 1205/2008**], and the Article 14b "Interoperability arrangements and harmonisation requirements for invocable spatial data services" of amendment [Regulation 1312/2014] to [Regulation 1089/2010] adding its Annex VII.
+
+This Conformance Class includes TG Requirements C.1 – C.22, TG Requirements 3.1 – 3.8, TG Requirements 5.1 – 5.5, TG Requirements 6.1 – 6.5, and TG Requirements 7.1 – 7.3 of this specification.'''^^xsd:string;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#Service>;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 112;
+    skos:notation "metadata/2.0/sds-harmonised"^^xsd:string
+.
+guideline:TGRecommendation1.1 rdf:type skos:Concept;
+    rdfs:label "TG Recommendation 1.1"@en;
+    rdfs:comment '''The `gmd:MD_DataIdentification` elements should contain a unique identifier of the element itself to be used for referring from within the Spatial Data Service metadata records to indicate a coupled resource.
+
+This identifier should be provided as the value of attribute id of `gmd:MD_DataIdentification` element.
+
+This identifier should be persistent for a particular data set or service, and unique within the all the id elements of the metadata record document and other XML documents it may appear in (like GetRecords responses of Discovery Service). The persistence of the id attributes is important to prevent breaking the coupled resource links between the service metadata and the data set metadata.'''^^xsd:string;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#UniqueResourceIdentifier>;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 38;
+    skos:notation "metadata/2.0/rec/datasets-and-series/md-element-id"^^xsd:string
+.
+guideline:TGRecommendation1.10 rdf:type skos:Concept;
+    rdfs:label "TG Recommendation 1.10"@en;
+    rdfs:comment "If providing the specification title as an `gmx:Anchor` element (as recommended in TG Recommendation C.10), the following URI should be used to refer to [Regulation 1089/2010]: [http://data.europa.eu/eli/reg/2010/1089](http://data.europa.eu/eli/reg/2010/1089)."^^xsd:string;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 56;
+    skos:notation "metadata/2.0/rec/datasets-and-series/uri-for-regulation-1089-2010"^^xsd:string
+.
+guideline:TGRecommendation1.11 rdf:type skos:Concept;
+    rdfs:label "TG Recommendation 1.11"@en;
+    rdfs:comment "If declaring conformity to an abstract test suite or a conformance class using an `gmx:Anchor` element (as recommended in TG Recommendation C.11), the URI identifying the abstract test suite or a conformance class should be used in the `xlink:href` attribute of the specification title element."^^xsd:string;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 57;
+    skos:notation "metadata/2.0/rec/datasets-and-series/uris-for-ats-and-cc"^^xsd:string
+.
+guideline:TGRecommendation1.12 rdf:type skos:Concept;
+    rdfs:label "TG Recommendation 1.12"@en;
+    rdfs:comment "If a data provider has a procedure for the quality management of their spatial data set (series) then the appropriate ISO data quality elements and measures should be used to evaluate and report (in the metadata) the results in addition to the Lineage metadata element."^^xsd:string;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 59;
+    skos:notation "metadata/2.0/rec/datasets-and-series/use-iso-dq-elements-and-measures"^^xsd:string
+.
+guideline:TGRecommendation1.13 rdf:type skos:Concept;
+    rdfs:label "TG Recommendation 1.13"@en;
+    rdfs:comment "The use of abbreviations (including acronyms) should be avoided. If used, their meaning should be explained."^^xsd:string;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#Lineage>;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 60;
+    skos:notation "metadata/2.0/rec/datasets-and-series/lineage-avoid-acronyms"^^xsd:string
+.
+guideline:TGRecommendation1.1a rdf:type skos:Concept;
+    rdfs:label "TG Recommendation 1.1a"@en;
+    rdfs:comment "It is strongly recommended to use the `MD_Identifier` instead of the the `RS_Identifier` type and to encode the complete URI in the code element."^^xsd:string;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#UniqueResourceIdentifier>;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 40;
+    skos:notation "metadata/2.0/rec/datasets-and-series/use_md_identifier"^^xsd:string
+.
+guideline:TGRecommendation1.2 rdf:type skos:Concept;
+    rdfs:label "TG Recommendation 1.2"@en;
+    rdfs:comment '''It is recommended to make the unique resource identifier resolvable into a document providing information about described data set or data sets series. In the case of HTTP URIs (HTTP URIs in the text also include HTTPS URIs), the public DNS and the usual HTTP URI resolving mechanisms should be used for implementing this resolvability. For other types of URIs, a resolving service should be provided implementing similar functionality.
+
+This document retrieved as the result of the resolving process may be, but is not required to be, the metadata description of the described resource. It is also recommended that viewing of the provided document does not require user authentication, authorisation or specialised viewing tools beyond a typical web browser.'''^^xsd:string;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#UniqueResourceIdentifier>;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 41;
+    skos:notation "metadata/2.0/rec/datasets-and-series/resolvable-uid"^^xsd:string
+.
+guideline:TGRecommendation1.3 rdf:type skos:Concept;
+    rdfs:label "TG Recommendation 1.3"@en;
+    rdfs:comment '''The providers of unique resource identifiers should take great care in ensuring that the issued identifiers remain valid and available for the entire availability period of the identified resource, and preferably also after the data set or the data set series has been made unavailable.
+
+If a published unique identifier for a resource must be changed during the availability time of the resource, both the old and the new identifier should resolve to the same document described in TG Recommendation 1.2. If this is not possible, the old identifier should resolve to document providing information about the change in the unique identifier and provide the new unique identifier of the described resource.
+
+Assigning a published unique resource identifier to another or an extensively restructured data set or data set series should be avoided. Instead a new unique resource identifier should be assigned to the data set in these cases.
+
+The persistence and process of preventing breaking the identifier resolvability is crucial for keeping the links between the services and the provided data sets functional.'''^^xsd:string;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#UniqueResourceIdentifier>;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 42;
+    skos:notation "metadata/2.0/rec/datasets-and-series/persistent-uid"^^xsd:string
+.
+guideline:TGRecommendation1.4 rdf:type skos:Concept;
+    rdfs:label "TG Recommendation 1.4"@en;
+    rdfs:comment '''For references to the GEMET – INSPIRE themes controlled vocabulary, the title element of the thesaurusName should be encoded using the `gmd:title/gmx:Anchor` element, with the `xlink:href` attribute referring to [http://www.eionet.europa.eu/gemet/inspire_themes](http://www.eionet.europa.eu/gemet/inspire_themes).
+
+The INSPIRE themes keywords should be encoded using the `gmd:keyword/gmx:Anchor` element, with the `xlink:href` attribute referring to the URI of the theme defined in the GEMET – INSPIRE themes controlled vocabulary.'''^^xsd:string;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#KeywordValue>;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 44;
+    skos:notation "metadata/2.0/rec/datasets-and-series/use-anchors-for-gemet"^^xsd:string
+.
+guideline:TGRecommendation1.5 rdf:type skos:Concept;
+    rdfs:label "TG Recommendation 1.5"@en;
+    rdfs:comment "In addition to the required keywords from the GEMET - INSPIRE themes vocabulary, it is recommended to provide at least two other keywords describing the data set or data set series."^^xsd:string;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#KeywordValue>;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 45;
+    skos:notation "metadata/2.0/rec/datasets-and-series/additional-keywords"^^xsd:string
+.
+guideline:TGRecommendation1.6 rdf:type skos:Concept;
+    rdfs:label "TG Recommendation 1.6"@en;
+    rdfs:comment "If the spatial resolution is an interval, both bounding values of the interval should be given (either as equivalent scale or resolution distance) as two instances of the `gmd:spatialResolution/gmd:MD_Resolution` element."^^xsd:string;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#SpatialResolutionDistance>;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#SpatialResolutionEquivalentScale>;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 47;
+    skos:notation "metadata/2.0/rec/datasets-and-series/spatial-resolution-interval"^^xsd:string
+.
+guideline:TGRecommendation1.7 rdf:type skos:Concept;
+    rdfs:label "TG Recommendation 1.7"@en;
+    rdfs:comment "The name of the language(s) of the described resource in the language of the metadata should be used as the text content of the `gmd:LanguageCode` element."^^xsd:string;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#ResourceLanguage>;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 49;
+    skos:notation "metadata/2.0/rec/datasets-and-series/language-name"^^xsd:string
+.
+guideline:TGRecommendation1.8 rdf:type skos:Concept;
+    rdfs:label "TG Recommendation 1.8"@en;
+    rdfs:comment '''The `gmd:name`, `gmd:description`, and `gmd:function/gmd:CI_OnLineFunctionCode` child elements of `gmd:CI_OnlineResource` element containing the given `gmd:linkage` element should also be provided, if possible, to give additional information about the provided URL link. The `gmd:name` and the `gmd:description` elements should contain Non-empty Free Text Elements. If provided, the `gmd:CI_OnLineFunctionCode` element should point to one of the values of the ISO 19139 code list CI_OnLineFunctionCode (Attribute `codeList` with value "http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_OnLineFunctionCode".).'''^^xsd:string;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#ResourceLocator>;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 52;
+    skos:notation "metadata/2.0/rec/datasets-and-series/resource-locator-additional-info"^^xsd:string
+.
+guideline:TGRecommendation1.9 rdf:type skos:Concept;
+    rdfs:label "TG Recommendation 1.9"@en;
+    rdfs:comment '''The URL provided as the value of the `gmd:transferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd: linkage/gmd:URL` element should point to one of following type of resources:
+
+- direct access for downloading the described data set,
+- a service metadata (capabilities) document of a Spatial Data Service used for providing this data set,
+- a service WSDL (W3C Web Services Description Language, https://www.w3.org/TR/wsdl) document of a Spatial Data Service used for providing this data set (if SOAP (W3C Simple Object Access Protocol, or more recently, just SOAP, https://www.w3.org/TR/soap/) binding is available),
+- a client application that directly accesses the described data set, or
+- a web page with further instructions for accessing the described data set.'''^^xsd:string;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#ResourceLocator>;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 53;
+    skos:notation "metadata/2.0/rec/datasets-and-series/resource-locator-url"^^xsd:string
+.
+guideline:TGRecommendation2.1 rdf:type skos:Concept;
+    rdfs:label "TG Recommendation 2.1"@en;
+    rdfs:comment "If the data set is provided through a download service that provides coordinate transformation functionality (i.e. allows to provide the data set in any coordinate reference system supported by the service), the source coordinate reference system(s) of the data set should be documented in the metadata."^^xsd:string;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#SpatialDatasetCoordinateReferenceSystem>;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 63;
+    skos:notation "metadata/2.0/rec/isdss/source-crs"^^xsd:string
+.
+guideline:TGRecommendation2.1a rdf:type skos:Concept;
+    rdfs:label "TG Recommendation 2.1a"@en;
+    rdfs:comment "If a commonly known unique identifier for the referred temporal reference system is available in a common register, the registered identifier should be used as the value of the `gmd:referenceSystemInfo/gmd:MD_ReferenceSystem/gmd:referenceSystemIdentifier/gmd:RS_Identifier/gmd:code element`."^^xsd:string;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#SpatialDatasetTemporalReferenceSystem>;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 67;
+    skos:notation "metadata/2.0/rec/isdss/"^^xsd:string
+.
+guideline:TGRecommendation2.2 rdf:type skos:Concept;
+    rdfs:label "TG Recommendation 2.2"@en;
+    rdfs:comment "Also spatial reference systems using geographic identifiers should be identified using the element `gmd:referenceSystemInfo/gmd:MD_ReferenceSystem/ gmd:referenceSystemIdentifier/gmd:RS_Identifier/gmd:code`. A `gmx:Anchor` element should be used, whose `xlink:href` attribute refers to a URI that provides further information about the spatial reference systems using geographic identifiers."^^xsd:string;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#SpatialDatasetCoordinateReferenceSystem>;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 65;
+    skos:notation "metadata/2.0/rec/isdss/srs-using-geographic-identifiers"^^xsd:string
+.
+guideline:TGRecommendation2.2b rdf:type skos:Concept;
+    rdfs:label "TG Recommendation 2.2b"@en;
+    rdfs:comment "The name of the topology consistency measure should be provided using the `gmd:nameOfMeasure` child element of each of the `gmd:DQ_QuantitativeResult` elements. This element is a Non-empty Free Text Element. In the case where the result reflects more than one measure, a separate `gmd:nameOfMeasure` should be given to identify each included measure."^^xsd:string;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 72;
+    skos:notation "metadata/2.0/rec/isdss/topological-consistency-measure-name"^^xsd:string
+.
+guideline:TGRecommendation2.3 rdf:type skos:Concept;
+    rdfs:label "TG Recommendation 2.3"@en;
+    rdfs:comment '''It is recommended to provide a short description of the evaluation method used for topological consistency check using the `gmd:evaluationMethodDescription` child element of `gmd:DQ_QuantitativeResult` element. This element is a Non-empty Free Text Element.
+
+If applicable, the evaluation method type should be declared using the `gmd:evaluationMethodType/gmd:DQ_EvaluationMethodTypeCode` child element of `gmd:DQ_QuantitativeResult` element referring to one of the values of ISO 19139 code list DQ_EvaluationMethodTypeCode (Attribute `codeList` with value "http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#DQ_EvaluationMethodTypeCode").'''^^xsd:string;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 73;
+    skos:notation "metadata/2.0/rec/isdss/topological-consistency-evaluation-method"^^xsd:string
+.
+guideline:TGRecommendation2.4 rdf:type skos:Concept;
+    rdfs:label "TG Recommendation 2.4"@en;
+    rdfs:comment "It is recommended to provide the date of evaluating the topological consistency check using the `gmd:dateTime/gco:DateTime` child element of `gmd:DQ_QuantitativeResult` element. The value shall be expressed using Gregorian calendar and in accordance with [ISO 8601] date and time precision."^^xsd:string;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 74;
+    skos:notation "metadata/2.0/rec/isdss/topological-consistency/date"^^xsd:string
+.
+guideline:TGRecommendation2.5 rdf:type skos:Concept;
+    rdfs:label "TG Recommendation 2.5"@en;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#TherecommendedmetadataelementsshouldbeincludedtometadatadescribingaspatialdatasetorspatialdatasetseriesrelatedtotheannexthemesspecifiedfortherelevantelementinAnnexC.7.>;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 76;
+    skos:notation "metadata/2.0/rec/isdss/recommended-theme-specific-md-elements"^^xsd:string
+.
+guideline:TGRecommendation3.1 rdf:type skos:Concept;
+    rdfs:label "TG Recommendation 3.1"@en;
+    rdfs:comment "If the spatial resolution is an interval, both bounding values of the interval should be given."^^xsd:string;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 81;
+    skos:notation "metadata/2.0/rec/sds/spatial-resolution-interval"^^xsd:string
+.
+guideline:TGRecommendation3.2 rdf:type skos:Concept;
+    rdfs:label "TG Recommendation 3.2"@en;
+    rdfs:comment "To make the reference to the keywords values in [Regulation 1205/2008], Part D 4 clear, these keywords should be expressed as keywords from a controlled vocabulary and using `gmx:Anchor` elements with references to the Classification of spatial data services code list in the INSPIRE registry ([http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceCategory](http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceCategory)). The `gmd:thesaurusName` element of the enclosing `gmd:MD_Keywords` element should be added and it should contain the citation to the [Regulation 1205/2008], Part D 4 and its publication date according to section 2.4.5."^^xsd:string;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 83;
+    skos:notation "metadata/2.0/rec/sds/sds-category-cv"^^xsd:string
+.
+guideline:TGRecommendation3.3 rdf:type skos:Concept;
+    rdfs:label "TG Recommendation 3.3"@en;
+    rdfs:comment "In addition to the required keyword from the categories from part D 4 of the [Regulation 1205/2008], it is suggested to choose a minimum of two additional keywords describing the service or the data sets provided by it."^^xsd:string;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 84;
+    skos:notation "metadata/2.0/rec/sds/additional-keywords"^^xsd:string
+.
+guideline:TGRecommendation3.4 rdf:type skos:Concept;
+    rdfs:label "TG Recommendation 3.4"@en;
+    rdfs:comment '''It is recommended that in addition to the mandatory `gmd:linkage` element also `gmd:name`, `gmd:description`, and `gmd:function/gmd:CI_OnLineFunctionCode` child elements of `gmd:CI_OnlineResource` element are provided to give additional information about the provided URL link. The gmd:name and the `gmd:description` elements should contain Non-empty Free Text Elements.
+
+If provided, the `gmd:CI_OnLineFunctionCode` element should point to one of the values of the ISO 19139 code list CI_OnLineFunctionCode (Attribute `codeList` with value "http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_OnLineFunctionCode".).'''^^xsd:string;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 88;
+    skos:notation "metadata/2.0/rec/sds/resource-locator-additional-info"^^xsd:string
+.
+guideline:TGRecommendation3.5 rdf:type skos:Concept;
+    rdfs:label "TG Recommendation 3.5"@en;
+    rdfs:comment '''The URL provided as the value of the `gmd:transferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd: linkage/gmd:URL` element should point to one of following type of resources:
+
+- a service metadata (capabilities) document of described Spatial Data Service,
+- a service WSDL (W3C Web Services Description Language, https://www.w3.org/TR/wsdl) document of the described Spatial Data Service (if SOAP (W3C Simple Object Access Protocol, or more recently, just SOAP, https://www.w3.org/TR/soap/) binding is available), or
+- a web page with further instructions for accessing the described service.'''^^xsd:string;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 89;
+    skos:notation "metadata/2.0/rec/sds/resource-type-url-target"^^xsd:string
+.
+guideline:TGRecommendation4.1 rdf:type skos:Concept;
+    rdfs:label "TG Recommendation 4.1"@en;
+    rdfs:comment '''Metadata for an INSPIRE Network Services should declare the conformity to the Network Services Implementation Rules, and it should be encoded using `gmd:report/gmd:DQ_DomainConsistency/gmd:result/ gmd:DQ_ConformanceResult` element as specified in the TG Requirement C.20 (TG Requirement C.20: degree of conformity using gmd:DQ_ConformanceResult). This element should contain a citation for the [Regulation 976/2009] encoded according to TG Requirement C.21 (TG Requirement C.21: gmd:DQ_ConformanceResult shall include a citation of the specification document, ..). The degree of conformity should be encoded according to TG Requirement C.22 (TG Requirement C.22: .. gmd:DQ_ConformanceResult .. shall also include the degree of declared conformity..).
+
+The multiplicity of the `gmd:report/gmd:DQ_DomainConsistency/gmd:result/ gmd:DQ_ConformanceResult` element used for the above purpose is 1.'''^^xsd:string;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 93;
+    skos:notation "metadata/2.0/rec/ns/conformity"^^xsd:string
+.
+guideline:TGRecommendation4.2 rdf:type skos:Concept;
+    rdfs:label "TG Recommendation 4.2"@en;
+    rdfs:comment "If providing the specification title as an `gmx:Anchor` element (as recommended in TG Recommendation C.11), the following URI should be used to refer to [Regulation 976/2009]: [http://data.europa.eu/eli/reg/2009/976](http://data.europa.eu/eli/reg/2009/976)."^^xsd:string;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 94;
+    skos:notation "metadata/2.0/rec/ns/uri-for-regulation-976-2009"^^xsd:string
+.
+guideline:TGRecommendation4.3 rdf:type skos:Concept;
+    rdfs:label "TG Recommendation 4.3"@en;
+    rdfs:comment "If declaring conformity to an abstract test suite or a conformance class using an `gmx:Anchor` element (as recommended in TG Recommendation C.11), the URI identifying the abstract test suite or a conformance class should be used in the `xlink:href` attribute of the specification title element."^^xsd:string;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 95;
+    skos:notation "metadata/2.0/rec/ns/uris-for-ats-and-cc"^^xsd:string
+.
+guideline:TGRecommendation5.4 rdf:type skos:Concept;
+    rdfs:label "TG Recommendation 5.4"@en;
+    rdfs:comment '''It is recommended that in addition to the mandatory `gmd:linkage` and `gmd:description` elements, also the `gmd:name`, the `gmd:function/gmd:CI_OnLineFunctionCode` child elements of `gmd:CI_OnlineResource` element are provided to give additional information about the provided URL link. The `gmd:name` element should contain a Non-empty Free Text Element.
+
+If provided, the `gmd:CI_OnLineFunctionCode` element should point to value "information" of the ISO 19139 code list `CI_OnLineFunctionCode` (Attribute `codeList` with value "http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_OnLineFunctionCode" and the attribute `codeListValue` with "information".).'''^^xsd:string;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 99;
+    skos:notation "metadata/2.0/rec/sds-invocable/access-point-additional-info"^^xsd:string
+.
+guideline:TGRecommendation5.5 rdf:type skos:Concept;
+    rdfs:label "TG Recommendation 5.5"@en;
+    rdfs:comment "If providing the specification title as an gmx:Anchor element (as recommended in TG Recommendation C.11), the following URI should be used to refer to [Regulation 1089/2010]: [http://data.europa.eu/eli/reg/2010/1089](http://data.europa.eu/eli/reg/2010/1089)."^^xsd:string;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 101;
+    skos:notation "metadata/2.0/rec/sds-invocable/uri-for-regulation-1089-2010"^^xsd:string
+.
+guideline:TGRecommendation5.6 rdf:type skos:Concept;
+    rdfs:label "TG Recommendation 5.6"@en;
+    rdfs:comment "If declaring conformity to an abstract test suite or a conformance class using an `gmx:Anchor` element (as recommended in TG Recommendation C.11), the URI identifying the abstract test suite or a conformance class should be used in the `xlink:href` attribute of the specification title element."^^xsd:string;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 102;
+    skos:notation "metadata/2.0/rec/datasets-and-series/uris-for-ats-and-cc"^^xsd:string
+.
+guideline:TGRecommendation5.7 rdf:type skos:Concept;
+    rdfs:label "TG Recommendation 5.7"@en;
+    rdfs:comment "In order to be machine readable, the specification title element should be provided using the `gmx:Anchor` element referring to an official publication URL address of the particular specification. The text content of this element should contain the official title of the referred technical specification."^^xsd:string;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 105;
+    skos:notation "metadata/2.0/rec/sds-invocable/specification-title-anchor"^^xsd:string
+.
+guideline:TGRecommendationC.1 rdf:type skos:Concept;
+    rdfs:label "TG Recommendation C.1"@en;
+    rdfs:comment "The metadata record should contain a globally unique and persistent `fileIdentifier` element."^^xsd:string;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 5;
+    skos:notation "metadata/2.0/rec/common/fileIdentifier"^^xsd:string
+.
+guideline:TGRecommendationC.10 rdf:type skos:Concept;
+    rdfs:label "TG Recommendation C.10"@en;
+    rdfs:comment "For detailed information about the licensing of the resource it is recommended to provide a link to a license type (e.g. [http://creativecommons.org/licenses/by/3.0](http://creativecommons.org/licenses/by/3.0)), a website or to a document containing the necessary information."^^xsd:string;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#ConditionsApplyingToAccessAndUse>;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 29;
+    skos:notation "metadata/2.0/rec/common/licences"^^xsd:string
+.
+guideline:TGRecommendationC.11 rdf:type skos:Concept;
+    rdfs:label "TG Recommendation C.11"@en;
+    rdfs:comment "For references to well-known INSPIRE legal acts, technical guidance documents or conformance classes, the title element of the specification should be encoded using the `gmd:title/gmx:Anchor` element. The `xlink:href` attribute of the `gmx:Anchor` element should be used for referring to the URI of the specification."^^xsd:string;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#Conformity>;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 33;
+    skos:notation "metadata/2.0/rec/common/use-anchors-for-specifications"^^xsd:string
+.
+guideline:TGRecommendationC.1a rdf:type skos:Concept;
+    rdfs:label "TG Recommendation C.1a"@en;
+    rdfs:comment "The name of the language(s) of the described resource in the language of the metadata should be used as the text content of the `gmd:LanguageCode` element."^^xsd:string;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#MetadataLanguage>;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 7;
+    skos:notation "metadata/2.0/rec/common/metadata-language-name"^^xsd:string
+.
+guideline:TGRecommendationC.2 rdf:type skos:Concept;
+    rdfs:label "TG Recommendation C.2"@en;
+    rdfs:comment "The name of the organisation should be given in full, without abbreviations. It is recommended to use an email address of the organisation instead of personal email address."^^xsd:string;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#MetadataPointOfContact>;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 9;
+    skos:notation "metadata/2.0/rec/common/organisation-name"^^xsd:string
+.
+guideline:TGRecommendationC.3 rdf:type skos:Concept;
+    rdfs:label "TG Recommendation C.3"@en;
+    rdfs:comment '''The Resource title should be concise and clearly understandable. It should not contain unexplained acronyms or abbreviations. It is recommended a maximum length of 250 characters and keeping the similarity with the original title of the resource, in the sense of the 'official naming'.
+
+If the data or service is part of a larger project, it is recommended to indicate the Project at the end of the title, in brackets. In case of Project names, abbreviations are allowed, as long as the rest of the title follows the guidelines above and the abbreviation is spelled out immediately in the abstract.'''^^xsd:string;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#ResourceTitle>;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 12;
+    skos:notation "metadata/2.0/rec/common/resource-title"^^xsd:string
+.
+guideline:TGRecommendationC.4 rdf:type skos:Concept;
+    rdfs:label "TG Recommendation C.4"@en;
+    rdfs:comment '''The resource abstract is a succinct description that can include:
+
+- A brief summary with the most important details that summarise the data or service
+- Coverage: linguistic transcriptions of the extent or location in addition to the bounding box
+- Main attributes
+- Data sources
+- Legal references
+- Importance of the work
+
+The most important details of the description should be summarised in the first sentence or the first 256 characters.
+
+Unexplained acronyms should not be used.'''^^xsd:string;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#ResourceAbstract>;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 14;
+    skos:notation "metadata/2.0/rec/common/resource-abstract"^^xsd:string
+.
+guideline:TGRecommendationC.5 rdf:type skos:Concept;
+    rdfs:label "TG Recommendation C.5"@en;
+    rdfs:comment "The name of the organisation should be given in full, without abbreviations. It is recommended to use an email address of the organisation instead of personal email address."^^xsd:string;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#ResponsibleOrganisation>;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 16;
+    skos:notation "metadata/2.0/rec/common/responsible-organisation"^^xsd:string
+.
+guideline:TGRecommendationC.6 rdf:type skos:Concept;
+    rdfs:label "TG Recommendation C.6"@en;
+    rdfs:comment "In case of spatial data set, at least the date of the last revision of the spatial data set should be reported."^^xsd:string;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#DateOfLastRevision>;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 20;
+    skos:notation "metadata/2.0/rec/common/date-of-last-revision-dataset"^^xsd:string
+.
+guideline:TGRecommendationC.7 rdf:type skos:Concept;
+    rdfs:label "TG Recommendation C.7"@en;
+    rdfs:comment "If keyword values are made available as a collection of specific, well-defined terms (controlled vocabularies), those should be preferred over free-text terms."^^xsd:string;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#KeywordValue>;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 23;
+    skos:notation "metadata/2.0/rec/common/use-cvs"^^xsd:string
+.
+guideline:TGRecommendationC.8 rdf:type skos:Concept;
+    rdfs:label "TG Recommendation C.8"@en;
+    rdfs:comment "If the keywords from controlled vocabularies are used and the individual keywords have a specified canonical URI within that controlled vocabulary, these keywords should be encoded using the `gmd:keyword/gmx:Anchor` element. The `xlink:href` attribute of the `gmx:Anchor` element should be used for referring to the canonical URI of the keyword."^^xsd:string;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#KeywordValue>;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 24;
+    skos:notation "metadata/2.0/rec/common/use-anchors-for-cv-keywords"^^xsd:string
+.
+guideline:TGRecommendationC.9 rdf:type skos:Concept;
+    rdfs:label "TG Recommendation C.9"@en;
+    rdfs:comment "For references to well-known thesauri or controlled vocabularies, the title element of the thesaurusName should be encoded using the `gmd:title/gmx:Anchor` element. The `xlink:href` attribute of the `gmx:Anchor` element should be used for referring to the URI of the thesaurus or controlled vocabulary."^^xsd:string;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#KeywordValue>;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 25;
+    skos:notation "metadata/2.0/rec/common/use-anchors-for-thesauri"^^xsd:string
+.
+guideline:TGRequirement1.1 rdf:type skos:Concept;
+    rdfs:label "TG Requirement 1.1"@en;
+    rdfs:comment '''The resource type shall be declared as "dataset" or "series" using the first `gmd:hierarchyLevel` child element of `gmd:MD_Metadata`. The `gmd:hierarchyLevel` shall contain a `gmd:MD_ScopeCode` element (Attribute `codeList` with value "http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_ScopeCode" and the attribute `codeListValue` with value "dataset" or "series".).'''^^xsd:string;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#ResourceType>;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 36;
+    skos:notation "metadata/2.0/req/datasets-and-series/resource-type"^^xsd:string
+.
+guideline:TGRequirement1.10 rdf:type skos:Concept;
+    rdfs:label "TG Requirement 1.10"@en;
+    rdfs:comment "Metadata for an INSPIRE data set or data set series shall declare conformity to the Implementing Rules for interoperability of spatial data sets and services, and it shall be encoded using `gmd:report/gmd:DQ_DomainConsistency/gmd:result/gmd:DQ_ConformanceResult` element as specified in TG Requirement C.20 (TG Requirement C.20: degree of conformity using `gmd:DQ_ConformanceResult`). This element shall contain citation of the [Regulation 1089/2010] encoded according to TG Requirement C.21 (TG Requirement C.21: `gmd:DQ_ConformanceResult` shall include a citation of the specification document). The degree of conformity shall be encoded as according to TG Requirement C.22 (TG Requirement C.22: .. `gmd:DQ_ConformanceResult` .. shall also include the degree of declared conformity..)."^^xsd:string;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 55;
+    skos:notation "metadata/2.0/req/datasets-and-series/conformity"^^xsd:string
+.
+guideline:TGRequirement1.11 rdf:type skos:Concept;
+    rdfs:label "TG Requirement 1.11"@en;
+    rdfs:comment "The lineage statement for the described data set or data set series shall be given. It shall be included in the `gmd:dataQualityInfo/gmd:DQ_DataQuality` element scoped to the entire described data sets or data sets series as specified by TG Requirement 1.9. The lineage shall be encoded using the `gmd:lineage/gmd:LI_Lineage/gmd:statement` element with a Non-empty Free Text Element content, and it shall contain the description of the lineage of the described data set or series. The multiplicity of this element is 1."^^xsd:string;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#Lineage>;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 58;
+    skos:notation "metadata/2.0/req/datasets-and-series/lineage"^^xsd:string
+.
+guideline:TGRequirement1.2 rdf:type skos:Concept;
+    rdfs:label "TG Requirement 1.2"@en;
+    rdfs:comment "The first `gmd:identificationInfo` property of `gmd:MD_Metadata` element shall contain only one `gmd:MD_DataIdentification` element for identifying the described INSPIRE data set or data set series."^^xsd:string;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#UniqueResourceIdentifier>;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 37;
+    skos:notation "metadata/2.0/req/datasets-and-series/only-one-md-data-identification"^^xsd:string
+.
+guideline:TGRequirement1.3 rdf:type skos:Concept;
+    rdfs:label "TG Requirement 1.3"@en;
+    rdfs:comment '''A unique identifier shall be given for each described dataset or data sets series. This identifier shall be a URI consisting of a namespace uniquely identifying a naming context governed by an identifier authority, and a code unique within this namespace.
+
+The identifying URI shall be encoded using `gmd:citation/gmd:CI_Citation/gmd:identifier/*/gmd:code` element with a Non-empty Free Text Element content.
+
+The multiplicity of this element is 1..*.'''^^xsd:string;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#UniqueResourceIdentifier>;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 39;
+    skos:notation "metadata/2.0/req/datasets-and-series/dataset-uid"^^xsd:string
+.
+guideline:TGRequirement1.4 rdf:type skos:Concept;
+    rdfs:label "TG Requirement 1.4"@en;
+    rdfs:comment '''The INSPIRE Spatial Data Theme(s), to which the data set belongs to, shall be declared using at least one keyword from the INSPIRE Spatial Data Themes vocabulary of the general environmental multilingual thesaurus (GEMET). The keyword values shall be the exact text values of the terms in this vocabulary.
+
+These keywords shall be encoded using an `gmd:descriptiveKeywords/gmd:MD_Keywords` element referring to the GEMET INSPIRE themes controlled vocabulary as specified in section 2.4.5. The value of the `gmd:thesaurusName/gmd:CI_Citation/gmd:title` element shall contain value "GEMET - INSPIRE themes, version 1.0".
+
+For each INSPIRE Spatial Data Theme, a `gmd:keyword` element shall be included with the title of the theme as a Non-empty Free Text Element content in the language of the metadata.'''^^xsd:string;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#KeywordValue>;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 43;
+    skos:notation "metadata/2.0/req/datasets-and-series/inspire-theme-keyword"^^xsd:string
+.
+guideline:TGRequirement1.5 rdf:type skos:Concept;
+    rdfs:label "TG Requirement 1.5"@en;
+    rdfs:comment '''Spatial resolution for data set or data set series shall be given using either equivalent scale or a resolution distance, provided that these have been specified for the described data sets. If both ways have been specified, only one of the ways shall be used.
+
+The spatial resolution as equivalent scale shall be encoded using `gmd:spatialResolution/gmd:MD_Resolution/gmd:equivalentScale/gmd:MD_RepresentativeFraction/gmd:denominator/gco:Integer` element.
+
+The spatial resolution as resolution distance shall be encoded using `gmd:spatialResolution/gmd:MD_Resolution/gmd:distance/gco:Distance` element.
+
+The multiplicity of this element is 0..n.'''^^xsd:string;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#SpatialResolutionDistance>;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#SpatialResolutionEquivalentScale>;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 46;
+    skos:notation "metadata/2.0/req/datasets-and-series/spatial-resolution"^^xsd:string
+.
+guideline:TGRequirement1.6 rdf:type skos:Concept;
+    rdfs:label "TG Requirement 1.6"@en;
+    rdfs:comment '''For data sets or data set series containing textual information, the language(s) used in the resource shall be given. The language(s) used shall be encoded using one or more `gmd:language/gmd:LanguageCode` elements pointing to one of the three-letter language codes of the ISO 639-2/B code list (attribute `codeList` shall be "http://www.loc.gov/standards/iso639-2/" and the attribute `codeListValue` shall contain one of the three-letter bibliographic language code values.).
+
+The multiplicity of the gmd:language element is 1..*.
+
+If the described resource does not contain textual information expressed in a natural language the special code value "zxx" of the ISO 639-2/B reserved for "no linguistic content; not applicable" shall be used.'''^^xsd:string;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#ResourceLanguage>;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 48;
+    skos:notation "metadata/2.0/req/datasets-and-series/resource-language"^^xsd:string
+.
+guideline:TGRequirement1.7 rdf:type skos:Concept;
+    rdfs:label "TG Requirement 1.7"@en;
+    rdfs:comment '''The main theme(s) of the data set shall be described using of the ISO 19115 topic category code list values. The topic categories shall be encoded using `gmd:topicCategory/gmd:MD_TopicCategoryCode` element (See Part D 2 of [Regulation 1205/2008] for the mapping between topics and INSPIRE themes).
+
+The multiplicity of this element is 1..*.'''^^xsd:string;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#TopicCategory>;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 50;
+    skos:notation "metadata/2.0/req/datasets-and-series/topic-category"^^xsd:string
+.
+guideline:TGRequirement1.8 rdf:type skos:Concept;
+    rdfs:label "TG Requirement 1.8"@en;
+    rdfs:comment '''A Resource locator linking to the service(s) providing online access to the described data set or data set series shall be given, if such online access is available.
+
+If no online access for the data set or data set series is available, but there is a publicly available online resource providing additional information about the described data set or data set series, the URL pointing to this resource shall be given instead.
+
+These links shall be encoded using `gmd:transferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/gmd:CI_OnlineResource/gmd: linkage/gmd:URL` element.
+
+The multiplicity of this element is 0..n.'''^^xsd:string;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#ResourceLocator>;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 51;
+    skos:notation "metadata/2.0/req/datasets-and-series/resource-locator"^^xsd:string
+.
+guideline:TGRequirement1.9 rdf:type skos:Concept;
+    rdfs:label "TG Requirement 1.9"@en;
+    rdfs:comment '''There shall be exactly one `gmd:dataQualityInfo/gmd:DQ_DataQuality` element scoped to the entire described data set or data set series. The scoping shall be encoded using `gmd:scope/gmd:DQ_Scope/gmd:level/gmd:MD_ScopeCode` element referring to value "dataset" or "series" of ISO 19139 code list MD_ScopeCode (Attribute `codeList` with value "http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_ScopeCode" and the attribute `codeListValue` with "service".).'''^^xsd:string;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 54;
+    skos:notation "metadata/2.0/req/datasets-and-series/one-data-quality-element"^^xsd:string
+.
+guideline:TGRequirement2.1 rdf:type skos:Concept;
+    rdfs:label "TG Requirement 2.1"@en;
+    rdfs:comment '''The coordinate reference system(s) used in the described data set or data set series shall be given using element `gmd:referenceSystemInfo/gmd:MD_ReferenceSystem/gmd:referenceSystemIdentifier/gmd:RS_Identifier`.
+
+The multiplicity of this element is 1..*.
+
+The `gmd:code child` element of `gmd:RS_Identifier` is mandatory. The `gmd:codeSpace` child element shall be used if the code alone does not uniquely identify the referred coordinate reference system. Both `gmd:code` and `gmd:codeSpace` element (if given) shall contain Non-empty Free Text Elements. Only the coordinate reference system identifiers specified in a well-known common register shall be used.'''^^xsd:string;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#SpatialDatasetCoordinateReferenceSystem>;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 62;
+    skos:notation "metadata/2.0/req/isdss/crs"^^xsd:string
+.
+guideline:TGRequirement2.2 rdf:type skos:Concept;
+    rdfs:label "TG Requirement 2.2"@en;
+    rdfs:comment '''If the coordinate reference system is listed in the table Default Coordinate Reference System Identifiers in Annex D.4, the value of the HTTP URI Identifier column shall be used as the value of `gmd:referenceSystemInfo/gmd:MD_ReferenceSystem/ gmd:referenceSystemIdentifier/gmd:RS_Identifier/gmd:code` element.
+
+The `gmd:codeSpace` element shall not be used in this case.'''^^xsd:string;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#SpatialDatasetCoordinateReferenceSystem>;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 64;
+    skos:notation "metadata/2.0/req/isdss/crs-id"^^xsd:string
+.
+guideline:TGRequirement2.3 rdf:type skos:Concept;
+    rdfs:label "TG Requirement 2.3"@en;
+    rdfs:comment '''The temporal reference system(s) used in the described data set or data set series shall be given using element `gmd:referenceSystemInfo/gmd:MD_ReferenceSystem/gmd:referenceSystemIdentifier/gmd:RS_Identifier`.
+
+The multiplicity of this element is 0..n.
+
+The `gmd:code` child element of `gmd:RS_Identifier` is mandatory. The `gmd:codeSpace` child element shall be used if the code alone does not uniquely identify the referred coordinate reference system. Both gmd:code and gmd:codeSpace element (if given) shall contain Non-empty Free Text Elements'''^^xsd:string;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#SpatialDatasetTemporalReferenceSystem>;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 66;
+    skos:notation "metadata/2.0/req/isdss/temportal-rs"^^xsd:string
+.
+guideline:TGRequirement2.4 rdf:type skos:Concept;
+    rdfs:label "TG Requirement 2.4"@en;
+    rdfs:comment '''The spatial representation type shall be given using element `gmd:spatialRepresentationType/gmd:MD_SpatialRepresentationTypeCode` referring to one of the values of ISO 19139 code list `MD_SpatialRepresentationTypeCode` and one of the code list values "vector", "grid", "tin" or “textTable”48.
+
+Multiplicity of this element is 1..*.'''^^xsd:string;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#SpatialDatasetSpatialRepresentationType>;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 68;
+    skos:notation "metadata/2.0/req/isdss/spatial-representation-type"^^xsd:string
+.
+guideline:TGRequirement2.5 rdf:type skos:Concept;
+    rdfs:label "TG Requirement 2.5"@en;
+    rdfs:comment '''The character encoding(s) shall be given for data sets and data sets series which use encodings not based on UTF-8 by using element `gmd:characterSet/gmd:MD_CharacterSetCode` referring to one of the values of ISO 19139 code list MD_CharacterSetCode50.
+
+The multiplicity of this element is 0..n.
+
+If more than one character encoding is used within the described data set or data sets series, all used character encodings, including UTF-8 (code list value "utf8"), shall be given using this element.'''^^xsd:string;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 69;
+    skos:notation "metadata/2.0/req/isdss/character-encoding"^^xsd:string
+.
+guideline:TGRequirement2.6 rdf:type skos:Concept;
+    rdfs:label "TG Requirement 2.6"@en;
+    rdfs:comment '''The encoding and the storage or transmission format of the provided data sets or data set series shall be given using the `gmd:distributionFormat/gmd:MD_Format` element.
+
+The multiplicity of this element is 1..*.
+
+The `gmd:name` and `gmd:version` child elements of `gmd:MD_Format` are mandatory. Both of these elements shall contain Non-empty Free Text Elements.
+
+If the version of the encoding is unknown or if the encoding is not versioned, the gmd:version shall be left empty and the nil reason attribute shall be provided with either value "unknown" or "inapplicable" correspondingly (Attribute `gco:nilReason`="unknown" or "inapplicable").'''^^xsd:string;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 70;
+    skos:notation "metadata/2.0/req/isdss/data-encoding"^^xsd:string
+.
+guideline:TGRequirement2.7 rdf:type skos:Concept;
+    rdfs:label "TG Requirement 2.7"@en;
+    rdfs:comment '''The quantitative results for topological consistency measures shall be reported using the `gmd:report/gmd:DQ_TopologicalConsistency` element with a `gmd:DQ_QuantitativeResult` element as the value of its mandatory `gmd:result` property.
+
+The multiplicity of the element is 0..*.
+
+The `gmd:valueUnit` and `gmd:value/gco:Record` child elements of `gmd:DQ_QuantitativeResult` are mandatory and shall be used for giving a numerical or otherwise quantitative value of the evaluated topology consistency measure for the described data set or data set series.
+
+The type of the `gmd:value/gco:Record` element shall be chosen based on the result type of the particular measure, and it shall be declared using the `xsi:type` attribute of the `gco:Record` element.'''^^xsd:string;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 71;
+    skos:notation "metadata/2.0/req/isdss/topological-consistency-quantitative-results"^^xsd:string
+.
+guideline:TGRequirement2.8 rdf:type skos:Concept;
+    rdfs:label "TG Requirement 2.8"@en;
+    rdfs:comment '''If the data set includes types from the Generic Network Model, it does not assure the centreline topology for the network, and the value of the topological consistency checks is not available as quantitative results, the result of the topological consistency shall be reported using the descriptive results.
+
+The descriptive topological consistency measures shall be reported using the `gmd:report/gmd:DQ_TopologicalConsistency/gmd:result /gmd:DQ_ConformanceResult` element citing to the INSPIRE Generic Network Model.
+
+The `gmd:DQ_ConformanceResult/gmd:specification/gmd:CI_Citation/ gmd:title/gco:CharacterString` element shall have the value "INSPIRE Data Specifications - Base Models - Generic Network Model" regardless of the metadata language.
+
+The `gmd:DQ_ConformanceResult/gmd:specification/gmd:CI_Citation/ gmd:date/gmd:CI_Date/gmd:date` shall contain the publication date of the INSPIRE Generic Network Model document containing the geometry types used in the data set.
+
+The date type code element `gmd:DQ_ConformanceResult/gmd:specification/gmd:CI_Citation/ gmd:date/gmd:CI_Date/gmd:dateType/gmd:CI_DateTypeCode` shall be given and it shall point to the value "publication" of the ISO 19139 code list `CI_DateTypeCode`.
+
+The value of the `gmd:DQ_ConformanceResult/gmd:pass` element shall always be "false" in this element to indicate that the data set does not assure the centreline topology for the network.
+
+The multiplicity of `gmd:report/gmd:DQ_TopologicalConsistency/gmd:result/ gmd:DQ_ConformanceResult` elements as described above is 0..*.
+
+The textual description of the results of the topological consistency check shall be given using the `gmd:DQ_ConformanceResult/gmd:explanation` element. This element is a Non-empty Free Text Element.'''^^xsd:string;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 75;
+    skos:notation "metadata/2.0/req/isdss/topological-consistency-descriptive-results"^^xsd:string
+.
+guideline:TGRequirement3.1 rdf:type skos:Concept;
+    rdfs:label "TG Requirement 3.1"@en;
+    rdfs:comment '''Resource type shall be declared as "service" using `gmd:hierarchyLevel/gmd:MD_ScopeCode` element (Attribute `codeList` with value "http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_ScopeCode" and the attribute `codeListValue` with value "service".).
+
+Additionally the name of the hierarchy level shall be given using element `gmd:hierarchyLevelName` element with a Non-empty Free Text Element containing the term "service" in the language of the metadata.
+
+The multiplicity of both of these elements is 1.'''^^xsd:string;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#ResourceType>;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 78;
+    skos:notation "metadata/2.0/req/sds/resource-type"^^xsd:string
+.
+guideline:TGRequirement3.2 rdf:type skos:Concept;
+    rdfs:label "TG Requirement 3.2"@en;
+    rdfs:comment "The first `gmd:identificationInfo` property of `gmd:MD_Metadata` element shall contain a `srv:SV_ServiceIdentification` element for identifying an INSPIRE Spatial Data Service."^^xsd:string;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 79;
+    skos:notation "metadata/2.0/req/sds/service-identification-element"^^xsd:string
+.
+guideline:TGRequirement3.3 rdf:type skos:Concept;
+    rdfs:label "TG Requirement 3.3"@en;
+    rdfs:comment "For services with restriction on the spatial resolution, these restrictions shall be expressed in the `gmd:abstract` element with a Non-empty Free Text Element content. The spatial resolution restriction text shall include either an equivalent scale as integer valued scale denominator or a resolution distance using a numerical length value and with a unit of length."^^xsd:string;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 80;
+    skos:notation "metadata/2.0/req/sds/spatial-resolution"^^xsd:string
+.
+guideline:TGRequirement3.4 rdf:type skos:Concept;
+    rdfs:label "TG Requirement 3.4"@en;
+    rdfs:comment '''At least one Spatial Data Service category or subcategory for the described service shall be given using the language-neutral keyword values as defined in Part D 4 "Classification of Spatial Data Services" of [Regulation 1205/2008].'''^^xsd:string;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 82;
+    skos:notation "metadata/2.0/req/sds/sds-category"^^xsd:string
+.
+guideline:TGRequirement3.5 rdf:type skos:Concept;
+    rdfs:label "TG Requirement 3.5"@en;
+    rdfs:comment '''Spatial Data Service type shall be given using element `srv:serviceType/gco:LocalName`.
+
+The multiplicity of this element is 1.'''^^xsd:string;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 85;
+    skos:notation "metadata/2.0/req/sds/sds-type"^^xsd:string
+.
+guideline:TGRequirement3.6 rdf:type skos:Concept;
+    rdfs:label "TG Requirement 3.6"@en;
+    rdfs:comment '''Links pointing to the online metadata descriptions of data sets provided by the described service shall be given using `srv:operatesOn` element.
+
+The multiplicity of this element is 0..n.
+
+This property shall be implemented by reference. The `xlink:href attribute` of each of the `srv:operatesOn` elements shall contain a URI pointing to the `gmd:MD_DataIdentification` element of the metadata record of the provided the data set or data set series.'''^^xsd:string;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 86;
+    skos:notation "metadata/2.0/req/sds/coupled-resource"^^xsd:string
+.
+guideline:TGRequirement3.7 rdf:type skos:Concept;
+    rdfs:label "TG Requirement 3.7"@en;
+    rdfs:comment '''A Resource locator linking to the described Spatial Data Service shall be given, if online access to this service is available.
+
+If no online access to the described Spatial Data Service is available, but there is a publicly available online resource providing additional information about the described service, the URL pointing to this resource shall be given instead.
+
+These links shall be encoded using `gmd:transferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/ gmd:CI_OnlineResource/gmd:linkage/gmd:URL` element.
+
+The multiplicity of this element is 0..n.'''^^xsd:string;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 87;
+    skos:notation "metadata/2.0/req/sds/resource-locator"^^xsd:string
+.
+guideline:TGRequirement3.8 rdf:type skos:Concept;
+    rdfs:label "TG Requirement 3.8"@en;
+    rdfs:comment '''There shall be exactly one `gmd:dataQualityInfo/gmd:DQ_DataQuality` element scoped to the entire described service.
+
+The scoping shall be encoded using `gmd:scope/gmd:DQ_Scope/gmd:level/gmd:MD_ScopeCode` element referring to value "service" of [ISO 19139] code list `MD_ScopeCode` (Attribute `codeList` with value "http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#MD_ScopeCode" and the attribute `codeListValue` with value "service".).
+
+Additionally the level shall be named using element `gmd:scope/gmd:DQ_Scope/gmd:levelDescription/gmd:MD_ScopeDescription/gmd:other` element with a Non-empty Free Text Element containing the term "service" in the language of the metadata.'''^^xsd:string;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 90;
+    skos:notation "metadata/2.0/req/sds/only-one-dq-element"^^xsd:string
+.
+guideline:TGRequirement4.1 rdf:type skos:Concept;
+    rdfs:label "TG Requirement 4.1"@en;
+    rdfs:comment '''Spatial Data Service type shall be given encoded as specified in TG Requirement 3.5. The value for the element shall be "view", "download", "discovery" or "transformation" depending on the kind of the described Network Service. The multiplicity of the `srv:serviceType/gco:LocalName` element used for the above purpose is 1.'''^^xsd:string;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 92;
+    skos:notation "metadata/2.0/req/ns/sds-type"^^xsd:string
+.
+guideline:TGRequirement5.1 rdf:type skos:Concept;
+    rdfs:label "TG Requirement 5.1"@en;
+    rdfs:comment '''Spatial Data Service type shall be given encoded using element `srv:serviceType/gco:LocalName` as specified in TG Requirement 3.5. The value for the element shall be "other" for all Invocable Spatial Data Services.'''^^xsd:string;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 97;
+    skos:notation "metadata/2.0/req/sds-invocable/sds-type"^^xsd:string
+.
+guideline:TGRequirement5.2 rdf:type skos:Concept;
+    rdfs:label "TG Requirement 5.2"@en;
+    rdfs:comment '''Each access point of the described Invocable Spatial Data Service shall be described in the metadata record using a `gmd:transferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/ gmd:CI_OnlineResource` element.
+
+The `gmd:linkage/gmd:URL` child element of `gmd:CI_OnlineResource` shall contain the URL of the described access point containing a detailed description of a spatial data service, including a list of end points to allow its execution.
+
+The `gmd:linkage/gmd:description` child element `gmd:CI_OnlineResource` shall contain a `gmx:Anchor` element pointing to the value "accessPoint" of the code list `OnLineDescriptionCode` in the INSPIRE Registry (Attribute `xlink:href` with value "http://inspire.ec.europa.eu/metadata-codelist/OnLineDescriptionCode/accessPoint").
+
+The multiplicity of the `gmd:transferOptions/gmd:MD_DigitalTransferOptions/gmd:onLine/ gmd:CI_OnlineResource` element used for the above purpose is 1..*.'''^^xsd:string;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 98;
+    skos:notation "metadata/2.0/req/sds-invocable/access-point"^^xsd:string
+.
+guideline:TGRequirement5.3 rdf:type skos:Concept;
+    rdfs:label "TG Requirement 5.3"@en;
+    rdfs:comment '''Metadata for an INSPIRE Invocable Spatial Data Services shall declare the conformity to the Implementing Rules for interoperability of spatial data sets and services, and it shall be encoded using `gmd:report/gmd:DQ_DomainConsistency/gmd:result/gmd:DQ_ConformanceResult` element as specified in TG Requirement C.20 (TG Requirement C.20: degree of conformity using `gmd:DQ_ConformanceResult`). This element shall contain citation of the [Regulation 1089/2010] encoded according to TG Requirement C.21 (TG Requirement C.21: `gmd:DQ_ConformanceResult` shall include a citation of the specification document, ..). The degree of conformity shall be encoded as according to TG Requirement C.22 (TG Requirement C.22: .. `gmd:DQ_ConformanceResult` .. shall also include the degree of declared conformity..).
+
+The multiplicity of the gmd:report/gmd:DQ_DomainConsistency/gmd:result/ gmd:DQ_ConformanceResult element used for the above purpose is 1.'''^^xsd:string;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 100;
+    skos:notation "metadata/2.0/req/sds-invocable/conformity"^^xsd:string
+.
+guideline:TGRequirement5.4 rdf:type skos:Concept;
+    rdfs:label "TG Requirement 5.4"@en;
+    rdfs:comment '''The category of the Invocable Spatial Data Service shall be given. It shall be encoded using the `gmd:report/gmd:DQ_DomainConsistency/gmd:result/gmd:DQ_ConformanceResult` element as specified in TG Requirement C.20 (TG Requirement C.20: degree of conformity using `gmd:DQ_ConformanceResult`). This element shall contain a citation for one of the three Conformance Classes for Invocable Spatial Data Service categories, and it shall be encoded according to TG Requirement C.21 (TG Requirement C.21: `gmd:DQ_ConformanceResult` shall include a citation of the specification document, ..).
+
+The title of the cited Conformance Class shall be encoded using the `gmd:DQ_ConformanceResult/gmd:specification/gmd:CI_Citation/gmd:title/gmx:Anchor` element. The attribute `xlink:href` of this element shall contain the permanent unique identifier of the Conformance Class, and the textual content of the `gmx:Anchor` element shall contain the corresponding language-neutral name of the category. The language-neutral names and the permanent unique identifiers are given in Table 5.1.
+The degree of conformity as specified by TG Requirement C.22 (TG Requirement C.22: .. `gmd:DQ_ConformanceResult` .. shall also include the degree of declared conformity..) shall indicate that the service is fully conformant with the cited Conformance Class (Element `gmd:DQ_ConformanceResult/gmd:pass/gco:Boolean` shall have value "true".).
+
+The multiplicity of the `gmd:report/gmd:DQ_DomainConsistency/gmd:result/gmd:DQ_ConformanceResult` element used for the above purpose is 1.'''^^xsd:string;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 103;
+    skos:notation "metadata/2.0/req/sds-invocable/sds-category"^^xsd:string
+.
+guideline:TGRequirement5.5 rdf:type skos:Concept;
+    rdfs:label "TG Requirement 5.5"@en;
+    rdfs:comment '''An Invocable Spatial Data Service shall declare full compliance with at least one technical specification providing all the necessary technical elements to actually invoke the service and enable its usage. This declaration shall be encoded using `gmd:report/gmd:DQ_DomainConsistency/gmd:result/gmd:DQ_ConformanceResult` element as specified in TG Requirement C.20 (TG Requirement C.20: degree of conformity using `gmd:DQ_ConformanceResult`). This element shall contain a citation for the technical specification encoded according to TG Requirement C.21 (TG Requirement C.21: `gmd:DQ_ConformanceResult` shall include a citation of the specification document, ..).
+
+The degree of conformity as specified by TG Requirement C.22 (TG Requirement C.22: .. `gmd:DQ_ConformanceResult` .. shall also include the degree of declared conformity..) shall indicate that the service is fully conformant with the given specification (Element `gmd:DQ_ConformanceResult/gmd:pass/gco:Boolean` shall have value "true".).
+
+The multiplicity of the `gmd:report/gmd:DQ_DomainConsistency/gmd:result/gmd:DQ_ConformanceResult` element used for the above purpose is 1..*.'''^^xsd:string;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 104;
+    skos:notation "metadata/2.0/req/sds-invocable/conformity-to-technical-specifications"^^xsd:string
+.
+guideline:TGRequirement6.1 rdf:type skos:Concept;
+    rdfs:label "TG Requirement 6.1"@en;
+    rdfs:comment '''The coordinate reference system(s) supported by the described Spatial Data Service shall be given using element `gmd:referenceSystemInfo/gmd:MD_ReferenceSystem/ gmd:referenceSystemIdentifier/gmd:RS_Identifier`.
+
+The multiplicity of this element is 1..*.
+
+The `gmd:code` child element of `gmd:RS_Identifier` is mandatory. The `gmd:codeSpace` child element shall be used if the code alone does not uniquely identify the referred coordinate reference system. Both `gmd:code` and `gmd:codeSpace` element (if given) shall contain Non-empty Free Text Elements.
+
+Only the coordinate reference system identifiers specified in a well-known common register shall be used.'''^^xsd:string;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 107;
+    skos:notation "metadata/2.0/req/sds-interoperable/crs"^^xsd:string
+.
+guideline:TGRequirement6.2 rdf:type skos:Concept;
+    rdfs:label "TG Requirement 6.2"@en;
+    rdfs:comment '''If the coordinate reference system is listed in the table Default Coordinate Reference System Identifiers in Annex D.4, the value of the HTTP URI Identifier column shall be used as the value of `gmd:referenceSystemInfo/gmd:MD_ReferenceSystem/ gmd:referenceSystemIdentifier/gmd:RS_Identifier/gmd:code` element.
+
+The `gmd:codeSpace` element shall not be used in this case.'''^^xsd:string;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 108;
+    skos:notation "metadata/2.0/req/sds-interoperable/crs-http-uris"^^xsd:string
+.
+guideline:TGRequirement6.3 rdf:type skos:Concept;
+    rdfs:label "TG Requirement 6.3"@en;
+    rdfs:comment '''The technical restrictions applying to access and use of an Interoperable Spatial Data Service shall be given in the metadata. This information shall be encoded as described in the TG Requirement C.18.
+
+The multiplicity of the `gmd:resourceConstraints/gmd:MD_LegalConstraints` element used for the above purpose is 1..*.
+
+This information may be combined within the same `gmd:resourceConstraints` element used for describing the non-technical conditions applying to access and use of the Spatial Data Service.'''^^xsd:string;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 109;
+    skos:notation "metadata/2.0/req/sds-interoperable/conditions-applying-to-access-and-use"^^xsd:string
+.
+guideline:TGRequirement6.4 rdf:type skos:Concept;
+    rdfs:label "TG Requirement 6.4"@en;
+    rdfs:comment '''The responsible party for the Interoperable Spatial Data Service in the role of the custodian shall be given. This element shall be encoded as described in TG Requirement C.10.
+
+The value of `gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:role/gmd:CI_RoleCode` shall point to the value "custodian" of ISO 19139 code list `CI_RoleCode` (Attribute `codeList` shall be "http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_RoleCode" and the attribute `codeListValue` shall be "custodian".)
+
+The multiplicity of the `gmd:pointOfContact/gmd:CI_ResponsibleParty` element used for the above purpose is 1..*.'''^^xsd:string;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 110;
+    skos:notation "metadata/2.0/req/sds-interoperable/responsible-party"^^xsd:string
+.
+guideline:TGRequirement6.5 rdf:type skos:Concept;
+    rdfs:label "TG Requirement 6.5"@en;
+    rdfs:comment '''The minimum values for each of the Quality of Service criteria given in Table 6.1 shall be given in the metadata. They shall be encoded using one `gmd:report/gmd:DQ_ConceptualConsistency` element within the `gmd:DQ_DataQuality` element scoped for the entire service.
+
+The value of `gmd:DQ_ConceptualConsistency/gmd:nameOfMeasure` shall be shall be an `gmx:Anchor` element referring to the code list value for the criterion in the INSPIRE Registry (Attribute `xlink:href` with URL value starting with "http://inspire.ec.europa.eu/metadata-codelist/QualityOfServiceCriteriaCode/" and postfixed with one of values of code list QualityOfServiceCriteriaCode, see Annex D.4) and expressing the name of the criterion in the language of the metadata.
+
+The description of the measurement of the criterion shall be encoded using the `gmd:DQ_ConceptualConsistency/gmd:measureDescription` element.
+
+The value of the measurement of the criterion shall be encoded using the `gmd:DQ_ConceptualConsistency/gmd:result/gmd:DQ_QuantitativeResult` element. The `gmd:valueUnit` child element shall describe the unit of measure of the criteria as given in Table 6.1. The numerical value of the criteria shall be encoded using the `gmd:value/gco:Record` element. The value type of shall be declared using the `xsi:type` attribute of the `gco:Record` element as given in the Table 6.1.'''^^xsd:string;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 111;
+    skos:notation "metadata/2.0/req/sds-interoperable/quality-of-service"^^xsd:string
+.
+guideline:TGRequirement7.1 rdf:type skos:Concept;
+    rdfs:label "TG Requirement 7.1"@en;
+    rdfs:comment '''The invocation metadata shall be given for Harmonised Spatial Data Services. This information shall be encoded using one of the following two options:
+
+**Option 1**: All operations and the list of end points for them along with the information about the required and optional parameters for each operation shall be provided within the metadata record using the `srv:containsOperations/srv:SV_OperationMetadata/srv:connectPoint element`. This element shall be the same as the element describing the access point (see TG Requirement 5.2). In this option the information provided by calling the access point together with the information about the conformity with the technical specifications described according to TG Requirement 5.5 shall fulfil the invocation metadata requirements.
+
+**Option 2**: All operations and the list of end points for them along with the information about the required and optional parameters for each operation shall be provided within the metadata record using one `srv:containsOperations/srv:SV_OperationMetadata` element for each provided operation. The contents of these element shall be given according to [ISO 19119, Section C.2].
+
+When the metadata record contains at least one `srv:containsOperations/srv:SV_OperationMetadata` element, it is assumed that the option 2 has been chosen, otherwise it is assumed that the option 1 has been chosen.'''^^xsd:string;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 113;
+    skos:notation "metadata/2.0/req/sds-harmonised/invocation-metadata"^^xsd:string
+.
+guideline:TGRequirement7.2 rdf:type skos:Concept;
+    rdfs:label "TG Requirement 7.2"@en;
+    rdfs:comment '''If the metadata contains at least one the `srv:containsOperations/srv:SV_OperationMetadata` element the invocation metadata within shall be encoded using at least the following child elements:
+
+- `srv:operationName` element shall contain a unique identifier for interface described by the srv:SV_OperationMetadata element. The value of this element is a Non-empty Free Text Element. The multiplicity of this element is 1.
+- `srv:DCP/srv:DCPList` shall contain a reference to the Distributed Computing Platform on which the operation has been implemented. The multiplicity of this element is 1..*.
+- `srv:parameters/srv:SV_Parameter` shall contain a description of a single request parameter to be used in invoking the operation. The content for this element shall be encoded as described in TG Requirement 7.3. The multiplicity of this element is 0..*, and it is mandatory for all required and optional parameters provided by the operation. - `srv:connectPoint/gmd:CI_OnlineResource/gmd:URL` shall contain an end point URL to be used for accessing the service for executing the operation. The multiplicity of the element is 1..*.'''^^xsd:string;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 114;
+    skos:notation "metadata/2.0/req/sds-harmonised/operation-metadata"^^xsd:string
+.
+guideline:TGRequirement7.3 rdf:type skos:Concept;
+    rdfs:label "TG Requirement 7.3"@en;
+    rdfs:comment '''For all the required and optional request parameters of all the operations described using `srv:containsOperations/srv:SV_OperationMetadata` elements, the following child elements of `srv:parameters/srv:SV_Parameter` element shall be given:
+
+- `srv:name/gco:aName` shall contain the name of the parameter as used by the service. The content of this element is a Non-empty Free Text Element. The element srv:name/gco:attributeType shall contain the record or the type part of the attribute name. The multiplicity of the srv:name element is 1.
+- `srv:optionality` shall contain information about whether the attribute is required or optional. The content of this element is a Non-empty Free Text Element. The multiplicity of this element is 1.
+- `srv:repeatability/gco:Boolean` shall contain indicate whether the attribute can be given more than once in one operation. The value "true" shall be used indicate that the attribute may be repeated, "false" that only it may be given only once.
+- `srv:valueType/gco:TypeName/gco:Name` shall indicate the data type of the attribute.'''^^xsd:string;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 115;
+    skos:notation "metadata/2.0/req/sds-harmonised/operation-metadata-parameters"^^xsd:string
+.
+guideline:TGRequirementC.1 rdf:type skos:Concept;
+    rdfs:label "TG Requirement C.1"@en;
+    rdfs:comment '''INSPIRE metadata records shall be encoded in XML format valid against one of the following XML Schemas:
+
+- [CSW2 AP ISO] XML Schema ([http://inspire.ec.europa.eu/draft-schemas/inspire-md-schemas/](http://inspire.ec.europa.eu/draft-schemas/inspire-md-schemas/) importing the srv namespace for encoding service metadata and referring to GML version 3.2.1 available in the OGC schema repository (as defined in the schemas at [http://inspire.ec.europa.eu/draft-schemas/inspire-md-schemas/srv/1.0/](http://inspire.ec.europa.eu/draft-schemas/inspire-md-schemas/srv/1.0/)), or an unmodified copy),
+- [ISO 19139] XML Schema as available in the ISO repository ([http://www.isotc211.org/2005/gmd/gmd.xsd](http://www.isotc211.org/2005/gmd/gmd.xsd) referring to GML version 3.2.1 available in the ISO schema repository, or an unmodified copy), or
+- [ISO 19139] XML Schema as available in the OGC schema repository ([http://schemas.opengis.net/iso/19139/20070417/gmd/gmd.xsd](http://schemas.opengis.net/iso/19139/20070417/gmd/gmd.xsd) referring to GML version 3.2.1 available in the OGC schema repository, or [http://schemas.opengis.net/iso/19139/20060504/gmd/gmd.xsd](http://schemas.opengis.net/iso/19139/20060504/gmd/gmd.xsd) referring to GML version 3.2.0 available in the OGC schema repository, or unmodified copies of either of these.).
+
+All three of these XML Schemas declare the same namespace [http://www.isotc211.org/2005/gmd](http://www.isotc211.org/2005/gmd).
+
+The metadata identification info property for INSPIRE Spatial Data Services shall be encoded using the service metadata XML Schema available in the OGC schema repository. This schema is an XML implementation of the [ISO 19119] service metadata, and it declares the namespace [http://www.isotc211.org/2005/srv](http://www.isotc211.org/2005/srv).'''^^xsd:string;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 1;
+    skos:notation "metadata/2.0/req/common/xml-schema"^^xsd:string
+.
+guideline:TGRequirementC.10 rdf:type skos:Concept;
+    rdfs:label "TG Requirement C.10"@en;
+    rdfs:comment '''The point of contact for the organisation responsible for the establishment, management, maintenance and distribution of the described resource shall be given using element `gmd:pointOfContact/gmd:CI_ResponsibleParty`.
+
+The multiplicity of this element is 1..*.
+
+The `gmd:CI_ResponsibleParty` element shall contain the following child elements:
+
+- The name of the organisation shall be given as the value of `gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:organisationName` element with a Non-empty Free Text Element content.
+- The email address of the organisation shall be provided as the value of `gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:electronicMailAddress` element with a Non-empty Free Text Element containing a functioning email address of the responsible party.
+
+The value of `gmd:pointOfContact/gmd:CI_ResponsibleParty/gmd:role/gmd:CI_RoleCode` shall point to the most relevant value of ISO 19139 code list `CI_RoleCode` (Attribute `codeList` shall be "http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_RoleCode".).'''^^xsd:string;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#ResponsibleOrganisation>;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 15;
+    skos:notation "metadata/2.0/req/common/responsible-organisation"^^xsd:string
+.
+guideline:TGRequirementC.11 rdf:type skos:Concept;
+    rdfs:label "TG Requirement C.11"@en;
+    rdfs:comment '''At least one temporal reference describing the resource shall be given using `gmd:citation/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:date` element, with one of the following date types:
+
+- *publication* for date of publication of the resource,
+- *revision* for the date of last revision of the resource, or
+- *creation* for the date of creation of the resource.
+
+The date type shall be given using the `gmd:citation/gmd:CI_Citation/gmd:date/gmd:CI_Date/gmd:dateType/gmd:CI_DateTypeCode` element and it shall point to the corresponding value of [ISO 19139] code list `CI_DateTypeCode` mentioned above (Attribute `codeList` shall have value "http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" and the attribute `codeListValue` one of "publication", "revision" or "creation").
+
+The date values shall be expressed using Gregorian calendar and in accordance with [ISO 8601] with either date precision or date and time precision. For date precision the `gmd:CI_Date/gmd:date/gco:Date` element, and for date and time precision `gmd:CI_Date/gmd:date/gco:DateTime` element shall be used.'''^^xsd:string;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#DateOfCreation>;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#DateOfLastRevision>;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#DateOfPublication>;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 17;
+    skos:notation "metadata/2.0/req/common/temporal-reference"^^xsd:string
+.
+guideline:TGRequirementC.12 rdf:type skos:Concept;
+    rdfs:label "TG Requirement C.12"@en;
+    rdfs:comment "Not more than one date of creation for the described resource shall be given."^^xsd:string;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#DateOfCreation>;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 18;
+    skos:notation "metadata/2.0/req/common/max-1-date-of-creation"^^xsd:string
+.
+guideline:TGRequirementC.13 rdf:type skos:Concept;
+    rdfs:label "TG Requirement C.13"@en;
+    rdfs:comment "Not more than one date of last revision for the described resource shall be given."^^xsd:string;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#DateOfLastRevision>;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 19;
+    skos:notation "metadata/2.0/req/common/max-1-date-of-last-revision"^^xsd:string
+.
+guideline:TGRequirementC.14 rdf:type skos:Concept;
+    rdfs:label "TG Requirement C.14"@en;
+    rdfs:comment '''If a temporal reference is provided using the temporal extent, it shall be encoded using the `gmd:extent/gmd:EX_Extent` element with one or more `gmd:temporalElement/gmd:EX_TemporalExtent/gmd:extent` child elements. The value of each of these element may be an individual date or a time period between two dates.
+
+The multiplicity of this element is 0..*.
+
+A single individual date or a time period shall be encoded using one `gmd:temporalElement/gmd:EX_TemporalExtent/gmd:extent` element. For individual dates this element shall contain a `gml:TimeInstant/gml:timePosition` element with the date value given according to [ISO 8601]. For a single time period the `gmd:temporalElement/gmd:EX_TemporalExtent/gmd:extent` element shall contain a `gml:TimePeriod` element containing start and end dates of the period. In case the time period is open-ended with either the start or the end date unknown, the elements `gml:startPosition` or `gml:endPosition` may be used with an empty value and the attribute `indeterminatePosition` with value "unknown". If the temporal extent is on-going, the `gml:endPosition` may be used with an empty value and the attribute `indeterminatePosition` with value "now". Individual dates and time periods may be combined to form a complex temporal extent using multiple `gmd:temporalElement/gmd:EX_TemporalExtent/gmd:extent` elements.'''^^xsd:string;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#TemporalExtent>;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 21;
+    skos:notation "metadata/2.0/req/common/temporal-extent"^^xsd:string
+.
+guideline:TGRequirementC.15 rdf:type skos:Concept;
+    rdfs:label "TG Requirement C.15"@en;
+    rdfs:comment '''When using keywords originating from a controlled vocabulary, the originating controlled vocabulary shall be cited using `gmd:descriptiveKeywords/gmd:MD_Keywords/gmd:thesaurusName/gmd:CI_Citation` element.
+
+The title of the vocabulary shall be given using `gmd:title` element with a Non-empty Free Text Element content.
+
+The publication date of the vocabulary shall be given using the `gmd:date/gmd:CI_Date/gmd:date/gco:Date` and `gmd:dateType/gmd:CI_DateTypeCode` (Attribute `codeList` shall have value "http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" and the attribute `codeListValue` value "publication") elements.'''^^xsd:string;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#KeywordOriginatingControlledVocabulary>;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 22;
+    skos:notation "metadata/2.0/req/common/keyword-originating-cv"^^xsd:string
+.
+guideline:TGRequirementC.16 rdf:type skos:Concept;
+    rdfs:label "TG Requirement C.16"@en;
+    rdfs:comment "All keywords originating from the same controlled vocabulary, or its version, shall be grouped under one `gmd:descriptiveKeywords/gmd:MD_Keywords` element. A single `gmd:MD_Keywords` element may only contain keywords originating from the one cited controlled vocabulary, or its version."^^xsd:string;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#KeywordValue>;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 26;
+    skos:notation "metadata/2.0/req/common/group-keywords-by-cv"^^xsd:string
+.
+guideline:TGRequirementC.17 rdf:type skos:Concept;
+    rdfs:label "TG Requirement C.17"@en;
+    rdfs:comment '''Limitations on public access (or lack of such limitations) for the described resource shall be described using exactly one `gmd:resourceConstraints/gmd:MD_LegalConstraints` element. This element shall not be the same one as used for describing conditions applying to access and use (see 2.4.7).
+
+The limitations on public access (or lack of such limitations) based on reasons referred to in point (a) or in points (c) to (h) of Article 13(1) of INSPIRE Directive quoted above, the `gmd:resourceConstraints/gmd:MD_LegalConstraints` element shall include a combination of
+
+- one instance of `gmd:accessConstraints/gmd:MD_RestrictionCode` element with code list value "otherRestrictions" (Attribute `codeList` with value "http://standards.iso.org/iso/19139/resources/gmxCodelists.xml" and attribute `codeListValue` "otherRestrictions") and
+- at least one instance of `gmd:otherConstraints/gmx:Anchor` pointing to one of the values from the code list for LimitationsOnPublicAccess (INSPIRE Registry, attribute `xlink:href` with URL value starting with "http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/" and postfixed with one of values of code list LimitationsOnPublicAccess, see Annex D.1). If there are no limitations on public access, the element shall point to the code list value "noLimitations".'''^^xsd:string;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#LimitationsOnPublicAccess>;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 27;
+    skos:notation "metadata/2.0/req/common/limitations-on-public-access"^^xsd:string
+.
+guideline:TGRequirementC.18 rdf:type skos:Concept;
+    rdfs:label "TG Requirement C.18"@en;
+    rdfs:comment '''Conditions for access and use of the described resource shall be described using exactly one `gmd:resourceConstraints/gmd:MD_LegalConstraints` element. This element shall not be the same used for describing limitations on public access (see 2.4.6).
+
+The `gmd:resourceConstraints/gmd:MD_LegalConstraints` element for conditions for access and use shall be encoded as follows:
+
+- One instance of either `gmd:accessConstraints` or `gmd:useConstraints` element shall be given. In both cases this element shall contain a `gmd:MD_RestrictionCode` element with code list value "otherRestrictions" (Attribute `codeList` with value "http://standards.iso.org/iso/19139/resources/gmxCodelists.xml" and attribute `codeListValue` "otherRestrictions".).
+- Additionally at least one instance of `gmd:otherConstraints` shall be given describing the actual conditions.
+- If no conditions apply the `gmd:otherConstraints` shall include a `gmx:Anchor` element pointing to the value "noConditionsApply" in the code list ConditionsApplyingToAccessAndUse (INSPIRE Registry, attribute `xlink:href` with URL value "http://inspire.ec.europa.eu/metadata-codelist/
+ConditionsApplyingToAccessAndUse/noConditionsApply", see Annex D.2.).
+- If the conditions are unknown `gmd:otherConstraints` shall include a `gmx:Anchor` element pointing to the value "conditionsUnknown" in the code list ConditionsApplyingToAccessAndUse (INSPIRE Registry, attribute `xlink:href` with URL value "http://inspire.ec.europa.eu/metadata-codelist/
+ConditionsApplyingToAccessAndUse/conditionsUnknown", see Annex D.2.).
+- In other cases `gmd:otherConstraints` shall include a Non-empty Free Text Element with a textual description of the conditions in the language of the metadata. This text shall include descriptions of terms and conditions, including where applicable, the corresponding fees or an URL pointing to an online resource where these terms and conditions are described.'''^^xsd:string;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#ConditionsApplyingToAccessAndUse>;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 28;
+    skos:notation "metadata/2.0/req/common/conditions-for-access-and-use"^^xsd:string
+.
+guideline:TGRequirementC.19 rdf:type skos:Concept;
+    rdfs:label "TG Requirement C.19"@en;
+    rdfs:comment '''A minimal containing geographic bounding box of the data set or data set series shall be described. This bounding box shall be encoded using one or more `gmd:extent/gmd:EX_Extent/gmd:geographicElement/gmd:EX_GeographicBoundingBox` elements.
+
+The multiplicity of this element is 1..* for data sets and data set series, and 0..n for services.
+
+The bounding coordinate values for west and east bound longitudes and south and north bound latitudes shall be given in decimal degree values using WGS 84 Coordinate Reference System, as specified for the EX_GeographicBoundingBox class of the [ISO 19115] data model. The coordinates shall be given with at least 2 decimal precision.'''^^xsd:string;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#GeographicBoundingBox>;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 30;
+    skos:notation "metadata/2.0/req/common/bounding-box"^^xsd:string
+.
+guideline:TGRequirementC.2 rdf:type skos:Concept;
+    rdfs:label "TG Requirement C.2"@en;
+    rdfs:comment '''The metadata for an INSPIRE data set, data set series or service shall be encoded using exactly one `gmd:MD_Metadata` element as specified in the XML Schema rules and in the TG Requirements of the Conformance Classes in this specification.
+
+Additionally the requirements of [ISO 19139], [ISO 19115] and [ISO 19119] shall be followed for describing the metadata records in cases where neither the XML Schemas nor the TG Requirements in this specification require otherwise.'''^^xsd:string;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 2;
+    skos:notation "metadata/2.0/req/common/root-element"^^xsd:string
+.
+guideline:TGRequirementC.20 rdf:type skos:Concept;
+    rdfs:label "TG Requirement C.20"@en;
+    rdfs:comment '''The degree of conformity of the described resource with an INSPIRE Implementing Rule, specification document or Conformance Class, shall be given using one or several gmd:DQ_ConformanceResult elements under `gmd:report/gmd:DQ_DomainConsistency/gmd:result`. For each conformity statement (i.e. for each specification), a separate `gmd:DQ_ConformanceResult` element shall be used.
+
+The multiplicity of this element is 1..*.'''^^xsd:string;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#Conformity>;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 31;
+    skos:notation "metadata/2.0/req/common/conformity"^^xsd:string
+.
+guideline:TGRequirementC.21 rdf:type skos:Concept;
+    rdfs:label "TG Requirement C.21"@en;
+    rdfs:comment '''Each `gmd:report/gmd:DQ_DomainConsistency/gmd:result/gmd:DQ_ConformanceResult` element shall include a citation of the INSPIRE Implementing Rule, specification document or Conformance Class, including its official title and the date of publication of the document, using `gmd:specification/gmd:CI_Citation` element.
+
+The title shall be given using the `gmd:title` child element of the citation element with a Non-empty Free Text Element content. For the INSPIRE Implementation Rule documents the value of the title element shall match exactly the official title of the cited document in the language of the metadata.
+
+The publication date of the cited document shall be given using `gmd:date` child element. The date value shall be expressed in accordance with ISO 8601 with only the date part included.
+
+The date type code element `gmd:date/gmd:CI_Date/gmd:dateType/gmd:CI_DateTypeCode` shall be given and it shall point to the value "publication" of the ISO 19139 code list CI_DateTypeCode (Attribute `codeList` shall have value "http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_DateTypeCode" and the attribute `codeListValue` value "publication".).'''^^xsd:string;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#Conformity>;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 32;
+    skos:notation "metadata/2.0/req/common/conformity-specification"^^xsd:string
+.
+guideline:TGRequirementC.22 rdf:type skos:Concept;
+    rdfs:label "TG Requirement C.22"@en;
+    rdfs:comment '''Each `gmd:report/gmd:DQ_DomainConsistency/gmd:result/gmd:DQ_ConformanceResult` element containing a specification citation described in Requirement C.21 shall also include the degree of declared conformity against this specification using `gmd:pass` property with `gco:Boolean` value of "true" for a conformant resource and "false" for non-conformant resource. If the conformity has not yet been evaluated, the `gmd:pass` element shall be empty and contain a nil reason attribute with value "unknown" (Attribute `gco:nilReason`="unknown").'''^^xsd:string;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#Conformity>;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 34;
+    skos:notation "metadata/2.0/req/common/conformity-degree"^^xsd:string
+.
+guideline:TGRequirementC.3 rdf:type skos:Concept;
+    rdfs:label "TG Requirement C.3"@en;
+    rdfs:comment "The code list value shall be encoded using the `codeListValue` attribute of the relevant ISO 19139 element. The value shall be the identifier of the code list value, as defined in the name column of the tables in [ISO 19115], Annex B."^^xsd:string;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 3;
+    skos:notation "metadata/2.0/req/common/code-list-value"^^xsd:string
+.
+guideline:TGRequirementC.4 rdf:type skos:Concept;
+    rdfs:label "TG Requirement C.4"@en;
+    rdfs:comment '''Free text elements of type `gco:CharacterString_PropertyType` in INSPIRE metadata shall be expressed in one of the following ways:
+
+1. using the `gco:CharacterString` child element,
+2. using `gmx:Anchor` child element, or
+3. re-typing the containing element to `gmd:PT_FreeText_PropertyType` using the `xsi:type` attribute and providing both `gco:CharacterString` and `gmd:PT_FreeText` child elements.
+
+For options 1 and 2 the character string content of elements shall be provided in the language of the metadata. For option 3 the definition of the used locale shall be provided either using an URI pointing to a `gmd:MD_Metadata/gmd:locale` element within the same document or to an externally provided `gmd:PT_Locale` element.
+
+The character string content shall not be empty unless explicitly allowed in the element specific TG Requirements.'''^^xsd:string;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 4;
+    skos:notation "metadata/2.0/req/common/free-text"^^xsd:string
+.
+guideline:TGRequirementC.5 rdf:type skos:Concept;
+    rdfs:label "TG Requirement C.5"@en;
+    rdfs:comment '''The language of the provided metadata content shall be given. It shall be encoded using `gmd:MD_Metadata/gmd:language/gmd:LanguageCode` element pointing to one of the three-letter language codes of the ISO 639-2/B code list (Attribute `codeList` shall be "http://www.loc.gov/standards/iso639-2/" and the attribute `codeListValue` shall contain one of the three-letter bibliographic language code values).
+
+Only the code values for the official languages of the European Union (At the time of writing there are 24 official languages of the EU, see [http://ec.europa.eu/languages/policy/linguistic-diversity/official-languages-eu_en.htm](http://ec.europa.eu/languages/policy/linguistic-diversity/official-languages-eu_en.htm)) shall be used.
+
+The multiplicity of this element is 1.'''^^xsd:string;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#MetadataLanguage>;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 6;
+    skos:notation "metadata/2.0/req/common/metadata-language-code"^^xsd:string
+.
+guideline:TGRequirementC.6 rdf:type skos:Concept;
+    rdfs:label "TG Requirement C.6"@en;
+    rdfs:comment '''Point of contact for the responsible party for the provided metadata shall be given using element `gmd:MD_metadata/gmd:contact/gmd:CI_ResponsibleParty`.
+
+The multiplicity of this element is 1..*.
+
+The `gmd:CI_ResponsibleParty` element shall contain the following child elements:
+
+- The name of the responsible organisation shall be provided as the value of `gmd:organisationName` element with a Non-empty Free Text Element content.
+- The email address of the organisation shall be provided as the value of `gmd:contactInfo/gmd:CI_Contact/gmd:address/gmd:CI_Address/gmd:electronicMailAddress` element with a Non-empty Free Text Element containing a functioning email address of the responsible party.
+- The value of `gmd:role/gmd:CI_RoleCode` shall point to the value "pointOfContact" of [ISO 19139] code list *CI_RoleCode* (Attribute `codeList` shall be "http://standards.iso.org/iso/19139/resources/gmxCodelists.xml#CI_RoleCode" and value of `codeListValue` attribute "pointOfContact").'''^^xsd:string;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#MetadataPointOfContact>;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 8;
+    skos:notation "metadata/2.0/req/common/md-point-of-contact"^^xsd:string
+.
+guideline:TGRequirementC.7 rdf:type skos:Concept;
+    rdfs:label "TG Requirement C.7"@en;
+    rdfs:comment '''The latest update date of the metadata description shall be given for each metadata record. It shall be encoded using the `gmd:MD_Metadata/gmd:dateStamp` element. If no updates to the metadata have been made since publishing it, the creation date of the metadata shall be used instead.
+
+The multiplicity of this element is 1.'''^^xsd:string;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#MetadataDate>;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 10;
+    skos:notation "metadata/2.0/req/common/md-date"^^xsd:string
+.
+guideline:TGRequirementC.8 rdf:type skos:Concept;
+    rdfs:label "TG Requirement C.8"@en;
+    rdfs:comment '''A human readable, non-empty title of the described data set, data set series or service shall be provided. It shall be encoded using the `gmd:citation/gmd:CI_Citation/gmd:title` element with a Non-empty Free Text Element content in the language of the metadata.
+
+The multiplicity of the element is 1.'''^^xsd:string;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#ResourceTitle>;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 11;
+    skos:notation "metadata/2.0/req/common/resource-title"^^xsd:string
+.
+guideline:TGRequirementC.9 rdf:type skos:Concept;
+    rdfs:label "TG Requirement C.9"@en;
+    rdfs:comment '''A non-empty brief narrative summary of the content of the described data set, data set series or service shall be provided. It shall be encoded using the `gmd:abstract` element with a Non-empty Free Text Element content in the language of the metadata.
+
+The multiplicity of this element is 1.'''^^xsd:string;
+    rdfs:seeAlso <http://bp4mc2.org/inspire/def/inspire-shape#ResourceAbstract>;
+    skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>;
+    shxl:index 13;
+    skos:notation "metadata/2.0/req/common/resource-abstract"^^xsd:string
+.

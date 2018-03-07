@@ -1,7 +1,7 @@
 @prefix inspire-concept: <http://bp4mc2.org/inspire/id/concept/>.
 @prefix inspire-collection: <http://bp4mc2.org/inspire/id/collection/>.
 @prefix inspire-scheme: <http://bp4mc2.org/inspire/id/conceptscheme/>.
-@prefix inspire-shape: <http://bp4mc2.org/inspire/def/inspire/>.
+@prefix inspire-shape: <http://bp4mc2.org/inspire/def/inspire-shape#>.
 @prefix inspire-lex: <http://bp4mc2.org/inspire/id/regelgeving/>.
 @prefix inspire: <http://bp4mc2.org/inspire/def/inspire#>.
 @prefix inspire-meta: <http://bp4mc2.org/inspire/def/meta#>.
@@ -1135,9 +1135,10 @@ inspire:Service a owl:Class;
 
 inspire-shape:Resource a sh:NodeShape;
   dct:subject inspire-concept:Resource;
+  sh:targetClass inspire:Resource; #MAPPING: Deze is lastig: in dcat heb je deze niet, maar alleen 1 van de subklassen. Mogelijk via shapes doen??
   sh:name "+Resource";
   rdfs:label "Resource"@en;
-  sh:targetClass inspire:Resource;
+  rdfs:label "Bron"@nl;
   inspire-meta:xpath "/";
   sh:property inspire-shape:ResourceTitle;
   sh:property inspire-shape:ResourceAbstract;
@@ -1166,7 +1167,7 @@ inspire-shape:Dataset a sh:NodeShape;
   dct:subject inspire-concept:Dataset;
   sh:name "+Dataset(series)";
   rdfs:label "Dataset(series)"@en;
-  sh:targetClass inspire:Dataset;
+  sh:targetClass inspire:Dataset; #MAPPING: Hier moet nog naar gekeken worden. Kan het dcat:Dataset worden??
   inspire-meta:xpath "/";
   sh:property inspire-shape:ResourceLocator; # Lijkt erop dat dit niet voor services geldt?
   sh:property inspire-shape:ResourceLocatorComplex;
@@ -1183,9 +1184,9 @@ inspire-shape:Dataset a sh:NodeShape;
   sh:property inspire-shape:SpatialDatasetTopologicalConsistencyDescriptive;
 .
 inspire-shape:Service a sh:NodeShape;
-  dct:subject inspire-concept:Service;
-  sh:name "+Service";
+  dct:subject inspire-concept:Service; #MAPPING: Uitdaging. Wat wordt dit? dcat:Distribution ligt voor de hand, maar GEO-DCAT-AP zegt ook dcat:Catalog en dct:Service??
   sh:targetClass inspire:Service;
+  sh:name "+Service";
   inspire-meta:xpath "/";
   sh:property inspire-shape:CoupledResource;
   sh:property inspire-shape:SpatialDataServiceType;
@@ -1215,10 +1216,10 @@ inspire-shape:ResourceTitle a sh:PropertyShape;
 inspire-shape:ResourceAbstract a sh:PropertyShape;
   shxl:index 2;
   dct:subject inspire-concept:ResourceAbstract;
+  sh:path dct:description;
   sh:name "abstract";
   rdfs:label "Resource abstract"@en;
   rdfs:label "Samenvatting van de bron"@nl;
-  sh:path dct:description;
   sh:severity sh:Violation;
   sh:datatype xsd:string; #CharacterString
   sh:node inspire-shape:FreeText;
@@ -1229,8 +1230,12 @@ inspire-shape:ResourceAbstract a sh:PropertyShape;
   skos:example "The Standardized Precipitation Index (SPI-n) is a statistical indicator comparing the total precipitation received at a particular location during a period of n months with the long-term rainfall distribution for the same period of time at that location. SPI is calculated on a monthly basis for a moving window of n months, where n indicates the rainfall accumulation period, which is typically 1, 3, 6, 9, 12, 24 or 48 months. The corresponding SPIs are denoted as SPI-1, SPI-3, SPI-6, etc. In order to allow for the statistical comparison of wetter and drier climates, SPI is based on a transformation of the accumulated precipitation into a standard normal variable with zero mean and variance equal to one. SPI results are given in units of standard deviation from the long-term mean of the standardized distribution. In 2010 WMO selected the SPI as a key meteorological drought indicator to be produced operationally by meteorological services";
 .
 inspire-shape:ResourceType a sh:PropertyShape;
+  shxl:index 3;
   dct:subject inspire-concept:ResourceType;
   sh:name "type";
+  rdfs:label "Resource type"@en;
+  rdfs:label "Type bron"@nl;
+  sh:path dct:type;
   sh:severity sh:Violation;
   sh:class skos:Concept; #MD_ScopeCode
   sh:node inspire-shape:ResourceTypes;
@@ -1241,6 +1246,8 @@ inspire-shape:ResourceType a sh:PropertyShape;
   skos:example "dataset";
 .
 inspire-shape:ResourceLocator a sh:PropertyShape;
+  #MAPPING: Deze is lastig. Eigenlijk wil je ResourceLocator in basale vorm niet, maar alleen ResourceLocatorComplex
+  shxl:index 4;
   dct:subject inspire-concept:ResourceLocator;
   sh:name "locator";
   sh:severity sh:Warning;
@@ -1254,9 +1261,9 @@ inspire-shape:ResourceLocator a sh:PropertyShape;
 Examples of Resource Locator with these additional elements:
 - JRC EDO (European Drought Observatory) - Drought Indexes WMS
   - Linkage: http://edo.jrc.ec.europa.eu/chm/ows.php?VERSION=1.3.0&SERVICE=WMS&REQUEST=GetCapabilities
-- Title: JRC EDO (European Drought Observatory) - Drought Indexes WMS
-- Description: WMS delivering maps of drought indexes provided by the European Drought Observatory (EDO).
-- Function: information
+  - Title: JRC EDO (European Drought Observatory) - Drought Indexes WMS
+  - Description: WMS delivering maps of drought indexes provided by the European Drought Observatory (EDO).
+  - Function: information
 - WISE River basin districts (RBDs)
   - Linkage: http://www.eea.europa.eu/data-and-maps/data/wise-river-basin-districts-rbds-1
   - Title: WISE River basin districts (RBDs)
@@ -1264,6 +1271,16 @@ Examples of Resource Locator with these additional elements:
   - Function: information''';
 .
 inspire-shape:ResourceLocatorComplex a sh:PropertyShape;
+  #MAPPING: Complex mapping is lastig, ook de functie moet meegenomen worden! Hier zit een complexe vertaalslag achter
+  #Volgens GEO-DCAT:
+  #- Services: foaf:homePage bij een dcat:Catalog (??? Dat zou ik dus nooit doen...). Ook uitzoeken: hoe zit het met ResourceLocator en services???
+  #- Dataset: dcat:Dataset/dcat:landingPage, indien functiecode ontbreekt
+  #- Dataset: dcat:Distribution/dcat:accessURL, bij functiecode download (ik zou dan juist dcat:downloadURL verwachten???)
+  #- Dataset: dcat:Dataset/foaf:page, bij functiecode informatie (foaf:page zit niet in DCAT-AP-EU, waarom niet dcat:landingPage???)
+  #- Dataset: dcat:Distribution/dcat:accessURL, bij functiecode offlineAccess
+  #- Dataset: dcat:Distribution/dcat:accessURL, bij functiecode order
+  #- Dataset: dcat:Dataset/foaf:page, bij functiecode search (let op: dit is dus lastig, meerdere dezelfde, dan is heen-en-terug niet meer mogelijk!!)
+  shxl:index 4;
   dct:subject inspire-concept:ResourceLocator;
   sh:name "locator";
   sh:node inspire-shape:ResourceLocatorElement;
@@ -1274,9 +1291,9 @@ inspire-shape:ResourceLocatorComplex a sh:PropertyShape;
 inspire-shape:UniqueResourceIdentifier a sh:PropertyShape;
   shxl:index 5;
   dct:subject inspire-concept:UniqueResourceIdentifier;
+  sh:path dct:identifier;
   sh:name "identifier";
   sh:severity sh:Violation; #Only for dataset and dataset series
-  sh:path dct:identifier;
   rdfs:label "Unique resource identifier"@en;
   rdfs:label "Unieke identifier van de bron"@nl;
   sh:node inspire-shape:URI;
@@ -1288,23 +1305,27 @@ inspire-shape:UniqueResourceIdentifier a sh:PropertyShape;
   rdfs:comment "The unique resource identifier is needed to provide a queryable information when following data-service-coupling (see also 4.1.2.4). Therefore it is necessary to have the identifier itself together with the namespace in element code. The use of RS_Identifier (with a separate element codeSpace) is not suitable here";
 .
 inspire-shape:CoupledResource a sh:PropertyShape;
+  shxl:index 6;
   dct:subject inspire-concept:CoupledResource;
+  sh:path dct:hasPart; #MAPPING Conform GEO-DCAT. Het idee is dat een service bestaat uit datasets
   sh:name "coupledResource";
+  rdfs:label "Coupled resource"@en;
+  rdfs:label "Coupled resource"@nl;
   sh:severity sh:Warning; #Not applicable for datasets and dataset series, mandatory if linkage to datasets on which the service operates are available
   sh:node inspire-shape:Dataset; # 36. MD_DataIdentification, unique resource identifier or locator (URL) of the MD_DataIdentification object
-  sh:class inspire:Dataset;
+  sh:class inspire:Dataset; #MAPPING: Wellicht dcat:Dataset? In GEO-DCAT kan ook gewerkt worden met datasets die blank nodes zijn... Minimaal moet dan dct:identifier ingevuld zijn...
   inspire-meta:isoref "9 of table C.1. operatesOn";
   inspire-meta:xpath "identificationInfo[1]/*/operatesOn";
   skos:example "http://vap-xgeodev.jrc.ec.europa.eu/geonetwork/srv/eng/csw?SERVICE=CSW&VERSION=2.0.2&REQUEST=GetRecordById&ID=f9ee6623-cf4c-11e1-9105-0017085a97ab&OUTPUTSCHEMA=http://www.isotc211.org/2005/gmd&ELEMENTSETNAME=full#lakes";
   rdfs:comment "The implementation of this element by reference means that the xlink:href element are pointing to a metadatarecord that contains a MD_DataIdentification object. The reference to the MD_DataIdentification object is done using the xpointer reference using the #-sign. The example above points to #lakes which is the ID of this object. Check example on xml encoding in section 0. The Unique Resource Identifier for the can be explicilty defined for the target dataset using the optional uuidref.attribute.";
 .
 inspire-shape:ResourceLanguage a sh:PropertyShape;
-  shxl:index 6;
+  shxl:index 7;
   dct:subject inspire-concept:ResourceLanguage;
+  sh:path dct:language;
   sh:name "language";
   rdfs:label "Resource language"@en;
   rdfs:label "Taal van de bron"@nl;
-  sh:path dct:language;
   sh:severity sh:Warning; # Mandatory if the resource includes textual information, not applicable to services
 #  sh:datatype xsd:string; LanguageCode (ISO/TS 19139) [Inspire states a string, GEODCAT-AP states dct:LinguisticSystem]
   sh:class dct:LinguisticSystem;
@@ -1314,8 +1335,12 @@ inspire-shape:ResourceLanguage a sh:PropertyShape;
   skos:example "eng";
 .
 inspire-shape:TopicCategory a sh:PropertyShape;
+  shxl:index 8;
   dct:subject inspire-concept:TopicCategory;
+  sh:path dct:subject; #MAPPING: Conform GEO-DCAT
   sh:name "topicCategory";
+  rdfs:label "Topic category"@en;
+  rdfs:label "Onderwerpcategorie"@nl;
   sh:severity sh:Violation; # Only for dataset and dataset series, not applicable to services
   sh:minCount 1;
   sh:class skos:Concept; # MD_TopicCategory
@@ -1326,8 +1351,12 @@ inspire-shape:TopicCategory a sh:PropertyShape;
   rdfs:comment "The topic categories defined in Part D 2 of [Regulation 1205/2008] are derived directly from the topic categories defined in MD_TopicCategoryCode (B.5.27 of ISO 19115)";
 .
 inspire-shape:SpatialDataServiceType a sh:PropertyShape;
+  shxl:index 9;
   dct:subject inspire-concept:SpatialDataServiceType;
+  sh:path dct:type; #MAPPING: services have two dct:type field: ResourceType and SpatialDataServiceType, but the second are narrower versions of the first, so this is OK
   sh:name "SDStype";
+  rdfs:label "Spatial data service type"@en;
+  rdfs:label "Type dienst met betrekking tot ruimtelijke gegevens"@nl;
   sh:severity sh:Violation; # Only for services, not applicable to datasets and dataset series
   sh:class skos:Concept; # GenericName
   sh:minCount 1;
@@ -1338,16 +1367,28 @@ inspire-shape:SpatialDataServiceType a sh:PropertyShape;
   skos:example "view";
 .
 inspire-shape:Keyword a sh:PropertyShape;
+  shxl:index 10;
   dct:subject inspire-concept:Keyword;
+  #MAPPING: er zijn twee mappings:
+  #- dcat:keyword indien sprake is van een stringetje
+  #- dcat:theme indien sprake is van een concept
+  #Hieronder is de concept-variant uitgewerkt
+  sh:path dcat:theme; #MAPPING: Dit wordt dan 
   sh:name "keyword";
+  rdfs:label "Keyword"@en;
+  rdfs:label "Trefwoord"@nl;
   sh:node inspire-shape:KeywordElement;
   sh:nodeKind sh:BlankNode;
   sh:minCount 1;
   inspire-meta:xpath "identificationInfo[1]/*/descriptiveKeywords/*/";
 .
 inspire-shape:KeywordValue a sh:PropertyShape;
+  shxl:index 11;
   dct:subject inspire-concept:KeywordValue;
+  sh:path skos:prefLabel; #MAPPING: dit gaat uit van een echt concept
   sh:name "keyword value";
+  rdfs:label "Keyword value"@en;
+  rdfs:label "Trefwoordwaarde"@nl;
   sh:severity sh:Violation;
   sh:datatype xsd:string;
   sh:node inspire-shape:FreeText;
@@ -1362,8 +1403,12 @@ inspire-shape:KeywordValue a sh:PropertyShape;
   rdfs:comment "Each instance of ISO 19115 keyword may originate from a controlled vocabulary described through the thesaurusName property of the instance of descriptiveKeywords to which the keyword pertains";
 .
 inspire-shape:KeywordOriginatingControlledVocabulary a sh:PropertyShape;
+  shxl:index 12;
   dct:subject inspire-concept:KeywordOriginatingControlledVocabulary;
+  sh:path skos:inScheme;
   sh:name "originating controlled vocabulary";
+  rdfs:label "Keyword originating controlled vocabulary"@en;
+  rdfs:label "Origineel gecontroleerd vocabulaire van het trefwoord"@nl;
   sh:severity sh:Warning; # Mandatory if keyword is from controlled vocabulary
   sh:node inspire-shape:Citation;
   sh:nodeKind sh:BlankNode;
@@ -1387,10 +1432,14 @@ inspire-shape:KeywordOriginatingControlledVocabulary a sh:PropertyShape;
     - date: 2008-04-14''';
 .
 inspire-shape:GeographicBoundingBox a sh:PropertyShape;
+  shxl:index 13;
   dct:subject inspire-concept:GeographicBoundingBox;
+  sh:path dct:spatial;
   sh:name "geographicBoundingBox";
+  rdfs:label "Geographic bounding box"@en;
+  rdfs:label "Geografische rechthoek"@nl;
   sh:severity sh:Violation; # Mandatory for datasets and spatial dataset series, Conditional for spatial services: mandatory for services with an explicit geographic extent
-  sh:node inspire-shape:BoundingBox;
+  sh:node inspire-shape:BoundingBox; #MAPPING: in dcat zal het geen boundingbox zijn, maar een Location-object. Dit kan een named resource zijn, OF een geometry conform de Core Location Vocabulary
   sh:nodeKind sh:BlankNode;
   inspire-meta:isoref "344. westBoundLongitude";
   inspire-meta:isoref "345. eastBoundLongitude";
@@ -1408,8 +1457,12 @@ inspire-shape:GeographicBoundingBox a sh:PropertyShape;
 - If the bounding box crosses the 180 meridian, then the value of the westBoundLongitude will be greater than the eastBoundLongitude value.'''
 .
 inspire-shape:TemporalExtent a sh:PropertyShape;
+  shxl:index 14;
   dct:subject inspire-concept:TemporalExtent;
+  sh:path dct:temporal;
   sh:name "temporalExtent";
+  rdfs:label "Temporal extent"@en;
+  rdfs:label "Temporele dekking"@nl;
   sh:severity sh:Warning; #Conditional: At least one temporal reference is required
   sh:node inspire-shape:Period; # TM_Primitive, As described in ISO 19108
   sh:nodeKind sh:BlankNode;
@@ -1419,8 +1472,12 @@ inspire-shape:TemporalExtent a sh:PropertyShape;
   rdfs:comment "The overall time period covered by the content of the resource may be composed of one or many instances";
 .
 inspire-shape:DateOfPublication a sh:PropertyShape;
+  shxl:index 15;
   dct:subject inspire-concept:DateOfPublication;
+  sh:path dct:issued;
   sh:name "dateOfPublication";
+  rdfs:label "Date of publication"@en;
+  rdfs:label "Datum van bekendmaking"@nl;
   sh:node inspire-shape:CIDate; #Described in ISO 19108 and ISO 8601
   sh:severity sh:Warning; #Conditional: at least one date of publication / date of creation / date of revision is required
   sh:nodekind sh:BlankNode;
@@ -1430,8 +1487,12 @@ inspire-shape:DateOfPublication a sh:PropertyShape;
   skos:example "2009-03-15T11:15:00";
 .
 inspire-shape:DateOfLastRevision a sh:PropertyShape;
+  shxl:index 16;
   dct:subject inspire-concept:DateOfLastRevision;
+  sh:path dct:modified;
   sh:name "dateOfLastRevision";
+  rdfs:label "Date of last revision"@en;
+  rdfs:label "Datum van laatste herziening"@nl;
   sh:severity sh:Warning; #Conditional: at least one date of publication / date of creation / date of revision is required
   sh:maxCount 1;
   sh:node inspire-shape:CIDate; #Described in ISO 19108 and ISO 8601
@@ -1443,8 +1504,12 @@ inspire-shape:DateOfLastRevision a sh:PropertyShape;
   rdfs:comment "There may be more than one revision date provided in an ISO 19115 metadata, but INSPIRE will consider as date of last revision the more recent one";
 .
 inspire-shape:DateOfCreation a sh:PropertyShape;
+  shxl:index 17;
   dct:subject inspire-concept:DateOfCreation;
+  sh:path dct:created;
   sh:name "dateOfCreation";
+  rdfs:label "Date of creation"@en;
+  rdfs:label "Aanmaakdatum"@nl;
   sh:severity sh:Warning; #Conditional: at least one date of publication / date of creation / date of revision is required
   sh:maxCount 1;
   sh:node inspire-shape:CIDate; #Described in ISO 19108 and ISO 8601
@@ -1455,20 +1520,28 @@ inspire-shape:DateOfCreation a sh:PropertyShape;
   skos:example "2009-02-15T11:15:00";
 .
 inspire-shape:Lineage a sh:PropertyShape;
+  shxl:index 18;
   dct:subject inspire-concept:Lineage;
+  sh:path dct:provenance;
   sh:name "lineage";
+  rdfs:label "Lineage"@en;
+  rdfs:label "Algemene beschrijving herkomst"@nl;
   sh:severity sh:Violation; #Mandatory for spatial dataset and spatial dataset series. Not applicable to services.
   sh:minCount 1;
   sh:maxCount 1;
   sh:datatype xsd:string; #CharacterString
-  sh:node inspire-shape:FreeText;
+  sh:node inspire-shape:FreeText; #MAPPING: In DCAT-AP wordt dit een dct:ProvenanceStatement!
   inspire-meta:isoref "83. statement";
   inspire-meta:xpath "dataQualityInfo/*/lineage/*/statement";
   skos:example "Computation of the SPI involves fitting a probability density function to a given frequency distribution of precipitation totals for a station or grid point and for an accumulation period. We use the gamma probability density function. The statistics for the frequency distribution are calculated on the basis of a reference period of at least 30 years. The parameters of the probability density function are then used to find the cumulative probability of the observed precipitation for the required month and temporal scale. This cumulative probability is then transformed to the standardised normal distribution with mean zero and variance one, which results in the value of the SPI. The SPI values are computed using the so-called MARS weather stations as rainfall input data. Refer the MARS weather catalogue for characteristics of the quality and quantity of these data. We only rely on the rainfall data input";
 .
 inspire-shape:SpatialResolutionEquivalentScale a sh:PropertyShape;
+  shxl:index 19;
   dct:subject inspire-concept:SpatialResolution;
+  sh:path rdfs:comment; #MAPPING: Geen goede mapping mogelijk! Het wordt "talig" opgelost, en het wordt dan ook een string!
   sh:name "spatialResolution";
+  rdfs:label "Spatial resolution"@en;
+  rdfs:label "Ruimtelijke resolutie"@nl;
   sh:severity sh:Warning; #Mandatory if an equivalent scale or a resolution distance can be specified. Mandatory when there is a restriction on the spatial resolution for service.
   sh:datatype xsd:integer;
   sh:node inspire-shape:Integer;
@@ -1478,8 +1551,12 @@ inspire-shape:SpatialResolutionEquivalentScale a sh:PropertyShape;
   rdfs:comment "For services, it is not possible to express the restriction of a service concerning the spatial resolution in the current version of ISO 19119. While the problem is addressed by the standardization community, spatial resolution restrictions for services shall be expressed in the Abstract";
 .
 inspire-shape:SpatialResolutionDistance a sh:PropertyShape;
+  shxl:index 20;
   dct:subject inspire-concept:SpatialResolution;
   sh:name "spatialResolution";
+  rdfs:label "Spatial resolution"@en;
+  rdfs:label "Ruimtelijke resolutie"@nl;
+  sh:path rdfs:comment; #MAPPING: Geen goede mapping mogelijk! Het wordt "talig" opgelost, en het wordt dan ook een string!
   sh:severity sh:Warning; #Mandatory if an equivalent scale or a resolution distance can be specified. Mandatory when there is a restriction on the spatial resolution for service.
   sh:datatype xsd:integer;
   sh:node inspire-shape:Distance;

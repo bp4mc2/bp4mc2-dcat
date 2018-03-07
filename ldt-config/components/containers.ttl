@@ -136,3 +136,38 @@ stage:PostUploadPrefixQuery a elmo:Query;
     }
   '''
 .
+
+containerlocal:guidelines-xlsx a elmo:Container;
+  rdfs:label "Upload Excel guidelines";
+  elmo:contains stage:Menu;
+  elmo:replaces containerlocal:guidelines;
+  elmo:representation elmo:UploadRepresentation;
+  elmo:translator elmo:TableExcelTranslator;
+  elmo:query stage:PostUploadGuidelinesQuery;
+.
+containerlocal:prefix a elmo:Container;
+  elmo:contains stage:Menu;
+.
+stage:PostUploadGuidelinesQuery a elmo:Query;
+  elmo:query '''
+    PREFIX container: <http://localhost:8080/modeling/container/>
+    DELETE FROM container:profiel {
+      ?s ?p ?o
+    }
+    WHERE {
+      GRAPH container:guidelines {
+        ?s skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>.
+        ?s ?p ?o
+      }
+    }
+    INSERT INTO container:profiel {
+      ?s ?p ?o
+    }
+    WHERE {
+      GRAPH container:guidelines {
+        ?s skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>.
+        ?s ?p ?o
+      }
+    }
+  '''
+.

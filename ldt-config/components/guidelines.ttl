@@ -1,0 +1,44 @@
+@prefix elmo: <http://bp4mc2.org/elmo/def#>.
+@prefix html: <http://www.w3.org/1999/xhtml/vocab#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix void: <http://rdfs.org/ns/void#>.
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
+@prefix stage: <http://localhost:8080/modeling/stage#>.
+
+stage:ProfielGuidelines	a	elmo:Representation;
+	elmo:url-pattern	"/query/profiel-guidelines$";
+	elmo:contains	stage:Menu;
+  elmo:fragment [
+    elmo:applies-to "g";
+    elmo:appearance elmo:HiddenAppearance;
+    elmo:name "SUBJECT";
+  ];
+  elmo:fragment [
+    elmo:applies-to "description";
+    rdfs:label "Description";
+    elmo:appearance elmo:MarkdownAppearance;
+  ];
+  elmo:fragment [
+    elmo:applies-to "rule";
+    elmo:appearance elmo:GlobalLink;
+  ];
+  elmo:query '''
+    prefix containerlocal: <http://localhost:8080/modeling/container/>
+    prefix shxl: <http://bp4mc2.org/def/shacl-xl#>
+    select ?g ?guideline ?code (strafter(str(?r),"#") as ?rule) ?description
+    where {
+      graph containerlocal:profiel {
+        ?g skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>.
+        ?g rdfs:label ?guideline.
+        ?g skos:notation ?code.
+        ?g rdfs:comment ?description.
+        ?g shxl:index ?index
+        OPTIONAL {
+          ?g rdfs:seeAlso ?r
+        }
+      }
+    }
+    order by ?index
+  '''
+.
