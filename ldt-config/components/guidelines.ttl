@@ -29,7 +29,7 @@ stage:ProfielGuidelines	a	elmo:Representation;
     select ?g ?guideline ?code (strafter(str(?r),"#") as ?rule) ?description
     where {
       graph containerlocal:profiel {
-        ?g skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>.
+        ?g skos:inScheme <http://bp4mc2.org/inspire/id/scheme/Guideline>.
         ?g rdfs:label ?guideline.
         ?g skos:notation ?code.
         ?g rdfs:comment ?description.

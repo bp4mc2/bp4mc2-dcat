@@ -1,0 +1,65 @@
+@prefix stage: <http://localhost:8080/modeling/stage#>.
+@prefix elmo: <http://bp4mc2.org/elmo/def#>.
+@prefix html: <http://www.w3.org/1999/xhtml/vocab#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix production: <http://linkeddata.ordina.nl/modeling/update/>.
+@prefix productionlocal: <http://localhost:8080/modeling/update/>.
+
+productionlocal:cleancodelists a elmo:Production;
+  elmo:contains stage:Menu;
+  elmo:contains stage:Cleancodelists_scene1;
+  elmo:contains stage:Cleancodelists_scene2;
+  elmo:contains stage:Cleancodelists_scene3;
+.
+stage:Cleancodelists_scene1 a elmo:Scene;
+  elmo:index "1";
+  rdfs:label "Add concept type and inScheme";
+  elmo:query '''
+    PREFIX container: <http://localhost:8080/modeling/container/>
+    PREFIX dct: <http://purl.org/dc/terms/>
+    INSERT INTO container:profiel {
+      ?concept a skos:Concept.
+      ?concept skos:inScheme ?scheme.
+    }
+    WHERE {
+      GRAPH container:profiel {
+        ?scheme a skos:ConceptScheme.
+        ?scheme dct:hasPart ?concept.
+      }
+    }
+  ''';
+.
+stage:Cleancodelists_scene2 a elmo:Scene;
+  elmo:index "2";
+  rdfs:label "Add skos:prefLabel";
+  elmo:query '''
+    PREFIX container: <http://localhost:8080/modeling/container/>
+    PREFIX dct: <http://purl.org/dc/terms/>
+    INSERT INTO container:profiel {
+      ?concept skos:prefLabel ?title.
+    }
+    WHERE {
+      GRAPH container:profiel {
+        ?concept a skos:Concept.
+        ?concept dct:title ?title.
+      }
+    }
+  ''';
+.
+stage:Cleancodelists_scene3 a elmo:Scene;
+  elmo:index "2";
+  rdfs:label "Add skos:notation";
+  elmo:query '''
+    PREFIX container: <http://localhost:8080/modeling/container/>
+    PREFIX dct: <http://purl.org/dc/terms/>
+    INSERT INTO container:profiel {
+      ?concept skos:notation ?notation.
+    }
+    WHERE {
+      GRAPH container:profiel {
+        ?concept a skos:Concept.
+        BIND(replace(str(?concept),"^([^ ]+)(#|/)([^ ]+)$","$3") as ?notation)
+      }
+    }
+  ''';
+.

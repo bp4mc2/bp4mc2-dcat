@@ -6,8 +6,10 @@
 @prefix inspire: <http://bp4mc2.org/inspire/def/inspire#>.
 @prefix inspire-meta: <http://bp4mc2.org/inspire/def/meta#>.
 @prefix inspire-voc: <http://bp4mc2.org/inspire/id/vocabulary/>.
+@prefix inspire-tg: <http://bp4mc2.org/inspire/id/guideline/>.
 
 @prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix cnt: <http://www.w3.org/2011/content#> .
 @prefix dash: <http://datashapes.org/dash#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
@@ -1162,6 +1164,10 @@ inspire-shape:Resource a sh:NodeShape;
   sh:property inspire-shape:MetadataPointOfContact;
   sh:property inspire-shape:MetadataDate;
   sh:property inspire-shape:MetadataLanguage;
+  sh:property inspire-shape:MetadataStandardName;
+  sh:property inspire-shape:MetadataStandardVersion;
+  sh:property inspire-shape:MetadataCharacterSet;
+  sh:property inspire-shape:MetadataFileIdentifier;
 .
 inspire-shape:Dataset a sh:NodeShape;
   dct:subject inspire-concept:Dataset;
@@ -1180,6 +1186,7 @@ inspire-shape:Dataset a sh:NodeShape;
   sh:property inspire-shape:SpatialDatasetEncoding;
   sh:property inspire-shape:SpatialDatasetCharacterEncoding;
   sh:property inspire-shape:SpatialDatasetSpatialRepresentationType;
+  sh:property inspire-shape:MaintenanceInformation;
   sh:property inspire-shape:SpatialDatasetTopologicalConsistencyQuantitive;
   sh:property inspire-shape:SpatialDatasetTopologicalConsistencyDescriptive;
 .
@@ -1247,7 +1254,6 @@ inspire-shape:ResourceType a sh:PropertyShape;
 .
 inspire-shape:ResourceLocator a sh:PropertyShape;
   #MAPPING: Deze is lastig. Eigenlijk wil je ResourceLocator in basale vorm niet, maar alleen ResourceLocatorComplex
-  shxl:index 4;
   dct:subject inspire-concept:ResourceLocator;
   sh:name "locator";
   sh:severity sh:Warning;
@@ -1282,7 +1288,13 @@ inspire-shape:ResourceLocatorComplex a sh:PropertyShape;
   #- Dataset: dcat:Dataset/foaf:page, bij functiecode search (let op: dit is dus lastig, meerdere dezelfde, dan is heen-en-terug niet meer mogelijk!!)
   shxl:index 4;
   dct:subject inspire-concept:ResourceLocator;
+  sh:path foaf:homePage;
+  sh:path dcat:landingPage;
+  sh:path foaf:page;
+  sh:path dcat:accessURL;
   sh:name "locator";
+  rdfs:label "Resource locator"@en;
+  rdfs:label "Resource locator"@nl;
   sh:node inspire-shape:ResourceLocatorElement;
   sh:nodeKind sh:BlankNode;
   inspire-meta:xpath "distributionInfo/*/transferOptions/*/onLine/*/linkage/";
@@ -1553,6 +1565,7 @@ inspire-shape:SpatialResolutionEquivalentScale a sh:PropertyShape;
 inspire-shape:SpatialResolutionDistance a sh:PropertyShape;
   shxl:index 20;
   dct:subject inspire-concept:SpatialResolution;
+  sh:path rdfs:comment; #MAPPING: Geen goede mapping mogelijk! Het wordt "talig" opgelost, en het wordt dan ook een string!
   sh:name "spatialResolution";
   rdfs:label "Spatial resolution"@en;
   rdfs:label "Ruimtelijke resolutie"@nl;
@@ -1566,19 +1579,30 @@ inspire-shape:SpatialResolutionDistance a sh:PropertyShape;
   rdfs:comment "For services, it is not possible to express the restriction of a service concerning the spatial resolution in the current version of ISO 19119. While the problem is addressed by the standardization community, spatial resolution restrictions for services shall be expressed in the Abstract";
 .
 inspire-shape:Conformity a sh:PropertyShape;
+  shxl:index 21;
   dct:subject inspire-concept:Conformity;
+  sh:path dct:conformsTo; #MAPPING: Alleen als sprake is van "conformant", anders:..
+  sh:path prov:wasUsedBy;
   sh:name "conformity";
+  rdfs:label "Conformity"@en;
+  rdfs:label "Overeenstemming"@nl;
   sh:severity sh:Violation;
   sh:node inspire-shape:ConformityElement;
+  sh:class prov:Activity;
   sh:nodeKind sh:BlankNode;
   sh:minCount 1;
   inspire-meta:xpath "dataQualityInfo/*/report/*/result/*/";
 .
 inspire-shape:ConformitySpecification a sh:PropertyShape;
+  shxl:index 22;
   dct:subject inspire-concept:ConformitySpecification;
+  sh:path prov:wasDerivedFrom; #MAPPING: Eigenlijk ingewikkelder: prov:qualifiedAssociation/prov:hadPlan/prov:wasDerivedFrom
   sh:name "specification";
+  rdfs:label "Comformity specification"@en;
+  rdfs:label "Specificatie van de overeenstemming"@nl;
   sh:severity sh:Violation;
   sh:node inspire-shape:Citation; #359. CI_Citation
+  sh:class prov:Entity, dct:Standard;
   sh:nodeKind sh:BlankNode;
   inspire-meta:isoref "130. specification";
   inspire-meta:xpath "dataQualityInfo/*/report/*/result/*/specification";
@@ -1588,11 +1612,16 @@ inspire-shape:ConformitySpecification a sh:PropertyShape;
   - date: 2010-12-08'''
 .
 inspire-shape:ConformityDegree a sh:PropertyShape;
+  shxl:index 23;
   dct:subject inspire-concept:ConformityDegree;
+  sh:path dct:type;
   sh:name "degree";
+  rdfs:label "Conformity degree"@en;
+  rdfs:label "Conformiteitsindicatie met de specificatie"@nl;
   sh:severity sh:Violation;
   sh:node inspire-shape:Boolean;
   sh:datatype xsd:boolean; #Datatype is specified as boolean, the legislation dictates a list of values (!) => D.5 is not used
+              #MAPPING: In LD wordt gebruik gemaakt van de waarden uit <http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity>
   inspire-meta:isoref "132. pass";
   inspire-meta:xpath "dataQualityInfo/*/report/*/result/*/pass";
   skos:example "true";
@@ -1601,8 +1630,12 @@ inspire-shape:ConformityDegree a sh:PropertyShape;
 - null (with nilReason = 'unknown') if not evaluated'''
 .
 inspire-shape:ConditionsApplyingToAccessAndUse a sh:PropertyShape;
+  shxl:index 24;
   dct:subject inspire-concept:ConditionsApplyingToAccessAndUse;
   sh:name "conditionsApplyingToAccessAndUse";
+  sh:path dct:license;
+  rdfs:label "Conditions applying to access and use"@en;
+  rdfs:label "Voorwaarden voor toegang en gebruik"@nl;
   sh:severity sh:Warning; #Mandatory if useConstraints is not documented.
   sh:class skos:Concept; #MD_RestrictionCode
   sh:node inspire-shape:AccessAndUseConditions; #Codelist (strictly limited to the value defined in B.5.24 of ISO 19115)
@@ -1612,7 +1645,7 @@ inspire-shape:ConditionsApplyingToAccessAndUse a sh:PropertyShape;
 .
 inspire-shape:ConditionsApplyingToAccessAndUseOtherConstraints a sh:PropertyShape;
   dct:subject inspire-concept:ConditionsApplyingToAccessAndUse;
-  sh:name "conditionsApplyingToAccessAndUse";
+  sh:name "conditionsApplyingToAccessAndUse"; #MAPPING: Maar 1 van deze daadwerkelijk gemapt
   sh:severity sh:Warning; #Mandatory if accessConstraints is set at the value "otherRestrictions"
   sh:node inspire-shape:FreeText;
   sh:datatype xsd:string; #CharacterString
@@ -1624,7 +1657,7 @@ inspire-shape:ConditionsApplyingToAccessAndUseOtherConstraints a sh:PropertyShap
 .
 inspire-shape:ConditionsApplyingToUse a sh:Propertyshape;
   dct:subject inspire-concept:ConditionsApplyingToAccessAndUse;
-  sh:name "conditionsApplyingToUse";
+  sh:name "conditionsApplyingToUse"; #MAPPING: ApplyingToUse mapt op dezelfde wijze als ApplyingToAccessAndUse
   sh:severity sh:Warning; #Mandatory if accessConstraints is not documented.
   sh:class skos:Concept; #MD_RestrictionCode
   sh:node inspire-shape:AccessAndUseConditions; #Codelist (strictly limited to the value defined in B.5.24 of ISO 19115)
@@ -1634,7 +1667,7 @@ inspire-shape:ConditionsApplyingToUse a sh:Propertyshape;
 .
 inspire-shape:ConditionsApplyingToUseOtherConstraints a sh:PropertyShape;
   dct:subject inspire-concept:ConditionsApplyingToAccessAndUse;
-  sh:name "conditionsApplyingToUse";
+  sh:name "conditionsApplyingToUse"; #MAPPING: ApplyingToUse mapt op dezelfde wijze als ApplyingToAccessAndUse
   sh:severity sh:Warning; #Mandatory if useConstraints is set at the value "otherRestrictions"
   sh:node inspire-shape:FreeText;
   sh:datatype xsd:string; #CharacterString
@@ -1645,8 +1678,12 @@ inspire-shape:ConditionsApplyingToUseOtherConstraints a sh:PropertyShape;
   rdfs:comment '''The domain of the metadata element otherConstraints is Free text. This makes it hard to unambiguous define some common values in all official languages in the Communiy. Therefore it is required to refer to code lists in the Inspire registry for some specific values like "no conditions apply" and "conditions unknown" (see TG Requirement 8).'''
 .
 inspire-shape:LimitationsOnPublicAccess a sh:PropertyShape;
+  shxl:index 25;
   dct:subject inspire-concept:LimitationsOnPublicAccess;
+  sh:path dct:accessRights;
   sh:name "limitationsOnPublicAccess";
+  rdfs:label "Limitations on public access"@en;
+  rdfs:label "Beperkingen op openbare toegang"@nl;
   sh:severity sh:Warning; #Mandatory if classification is not documented
   sh:class skos:Concept; #MD_RestrictionCode
   sh:node inspire-shape:AccessAndUseConditions; #Codelist (strictly limited to the value defined in B.5.24 of ISO 19115)
@@ -1657,7 +1694,7 @@ inspire-shape:LimitationsOnPublicAccess a sh:PropertyShape;
 .
 inspire-shape:LimitationsOnPublicAccessOtherConstraints a sh:PropertyShape;
   dct:subject inspire-concept:LimitationsOnPublicAccess;
-  sh:name "limitationsOnPublicAccess";
+  sh:name "limitationsOnPublicAccess"; #MAPPING: Maar 1 van deze echt gemapt
   sh:severity sh:Warning; #Mandatory if classification is not documented
   sh:class skos:Concept; #Gmx:anchor
   sh:node inspire-shape:PublicAccessLimitations;
@@ -1666,16 +1703,28 @@ inspire-shape:LimitationsOnPublicAccessOtherConstraints a sh:PropertyShape;
   skos:example '''<gmx:Anchor link:href=" http://inspire.ec.europa.eu/ metadata-codelist /LimitationsOnPublicAccess//NoLimitations"> no limitations</gmx:Anchor>''';
 .
 inspire-shape:ResponsibleOrganisation a sh:PropertyShape;
+  shxl:index 26;
   dct:subject inspire-concept:ResponsibleOrganisation;
-  inspire-meta:xpath "identificationInfo[1]/*/";
+  sh:path dcat:contactPoint; #MAPPING: In geval van rol = "Point of contact"
+  sh:path dct:rightsHolder; #MAPPING: In geval van rol = "Owner"
+  sh:path dct:publisher; #MAPPING: In geval van rol = "Publisher"
+  sh:path dct:creator; #MAPPING: In geval van rol = "Creator"
+  sh:path prov:qualifiedAttribution; #MAPPING: Voor gevallen dat er geen rol bestaat. In dat geval moet dct:type de werkelijke rol bevatten
   sh:name "responsibleOrganisation";
+  rdfs:label "Responsible organisation"@en;
+  rdfs:label "Verantwoordelijke organisatie"@nl;
+  inspire-meta:xpath "identificationInfo[1]/*/";
   sh:minCount 1;
   sh:node inspire-shape:ResponsibleOrganisationElement;
   sh:nodeKind sh:BlankNode;
 .
 inspire-shape:ResponsibleParty a sh:PropertyShape;
+  shxl:index 27;
   dct:subject inspire-concept:ResponsibleParty;
+  sh:path prov:agent;
   sh:name "responsibleParty";
+  rdfs:label "Responsible party"@en;
+  rdfs:label "Verantwoordelijke organisatie bron"@nl;
   sh:severity sh:Violation;
   sh:node inspire-shape:Party; #CI_ResponsibleParty
   sh:nodeKind sh:BlankNode;
@@ -1707,8 +1756,12 @@ inspire-shape:Party a sh:NodeShape;
   ];
 .
 inspire-shape:ResponsiblePartyRole a sh:PropertyShape;
+  shxl:index 28;
   dct:subject inspire-concept:ResponsiblePartyRole;
+  sh:path dct:type;
   sh:name "responsiblePartyRole";
+  rdfs:label "Responsible party role"@en;
+  rdfs:label "Rol van de verantwoordelijke organisatie bron"@nl;
   sh:severity sh:Violation;
   sh:class skos:Concept; #CI_RoleCode
   sh:node inspire-shape:ResponsiblePartyRoles;
@@ -1720,8 +1773,12 @@ inspire-shape:ResponsiblePartyRole a sh:PropertyShape;
   rdfs:comment "There is a direct mapping between the responsible party roles defined in Part D 6 of [Regulation 1205/2008] and the values of the CI_RoleCode code list of ISO 19115";
 .
 inspire-shape:MetadataPointOfContact a sh:PropertyShape;
+  shxl:index 29;
   dct:subject inspire-concept:MetadataPointOfContact;
+  sh:path dcat:contactPoint;
   sh:name "metadataPointOfContact";
+  rdfs:label "Metadata point of contact"@en;
+  rdfs:label "Contactpunt voor metagegevens"@nl;
   sh:severity sh:Violation;
   sh:node inspire-shape:Party; #CI_ResponsibleParty
   sh:nodeKind sh:BlankNode;
@@ -1734,8 +1791,12 @@ inspire-shape:MetadataPointOfContact a sh:PropertyShape;
   - electronicMailAddress: ies-contact@jrc.ec.europa.eu'''
 .
 inspire-shape:MetadataDate a sh:PropertyShape;
+  shxl:index 30;
   dct:subject inspire-concept:MetadataDate;
+  sh:path dct:modified;
   sh:name "date";
+  rdfs:label "Metadata date"@en;
+  rdfs:label "Datum van metagegevens"@nl;
   sh:severity sh:Violation;
   sh:datatype xsd:date;
   sh:minCount 1;
@@ -1746,8 +1807,12 @@ inspire-shape:MetadataDate a sh:PropertyShape;
   skos:example "2012-02-20";
 .
 inspire-shape:MetadataLanguage a sh:PropertyShape;
+  shxl:index 31;
   dct:subject inspire-concept:MetadataLanguage;
+  sh:path dct:language;
   sh:name "language";
+  rdfs:label "Metadata language"@en;
+  rdfs:label "Taal van metagegevens"@nl;
   sh:severity sh:Violation;
   sh:node inspire-shape:LanguageCode;
   sh:datatype xsd:string;
@@ -1757,11 +1822,49 @@ inspire-shape:MetadataLanguage a sh:PropertyShape;
 .
 
 #
+# Technical (Only in the TG, not in the regulation)
+#
+inspire-shape:MetadataFileIdentifier a sh:PropertyShape;
+  shxl:index 32;
+  sh:path dct:identifier;
+  sh:name "fileIdentifier";
+  rdfs:label "File identifier"@en;
+  rdfs:label "Bestandsidentificatie"@nl;
+  sh:severity sh:Info;
+.
+inspire-shape:MetadataStandardName a sh:PropertyShape;
+  shxl:index 33;
+  sh:path dct:title; #MAPPING: via dct:conformsTo/dct:title
+  sh:name "standardName";
+  rdfs:label "Name of metadata standard"@en;
+  rdfs:label "Naam van de metadata standaard"@nl;
+  sh:severity sh:Info;
+.
+inspire-shape:MetadataStandardVersion a sh:PropertyShape;
+  shxl:index 34;
+  sh:path owl:versionInfo;
+  sh:name "standardVersion";
+  rdfs:label "Version of metadata standard"@en;
+  rdfs:label "Versie van de metadata standaard"@nl;
+.
+inspire-shape:MetadataCharacterSet a sh:PropertyShape;
+  shxl:index 35;
+  sh:path cnt:characterEncoding;
+  sh:name "characterEncoding";
+  rdfs:label "Metadata character encoding"@en;
+  rdfs:label "Metadata tekencodering"@nl;
+.  
+
+#
 # Section C.3 of Technical Guidance for the implementation of INSPIRE dataset and service metadata based on ISO/TS 19139:2007
 #
 inspire-shape:SpatialDatasetCoordinateReferenceSystem a sh:Propertyshape;
+  shxl:index 36;
   dct:subject inspire-concept:SpatialDatasetCoordinateReferenceSystem;
+  sh:path dct:conformsTo;
   sh:name "coordinateReferenceSystem";
+  rdfs:label "Spatial data set Coordinate Reference System"@en;
+  rdfs:label "Coördinaatreferentiesysteem van de verzameling ruimtelijke gegevens"@nl;
   sh:severity sh:Violation; #Mandatory for dataset and dataset series; not applicable to network services
   sh:minCount 1;
   sh:node inspire-shape:ReferenceSystem;
@@ -1772,8 +1875,12 @@ inspire-shape:SpatialDatasetCoordinateReferenceSystem a sh:Propertyshape;
   rdfs:comment "ISO 19115 lists several elements which build MD_ReferenceSystem. For the purpose of theme-specific metadata according to the INSPIRE Data specifications the element listed above is sufficient."
 .
 inspire-shape:SpatialDatasetTemporalReferenceSystem a sh:PropertyShape;
+  shxl:index 37;
   dct:subject inspire-concept:SpatialDatasetTemporalReferenceSystem;
+  sh:path dct:conformsTo;
   sh:name "temporal reference system";
+  rdfs:label "Spatial data set Temporal Reference System"@en;
+  rdfs:label "Tijdsreferentiesysteem van de verzameling ruimtelijke gegevens"@nl;
   sh:severity sh:Warning; #Only required for dataset if non-default
   sh:node inspire-shape:ReferenceSystem;
   sh:class inspire:TemporalReferenceSystem;
@@ -1783,9 +1890,14 @@ inspire-shape:SpatialDatasetTemporalReferenceSystem a sh:PropertyShape;
   rdfs:comment "The primary temporal reference system for use with geographic information is the Gregorian Calendar and 24 hour local or Coordinated Universal Time (UTC), but special applications may entail the use of alternative reference systems. So this element is mandatory only if the spatial data set contains temporal information that does not refer to the default temporal reference system.";
 .
 inspire-shape:SpatialDatasetEncoding a sh:PropertyShape;
+  shxl:index 38;
   dct:subject inspire-concept:SpatialDatasetEncoding;
+  sh:path dct:mediaType; #MAPPING: In geval het formaat voorkomt in de INSPIRE-Mediatype lijst (= subset van IANA Mediatypes)
+  sh:path dct:format; #MAPPING: In geval het formaat voorkomt in de referentielijst
   sh:severity sh:Violation; #Only for dataset and dataset series
   sh:name "encoding";
+  rdfs:label "Spatial data set encoding"@en;
+  rdfs:label "Codering van de verzameling ruimtelijke gegevens"@nl;
   sh:minCount 1;
   sh:node inspire-shape:Format;
   sh:class inspire:Mediatype; #Not sure, could be something else!
@@ -1793,9 +1905,13 @@ inspire-shape:SpatialDatasetEncoding a sh:PropertyShape;
   inspire-meta:xpath "distributionInfo/MD_Distribution/distributionFormat";
 .
 inspire-shape:SpatialDatasetCharacterEncoding a sh:PropertyShape;
+  shxl:index 39;
   dct:subject inspire-concept:SpatialDatasetCharacterEncoding;
+  sh:path dct:conformsTo;
   sh:severity sh:Warning; # Mandatory if not UTF8. Not applicable to services
   sh:name "characterEncoding";
+  rdfs:label "Spatial data set character encoding"@en;
+  rdfs:label "Tekencodering van de verzameling ruimtelijke gegevens"@nl;
   sh:node inspire-shape:CharacterSet;
   sh:class inspire:CharacterSet;
   inspire-meta:isoref "40. characterSet";
@@ -1803,9 +1919,13 @@ inspire-shape:SpatialDatasetCharacterEncoding a sh:PropertyShape;
   skos:example "usAscii";
 .
 inspire-shape:SpatialDatasetSpatialRepresentationType a sh:PropertyShape;
+  shxl:index 40;
   dct:subject inspire-concept:SpatialDatasetSpatialRepresentationType;
+  sh:path adms:representationTechnique;
   sh:severity sh:Violation; #Only for dataset and datasetseries, not applicable to services
   sh:name "spatialRepresentationType";
+  rdfs:label "Spatial data set representation type"@en;
+  rdfs:label "Ruimtelijk weergavetype van de verzameling ruimtelijke gegevens"@nl;
   sh:minCount 1;
   inspire-meta:isoref "37. SpatialRepresentationType";
   inspire-meta:xpath "identificationInfo[1]/*/spatialRepresentationType";
@@ -1965,6 +2085,22 @@ inspire-shape:ConnectPoint a sh:PropertyShape;
 #
 
 # [This section is about specific extensions and not part of the core]
+
+inspire-shape:MaintenanceInformation a sh:PropertyShape;
+  shxl:index 41;
+  #TODO: Niet duidelijk welk artikel uit de regelgeving dit betreft;
+  sh:path dct:accrualPeriodicity;
+  sh:name "maintenaceInformation";
+  rdfs:label "Maintenance information"@en;
+  rdfs:label "Onderhoudsinformatie"@nl;
+  sh:severity sh:Info; #Optional for Dataset(series), not applicable for services
+  sh:maxCount 1;
+  inspire-meta:isoref "30. resourceMaintenance";
+  inspire-meta:xpath "identificationInfo[1]/MD_DataIdentification/resourceMaintenance";
+  skos:example '''maintenanceAndUpdateFrequency: annually
+updateScope: dataset
+'''
+.
 
 #
 # Complex attributes

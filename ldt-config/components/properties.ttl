@@ -176,10 +176,15 @@ stage:DocPropertiesSeverityQuery a elmo:Query;
 stage:ProfielProperties	a	elmo:Representation;
 	elmo:url-pattern	"/query/profiel-properties$";
 	elmo:contains	stage:Menu;
+  elmo:fragment [
+    elmo:applies-to "prop";
+    elmo:appearance elmo:HiddenAppearance;
+    elmo:name "SUBJECT"
+  ];
   elmo:query '''
     prefix shxl: <http://bp4mc2.org/def/shacl-xl#>
     prefix containerlocal: <http://localhost:8080/modeling/container/>
-    select ?nr
+    select ?nr ?prop
            (strafter(str(?shape),"#") as ?class)
            ?predicate
            ?label_nl

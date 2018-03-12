@@ -1,0 +1,75 @@
+@prefix elmo: <http://bp4mc2.org/elmo/def#>.
+@prefix html: <http://www.w3.org/1999/xhtml/vocab#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix void: <http://rdfs.org/ns/void#>.
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
+@prefix stage: <http://localhost:8080/modeling/stage#>.
+
+stage:InspireConformance	a	elmo:Representation;
+	elmo:url-pattern	"/query/inspire/conformance$";
+	elmo:contains	stage:Menu;
+  elmo:fragment [
+    elmo:applies-to "prop";
+    elmo:appearance elmo:HiddenAppearance;
+    elmo:name "SUBJECT"
+  ];
+  elmo:fragment [
+    elmo:applies-to "comment";
+    elmo:appearance elmo:MarkdownAppearance;
+  ];
+  elmo:query '''
+    prefix containerlocal: <http://localhost:8080/modeling/container/>
+    prefix shxl: <http://bp4mc2.org/def/shacl-xl#>
+    prefix dct: <http://purl.org/dc/terms/>
+    select ?index ?prop
+           (concat(if(bound(?cvocprefix),
+                      ?cvocprefix,
+                      if(bound(?classprefix),"?","")
+                   ),
+                   ":",
+                   replace(str(?class),"^([^ ]+)(#|/)([^ ]+)$","$3")
+            )
+           ) as ?class
+           (concat(if(bound(?vocprefix),
+                      ?vocprefix,
+                      if(bound(?prefix),"?","")
+                   ),
+                   ":",
+                   replace(str(?path),"^([^ ]+)(#|/)([^ ]+)$","$3")
+            )
+           ) as ?property
+           ?rule ?definition ?comment
+    where {
+      graph containerlocal:profiel {
+        ?shape sh:targetClass ?class.
+        BIND (replace(str(?class),"^([^ ]+)(#|/)([^#/]+)","$1$2") as ?classprefix)
+        OPTIONAL {
+          ?cvoc sh:namespace ?cvocnamespace.
+          ?cvoc sh:prefix ?cvocprefix
+          FILTER (str(?cvocnamespace) = str(?classprefix))
+        }
+        ?shape sh:property ?prop.
+        ?prop shxl:index ?index.
+        ?prop sh:path ?path.
+        BIND (replace(str(?path),"^([^ ]+)(#|/)([^#/]+)","$1$2") as ?prefix)
+        OPTIONAL {
+          ?voc sh:namespace ?vocnamespace.
+          ?voc sh:prefix ?vocprefix
+          FILTER (str(?vocnamespace) = str(?prefix))
+        }
+        ?prop rdfs:seeAlso ?rule.
+        OPTIONAL {
+          ?rule dct:subject ?concept.
+          ?concept skos:definition ?definition.
+        }
+        OPTIONAL {
+          ?tg rdfs:seeAlso ?rule.
+          ?tg skos:inScheme <http://bp4mc2.org/inspire/id/scheme/Guideline>.
+          ?tg rdfs:comment ?comment.
+        }
+      }
+    }
+    order by ?index
+  '''
+.

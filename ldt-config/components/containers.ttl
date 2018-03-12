@@ -165,9 +165,29 @@ stage:PostUploadGuidelinesQuery a elmo:Query;
     }
     WHERE {
       GRAPH container:guidelines {
-        ?s skos:inScheme <http://linkeddata.ordina.nl/id/scheme/Guideline>.
+        ?s skos:inScheme <http://bp4mc2.org/inspire/id/scheme/Guideline>.
         ?s ?p ?o
       }
     }
   '''
+.
+
+containerlocal:addprofiel a elmo:Container;
+  rdfs:label "Upload and add RDF";
+  elmo:contains stage:Menu;
+  elmo:representation elmo:UploadRepresentation;
+  elmo:query stage:PostUploadAddQuery;
+.
+stage:PostUploadAddQuery a elmo:Query;
+  elmo:query '''
+    PREFIX container: <http://localhost:8080/modeling/container/>
+    INSERT INTO container:profiel {
+      ?s ?p ?o
+    }
+    WHERE {
+      GRAPH container:addprofiel {
+        ?s ?p ?o
+      }
+    }
+  ''';
 .
