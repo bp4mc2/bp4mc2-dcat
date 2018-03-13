@@ -11,12 +11,15 @@ stage:ProfielVocabularies	a	elmo:Representation;
 	elmo:contains	stage:Menu;
   elmo:query '''
     prefix containerlocal: <http://localhost:8080/modeling/container/>
-    select ?prefix ?namespace
+    select ?prefix ?namespace ?documentation
     where {
       graph containerlocal:profiel {
         ?vocabulary a owl:Ontology.
         ?vocabulary sh:prefix ?prefix.
         ?vocabulary sh:namespace ?namespace.
+        OPTIONAL {
+          ?vocabulary rdfs:seeAlso ?documentation
+        }
       }
     }
     order by ?prefix

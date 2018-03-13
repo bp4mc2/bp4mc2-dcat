@@ -1,7 +1,6 @@
 @prefix elmo: <http://bp4mc2.org/elmo/def#>.
 @prefix html: <http://www.w3.org/1999/xhtml/vocab#>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
-@prefix dcterms: <http://purl.org/dc/terms/>.
 @prefix void: <http://rdfs.org/ns/void#>.
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
 @prefix stage: <http://localhost:8080/modeling/stage#>.
@@ -15,17 +14,22 @@ stage:DocValues	a	elmo:Representation;
   ];
   elmo:query '''
     prefix containerlocal: <http://localhost:8080/modeling/container/>
+    prefix dct: <http://purl.org/dc/terms/>
     select *
     where {
       graph containerlocal:profiel {
         ?item skos:inScheme ?scheme.
-        ?scheme skos:prefLabel ?voc.
-        FILTER (lang(?voc)="en")
+        OPTIONAL {
+          ?scheme skos:prefLabel ?voc.
+          FILTER (lang(?voc)="en")
+        }
         OPTIONAL {
           ?item skos:notation ?value
         }
         OPTIONAL {
-          ?item dc:identifier ?identifier
+          {?item dc:identifier ?identifier}
+          UNION
+          {?item dct:identifier ?identifier}
         }
         ?item skos:prefLabel ?label_en.
         FILTER (lang(?label_en)="en")

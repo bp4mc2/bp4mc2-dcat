@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:dcat="http://www.w3.org/ns/dcat#" xmlns:adms="http://www.w3.org/ns/adms#"
+         xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
+         xmlns:vann="http://purl.org/vocab/vann/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+         xmlns:dct="http://purl.org/dc/terms/"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/">
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">SpatialDataServiceType</dct:identifier>
+      <owl:sameAs rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType:2"/>
+      <adms:last rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+      <dct:title xml:lang="nl">Type dienst met betrekking tot ruimtelijke gegevens</dct:title>
+      <skos:prefLabel xml:lang="nl">Type dienst met betrekking tot ruimtelijke gegevens</skos:prefLabel>
+      <dct:hasPart rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/discovery"/>
+      <skos:hasTopConcept rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/discovery"/>
+      <dct:hasPart rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/view"/>
+      <skos:hasTopConcept rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/view"/>
+      <dct:hasPart rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/download"/>
+      <skos:hasTopConcept rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/download"/>
+      <dct:hasPart rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/transformation"/>
+      <skos:hasTopConcept rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/transformation"/>
+      <dct:hasPart rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/invoke"/>
+      <skos:hasTopConcept rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/invoke"/>
+      <dct:hasPart rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/other"/>
+      <skos:hasTopConcept rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/other"/>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType">
+      <dcat:distribution rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/SpatialDataServiceType.nl.html"/>
+      <dcat:distribution rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/SpatialDataServiceType.nl.csv"/>
+      <dcat:distribution rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/SpatialDataServiceType.nl.json"/>
+      <dcat:distribution rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/SpatialDataServiceType.nl.xml"/>
+      <dcat:distribution rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/SpatialDataServiceType.nl.19135.xml"/>
+      <dcat:distribution rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/SpatialDataServiceType.nl.atom"/>
+      <dcat:distribution rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/SpatialDataServiceType.nl.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/SpatialDataServiceType.nl.html">
+      <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/SpatialDataServiceType.nl.csv">
+      <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/SpatialDataServiceType.nl.json">
+      <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/SpatialDataServiceType.nl.xml">
+      <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/SpatialDataServiceType.nl.19135.xml">
+      <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/SpatialDataServiceType.nl.atom">
+      <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/SpatialDataServiceType.nl.rdf">
+      <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/discovery">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">discovery</dct:identifier>
+      <owl:sameAs rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/discovery:1"/>
+      <adms:last rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/discovery"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType"/>
+      <skos:topConceptOf rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType"/>
+      <dct:title xml:lang="nl">Zoekdienst</dct:title>
+      <dct:description xml:lang="nl">Diensten die het mogelijk maken verzamelingen ruimtelijke gegevens en diensten met betrekking tot ruimtelijke gegevens op te zoeken op basis van de inhoud van de overeenkomstige metagegevens, en de inhoud van de metagegevens weer te geven.</dct:description>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/discovery">
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/discovery/discovery.nl.html"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/discovery/discovery.nl.csv"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/discovery/discovery.nl.json"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/discovery/discovery.nl.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/discovery/discovery.nl.19135.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/discovery/discovery.nl.atom"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/discovery/discovery.nl.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/discovery/discovery.nl.html">
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/discovery/discovery.nl.csv">
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/discovery/discovery.nl.json">
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/discovery/discovery.nl.xml">
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/discovery/discovery.nl.19135.xml">
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/discovery/discovery.nl.atom">
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/discovery/discovery.nl.rdf">
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/view">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">view</dct:identifier>
+      <owl:sameAs rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/view:1"/>
+      <adms:last rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/view"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType"/>
+      <skos:topConceptOf rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType"/>
+      <dct:title xml:lang="nl">Raadpleegdienst</dct:title>
+      <dct:description xml:lang="nl">Diensten die het minstens mogelijk maken raadpleegbare verzamelingen ruimtelijke gegevens weer te geven, in deze verzamelingen te navigeren, in of uit te zoomen, panoramisch of met overlays weer te geven en om de verklaring van de informatie en de relevantie van de metagegevens weer te geven.</dct:description>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/view">
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/view/view.nl.html"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/view/view.nl.csv"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/view/view.nl.json"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/view/view.nl.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/view/view.nl.19135.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/view/view.nl.atom"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/view/view.nl.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/view/view.nl.html">
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/view/view.nl.csv">
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/view/view.nl.json">
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/view/view.nl.xml">
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/view/view.nl.19135.xml">
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/view/view.nl.atom">
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/view/view.nl.rdf">
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/download">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">download</dct:identifier>
+      <owl:sameAs rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/download:1"/>
+      <adms:last rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/download"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType"/>
+      <skos:topConceptOf rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType"/>
+      <dct:title xml:lang="nl">Downloaddienst</dct:title>
+      <dct:description xml:lang="nl">Diensten die het mogelijk maken kopieën van verzamelingen ruimtelijke gegevens geheel of gedeeltelijk te downloaden en er, waar praktisch mogelijk, rechtstreeks toegang toe te hebben.</dct:description>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/download">
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/download/download.nl.html"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/download/download.nl.csv"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/download/download.nl.json"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/download/download.nl.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/download/download.nl.19135.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/download/download.nl.atom"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/download/download.nl.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/download/download.nl.html">
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/download/download.nl.csv">
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/download/download.nl.json">
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/download/download.nl.xml">
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/download/download.nl.19135.xml">
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/download/download.nl.atom">
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/download/download.nl.rdf">
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/transformation">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">transformation</dct:identifier>
+      <owl:sameAs rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/transformation:1"/>
+      <adms:last rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/transformation"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType"/>
+      <skos:topConceptOf rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType"/>
+      <dct:title xml:lang="nl">Verwerkingsdienst</dct:title>
+      <dct:description xml:lang="nl">Diensten die het mogelijk maken verzamelingen ruimtelijke gegevens te veranderen om tot interoperabiliteit te komen.</dct:description>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/transformation">
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/transformation/transformation.nl.html"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/transformation/transformation.nl.csv"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/transformation/transformation.nl.json"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/transformation/transformation.nl.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/transformation/transformation.nl.19135.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/transformation/transformation.nl.atom"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/transformation/transformation.nl.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/transformation/transformation.nl.html">
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/transformation/transformation.nl.csv">
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/transformation/transformation.nl.json">
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/transformation/transformation.nl.xml">
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/transformation/transformation.nl.19135.xml">
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/transformation/transformation.nl.atom">
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/transformation/transformation.nl.rdf">
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/invoke">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">invoke</dct:identifier>
+      <owl:sameAs rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/invoke:1"/>
+      <adms:last rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/invoke"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType"/>
+      <skos:topConceptOf rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType"/>
+      <dct:title xml:lang="nl">Oproepdienst</dct:title>
+      <dct:description xml:lang="nl">Diensten die het mogelijk maken zowel de input als de output van gegevens omtrent diensten te definiëren, alsook een workflowketen die vele diensten combineert. Ook de externe webdiensteninterface van de workflowketen kan worden gedefinieerd.</dct:description>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/invoke">
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/invoke/invoke.nl.html"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/invoke/invoke.nl.csv"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/invoke/invoke.nl.json"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/invoke/invoke.nl.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/invoke/invoke.nl.19135.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/invoke/invoke.nl.atom"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/invoke/invoke.nl.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/invoke/invoke.nl.html">
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/invoke/invoke.nl.csv">
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/invoke/invoke.nl.json">
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/invoke/invoke.nl.xml">
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/invoke/invoke.nl.19135.xml">
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/invoke/invoke.nl.atom">
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/invoke/invoke.nl.rdf">
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/other">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">other</dct:identifier>
+      <owl:sameAs rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/other:1"/>
+      <adms:last rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/other"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType"/>
+      <skos:topConceptOf rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType"/>
+      <dct:title xml:lang="nl">Andere dienst</dct:title>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/other">
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/other/other.nl.html"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/other/other.nl.csv"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/other/other.nl.json"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/other/other.nl.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/other/other.nl.19135.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/other/other.nl.atom"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/other/other.nl.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/other/other.nl.html">
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/other/other.nl.csv">
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/other/other.nl.json">
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/other/other.nl.xml">
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/other/other.nl.19135.xml">
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/other/other.nl.atom">
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType/other/other.nl.rdf">
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+</rdf:RDF>

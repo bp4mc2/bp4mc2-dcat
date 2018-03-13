@@ -7,9 +7,33 @@
 
 productionlocal:cleancodelists a elmo:Production;
   elmo:contains stage:Menu;
+  elmo:contains stage:Cleancodelists_scene0;
   elmo:contains stage:Cleancodelists_scene1;
   elmo:contains stage:Cleancodelists_scene2;
-  elmo:contains stage:Cleancodelists_scene3;
+#  elmo:contains stage:Cleancodelists_scene3;
+.
+stage:Cleancodelists_scene0 a elmo:Scene;
+  elmo:index "0";
+  rdfs:label "Keep only items with status 'valid'";
+  elmo:query '''
+    PREFIX container: <http://localhost:8080/modeling/container/>
+    PREFIX adms: <http://www.w3.org/ns/adms#>
+    PREFIX dct: <http://purl.org/dc/terms/>
+    DELETE FROM container:profiel {
+      ?scheme dct:hasPart ?concept.
+      ?concept ?p ?o.
+    }
+    WHERE {
+      GRAPH container:profiel {
+        ?scheme a skos:ConceptScheme.
+        ?scheme dct:hasPart ?concept.
+        ?concept ?p ?o.
+        FILTER NOT EXISTS {
+          ?concept adms:status <http://inspire.ec.europa.eu/registry/status/valid>
+        }
+      }
+    }
+  '''
 .
 stage:Cleancodelists_scene1 a elmo:Scene;
   elmo:index "1";

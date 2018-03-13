@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:dcat="http://www.w3.org/ns/dcat#" xmlns:adms="http://www.w3.org/ns/adms#"
+         xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
+         xmlns:vann="http://purl.org/vocab/vann/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+         xmlns:dct="http://purl.org/dc/terms/"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/">
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">LimitationsOnPublicAccess</dct:identifier>
+      <owl:sameAs rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess:1"/>
+      <adms:last rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+      <dct:title xml:lang="en">Limitations on public access</dct:title>
+      <skos:prefLabel xml:lang="en">Limitations on public access</skos:prefLabel>
+      <dct:hasPart rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1a"/>
+      <skos:hasTopConcept rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1a"/>
+      <dct:hasPart rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1b"/>
+      <skos:hasTopConcept rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1b"/>
+      <dct:hasPart rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1c"/>
+      <skos:hasTopConcept rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1c"/>
+      <dct:hasPart rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1d"/>
+      <skos:hasTopConcept rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1d"/>
+      <dct:hasPart rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1e"/>
+      <skos:hasTopConcept rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1e"/>
+      <dct:hasPart rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1f"/>
+      <skos:hasTopConcept rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1f"/>
+      <dct:hasPart rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1g"/>
+      <skos:hasTopConcept rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1g"/>
+      <dct:hasPart rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1h"/>
+      <skos:hasTopConcept rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1h"/>
+      <dct:hasPart rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/noLimitations"/>
+      <skos:hasTopConcept rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/noLimitations"/>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess">
+      <dcat:distribution rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/LimitationsOnPublicAccess.en.html"/>
+      <dcat:distribution rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/LimitationsOnPublicAccess.en.csv"/>
+      <dcat:distribution rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/LimitationsOnPublicAccess.en.json"/>
+      <dcat:distribution rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/LimitationsOnPublicAccess.en.xml"/>
+      <dcat:distribution rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/LimitationsOnPublicAccess.en.19135.xml"/>
+      <dcat:distribution rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/LimitationsOnPublicAccess.en.atom"/>
+      <dcat:distribution rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/LimitationsOnPublicAccess.en.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/LimitationsOnPublicAccess.en.html">
+      <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/LimitationsOnPublicAccess.en.csv">
+      <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/LimitationsOnPublicAccess.en.json">
+      <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/LimitationsOnPublicAccess.en.xml">
+      <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/LimitationsOnPublicAccess.en.19135.xml">
+      <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/LimitationsOnPublicAccess.en.atom">
+      <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/LimitationsOnPublicAccess.en.rdf">
+      <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1a">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">INSPIRE_Directive_Article13_1a</dct:identifier>
+      <owl:sameAs rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1a:1"/>
+      <adms:last rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1a"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess"/>
+      <skos:topConceptOf rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess"/>
+      <dct:title xml:lang="en">public access limited according to Article 13(1)(a) of the INSPIRE Directive</dct:title>
+      <dct:description xml:lang="en">Public access to spatial data sets and services would adversely affect the confidentiality of the proceedings of public authorities, where such confidentiality is provided for by law.</dct:description>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1a">
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1a/INSPIRE_Directive_Article13_1a.en.html"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1a/INSPIRE_Directive_Article13_1a.en.csv"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1a/INSPIRE_Directive_Article13_1a.en.json"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1a/INSPIRE_Directive_Article13_1a.en.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1a/INSPIRE_Directive_Article13_1a.en.19135.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1a/INSPIRE_Directive_Article13_1a.en.atom"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1a/INSPIRE_Directive_Article13_1a.en.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1a/INSPIRE_Directive_Article13_1a.en.html">
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1a/INSPIRE_Directive_Article13_1a.en.csv">
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1a/INSPIRE_Directive_Article13_1a.en.json">
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1a/INSPIRE_Directive_Article13_1a.en.xml">
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1a/INSPIRE_Directive_Article13_1a.en.19135.xml">
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1a/INSPIRE_Directive_Article13_1a.en.atom">
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1a/INSPIRE_Directive_Article13_1a.en.rdf">
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1b">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">INSPIRE_Directive_Article13_1b</dct:identifier>
+      <owl:sameAs rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1b:1"/>
+      <adms:last rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1b"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess"/>
+      <skos:topConceptOf rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess"/>
+      <dct:title xml:lang="en">public access limited according to Article 13(1)(b) of the INSPIRE Directive</dct:title>
+      <dct:description xml:lang="en">Public access to spatial data sets and services would adversely affect international relations, public security or national defence.</dct:description>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1b">
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1b/INSPIRE_Directive_Article13_1b.en.html"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1b/INSPIRE_Directive_Article13_1b.en.csv"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1b/INSPIRE_Directive_Article13_1b.en.json"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1b/INSPIRE_Directive_Article13_1b.en.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1b/INSPIRE_Directive_Article13_1b.en.19135.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1b/INSPIRE_Directive_Article13_1b.en.atom"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1b/INSPIRE_Directive_Article13_1b.en.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1b/INSPIRE_Directive_Article13_1b.en.html">
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1b/INSPIRE_Directive_Article13_1b.en.csv">
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1b/INSPIRE_Directive_Article13_1b.en.json">
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1b/INSPIRE_Directive_Article13_1b.en.xml">
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1b/INSPIRE_Directive_Article13_1b.en.19135.xml">
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1b/INSPIRE_Directive_Article13_1b.en.atom">
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1b/INSPIRE_Directive_Article13_1b.en.rdf">
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1c">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">INSPIRE_Directive_Article13_1c</dct:identifier>
+      <owl:sameAs rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1c:1"/>
+      <adms:last rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1c"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess"/>
+      <skos:topConceptOf rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess"/>
+      <dct:title xml:lang="en">public access limited according to Article 13(1)(c) of the INSPIRE Directive</dct:title>
+      <dct:description xml:lang="en">Public access to spatial data sets and services would adversely affect the course of justice, the ability of any person to receive a fair trial or the ability of a public authority to conduct an enquiry of a criminal or disciplinary nature.</dct:description>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1c">
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1c/INSPIRE_Directive_Article13_1c.en.html"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1c/INSPIRE_Directive_Article13_1c.en.csv"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1c/INSPIRE_Directive_Article13_1c.en.json"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1c/INSPIRE_Directive_Article13_1c.en.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1c/INSPIRE_Directive_Article13_1c.en.19135.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1c/INSPIRE_Directive_Article13_1c.en.atom"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1c/INSPIRE_Directive_Article13_1c.en.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1c/INSPIRE_Directive_Article13_1c.en.html">
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1c/INSPIRE_Directive_Article13_1c.en.csv">
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1c/INSPIRE_Directive_Article13_1c.en.json">
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1c/INSPIRE_Directive_Article13_1c.en.xml">
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1c/INSPIRE_Directive_Article13_1c.en.19135.xml">
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1c/INSPIRE_Directive_Article13_1c.en.atom">
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1c/INSPIRE_Directive_Article13_1c.en.rdf">
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1d">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">INSPIRE_Directive_Article13_1d</dct:identifier>
+      <owl:sameAs rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1d:1"/>
+      <adms:last rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1d"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess"/>
+      <skos:topConceptOf rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess"/>
+      <dct:title xml:lang="en">public access limited according to Article 13(1)(d) of the INSPIRE Directive</dct:title>
+      <dct:description xml:lang="en">Public access to spatial data sets and services would adversely affect the confidentiality of commercial or industrial information, where such confidentiality is provided for by national or Community law to protect a legitimate economic interest, including the public interest in maintaining statistical confidentiality and tax secrecy.</dct:description>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1d">
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1d/INSPIRE_Directive_Article13_1d.en.html"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1d/INSPIRE_Directive_Article13_1d.en.csv"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1d/INSPIRE_Directive_Article13_1d.en.json"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1d/INSPIRE_Directive_Article13_1d.en.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1d/INSPIRE_Directive_Article13_1d.en.19135.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1d/INSPIRE_Directive_Article13_1d.en.atom"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1d/INSPIRE_Directive_Article13_1d.en.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1d/INSPIRE_Directive_Article13_1d.en.html">
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1d/INSPIRE_Directive_Article13_1d.en.csv">
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1d/INSPIRE_Directive_Article13_1d.en.json">
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1d/INSPIRE_Directive_Article13_1d.en.xml">
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1d/INSPIRE_Directive_Article13_1d.en.19135.xml">
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1d/INSPIRE_Directive_Article13_1d.en.atom">
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1d/INSPIRE_Directive_Article13_1d.en.rdf">
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1e">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">INSPIRE_Directive_Article13_1e</dct:identifier>
+      <owl:sameAs rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1e:1"/>
+      <adms:last rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1e"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess"/>
+      <skos:topConceptOf rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess"/>
+      <dct:title xml:lang="en">public access limited according to Article 13(1)(e) of the INSPIRE Directive</dct:title>
+      <dct:description xml:lang="en">Public access to spatial data sets and services would adversely affect intellectual property rights.</dct:description>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1e">
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1e/INSPIRE_Directive_Article13_1e.en.html"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1e/INSPIRE_Directive_Article13_1e.en.csv"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1e/INSPIRE_Directive_Article13_1e.en.json"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1e/INSPIRE_Directive_Article13_1e.en.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1e/INSPIRE_Directive_Article13_1e.en.19135.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1e/INSPIRE_Directive_Article13_1e.en.atom"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1e/INSPIRE_Directive_Article13_1e.en.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1e/INSPIRE_Directive_Article13_1e.en.html">
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1e/INSPIRE_Directive_Article13_1e.en.csv">
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1e/INSPIRE_Directive_Article13_1e.en.json">
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1e/INSPIRE_Directive_Article13_1e.en.xml">
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1e/INSPIRE_Directive_Article13_1e.en.19135.xml">
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1e/INSPIRE_Directive_Article13_1e.en.atom">
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1e/INSPIRE_Directive_Article13_1e.en.rdf">
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1f">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">INSPIRE_Directive_Article13_1f</dct:identifier>
+      <owl:sameAs rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1f:1"/>
+      <adms:last rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1f"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess"/>
+      <skos:topConceptOf rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess"/>
+      <dct:title xml:lang="en">public access limited according to Article 13(1)(f) of the INSPIRE Directive</dct:title>
+      <dct:description xml:lang="en">Public access to spatial data sets and services would adversely affect the confidentiality of personal data and/or files relating to a natural person where that person has not consented to the disclosure of the information to the public, where such confidentiality is provided for by national or Community law.</dct:description>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1f">
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1f/INSPIRE_Directive_Article13_1f.en.html"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1f/INSPIRE_Directive_Article13_1f.en.csv"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1f/INSPIRE_Directive_Article13_1f.en.json"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1f/INSPIRE_Directive_Article13_1f.en.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1f/INSPIRE_Directive_Article13_1f.en.19135.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1f/INSPIRE_Directive_Article13_1f.en.atom"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1f/INSPIRE_Directive_Article13_1f.en.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1f/INSPIRE_Directive_Article13_1f.en.html">
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1f/INSPIRE_Directive_Article13_1f.en.csv">
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1f/INSPIRE_Directive_Article13_1f.en.json">
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1f/INSPIRE_Directive_Article13_1f.en.xml">
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1f/INSPIRE_Directive_Article13_1f.en.19135.xml">
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1f/INSPIRE_Directive_Article13_1f.en.atom">
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1f/INSPIRE_Directive_Article13_1f.en.rdf">
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1g">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">INSPIRE_Directive_Article13_1g</dct:identifier>
+      <owl:sameAs rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1g:1"/>
+      <adms:last rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1g"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess"/>
+      <skos:topConceptOf rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess"/>
+      <dct:title xml:lang="en">public access limited according to Article 13(1)(g) of the INSPIRE Directive</dct:title>
+      <dct:description xml:lang="en">Public access to spatial data sets and services would adversely affect the interests or protection of any person who supplied the information requested on a voluntary basis without being under, or capable of being put under, a legal obligation to do so, unless that person has consented to the release of the information concerned.</dct:description>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1g">
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1g/INSPIRE_Directive_Article13_1g.en.html"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1g/INSPIRE_Directive_Article13_1g.en.csv"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1g/INSPIRE_Directive_Article13_1g.en.json"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1g/INSPIRE_Directive_Article13_1g.en.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1g/INSPIRE_Directive_Article13_1g.en.19135.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1g/INSPIRE_Directive_Article13_1g.en.atom"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1g/INSPIRE_Directive_Article13_1g.en.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1g/INSPIRE_Directive_Article13_1g.en.html">
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1g/INSPIRE_Directive_Article13_1g.en.csv">
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1g/INSPIRE_Directive_Article13_1g.en.json">
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1g/INSPIRE_Directive_Article13_1g.en.xml">
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1g/INSPIRE_Directive_Article13_1g.en.19135.xml">
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1g/INSPIRE_Directive_Article13_1g.en.atom">
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1g/INSPIRE_Directive_Article13_1g.en.rdf">
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1h">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">INSPIRE_Directive_Article13_1h</dct:identifier>
+      <owl:sameAs rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1h:1"/>
+      <adms:last rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1h"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess"/>
+      <skos:topConceptOf rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess"/>
+      <dct:title xml:lang="en">public access limited according to Article 13(1)(h) of the INSPIRE Directive</dct:title>
+      <dct:description xml:lang="en">Public access to spatial data sets and services would adversely affect the protection of the environment to which such information relates, such as the location of rare species.</dct:description>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1h">
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1h/INSPIRE_Directive_Article13_1h.en.html"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1h/INSPIRE_Directive_Article13_1h.en.csv"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1h/INSPIRE_Directive_Article13_1h.en.json"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1h/INSPIRE_Directive_Article13_1h.en.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1h/INSPIRE_Directive_Article13_1h.en.19135.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1h/INSPIRE_Directive_Article13_1h.en.atom"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1h/INSPIRE_Directive_Article13_1h.en.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1h/INSPIRE_Directive_Article13_1h.en.html">
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1h/INSPIRE_Directive_Article13_1h.en.csv">
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1h/INSPIRE_Directive_Article13_1h.en.json">
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1h/INSPIRE_Directive_Article13_1h.en.xml">
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1h/INSPIRE_Directive_Article13_1h.en.19135.xml">
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1h/INSPIRE_Directive_Article13_1h.en.atom">
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/INSPIRE_Directive_Article13_1h/INSPIRE_Directive_Article13_1h.en.rdf">
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/noLimitations">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">noLimitations</dct:identifier>
+      <owl:sameAs rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/noLimitations:1"/>
+      <adms:last rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/noLimitations"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess"/>
+      <skos:topConceptOf rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess"/>
+      <dct:title xml:lang="en">no limitations to public access</dct:title>
+      <dct:description xml:lang="en">There are no limitations on public access to spatial data sets and services.</dct:description>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/noLimitations">
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/noLimitations/noLimitations.en.html"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/noLimitations/noLimitations.en.csv"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/noLimitations/noLimitations.en.json"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/noLimitations/noLimitations.en.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/noLimitations/noLimitations.en.19135.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/noLimitations/noLimitations.en.atom"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/noLimitations/noLimitations.en.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/noLimitations/noLimitations.en.html">
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/noLimitations/noLimitations.en.csv">
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/noLimitations/noLimitations.en.json">
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/noLimitations/noLimitations.en.xml">
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/noLimitations/noLimitations.en.19135.xml">
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/noLimitations/noLimitations.en.atom">
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/LimitationsOnPublicAccess/noLimitations/noLimitations.en.rdf">
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+</rdf:RDF>

@@ -1122,7 +1122,7 @@ inspire-concept:InvocationMetadata a skos:Concept;
 inspire:Resource a owl:Class;
   rdfs:label "Resource";
 .
-inspire:Dataset a owl:Class;
+dcat:Dataset a owl:Class;
   rdfs:label "Dataset";
   rdfs:subClassOf inspire:Resource;
 .
@@ -1173,7 +1173,7 @@ inspire-shape:Dataset a sh:NodeShape;
   dct:subject inspire-concept:Dataset;
   sh:name "+Dataset(series)";
   rdfs:label "Dataset(series)"@en;
-  sh:targetClass inspire:Dataset; #MAPPING: Hier moet nog naar gekeken worden. Kan het dcat:Dataset worden??
+  sh:targetClass dcat:Dataset;
   inspire-meta:xpath "/";
   sh:property inspire-shape:ResourceLocator; # Lijkt erop dat dit niet voor services geldt?
   sh:property inspire-shape:ResourceLocatorComplex;

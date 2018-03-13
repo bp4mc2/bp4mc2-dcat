@@ -30,6 +30,23 @@ stage:Profile a elmo:Representation;
   '''
 .
 
+stage:Profile a elmo:Representation;
+  elmo:url-pattern "/query/profiel-turtle$";
+  elmo:contains stage:Menu;
+  elmo:appearance elmo:TurtleAppearance;
+  elmo:query '''
+    prefix containerlocal: <http://localhost:8080/modeling/container/>
+    construct {
+      ?s ?p ?o
+    }
+    where {
+      graph containerlocal:profiel {
+        ?s ?p ?o
+      }
+    }
+  ''';
+.
+
 stage:DocProfile a elmo:Representation;
   elmo:url-pattern "/query/doc-profile$";
   elmo:contains stage:Menu;

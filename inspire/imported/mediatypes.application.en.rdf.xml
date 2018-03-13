@@ -1,0 +1,877 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:dcat="http://www.w3.org/ns/dcat#" xmlns:adms="http://www.w3.org/ns/adms#"
+         xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
+         xmlns:vann="http://purl.org/vocab/vann/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+         xmlns:dct="http://purl.org/dc/terms/"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/">
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">application</dct:identifier>
+      <owl:sameAs rdf:resource="http://inspire.ec.europa.eu/media-types/application:1"/>
+      <adms:last rdf:resource="http://inspire.ec.europa.eu/media-types/application"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+      <dct:title xml:lang="en">application</dct:title>
+      <dct:description xml:lang="en">This register contains the sub-types of the media type "application" used for spatial data sets in INSPIRE, in particular in INSPIRE download services. Whenever sub-types exist that are registered with IANA or are in the registration process these are used. For all other formats, no commonly used sub-type exists and INSPIRE has to - at least temporarily - define their own types. In accordance with the rules for media types in RFC 2046/RFC 4288, these start with "x-". At this time, all entries in this register have the status 'valid'. Sub-types that are no longer recommended for use will be marked as 'deprecated', but will always be kept in this register as download services may still be using deprecated sub-types.</dct:description>
+      <dct:hasPart rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-shapefile"/>
+      <skos:hasTopConcept rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-shapefile"/>
+      <dct:hasPart rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-filegdb"/>
+      <skos:hasTopConcept rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-filegdb"/>
+      <dct:hasPart rdf:resource="http://www.iana.org/assignments/media-types/application/gml+xml"/>
+      <skos:hasTopConcept rdf:resource="http://www.iana.org/assignments/media-types/application/gml+xml"/>
+      <dct:hasPart rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-gmz"/>
+      <skos:hasTopConcept rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-gmz"/>
+      <dct:hasPart rdf:resource="http://www.iana.org/assignments/media-types/application/vnd.google-earth.kml+xml"/>
+      <skos:hasTopConcept rdf:resource="http://www.iana.org/assignments/media-types/application/vnd.google-earth.kml+xml"/>
+      <dct:hasPart rdf:resource="http://www.iana.org/assignments/media-types/application/vnd.google-earth.kmz"/>
+      <skos:hasTopConcept rdf:resource="http://www.iana.org/assignments/media-types/application/vnd.google-earth.kmz"/>
+      <dct:hasPart rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-ecw"/>
+      <skos:hasTopConcept rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-ecw"/>
+      <dct:hasPart rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-ascii-grid"/>
+      <skos:hasTopConcept rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-ascii-grid"/>
+      <dct:hasPart rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-oracledump"/>
+      <skos:hasTopConcept rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-oracledump"/>
+      <dct:hasPart rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-las"/>
+      <skos:hasTopConcept rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-las"/>
+      <dct:hasPart rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-laz"/>
+      <skos:hasTopConcept rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-laz"/>
+      <dct:hasPart rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-tab"/>
+      <skos:hasTopConcept rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-tab"/>
+      <dct:hasPart rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-tab-raster"/>
+      <skos:hasTopConcept rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-tab-raster"/>
+      <dct:hasPart rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-worldfile"/>
+      <skos:hasTopConcept rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-worldfile"/>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application">
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/application.en.html"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/application.en.csv"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/application.en.json"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/application.en.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/application.en.19135.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/application.en.atom"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/application.en.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/application.en.html">
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/application.en.csv">
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/application.en.json">
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/application.en.xml">
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/application.en.19135.xml">
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/application.en.atom">
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/application.en.rdf">
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-shapefile">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">x-shapefile</dct:identifier>
+      <owl:sameAs rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-shapefile:1"/>
+      <adms:last rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-shapefile"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/media-types/application"/>
+      <skos:topConceptOf rdf:resource="http://inspire.ec.europa.eu/media-types/application"/>
+      <dct:title xml:lang="en">x-shapefile</dct:title>
+      <dct:description xml:lang="en">The media type shall be used for Esri shapefiles. The file is a zip archive that contains at least the shp, shx and dbf files.</dct:description>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-shapefile">
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-shapefile/x-shapefile.en.html"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-shapefile/x-shapefile.en.csv"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-shapefile/x-shapefile.en.json"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-shapefile/x-shapefile.en.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-shapefile/x-shapefile.en.19135.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-shapefile/x-shapefile.en.atom"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-shapefile/x-shapefile.en.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-shapefile/x-shapefile.en.html">
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-shapefile/x-shapefile.en.csv">
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-shapefile/x-shapefile.en.json">
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-shapefile/x-shapefile.en.xml">
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-shapefile/x-shapefile.en.19135.xml">
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-shapefile/x-shapefile.en.atom">
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-shapefile/x-shapefile.en.rdf">
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-filegdb">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">x-filegdb</dct:identifier>
+      <owl:sameAs rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-filegdb:1"/>
+      <adms:last rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-filegdb"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/media-types/application"/>
+      <skos:topConceptOf rdf:resource="http://inspire.ec.europa.eu/media-types/application"/>
+      <dct:title xml:lang="en">x-filegdb</dct:title>
+      <dct:description xml:lang="en">The media type shall be used for Esri file geodatabases. The file is a zip archive that contains the gdb directory.</dct:description>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-filegdb">
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-filegdb/x-filegdb.en.html"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-filegdb/x-filegdb.en.csv"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-filegdb/x-filegdb.en.json"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-filegdb/x-filegdb.en.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-filegdb/x-filegdb.en.19135.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-filegdb/x-filegdb.en.atom"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-filegdb/x-filegdb.en.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-filegdb/x-filegdb.en.html">
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-filegdb/x-filegdb.en.csv">
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-filegdb/x-filegdb.en.json">
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-filegdb/x-filegdb.en.xml">
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-filegdb/x-filegdb.en.19135.xml">
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-filegdb/x-filegdb.en.atom">
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-filegdb/x-filegdb.en.rdf">
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.iana.org/assignments/media-types/application/gml+xml">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">http://www.iana.org/assignments/media-types/application/gml+xml</dct:identifier>
+      <owl:sameAs rdf:resource="http://www.iana.org/assignments/media-types/application/gml+xml:1"/>
+      <adms:last rdf:resource="http://www.iana.org/assignments/media-types/application/gml+xml"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/media-types/application"/>
+      <skos:topConceptOf rdf:resource="http://inspire.ec.europa.eu/media-types/application"/>
+      <dct:title xml:lang="en">gml+xml</dct:title>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.iana.org/assignments/media-types/application/gml+xml">
+      <dct:hasFormat rdf:resource="http://www.iana.org/assignments/media-types/application/gml+xml/http://www.iana.org/assignments/media-types/application/gml+xml.en.html"/>
+      <dct:hasFormat rdf:resource="http://www.iana.org/assignments/media-types/application/gml+xml/http://www.iana.org/assignments/media-types/application/gml+xml.en.csv"/>
+      <dct:hasFormat rdf:resource="http://www.iana.org/assignments/media-types/application/gml+xml/http://www.iana.org/assignments/media-types/application/gml+xml.en.json"/>
+      <dct:hasFormat rdf:resource="http://www.iana.org/assignments/media-types/application/gml+xml/http://www.iana.org/assignments/media-types/application/gml+xml.en.xml"/>
+      <dct:hasFormat rdf:resource="http://www.iana.org/assignments/media-types/application/gml+xml/http://www.iana.org/assignments/media-types/application/gml+xml.en.19135.xml"/>
+      <dct:hasFormat rdf:resource="http://www.iana.org/assignments/media-types/application/gml+xml/http://www.iana.org/assignments/media-types/application/gml+xml.en.atom"/>
+      <dct:hasFormat rdf:resource="http://www.iana.org/assignments/media-types/application/gml+xml/http://www.iana.org/assignments/media-types/application/gml+xml.en.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.iana.org/assignments/media-types/application/gml+xml/http://www.iana.org/assignments/media-types/application/gml+xml.en.html">
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.iana.org/assignments/media-types/application/gml+xml/http://www.iana.org/assignments/media-types/application/gml+xml.en.csv">
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.iana.org/assignments/media-types/application/gml+xml/http://www.iana.org/assignments/media-types/application/gml+xml.en.json">
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.iana.org/assignments/media-types/application/gml+xml/http://www.iana.org/assignments/media-types/application/gml+xml.en.xml">
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.iana.org/assignments/media-types/application/gml+xml/http://www.iana.org/assignments/media-types/application/gml+xml.en.19135.xml">
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.iana.org/assignments/media-types/application/gml+xml/http://www.iana.org/assignments/media-types/application/gml+xml.en.atom">
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.iana.org/assignments/media-types/application/gml+xml/http://www.iana.org/assignments/media-types/application/gml+xml.en.rdf">
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-gmz">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">x-gmz</dct:identifier>
+      <owl:sameAs rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-gmz:1"/>
+      <adms:last rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-gmz"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/media-types/application"/>
+      <skos:topConceptOf rdf:resource="http://inspire.ec.europa.eu/media-types/application"/>
+      <dct:title xml:lang="en">x-gmz</dct:title>
+      <dct:description xml:lang="en">The media type shall be used for a zip archive that contains one or more GML documents.</dct:description>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-gmz">
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-gmz/x-gmz.en.html"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-gmz/x-gmz.en.csv"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-gmz/x-gmz.en.json"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-gmz/x-gmz.en.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-gmz/x-gmz.en.19135.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-gmz/x-gmz.en.atom"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-gmz/x-gmz.en.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-gmz/x-gmz.en.html">
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-gmz/x-gmz.en.csv">
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-gmz/x-gmz.en.json">
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-gmz/x-gmz.en.xml">
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-gmz/x-gmz.en.19135.xml">
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-gmz/x-gmz.en.atom">
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-gmz/x-gmz.en.rdf">
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.iana.org/assignments/media-types/application/vnd.google-earth.kml+xml">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">http://www.iana.org/assignments/media-types/application/vnd.google-earth.kml+xml</dct:identifier>
+      <owl:sameAs rdf:resource="http://www.iana.org/assignments/media-types/application/vnd.google-earth.kml+xml:1"/>
+      <adms:last rdf:resource="http://www.iana.org/assignments/media-types/application/vnd.google-earth.kml+xml"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/media-types/application"/>
+      <skos:topConceptOf rdf:resource="http://inspire.ec.europa.eu/media-types/application"/>
+      <dct:title xml:lang="en">vnd.google-earth.kml+xml</dct:title>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.iana.org/assignments/media-types/application/vnd.google-earth.kml+xml">
+      <dct:hasFormat rdf:resource="http://www.iana.org/assignments/media-types/application/vnd.google-earth.kml+xml/http://www.iana.org/assignments/media-types/application/vnd.google-earth.kml+xml.en.html"/>
+      <dct:hasFormat rdf:resource="http://www.iana.org/assignments/media-types/application/vnd.google-earth.kml+xml/http://www.iana.org/assignments/media-types/application/vnd.google-earth.kml+xml.en.csv"/>
+      <dct:hasFormat rdf:resource="http://www.iana.org/assignments/media-types/application/vnd.google-earth.kml+xml/http://www.iana.org/assignments/media-types/application/vnd.google-earth.kml+xml.en.json"/>
+      <dct:hasFormat rdf:resource="http://www.iana.org/assignments/media-types/application/vnd.google-earth.kml+xml/http://www.iana.org/assignments/media-types/application/vnd.google-earth.kml+xml.en.xml"/>
+      <dct:hasFormat rdf:resource="http://www.iana.org/assignments/media-types/application/vnd.google-earth.kml+xml/http://www.iana.org/assignments/media-types/application/vnd.google-earth.kml+xml.en.19135.xml"/>
+      <dct:hasFormat rdf:resource="http://www.iana.org/assignments/media-types/application/vnd.google-earth.kml+xml/http://www.iana.org/assignments/media-types/application/vnd.google-earth.kml+xml.en.atom"/>
+      <dct:hasFormat rdf:resource="http://www.iana.org/assignments/media-types/application/vnd.google-earth.kml+xml/http://www.iana.org/assignments/media-types/application/vnd.google-earth.kml+xml.en.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.iana.org/assignments/media-types/application/vnd.google-earth.kml+xml/http://www.iana.org/assignments/media-types/application/vnd.google-earth.kml+xml.en.html">
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.iana.org/assignments/media-types/application/vnd.google-earth.kml+xml/http://www.iana.org/assignments/media-types/application/vnd.google-earth.kml+xml.en.csv">
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.iana.org/assignments/media-types/application/vnd.google-earth.kml+xml/http://www.iana.org/assignments/media-types/application/vnd.google-earth.kml+xml.en.json">
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.iana.org/assignments/media-types/application/vnd.google-earth.kml+xml/http://www.iana.org/assignments/media-types/application/vnd.google-earth.kml+xml.en.xml">
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.iana.org/assignments/media-types/application/vnd.google-earth.kml+xml/http://www.iana.org/assignments/media-types/application/vnd.google-earth.kml+xml.en.19135.xml">
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.iana.org/assignments/media-types/application/vnd.google-earth.kml+xml/http://www.iana.org/assignments/media-types/application/vnd.google-earth.kml+xml.en.atom">
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.iana.org/assignments/media-types/application/vnd.google-earth.kml+xml/http://www.iana.org/assignments/media-types/application/vnd.google-earth.kml+xml.en.rdf">
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.iana.org/assignments/media-types/application/vnd.google-earth.kmz">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">http://www.iana.org/assignments/media-types/application/vnd.google-earth.kmz</dct:identifier>
+      <owl:sameAs rdf:resource="http://www.iana.org/assignments/media-types/application/vnd.google-earth.kmz:1"/>
+      <adms:last rdf:resource="http://www.iana.org/assignments/media-types/application/vnd.google-earth.kmz"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/media-types/application"/>
+      <skos:topConceptOf rdf:resource="http://inspire.ec.europa.eu/media-types/application"/>
+      <dct:title xml:lang="en">vnd.google-earth.kmz</dct:title>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.iana.org/assignments/media-types/application/vnd.google-earth.kmz">
+      <dct:hasFormat rdf:resource="http://www.iana.org/assignments/media-types/application/vnd.google-earth.kmz/http://www.iana.org/assignments/media-types/application/vnd.google-earth.kmz.en.html"/>
+      <dct:hasFormat rdf:resource="http://www.iana.org/assignments/media-types/application/vnd.google-earth.kmz/http://www.iana.org/assignments/media-types/application/vnd.google-earth.kmz.en.csv"/>
+      <dct:hasFormat rdf:resource="http://www.iana.org/assignments/media-types/application/vnd.google-earth.kmz/http://www.iana.org/assignments/media-types/application/vnd.google-earth.kmz.en.json"/>
+      <dct:hasFormat rdf:resource="http://www.iana.org/assignments/media-types/application/vnd.google-earth.kmz/http://www.iana.org/assignments/media-types/application/vnd.google-earth.kmz.en.xml"/>
+      <dct:hasFormat rdf:resource="http://www.iana.org/assignments/media-types/application/vnd.google-earth.kmz/http://www.iana.org/assignments/media-types/application/vnd.google-earth.kmz.en.19135.xml"/>
+      <dct:hasFormat rdf:resource="http://www.iana.org/assignments/media-types/application/vnd.google-earth.kmz/http://www.iana.org/assignments/media-types/application/vnd.google-earth.kmz.en.atom"/>
+      <dct:hasFormat rdf:resource="http://www.iana.org/assignments/media-types/application/vnd.google-earth.kmz/http://www.iana.org/assignments/media-types/application/vnd.google-earth.kmz.en.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.iana.org/assignments/media-types/application/vnd.google-earth.kmz/http://www.iana.org/assignments/media-types/application/vnd.google-earth.kmz.en.html">
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.iana.org/assignments/media-types/application/vnd.google-earth.kmz/http://www.iana.org/assignments/media-types/application/vnd.google-earth.kmz.en.csv">
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.iana.org/assignments/media-types/application/vnd.google-earth.kmz/http://www.iana.org/assignments/media-types/application/vnd.google-earth.kmz.en.json">
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.iana.org/assignments/media-types/application/vnd.google-earth.kmz/http://www.iana.org/assignments/media-types/application/vnd.google-earth.kmz.en.xml">
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.iana.org/assignments/media-types/application/vnd.google-earth.kmz/http://www.iana.org/assignments/media-types/application/vnd.google-earth.kmz.en.19135.xml">
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.iana.org/assignments/media-types/application/vnd.google-earth.kmz/http://www.iana.org/assignments/media-types/application/vnd.google-earth.kmz.en.atom">
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://www.iana.org/assignments/media-types/application/vnd.google-earth.kmz/http://www.iana.org/assignments/media-types/application/vnd.google-earth.kmz.en.rdf">
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-ecw">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">x-ecw</dct:identifier>
+      <owl:sameAs rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-ecw:1"/>
+      <adms:last rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-ecw"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/media-types/application"/>
+      <skos:topConceptOf rdf:resource="http://inspire.ec.europa.eu/media-types/application"/>
+      <dct:title xml:lang="en">x-ecw</dct:title>
+      <dct:description xml:lang="en">The media type shall be used for Enhanced Compressed Wavelet (ECW) files.</dct:description>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-ecw">
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-ecw/x-ecw.en.html"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-ecw/x-ecw.en.csv"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-ecw/x-ecw.en.json"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-ecw/x-ecw.en.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-ecw/x-ecw.en.19135.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-ecw/x-ecw.en.atom"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-ecw/x-ecw.en.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-ecw/x-ecw.en.html">
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-ecw/x-ecw.en.csv">
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-ecw/x-ecw.en.json">
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-ecw/x-ecw.en.xml">
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-ecw/x-ecw.en.19135.xml">
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-ecw/x-ecw.en.atom">
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-ecw/x-ecw.en.rdf">
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-ascii-grid">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">x-ascii-grid</dct:identifier>
+      <owl:sameAs rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-ascii-grid:1"/>
+      <adms:last rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-ascii-grid"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/media-types/application"/>
+      <skos:topConceptOf rdf:resource="http://inspire.ec.europa.eu/media-types/application"/>
+      <dct:title xml:lang="en">x-ascii-grid</dct:title>
+      <dct:description xml:lang="en">The media type shall be used for ASCII GRID files.</dct:description>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-ascii-grid">
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-ascii-grid/x-ascii-grid.en.html"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-ascii-grid/x-ascii-grid.en.csv"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-ascii-grid/x-ascii-grid.en.json"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-ascii-grid/x-ascii-grid.en.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-ascii-grid/x-ascii-grid.en.19135.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-ascii-grid/x-ascii-grid.en.atom"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-ascii-grid/x-ascii-grid.en.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-ascii-grid/x-ascii-grid.en.html">
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-ascii-grid/x-ascii-grid.en.csv">
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-ascii-grid/x-ascii-grid.en.json">
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-ascii-grid/x-ascii-grid.en.xml">
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-ascii-grid/x-ascii-grid.en.19135.xml">
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-ascii-grid/x-ascii-grid.en.atom">
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-ascii-grid/x-ascii-grid.en.rdf">
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-oracledump">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">x-oracledump</dct:identifier>
+      <owl:sameAs rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-oracledump:1"/>
+      <adms:last rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-oracledump"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/media-types/application"/>
+      <skos:topConceptOf rdf:resource="http://inspire.ec.europa.eu/media-types/application"/>
+      <dct:title xml:lang="en">x-oracledump</dct:title>
+      <dct:description xml:lang="en">The media type shall be used for Oracle dumps. This media type is incomplete as it misses a reference to the specification of the format.</dct:description>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-oracledump">
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-oracledump/x-oracledump.en.html"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-oracledump/x-oracledump.en.csv"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-oracledump/x-oracledump.en.json"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-oracledump/x-oracledump.en.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-oracledump/x-oracledump.en.19135.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-oracledump/x-oracledump.en.atom"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-oracledump/x-oracledump.en.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-oracledump/x-oracledump.en.html">
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-oracledump/x-oracledump.en.csv">
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-oracledump/x-oracledump.en.json">
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-oracledump/x-oracledump.en.xml">
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-oracledump/x-oracledump.en.19135.xml">
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-oracledump/x-oracledump.en.atom">
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-oracledump/x-oracledump.en.rdf">
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-las">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">x-las</dct:identifier>
+      <owl:sameAs rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-las:1"/>
+      <adms:last rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-las"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/media-types/application"/>
+      <skos:topConceptOf rdf:resource="http://inspire.ec.europa.eu/media-types/application"/>
+      <dct:title xml:lang="en">x-las</dct:title>
+      <dct:description xml:lang="en">The media type shall be used for the LASer file format (LAS).</dct:description>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-las">
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-las/x-las.en.html"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-las/x-las.en.csv"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-las/x-las.en.json"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-las/x-las.en.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-las/x-las.en.19135.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-las/x-las.en.atom"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-las/x-las.en.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-las/x-las.en.html">
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-las/x-las.en.csv">
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-las/x-las.en.json">
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-las/x-las.en.xml">
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-las/x-las.en.19135.xml">
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-las/x-las.en.atom">
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-las/x-las.en.rdf">
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-laz">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">x-laz</dct:identifier>
+      <owl:sameAs rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-laz:1"/>
+      <adms:last rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-laz"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/media-types/application"/>
+      <skos:topConceptOf rdf:resource="http://inspire.ec.europa.eu/media-types/application"/>
+      <dct:title xml:lang="en">x-laz</dct:title>
+      <dct:description xml:lang="en">The media type shall be used for compressed LAS files. This media type is incomplete as it misses a reference to the specification of the format.</dct:description>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-laz">
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-laz/x-laz.en.html"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-laz/x-laz.en.csv"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-laz/x-laz.en.json"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-laz/x-laz.en.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-laz/x-laz.en.19135.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-laz/x-laz.en.atom"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-laz/x-laz.en.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-laz/x-laz.en.html">
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-laz/x-laz.en.csv">
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-laz/x-laz.en.json">
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-laz/x-laz.en.xml">
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-laz/x-laz.en.19135.xml">
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-laz/x-laz.en.atom">
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-laz/x-laz.en.rdf">
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-tab">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">x-tab</dct:identifier>
+      <owl:sameAs rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-tab:1"/>
+      <adms:last rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-tab"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/media-types/application"/>
+      <skos:topConceptOf rdf:resource="http://inspire.ec.europa.eu/media-types/application"/>
+      <dct:title xml:lang="en">x-tab</dct:title>
+      <dct:description xml:lang="en">The media type shall be used for the MapInfo TAB format. The file is a zip archive that contains at least the tab, dat, map and id files.</dct:description>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-tab">
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-tab/x-tab.en.html"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-tab/x-tab.en.csv"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-tab/x-tab.en.json"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-tab/x-tab.en.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-tab/x-tab.en.19135.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-tab/x-tab.en.atom"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-tab/x-tab.en.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-tab/x-tab.en.html">
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-tab/x-tab.en.csv">
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-tab/x-tab.en.json">
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-tab/x-tab.en.xml">
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-tab/x-tab.en.19135.xml">
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-tab/x-tab.en.atom">
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-tab/x-tab.en.rdf">
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-tab-raster">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">x-tab-raster</dct:identifier>
+      <owl:sameAs rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-tab-raster:1"/>
+      <adms:last rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-tab-raster"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/media-types/application"/>
+      <skos:topConceptOf rdf:resource="http://inspire.ec.europa.eu/media-types/application"/>
+      <dct:title xml:lang="en">x-tab-raster</dct:title>
+      <dct:description xml:lang="en">The media type shall be used for the MapInfo Raster TAB format. This media type is incomplete as it misses a reference to the specification of the format.</dct:description>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-tab-raster">
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-tab-raster/x-tab-raster.en.html"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-tab-raster/x-tab-raster.en.csv"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-tab-raster/x-tab-raster.en.json"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-tab-raster/x-tab-raster.en.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-tab-raster/x-tab-raster.en.19135.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-tab-raster/x-tab-raster.en.atom"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-tab-raster/x-tab-raster.en.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-tab-raster/x-tab-raster.en.html">
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-tab-raster/x-tab-raster.en.csv">
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-tab-raster/x-tab-raster.en.json">
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-tab-raster/x-tab-raster.en.xml">
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-tab-raster/x-tab-raster.en.19135.xml">
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-tab-raster/x-tab-raster.en.atom">
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-tab-raster/x-tab-raster.en.rdf">
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-worldfile">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">x-worldfile</dct:identifier>
+      <owl:sameAs rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-worldfile:1"/>
+      <adms:last rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-worldfile"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+      <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/media-types/application"/>
+      <skos:topConceptOf rdf:resource="http://inspire.ec.europa.eu/media-types/application"/>
+      <dct:title xml:lang="en">x-worldfile</dct:title>
+      <dct:description xml:lang="en">The media type shall be used for world files. The file extension usually depends on the format of the associated image, e.g. .jgw for JPEG (2000) oder .tfw for TIFF.</dct:description>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-worldfile">
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-worldfile/x-worldfile.en.html"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-worldfile/x-worldfile.en.csv"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-worldfile/x-worldfile.en.json"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-worldfile/x-worldfile.en.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-worldfile/x-worldfile.en.19135.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-worldfile/x-worldfile.en.atom"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/media-types/application/x-worldfile/x-worldfile.en.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-worldfile/x-worldfile.en.html">
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-worldfile/x-worldfile.en.csv">
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-worldfile/x-worldfile.en.json">
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-worldfile/x-worldfile.en.xml">
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-worldfile/x-worldfile.en.19135.xml">
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-worldfile/x-worldfile.en.atom">
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/media-types/application/x-worldfile/x-worldfile.en.rdf">
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+   </rdf:Description>
+</rdf:RDF>
