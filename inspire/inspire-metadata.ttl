@@ -1935,18 +1935,24 @@ inspire-shape:SpatialDatasetSpatialRepresentationType a sh:PropertyShape;
   rdfs:comment "This element is used to broadly categorise a spatial data resource being described."
 .
 inspire-shape:SpatialDatasetTopologicalConsistencyQuantitive a sh:PropertyShape;
+  shxl:index 41;
   dct:subject inspire-concept:SpatialDatasetTopologicalConsistency;
   sh:severity sh:Warning;
   sh:name "topologicalConsistency";
+  rdfs:label "Spatial data set topological consistency"@en;
+  rdfs:label "Topologische consistentie van de verzameling ruimtelijke gegevens"@nl;
   sh:node inspire-shape:DataQualityElement;
   sh:nodeKind sh:BlankNode;
   inspire-meta:isoref "80. report";
   inspire-meta:xpath "dataQualityInfo/DQ_DataQuality/report/"
 .
 inspire-shape:SpatialDatasetTopologicalConsistencyDescriptive a sh:PropertyShape;
+  shxl:index 42;
   dct:subject inspire-concept:SpatialDatasetTopologicalConsistency;
   sh:severity sh:Warning;
   sh:name "topologicalConsistency";
+  rdfs:label "Spatial data set topological consistency"@en;
+  rdfs:label "Topologische consistentie van de verzameling ruimtelijke gegevens"@nl;
   sh:node inspire-shape:ConformanceResult;
   sh:nodeKind sh:BlankNode;
   inspire-meta:isoref "80. report";

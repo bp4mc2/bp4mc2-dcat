@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:dcat="http://www.w3.org/ns/dcat#" xmlns:adms="http://www.w3.org/ns/adms#"
+         xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
+         xmlns:vann="http://purl.org/vocab/vann/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+         xmlns:dct="http://purl.org/dc/terms/"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/">
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">DegreeOfConformity</dct:identifier>
+      <owl:sameAs rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity:2"/>
+      <adms:last rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+      <dct:title xml:lang="nl">Conformiteitsindicatie</dct:title>
+      <skos:prefLabel xml:lang="nl">Conformiteitsindicatie</skos:prefLabel>
+      <dct:hasPart rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/conformant"/>
+      <skos:hasTopConcept rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/conformant"/>
+      <dct:hasPart rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/notConformant"/>
+      <skos:hasTopConcept rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/notConformant"/>
+      <dct:hasPart rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/notEvaluated"/>
+      <skos:hasTopConcept rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/notEvaluated"/>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity">
+      <dcat:distribution rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/DegreeOfConformity.nl.html"/>
+      <dcat:distribution rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/DegreeOfConformity.nl.csv"/>
+      <dcat:distribution rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/DegreeOfConformity.nl.json"/>
+      <dcat:distribution rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/DegreeOfConformity.nl.xml"/>
+      <dcat:distribution rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/DegreeOfConformity.nl.19135.xml"/>
+      <dcat:distribution rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/DegreeOfConformity.nl.atom"/>
+      <dcat:distribution rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/DegreeOfConformity.nl.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/DegreeOfConformity.nl.html">
+      <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/DegreeOfConformity.nl.csv">
+      <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/DegreeOfConformity.nl.json">
+      <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/DegreeOfConformity.nl.xml">
+      <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/DegreeOfConformity.nl.19135.xml">
+      <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/DegreeOfConformity.nl.atom">
+      <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/DegreeOfConformity.nl.rdf">
+      <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/conformant">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">conformant</dct:identifier>
+      <owl:sameAs rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/conformant:1"/>
+      <adms:last rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/conformant"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity"/>
+      <skos:topConceptOf rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity"/>
+      <dct:title xml:lang="nl">Conform</dct:title>
+      <dct:description xml:lang="nl">De bron is volledig conform de specificatie.</dct:description>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/conformant">
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/conformant/conformant.nl.html"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/conformant/conformant.nl.csv"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/conformant/conformant.nl.json"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/conformant/conformant.nl.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/conformant/conformant.nl.19135.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/conformant/conformant.nl.atom"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/conformant/conformant.nl.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/conformant/conformant.nl.html">
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/conformant/conformant.nl.csv">
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/conformant/conformant.nl.json">
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/conformant/conformant.nl.xml">
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/conformant/conformant.nl.19135.xml">
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/conformant/conformant.nl.atom">
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/conformant/conformant.nl.rdf">
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/notConformant">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">notConformant</dct:identifier>
+      <owl:sameAs rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/notConformant:1"/>
+      <adms:last rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/notConformant"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity"/>
+      <skos:topConceptOf rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity"/>
+      <dct:title xml:lang="nl">Niet conform</dct:title>
+      <dct:description xml:lang="nl">De bron is niet conform de specificatie.</dct:description>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/notConformant">
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/notConformant/notConformant.nl.html"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/notConformant/notConformant.nl.csv"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/notConformant/notConformant.nl.json"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/notConformant/notConformant.nl.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/notConformant/notConformant.nl.19135.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/notConformant/notConformant.nl.atom"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/notConformant/notConformant.nl.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/notConformant/notConformant.nl.html">
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/notConformant/notConformant.nl.csv">
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/notConformant/notConformant.nl.json">
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/notConformant/notConformant.nl.xml">
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/notConformant/notConformant.nl.19135.xml">
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/notConformant/notConformant.nl.atom">
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/notConformant/notConformant.nl.rdf">
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/notEvaluated">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">notEvaluated</dct:identifier>
+      <owl:sameAs rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/notEvaluated:1"/>
+      <adms:last rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/notEvaluated"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity"/>
+      <skos:topConceptOf rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity"/>
+      <dct:title xml:lang="nl">Niet beoordeeld</dct:title>
+      <dct:description xml:lang="nl">De conformiteit is niet beoordeeld.</dct:description>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/notEvaluated">
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/notEvaluated/notEvaluated.nl.html"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/notEvaluated/notEvaluated.nl.csv"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/notEvaluated/notEvaluated.nl.json"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/notEvaluated/notEvaluated.nl.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/notEvaluated/notEvaluated.nl.19135.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/notEvaluated/notEvaluated.nl.atom"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/notEvaluated/notEvaluated.nl.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/notEvaluated/notEvaluated.nl.html">
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/notEvaluated/notEvaluated.nl.csv">
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/notEvaluated/notEvaluated.nl.json">
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/notEvaluated/notEvaluated.nl.xml">
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/notEvaluated/notEvaluated.nl.19135.xml">
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/notEvaluated/notEvaluated.nl.atom">
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/DegreeOfConformity/notEvaluated/notEvaluated.nl.rdf">
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+</rdf:RDF>

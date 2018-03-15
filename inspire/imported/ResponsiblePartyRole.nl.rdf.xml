@@ -1,0 +1,702 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:dcat="http://www.w3.org/ns/dcat#" xmlns:adms="http://www.w3.org/ns/adms#"
+         xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
+         xmlns:vann="http://purl.org/vocab/vann/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+         xmlns:dct="http://purl.org/dc/terms/"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/">
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">ResponsiblePartyRole</dct:identifier>
+      <owl:sameAs rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole:2"/>
+      <adms:last rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+      <dct:title xml:lang="nl">Rol van de verantwoordelijke partij</dct:title>
+      <skos:prefLabel xml:lang="nl">Rol van de verantwoordelijke partij</skos:prefLabel>
+      <dct:hasPart rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/resourceProvider"/>
+      <skos:hasTopConcept rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/resourceProvider"/>
+      <dct:hasPart rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/custodian"/>
+      <skos:hasTopConcept rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/custodian"/>
+      <dct:hasPart rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/owner"/>
+      <skos:hasTopConcept rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/owner"/>
+      <dct:hasPart rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/user"/>
+      <skos:hasTopConcept rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/user"/>
+      <dct:hasPart rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/distributor"/>
+      <skos:hasTopConcept rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/distributor"/>
+      <dct:hasPart rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/originator"/>
+      <skos:hasTopConcept rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/originator"/>
+      <dct:hasPart rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/pointOfContact"/>
+      <skos:hasTopConcept rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/pointOfContact"/>
+      <dct:hasPart rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/principalInvestigator"/>
+      <skos:hasTopConcept rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/principalInvestigator"/>
+      <dct:hasPart rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/processor"/>
+      <skos:hasTopConcept rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/processor"/>
+      <dct:hasPart rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/publisher"/>
+      <skos:hasTopConcept rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/publisher"/>
+      <dct:hasPart rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/author"/>
+      <skos:hasTopConcept rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/author"/>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole">
+      <dcat:distribution rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/ResponsiblePartyRole.nl.html"/>
+      <dcat:distribution rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/ResponsiblePartyRole.nl.csv"/>
+      <dcat:distribution rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/ResponsiblePartyRole.nl.json"/>
+      <dcat:distribution rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/ResponsiblePartyRole.nl.xml"/>
+      <dcat:distribution rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/ResponsiblePartyRole.nl.19135.xml"/>
+      <dcat:distribution rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/ResponsiblePartyRole.nl.atom"/>
+      <dcat:distribution rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/ResponsiblePartyRole.nl.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/ResponsiblePartyRole.nl.html">
+      <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/ResponsiblePartyRole.nl.csv">
+      <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/ResponsiblePartyRole.nl.json">
+      <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/ResponsiblePartyRole.nl.xml">
+      <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/ResponsiblePartyRole.nl.19135.xml">
+      <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/ResponsiblePartyRole.nl.atom">
+      <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/ResponsiblePartyRole.nl.rdf">
+      <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/resourceProvider">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">resourceProvider</dct:identifier>
+      <owl:sameAs rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/resourceProvider:1"/>
+      <adms:last rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/resourceProvider"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole"/>
+      <skos:topConceptOf rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole"/>
+      <dct:title xml:lang="nl">Bronverstrekker</dct:title>
+      <dct:description xml:lang="nl">De partij die de bron verstrekt.</dct:description>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/resourceProvider">
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/resourceProvider/resourceProvider.nl.html"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/resourceProvider/resourceProvider.nl.csv"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/resourceProvider/resourceProvider.nl.json"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/resourceProvider/resourceProvider.nl.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/resourceProvider/resourceProvider.nl.19135.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/resourceProvider/resourceProvider.nl.atom"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/resourceProvider/resourceProvider.nl.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/resourceProvider/resourceProvider.nl.html">
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/resourceProvider/resourceProvider.nl.csv">
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/resourceProvider/resourceProvider.nl.json">
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/resourceProvider/resourceProvider.nl.xml">
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/resourceProvider/resourceProvider.nl.19135.xml">
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/resourceProvider/resourceProvider.nl.atom">
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/resourceProvider/resourceProvider.nl.rdf">
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/custodian">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">custodian</dct:identifier>
+      <owl:sameAs rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/custodian:1"/>
+      <adms:last rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/custodian"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole"/>
+      <skos:topConceptOf rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole"/>
+      <dct:title xml:lang="nl">Beheerder</dct:title>
+      <dct:description xml:lang="nl">Partij die verantwoordelijk is voor de gegevens en de bron zorgvuldig bijhoudt.</dct:description>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/custodian">
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/custodian/custodian.nl.html"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/custodian/custodian.nl.csv"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/custodian/custodian.nl.json"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/custodian/custodian.nl.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/custodian/custodian.nl.19135.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/custodian/custodian.nl.atom"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/custodian/custodian.nl.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/custodian/custodian.nl.html">
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/custodian/custodian.nl.csv">
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/custodian/custodian.nl.json">
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/custodian/custodian.nl.xml">
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/custodian/custodian.nl.19135.xml">
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/custodian/custodian.nl.atom">
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/custodian/custodian.nl.rdf">
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/owner">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">owner</dct:identifier>
+      <owl:sameAs rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/owner:1"/>
+      <adms:last rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/owner"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole"/>
+      <skos:topConceptOf rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole"/>
+      <dct:title xml:lang="nl">Eigenaar</dct:title>
+      <dct:description xml:lang="nl">De partij die eigenaar is van de bron.</dct:description>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/owner">
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/owner/owner.nl.html"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/owner/owner.nl.csv"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/owner/owner.nl.json"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/owner/owner.nl.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/owner/owner.nl.19135.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/owner/owner.nl.atom"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/owner/owner.nl.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/owner/owner.nl.html">
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/owner/owner.nl.csv">
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/owner/owner.nl.json">
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/owner/owner.nl.xml">
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/owner/owner.nl.19135.xml">
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/owner/owner.nl.atom">
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/owner/owner.nl.rdf">
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/user">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">user</dct:identifier>
+      <owl:sameAs rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/user:1"/>
+      <adms:last rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/user"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole"/>
+      <skos:topConceptOf rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole"/>
+      <dct:title xml:lang="nl">Gebruiker</dct:title>
+      <dct:description xml:lang="nl">De partij die de bron gebruikt.</dct:description>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/user">
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/user/user.nl.html"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/user/user.nl.csv"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/user/user.nl.json"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/user/user.nl.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/user/user.nl.19135.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/user/user.nl.atom"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/user/user.nl.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/user/user.nl.html">
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/user/user.nl.csv">
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/user/user.nl.json">
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/user/user.nl.xml">
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/user/user.nl.19135.xml">
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/user/user.nl.atom">
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/user/user.nl.rdf">
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/distributor">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">distributor</dct:identifier>
+      <owl:sameAs rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/distributor:1"/>
+      <adms:last rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/distributor"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole"/>
+      <skos:topConceptOf rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole"/>
+      <dct:title xml:lang="nl">Verdeler</dct:title>
+      <dct:description xml:lang="nl">De partij die de bron verspreidt.</dct:description>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/distributor">
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/distributor/distributor.nl.html"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/distributor/distributor.nl.csv"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/distributor/distributor.nl.json"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/distributor/distributor.nl.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/distributor/distributor.nl.19135.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/distributor/distributor.nl.atom"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/distributor/distributor.nl.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/distributor/distributor.nl.html">
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/distributor/distributor.nl.csv">
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/distributor/distributor.nl.json">
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/distributor/distributor.nl.xml">
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/distributor/distributor.nl.19135.xml">
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/distributor/distributor.nl.atom">
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/distributor/distributor.nl.rdf">
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/originator">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">originator</dct:identifier>
+      <owl:sameAs rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/originator:1"/>
+      <adms:last rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/originator"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole"/>
+      <skos:topConceptOf rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole"/>
+      <dct:title xml:lang="nl">Initiatiefnemer</dct:title>
+      <dct:description xml:lang="nl">De partij die de bron heeft aangemaakt.</dct:description>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/originator">
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/originator/originator.nl.html"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/originator/originator.nl.csv"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/originator/originator.nl.json"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/originator/originator.nl.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/originator/originator.nl.19135.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/originator/originator.nl.atom"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/originator/originator.nl.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/originator/originator.nl.html">
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/originator/originator.nl.csv">
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/originator/originator.nl.json">
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/originator/originator.nl.xml">
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/originator/originator.nl.19135.xml">
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/originator/originator.nl.atom">
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/originator/originator.nl.rdf">
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/pointOfContact">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">pointOfContact</dct:identifier>
+      <owl:sameAs rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/pointOfContact:1"/>
+      <adms:last rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/pointOfContact"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole"/>
+      <skos:topConceptOf rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole"/>
+      <dct:title xml:lang="nl">Contactpunt</dct:title>
+      <dct:description xml:lang="nl">De partij waarmee contact kan worden opgenomen voor informatie over de bron of om ze te verwerven.</dct:description>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/pointOfContact">
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/pointOfContact/pointOfContact.nl.html"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/pointOfContact/pointOfContact.nl.csv"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/pointOfContact/pointOfContact.nl.json"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/pointOfContact/pointOfContact.nl.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/pointOfContact/pointOfContact.nl.19135.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/pointOfContact/pointOfContact.nl.atom"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/pointOfContact/pointOfContact.nl.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/pointOfContact/pointOfContact.nl.html">
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/pointOfContact/pointOfContact.nl.csv">
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/pointOfContact/pointOfContact.nl.json">
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/pointOfContact/pointOfContact.nl.xml">
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/pointOfContact/pointOfContact.nl.19135.xml">
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/pointOfContact/pointOfContact.nl.atom">
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/pointOfContact/pointOfContact.nl.rdf">
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/principalInvestigator">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">principalInvestigator</dct:identifier>
+      <owl:sameAs rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/principalInvestigator:1"/>
+      <adms:last rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/principalInvestigator"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole"/>
+      <skos:topConceptOf rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole"/>
+      <dct:title xml:lang="nl">Hoofdonderzoeker</dct:title>
+      <dct:description xml:lang="nl">De partij die voornamelijk verantwoordelijk is voor informatievergaring en onderzoek.</dct:description>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/principalInvestigator">
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/principalInvestigator/principalInvestigator.nl.html"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/principalInvestigator/principalInvestigator.nl.csv"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/principalInvestigator/principalInvestigator.nl.json"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/principalInvestigator/principalInvestigator.nl.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/principalInvestigator/principalInvestigator.nl.19135.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/principalInvestigator/principalInvestigator.nl.atom"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/principalInvestigator/principalInvestigator.nl.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/principalInvestigator/principalInvestigator.nl.html">
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/principalInvestigator/principalInvestigator.nl.csv">
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/principalInvestigator/principalInvestigator.nl.json">
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/principalInvestigator/principalInvestigator.nl.xml">
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/principalInvestigator/principalInvestigator.nl.19135.xml">
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/principalInvestigator/principalInvestigator.nl.atom">
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/principalInvestigator/principalInvestigator.nl.rdf">
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/processor">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">processor</dct:identifier>
+      <owl:sameAs rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/processor:1"/>
+      <adms:last rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/processor"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole"/>
+      <skos:topConceptOf rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole"/>
+      <dct:title xml:lang="nl">Bewerker</dct:title>
+      <dct:description xml:lang="nl">De partij die de gegevens heeft bewerkt zodat de bron is gewijzigd.</dct:description>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/processor">
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/processor/processor.nl.html"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/processor/processor.nl.csv"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/processor/processor.nl.json"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/processor/processor.nl.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/processor/processor.nl.19135.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/processor/processor.nl.atom"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/processor/processor.nl.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/processor/processor.nl.html">
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/processor/processor.nl.csv">
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/processor/processor.nl.json">
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/processor/processor.nl.xml">
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/processor/processor.nl.19135.xml">
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/processor/processor.nl.atom">
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/processor/processor.nl.rdf">
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/publisher">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">publisher</dct:identifier>
+      <owl:sameAs rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/publisher:1"/>
+      <adms:last rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/publisher"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole"/>
+      <skos:topConceptOf rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole"/>
+      <dct:title xml:lang="nl">Uitgever</dct:title>
+      <dct:description xml:lang="nl">De partij die de bron publiceert.</dct:description>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/publisher">
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/publisher/publisher.nl.html"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/publisher/publisher.nl.csv"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/publisher/publisher.nl.json"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/publisher/publisher.nl.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/publisher/publisher.nl.19135.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/publisher/publisher.nl.atom"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/publisher/publisher.nl.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/publisher/publisher.nl.html">
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/publisher/publisher.nl.csv">
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/publisher/publisher.nl.json">
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/publisher/publisher.nl.xml">
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/publisher/publisher.nl.19135.xml">
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/publisher/publisher.nl.atom">
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/publisher/publisher.nl.rdf">
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/author">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">author</dct:identifier>
+      <owl:sameAs rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/author:1"/>
+      <adms:last rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/author"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole"/>
+      <skos:topConceptOf rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole"/>
+      <dct:title xml:lang="nl">Auteur</dct:title>
+      <dct:description xml:lang="nl">De partij die auteur is van de bron.</dct:description>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/author">
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/author/author.nl.html"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/author/author.nl.csv"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/author/author.nl.json"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/author/author.nl.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/author/author.nl.19135.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/author/author.nl.atom"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/author/author.nl.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/author/author.nl.html">
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/author/author.nl.csv">
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/author/author.nl.json">
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/author/author.nl.xml">
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/author/author.nl.19135.xml">
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/author/author.nl.atom">
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/ResponsiblePartyRole/author/author.nl.rdf">
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+</rdf:RDF>

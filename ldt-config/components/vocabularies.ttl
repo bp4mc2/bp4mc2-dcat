@@ -9,6 +9,10 @@
 stage:ProfielVocabularies	a	elmo:Representation;
 	elmo:url-pattern	"/query/profiel-vocabularies$";
 	elmo:contains	stage:Menu;
+  elmo:fragment [
+    elmo:applies-to "documentation";
+    elmo:appearance elmo:GlobalLink;
+  ];
   elmo:query '''
     prefix containerlocal: <http://localhost:8080/modeling/container/>
     select ?prefix ?namespace ?documentation

@@ -1,0 +1,1158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:dcat="http://www.w3.org/ns/dcat#" xmlns:adms="http://www.w3.org/ns/adms#"
+         xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
+         xmlns:vann="http://purl.org/vocab/vann/"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+         xmlns:dct="http://purl.org/dc/terms/"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/">
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">TopicCategory</dct:identifier>
+      <owl:sameAs rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory:2"/>
+      <adms:last rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+      <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+      <dct:title xml:lang="nl">Onderwerpcategoriecn overeenkomstig EN ISO 19115</dct:title>
+      <skos:prefLabel xml:lang="nl">Onderwerpcategoriecn overeenkomstig EN ISO 19115</skos:prefLabel>
+      <dct:hasPart rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/farming"/>
+      <skos:hasTopConcept rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/farming"/>
+      <dct:hasPart rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/biota"/>
+      <skos:hasTopConcept rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/biota"/>
+      <dct:hasPart rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/boundaries"/>
+      <skos:hasTopConcept rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/boundaries"/>
+      <dct:hasPart rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/climatologyMeteorologyAtmosphere"/>
+      <skos:hasTopConcept rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/climatologyMeteorologyAtmosphere"/>
+      <dct:hasPart rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/economy"/>
+      <skos:hasTopConcept rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/economy"/>
+      <dct:hasPart rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/elevation"/>
+      <skos:hasTopConcept rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/elevation"/>
+      <dct:hasPart rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/environment"/>
+      <skos:hasTopConcept rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/environment"/>
+      <dct:hasPart rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/geoscientificInformation"/>
+      <skos:hasTopConcept rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/geoscientificInformation"/>
+      <dct:hasPart rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/health"/>
+      <skos:hasTopConcept rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/health"/>
+      <dct:hasPart rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/imageryBaseMapsEarthCover"/>
+      <skos:hasTopConcept rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/imageryBaseMapsEarthCover"/>
+      <dct:hasPart rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/intelligenceMilitary"/>
+      <skos:hasTopConcept rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/intelligenceMilitary"/>
+      <dct:hasPart rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/inlandWaters"/>
+      <skos:hasTopConcept rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/inlandWaters"/>
+      <dct:hasPart rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/location"/>
+      <skos:hasTopConcept rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/location"/>
+      <dct:hasPart rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/oceans"/>
+      <skos:hasTopConcept rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/oceans"/>
+      <dct:hasPart rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/planningCadastre"/>
+      <skos:hasTopConcept rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/planningCadastre"/>
+      <dct:hasPart rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/society"/>
+      <skos:hasTopConcept rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/society"/>
+      <dct:hasPart rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/structure"/>
+      <skos:hasTopConcept rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/structure"/>
+      <dct:hasPart rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/transportation"/>
+      <skos:hasTopConcept rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/transportation"/>
+      <dct:hasPart rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/utilitiesCommunication"/>
+      <skos:hasTopConcept rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/utilitiesCommunication"/>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory">
+      <dcat:distribution rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/TopicCategory.nl.html"/>
+      <dcat:distribution rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/TopicCategory.nl.csv"/>
+      <dcat:distribution rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/TopicCategory.nl.json"/>
+      <dcat:distribution rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/TopicCategory.nl.xml"/>
+      <dcat:distribution rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/TopicCategory.nl.19135.xml"/>
+      <dcat:distribution rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/TopicCategory.nl.atom"/>
+      <dcat:distribution rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/TopicCategory.nl.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/TopicCategory.nl.html">
+      <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/TopicCategory.nl.csv">
+      <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/TopicCategory.nl.json">
+      <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/TopicCategory.nl.xml">
+      <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/TopicCategory.nl.19135.xml">
+      <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/TopicCategory.nl.atom">
+      <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/TopicCategory.nl.rdf">
+      <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/farming">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">farming</dct:identifier>
+      <owl:sameAs rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/farming:1"/>
+      <adms:last rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/farming"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory"/>
+      <skos:topConceptOf rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory"/>
+      <dct:title xml:lang="nl">Landbouw en veeteelt</dct:title>
+      <dct:description xml:lang="nl">Kweken van dieren en/of gewassen.</dct:description>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/farming">
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/farming/farming.nl.html"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/farming/farming.nl.csv"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/farming/farming.nl.json"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/farming/farming.nl.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/farming/farming.nl.19135.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/farming/farming.nl.atom"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/farming/farming.nl.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/farming/farming.nl.html">
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/farming/farming.nl.csv">
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/farming/farming.nl.json">
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/farming/farming.nl.xml">
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/farming/farming.nl.19135.xml">
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/farming/farming.nl.atom">
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/farming/farming.nl.rdf">
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/biota">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">biota</dct:identifier>
+      <owl:sameAs rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/biota:1"/>
+      <adms:last rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/biota"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory"/>
+      <skos:topConceptOf rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory"/>
+      <dct:title xml:lang="nl">Biota</dct:title>
+      <dct:description xml:lang="nl">Flora en/of fauna in een natuurlijke omgeving.</dct:description>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/biota">
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/biota/biota.nl.html"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/biota/biota.nl.csv"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/biota/biota.nl.json"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/biota/biota.nl.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/biota/biota.nl.19135.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/biota/biota.nl.atom"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/biota/biota.nl.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/biota/biota.nl.html">
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/biota/biota.nl.csv">
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/biota/biota.nl.json">
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/biota/biota.nl.xml">
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/biota/biota.nl.19135.xml">
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/biota/biota.nl.atom">
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/biota/biota.nl.rdf">
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/boundaries">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">boundaries</dct:identifier>
+      <owl:sameAs rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/boundaries:1"/>
+      <adms:last rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/boundaries"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory"/>
+      <skos:topConceptOf rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory"/>
+      <dct:title xml:lang="nl">Grenzen</dct:title>
+      <dct:description xml:lang="nl">Wettelijke gebiedsbeschrijvingen.</dct:description>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/boundaries">
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/boundaries/boundaries.nl.html"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/boundaries/boundaries.nl.csv"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/boundaries/boundaries.nl.json"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/boundaries/boundaries.nl.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/boundaries/boundaries.nl.19135.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/boundaries/boundaries.nl.atom"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/boundaries/boundaries.nl.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/boundaries/boundaries.nl.html">
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/boundaries/boundaries.nl.csv">
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/boundaries/boundaries.nl.json">
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/boundaries/boundaries.nl.xml">
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/boundaries/boundaries.nl.19135.xml">
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/boundaries/boundaries.nl.atom">
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/boundaries/boundaries.nl.rdf">
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/climatologyMeteorologyAtmosphere">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">climatologyMeteorologyAtmosphere</dct:identifier>
+      <owl:sameAs rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/climatologyMeteorologyAtmosphere:1"/>
+      <adms:last rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/climatologyMeteorologyAtmosphere"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory"/>
+      <skos:topConceptOf rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory"/>
+      <dct:title xml:lang="nl">Klimatologie/meteorologie/atmosfeer</dct:title>
+      <dct:description xml:lang="nl">Atmosferische processen en fenomenen.</dct:description>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/climatologyMeteorologyAtmosphere">
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/climatologyMeteorologyAtmosphere/climatologyMeteorologyAtmosphere.nl.html"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/climatologyMeteorologyAtmosphere/climatologyMeteorologyAtmosphere.nl.csv"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/climatologyMeteorologyAtmosphere/climatologyMeteorologyAtmosphere.nl.json"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/climatologyMeteorologyAtmosphere/climatologyMeteorologyAtmosphere.nl.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/climatologyMeteorologyAtmosphere/climatologyMeteorologyAtmosphere.nl.19135.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/climatologyMeteorologyAtmosphere/climatologyMeteorologyAtmosphere.nl.atom"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/climatologyMeteorologyAtmosphere/climatologyMeteorologyAtmosphere.nl.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/climatologyMeteorologyAtmosphere/climatologyMeteorologyAtmosphere.nl.html">
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/climatologyMeteorologyAtmosphere/climatologyMeteorologyAtmosphere.nl.csv">
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/climatologyMeteorologyAtmosphere/climatologyMeteorologyAtmosphere.nl.json">
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/climatologyMeteorologyAtmosphere/climatologyMeteorologyAtmosphere.nl.xml">
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/climatologyMeteorologyAtmosphere/climatologyMeteorologyAtmosphere.nl.19135.xml">
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/climatologyMeteorologyAtmosphere/climatologyMeteorologyAtmosphere.nl.atom">
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/climatologyMeteorologyAtmosphere/climatologyMeteorologyAtmosphere.nl.rdf">
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/economy">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">economy</dct:identifier>
+      <owl:sameAs rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/economy:1"/>
+      <adms:last rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/economy"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory"/>
+      <skos:topConceptOf rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory"/>
+      <dct:title xml:lang="nl">Economie</dct:title>
+      <dct:description xml:lang="nl">Economische activiteiten, situatie en werkgelegenheid.</dct:description>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/economy">
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/economy/economy.nl.html"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/economy/economy.nl.csv"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/economy/economy.nl.json"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/economy/economy.nl.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/economy/economy.nl.19135.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/economy/economy.nl.atom"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/economy/economy.nl.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/economy/economy.nl.html">
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/economy/economy.nl.csv">
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/economy/economy.nl.json">
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/economy/economy.nl.xml">
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/economy/economy.nl.19135.xml">
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/economy/economy.nl.atom">
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/economy/economy.nl.rdf">
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/elevation">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">elevation</dct:identifier>
+      <owl:sameAs rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/elevation:1"/>
+      <adms:last rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/elevation"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory"/>
+      <skos:topConceptOf rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory"/>
+      <dct:title xml:lang="nl">Hoogte</dct:title>
+      <dct:description xml:lang="nl">Hoogte boven of onder zeeniveau.</dct:description>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/elevation">
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/elevation/elevation.nl.html"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/elevation/elevation.nl.csv"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/elevation/elevation.nl.json"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/elevation/elevation.nl.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/elevation/elevation.nl.19135.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/elevation/elevation.nl.atom"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/elevation/elevation.nl.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/elevation/elevation.nl.html">
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/elevation/elevation.nl.csv">
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/elevation/elevation.nl.json">
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/elevation/elevation.nl.xml">
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/elevation/elevation.nl.19135.xml">
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/elevation/elevation.nl.atom">
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/elevation/elevation.nl.rdf">
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/environment">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">environment</dct:identifier>
+      <owl:sameAs rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/environment:1"/>
+      <adms:last rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/environment"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory"/>
+      <skos:topConceptOf rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory"/>
+      <dct:title xml:lang="nl">Milieu</dct:title>
+      <dct:description xml:lang="nl">Milieuhulpbronnen, -bescherming en -behoud.</dct:description>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/environment">
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/environment/environment.nl.html"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/environment/environment.nl.csv"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/environment/environment.nl.json"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/environment/environment.nl.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/environment/environment.nl.19135.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/environment/environment.nl.atom"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/environment/environment.nl.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/environment/environment.nl.html">
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/environment/environment.nl.csv">
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/environment/environment.nl.json">
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/environment/environment.nl.xml">
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/environment/environment.nl.19135.xml">
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/environment/environment.nl.atom">
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/environment/environment.nl.rdf">
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/geoscientificInformation">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">geoscientificInformation</dct:identifier>
+      <owl:sameAs rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/geoscientificInformation:1"/>
+      <adms:last rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/geoscientificInformation"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory"/>
+      <skos:topConceptOf rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory"/>
+      <dct:title xml:lang="nl">Geowetenschappelijke informatie</dct:title>
+      <dct:description xml:lang="nl">Informatie met betrekking tot aardwetenschappen.</dct:description>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/geoscientificInformation">
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/geoscientificInformation/geoscientificInformation.nl.html"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/geoscientificInformation/geoscientificInformation.nl.csv"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/geoscientificInformation/geoscientificInformation.nl.json"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/geoscientificInformation/geoscientificInformation.nl.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/geoscientificInformation/geoscientificInformation.nl.19135.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/geoscientificInformation/geoscientificInformation.nl.atom"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/geoscientificInformation/geoscientificInformation.nl.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/geoscientificInformation/geoscientificInformation.nl.html">
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/geoscientificInformation/geoscientificInformation.nl.csv">
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/geoscientificInformation/geoscientificInformation.nl.json">
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/geoscientificInformation/geoscientificInformation.nl.xml">
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/geoscientificInformation/geoscientificInformation.nl.19135.xml">
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/geoscientificInformation/geoscientificInformation.nl.atom">
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/geoscientificInformation/geoscientificInformation.nl.rdf">
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/health">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">health</dct:identifier>
+      <owl:sameAs rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/health:1"/>
+      <adms:last rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/health"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory"/>
+      <skos:topConceptOf rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory"/>
+      <dct:title xml:lang="nl">Gezondheid</dct:title>
+      <dct:description xml:lang="nl">Gezondheid, gezondheidszorg, menselijke ecologie en veiligheid.</dct:description>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/health">
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/health/health.nl.html"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/health/health.nl.csv"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/health/health.nl.json"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/health/health.nl.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/health/health.nl.19135.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/health/health.nl.atom"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/health/health.nl.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/health/health.nl.html">
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/health/health.nl.csv">
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/health/health.nl.json">
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/health/health.nl.xml">
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/health/health.nl.19135.xml">
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/health/health.nl.atom">
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/health/health.nl.rdf">
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/imageryBaseMapsEarthCover">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">imageryBaseMapsEarthCover</dct:identifier>
+      <owl:sameAs rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/imageryBaseMapsEarthCover:1"/>
+      <adms:last rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/imageryBaseMapsEarthCover"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory"/>
+      <skos:topConceptOf rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory"/>
+      <dct:title xml:lang="nl">Beelden/Basiskaarten/grondgebruik</dct:title>
+      <dct:description xml:lang="nl">Basiskaarten.</dct:description>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/imageryBaseMapsEarthCover">
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/imageryBaseMapsEarthCover/imageryBaseMapsEarthCover.nl.html"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/imageryBaseMapsEarthCover/imageryBaseMapsEarthCover.nl.csv"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/imageryBaseMapsEarthCover/imageryBaseMapsEarthCover.nl.json"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/imageryBaseMapsEarthCover/imageryBaseMapsEarthCover.nl.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/imageryBaseMapsEarthCover/imageryBaseMapsEarthCover.nl.19135.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/imageryBaseMapsEarthCover/imageryBaseMapsEarthCover.nl.atom"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/imageryBaseMapsEarthCover/imageryBaseMapsEarthCover.nl.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/imageryBaseMapsEarthCover/imageryBaseMapsEarthCover.nl.html">
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/imageryBaseMapsEarthCover/imageryBaseMapsEarthCover.nl.csv">
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/imageryBaseMapsEarthCover/imageryBaseMapsEarthCover.nl.json">
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/imageryBaseMapsEarthCover/imageryBaseMapsEarthCover.nl.xml">
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/imageryBaseMapsEarthCover/imageryBaseMapsEarthCover.nl.19135.xml">
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/imageryBaseMapsEarthCover/imageryBaseMapsEarthCover.nl.atom">
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/imageryBaseMapsEarthCover/imageryBaseMapsEarthCover.nl.rdf">
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/intelligenceMilitary">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">intelligenceMilitary</dct:identifier>
+      <owl:sameAs rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/intelligenceMilitary:1"/>
+      <adms:last rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/intelligenceMilitary"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory"/>
+      <skos:topConceptOf rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory"/>
+      <dct:title xml:lang="nl">Inlichtingen/militaire gegevens</dct:title>
+      <dct:description xml:lang="nl">Militaire basissen, structuren, activiteiten.</dct:description>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/intelligenceMilitary">
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/intelligenceMilitary/intelligenceMilitary.nl.html"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/intelligenceMilitary/intelligenceMilitary.nl.csv"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/intelligenceMilitary/intelligenceMilitary.nl.json"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/intelligenceMilitary/intelligenceMilitary.nl.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/intelligenceMilitary/intelligenceMilitary.nl.19135.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/intelligenceMilitary/intelligenceMilitary.nl.atom"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/intelligenceMilitary/intelligenceMilitary.nl.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/intelligenceMilitary/intelligenceMilitary.nl.html">
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/intelligenceMilitary/intelligenceMilitary.nl.csv">
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/intelligenceMilitary/intelligenceMilitary.nl.json">
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/intelligenceMilitary/intelligenceMilitary.nl.xml">
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/intelligenceMilitary/intelligenceMilitary.nl.19135.xml">
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/intelligenceMilitary/intelligenceMilitary.nl.atom">
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/intelligenceMilitary/intelligenceMilitary.nl.rdf">
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/inlandWaters">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">inlandWaters</dct:identifier>
+      <owl:sameAs rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/inlandWaters:1"/>
+      <adms:last rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/inlandWaters"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory"/>
+      <skos:topConceptOf rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory"/>
+      <dct:title xml:lang="nl">Binnenwateren</dct:title>
+      <dct:description xml:lang="nl">Kenmerken van binnenwateren en afwateringssystemen.</dct:description>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/inlandWaters">
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/inlandWaters/inlandWaters.nl.html"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/inlandWaters/inlandWaters.nl.csv"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/inlandWaters/inlandWaters.nl.json"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/inlandWaters/inlandWaters.nl.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/inlandWaters/inlandWaters.nl.19135.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/inlandWaters/inlandWaters.nl.atom"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/inlandWaters/inlandWaters.nl.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/inlandWaters/inlandWaters.nl.html">
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/inlandWaters/inlandWaters.nl.csv">
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/inlandWaters/inlandWaters.nl.json">
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/inlandWaters/inlandWaters.nl.xml">
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/inlandWaters/inlandWaters.nl.19135.xml">
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/inlandWaters/inlandWaters.nl.atom">
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/inlandWaters/inlandWaters.nl.rdf">
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/location">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">location</dct:identifier>
+      <owl:sameAs rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/location:1"/>
+      <adms:last rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/location"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory"/>
+      <skos:topConceptOf rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory"/>
+      <dct:title xml:lang="nl">Locatie</dct:title>
+      <dct:description xml:lang="nl">Informatie en diensten met betrekking tot locaties.</dct:description>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/location">
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/location/location.nl.html"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/location/location.nl.csv"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/location/location.nl.json"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/location/location.nl.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/location/location.nl.19135.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/location/location.nl.atom"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/location/location.nl.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/location/location.nl.html">
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/location/location.nl.csv">
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/location/location.nl.json">
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/location/location.nl.xml">
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/location/location.nl.19135.xml">
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/location/location.nl.atom">
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/location/location.nl.rdf">
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/oceans">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">oceans</dct:identifier>
+      <owl:sameAs rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/oceans:1"/>
+      <adms:last rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/oceans"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory"/>
+      <skos:topConceptOf rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory"/>
+      <dct:title xml:lang="nl">Oceanen</dct:title>
+      <dct:description xml:lang="nl">Eigenschappen en kenmerken van zoutwatergebieden (uitgezonderd binnenwateren).</dct:description>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/oceans">
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/oceans/oceans.nl.html"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/oceans/oceans.nl.csv"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/oceans/oceans.nl.json"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/oceans/oceans.nl.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/oceans/oceans.nl.19135.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/oceans/oceans.nl.atom"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/oceans/oceans.nl.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/oceans/oceans.nl.html">
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/oceans/oceans.nl.csv">
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/oceans/oceans.nl.json">
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/oceans/oceans.nl.xml">
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/oceans/oceans.nl.19135.xml">
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/oceans/oceans.nl.atom">
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/oceans/oceans.nl.rdf">
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/planningCadastre">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">planningCadastre</dct:identifier>
+      <owl:sameAs rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/planningCadastre:1"/>
+      <adms:last rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/planningCadastre"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory"/>
+      <skos:topConceptOf rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory"/>
+      <dct:title xml:lang="nl">Planning/kadaster</dct:title>
+      <dct:description xml:lang="nl">Informatie die wordt gebruikt voor gerichte acties voor toekomstig grondgebruik.</dct:description>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/planningCadastre">
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/planningCadastre/planningCadastre.nl.html"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/planningCadastre/planningCadastre.nl.csv"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/planningCadastre/planningCadastre.nl.json"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/planningCadastre/planningCadastre.nl.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/planningCadastre/planningCadastre.nl.19135.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/planningCadastre/planningCadastre.nl.atom"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/planningCadastre/planningCadastre.nl.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/planningCadastre/planningCadastre.nl.html">
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/planningCadastre/planningCadastre.nl.csv">
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/planningCadastre/planningCadastre.nl.json">
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/planningCadastre/planningCadastre.nl.xml">
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/planningCadastre/planningCadastre.nl.19135.xml">
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/planningCadastre/planningCadastre.nl.atom">
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/planningCadastre/planningCadastre.nl.rdf">
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/society">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">society</dct:identifier>
+      <owl:sameAs rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/society:1"/>
+      <adms:last rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/society"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory"/>
+      <skos:topConceptOf rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory"/>
+      <dct:title xml:lang="nl">Maatschappij</dct:title>
+      <dct:description xml:lang="nl">Kenmerken van de maatschappij en van culturen.</dct:description>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/society">
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/society/society.nl.html"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/society/society.nl.csv"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/society/society.nl.json"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/society/society.nl.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/society/society.nl.19135.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/society/society.nl.atom"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/society/society.nl.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/society/society.nl.html">
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/society/society.nl.csv">
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/society/society.nl.json">
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/society/society.nl.xml">
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/society/society.nl.19135.xml">
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/society/society.nl.atom">
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/society/society.nl.rdf">
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/structure">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">structure</dct:identifier>
+      <owl:sameAs rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/structure:1"/>
+      <adms:last rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/structure"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory"/>
+      <skos:topConceptOf rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory"/>
+      <dct:title xml:lang="nl">Structuur</dct:title>
+      <dct:description xml:lang="nl">Door de mens gemaakte bouwwerken.</dct:description>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/structure">
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/structure/structure.nl.html"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/structure/structure.nl.csv"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/structure/structure.nl.json"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/structure/structure.nl.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/structure/structure.nl.19135.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/structure/structure.nl.atom"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/structure/structure.nl.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/structure/structure.nl.html">
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/structure/structure.nl.csv">
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/structure/structure.nl.json">
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/structure/structure.nl.xml">
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/structure/structure.nl.19135.xml">
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/structure/structure.nl.atom">
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/structure/structure.nl.rdf">
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/transportation">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">transportation</dct:identifier>
+      <owl:sameAs rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/transportation:1"/>
+      <adms:last rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/transportation"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory"/>
+      <skos:topConceptOf rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory"/>
+      <dct:title xml:lang="nl">Vervoer</dct:title>
+      <dct:description xml:lang="nl">Middelen voor het vervoer van personen en/of goederen.</dct:description>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/transportation">
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/transportation/transportation.nl.html"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/transportation/transportation.nl.csv"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/transportation/transportation.nl.json"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/transportation/transportation.nl.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/transportation/transportation.nl.19135.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/transportation/transportation.nl.atom"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/transportation/transportation.nl.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/transportation/transportation.nl.html">
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/transportation/transportation.nl.csv">
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/transportation/transportation.nl.json">
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/transportation/transportation.nl.xml">
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/transportation/transportation.nl.19135.xml">
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/transportation/transportation.nl.atom">
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/transportation/transportation.nl.rdf">
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/utilitiesCommunication">
+      <dct:identifier rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">utilitiesCommunication</dct:identifier>
+      <owl:sameAs rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/utilitiesCommunication:1"/>
+      <adms:last rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/utilitiesCommunication"/>
+      <rdf:type rdf:resource="http://purl.org/net/provenance/ns#DataItem"/>
+      <skos:inScheme rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory"/>
+      <skos:topConceptOf rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory"/>
+      <dct:title xml:lang="nl">Nutsdiensten/communicatie</dct:title>
+      <dct:description xml:lang="nl">Energie-, water- en afvalsystemen en communicatie-infrastructuur en -diensten.</dct:description>
+      <adms:status rdf:resource="http://inspire.ec.europa.eu/registry/status/valid"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/utilitiesCommunication">
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/utilitiesCommunication/utilitiesCommunication.nl.html"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/utilitiesCommunication/utilitiesCommunication.nl.csv"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/utilitiesCommunication/utilitiesCommunication.nl.json"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/utilitiesCommunication/utilitiesCommunication.nl.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/utilitiesCommunication/utilitiesCommunication.nl.19135.xml"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/utilitiesCommunication/utilitiesCommunication.nl.atom"/>
+      <dct:hasFormat rdf:resource="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/utilitiesCommunication/utilitiesCommunication.nl.rdf"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/utilitiesCommunication/utilitiesCommunication.nl.html">
+      <rdfs:label xml:lang="en">HTML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/utilitiesCommunication/utilitiesCommunication.nl.csv">
+      <rdfs:label xml:lang="en">CSV</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/utilitiesCommunication/utilitiesCommunication.nl.json">
+      <rdfs:label xml:lang="en">JSON</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/JSON"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/utilitiesCommunication/utilitiesCommunication.nl.xml">
+      <rdfs:label xml:lang="en">XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/utilitiesCommunication/utilitiesCommunication.nl.19135.xml">
+      <rdfs:label xml:lang="en">ISO 19135</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/utilitiesCommunication/utilitiesCommunication.nl.atom">
+      <rdfs:label xml:lang="en">Atom</rdfs:label>
+      <dct:format rdf:resource="http://www.iana.org/assignments/media-types/application/atom+xml"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+   <rdf:Description rdf:about="http://inspire.ec.europa.eu/metadata-codelist/TopicCategory/utilitiesCommunication/utilitiesCommunication.nl.rdf">
+      <rdfs:label xml:lang="en">RDF/XML</rdfs:label>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/DUT"/>
+   </rdf:Description>
+</rdf:RDF>
