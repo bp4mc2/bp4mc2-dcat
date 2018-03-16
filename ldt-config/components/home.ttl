@@ -56,7 +56,8 @@ stage:Menu elmo:appearance elmo:NavbarSearchAppearance;
       elmo:index "4";
       rdfs:label "Inspire";
       elmo:data [ elmo:index "1"; rdfs:label "Conformance"; html:link "query/inspire/conformance"];
-      elmo:data [ elmo:index "2"; rdfs:label "Mapping to dcat"; html:link "query/inspire/mapping-dcat"];
+      elmo:data [ elmo:index "2"; rdfs:label "Fields"; html:link "query/inspire/fields"];
+      elmo:data [ elmo:index "3"; rdfs:label "Mapping to dcat"; html:link "query/inspire/mapping-dcat"];
     ];
     elmo:data [
       elmo:index "5";

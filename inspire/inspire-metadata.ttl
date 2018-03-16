@@ -1412,7 +1412,6 @@ inspire-shape:KeywordValue a sh:PropertyShape;
   sh:datatype xsd:string;
   sh:node inspire-shape:FreeText;
   sh:minCount 1;
-  sh:maxCount 1; #Dit is niet geheel duidelijk, kan ook zijn dat er meerdere keywordvalues mogen zijn, mits uit dezelfde vocabulary
   inspire-meta:isoref "53. keyword";
   inspire-meta:xpath "identificationInfo[1]/*/descriptiveKeywords/*/keyword";
   skos:example "Atmospheric conditions (INSPIRE Spatial Data Theme)";
@@ -1428,7 +1427,8 @@ inspire-shape:KeywordOriginatingControlledVocabulary a sh:PropertyShape;
   sh:name "originating controlled vocabulary";
   rdfs:label "Keyword originating controlled vocabulary"@en;
   rdfs:label "Origineel gecontroleerd vocabulaire van het trefwoord"@nl;
-  sh:severity sh:Warning; # Mandatory if keyword is from controlled vocabulary
+  sh:severity shxl:Conditional;
+  shxl:severityCondition "Mandatory if keyword is from controlled vocabulary";
   sh:node inspire-shape:Citation;
   sh:nodeKind sh:BlankNode;
   sh:maxCount 1;
@@ -1460,6 +1460,7 @@ inspire-shape:GeographicBoundingBox a sh:PropertyShape;
   sh:severity sh:Violation; # Mandatory for datasets and spatial dataset series, Conditional for spatial services: mandatory for services with an explicit geographic extent
   sh:node inspire-shape:BoundingBox; #MAPPING: in dcat zal het geen boundingbox zijn, maar een Location-object. Dit kan een named resource zijn, OF een geometry conform de Core Location Vocabulary
   sh:nodeKind sh:BlankNode;
+  sh:minCount 1;
   inspire-meta:isoref "344. westBoundLongitude";
   inspire-meta:isoref "345. eastBoundLongitude";
   inspire-meta:isoref "346. southBoundLatitude";
@@ -1617,6 +1618,8 @@ inspire-shape:ConformitySpecification a sh:PropertyShape;
   sh:node inspire-shape:Citation; #359. CI_Citation
   sh:class prov:Entity, dct:Standard;
   sh:nodeKind sh:BlankNode;
+  sh:minCount 1;
+  sh:maxCount 1;
   inspire-meta:isoref "130. specification";
   inspire-meta:xpath "dataQualityInfo/*/report/*/result/*/specification";
   skos:example '''- title: COMMISSION REGULATION (EU) No 1089/2010 of 23 November 2010 implementing Directive 2007/2/EC of the European Parliament and of the Council as regards interoperability of spatial data sets and services
@@ -1653,6 +1656,7 @@ inspire-shape:ConditionsApplyingToAccessAndUse a sh:PropertyShape;
   shxl:severityCondition "Mandatory if useConstraints is not documented";
   sh:class skos:Concept; #MD_RestrictionCode
   sh:node inspire-shape:AccessAndUseConditions; #Codelist (strictly limited to the value defined in B.5.24 of ISO 19115)
+  sh:minCount 1;
   inspire-meta:isoref "70. accessConstraints";
   inspire-meta:xpath "identificationInfo[1]/*/resourceConstraints/*/accessConstraints";
   skos:example "otherRestrictions (limitation not listed).";
@@ -1705,6 +1709,7 @@ inspire-shape:LimitationsOnPublicAccess a sh:PropertyShape;
   shxl:severityCondition "Mandatory if classification is not documented";
   sh:class skos:Concept; #MD_RestrictionCode
   sh:node inspire-shape:AccessAndUseConditions; #Codelist (strictly limited to the value defined in B.5.24 of ISO 19115)
+  sh:minCount 1;
   sh:hasValue "otherConstraints";
   inspire-meta:isoref "70. accessConstraints";
   inspire-meta:xpath "identificationInfo[1]/*/resourceConstraints/*/accessConstraints";
@@ -1834,6 +1839,8 @@ inspire-shape:MetadataLanguage a sh:PropertyShape;
   rdfs:label "Taal van metagegevens"@nl;
   sh:severity sh:Violation;
   sh:node inspire-shape:LanguageCode;
+  sh:minCount 1;
+  sh:maxCount 1;
   sh:datatype xsd:string;
   inspire-meta:isoref "3. language";
   inspire-meta:xpath "language";
@@ -1850,6 +1857,7 @@ inspire-shape:MetadataFileIdentifier a sh:PropertyShape;
   rdfs:label "File identifier"@en;
   rdfs:label "Bestandsidentificatie"@nl;
   sh:severity sh:Info;
+  sh:maxCount 1;
 .
 inspire-shape:MetadataStandardName a sh:PropertyShape;
   shxl:index 33;
@@ -1858,6 +1866,7 @@ inspire-shape:MetadataStandardName a sh:PropertyShape;
   rdfs:label "Name of metadata standard"@en;
   rdfs:label "Naam van de metadata standaard"@nl;
   sh:severity sh:Info;
+  sh:maxCount 1;
 .
 inspire-shape:MetadataStandardVersion a sh:PropertyShape;
   shxl:index 34;
@@ -1866,6 +1875,7 @@ inspire-shape:MetadataStandardVersion a sh:PropertyShape;
   rdfs:label "Version of metadata standard"@en;
   rdfs:label "Versie van de metadata standaard"@nl;
   sh:severity sh:Info;
+  sh:maxCount 1;
 .
 inspire-shape:MetadataCharacterSet a sh:PropertyShape;
   shxl:index 35;
@@ -1874,7 +1884,8 @@ inspire-shape:MetadataCharacterSet a sh:PropertyShape;
   rdfs:label "Metadata character encoding"@en;
   rdfs:label "Metadata tekencodering"@nl;
   sh:severity shxl:Conditional;
-  shxl:severityCondition "ISO19115 is more demanding than Inspire: mandatory if not UTF8. Not applicable to services"
+  shxl:severityCondition "ISO19115 is more demanding than Inspire: mandatory if not UTF8. Not applicable to services";
+  sh:maxCount 1;
 .  
 
 #
@@ -1927,12 +1938,24 @@ inspire-shape:SpatialDatasetEncoding a sh:PropertyShape;
   inspire-meta:isoref "271.distributionFormat";
   inspire-meta:xpath "distributionInfo/MD_Distribution/distributionFormat";
 .
-inspire-shape:SpatialDatasetCharacterEncoding a sh:PropertyShape;
+inspire-shape:SpatialDatasetTopologicalConsistencyQuantitive a sh:PropertyShape;
   shxl:index 39;
+  dct:subject inspire-concept:SpatialDatasetTopologicalConsistency;
+  sh:severity sh:Warning;
+  sh:name "topologicalConsistency";
+  rdfs:label "Spatial data set topological consistency"@en;
+  rdfs:label "Topologische consistentie van de verzameling ruimtelijke gegevens"@nl;
+  sh:node inspire-shape:DataQualityElement;
+  sh:nodeKind sh:BlankNode;
+  inspire-meta:isoref "80. report";
+  inspire-meta:xpath "dataQualityInfo/DQ_DataQuality/report/"
+.
+inspire-shape:SpatialDatasetCharacterEncoding a sh:PropertyShape;
+  shxl:index 40;
   dct:subject inspire-concept:SpatialDatasetCharacterEncoding;
   sh:path dct:conformsTo;
   sh:severity shxl:Conditional;
-  shxl:severityCondition "ISO19115 is more demanding than Inspire: mandatory if not UTF8. Not applicable to services"
+  shxl:severityCondition "ISO19115 is more demanding than Inspire: mandatory if not UTF8. Not applicable to services";
   sh:name "characterEncoding";
   rdfs:label "Spatial data set character encoding"@en;
   rdfs:label "Tekencodering van de verzameling ruimtelijke gegevens"@nl;
@@ -1943,7 +1966,7 @@ inspire-shape:SpatialDatasetCharacterEncoding a sh:PropertyShape;
   skos:example "usAscii";
 .
 inspire-shape:SpatialDatasetSpatialRepresentationType a sh:PropertyShape;
-  shxl:index 40;
+  shxl:index 41;
   dct:subject inspire-concept:SpatialDatasetSpatialRepresentationType;
   sh:path adms:representationTechnique;
   sh:severity sh:Violation; #Only for dataset and datasetseries, not applicable to services
@@ -1957,18 +1980,6 @@ inspire-shape:SpatialDatasetSpatialRepresentationType a sh:PropertyShape;
   sh:class skos:Concept;
   skos:example "vector";
   rdfs:comment "This element is used to broadly categorise a spatial data resource being described."
-.
-inspire-shape:SpatialDatasetTopologicalConsistencyQuantitive a sh:PropertyShape;
-  shxl:index 41;
-  dct:subject inspire-concept:SpatialDatasetTopologicalConsistency;
-  sh:severity sh:Warning;
-  sh:name "topologicalConsistency";
-  rdfs:label "Spatial data set topological consistency"@en;
-  rdfs:label "Topologische consistentie van de verzameling ruimtelijke gegevens"@nl;
-  sh:node inspire-shape:DataQualityElement;
-  sh:nodeKind sh:BlankNode;
-  inspire-meta:isoref "80. report";
-  inspire-meta:xpath "dataQualityInfo/DQ_DataQuality/report/"
 .
 inspire-shape:SpatialDatasetTopologicalConsistencyDescriptive a sh:PropertyShape;
   shxl:index 42;

@@ -6,8 +6,8 @@
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
 @prefix stage: <http://localhost:8080/modeling/stage#>.
 
-stage:InspireMappingDcat	a	elmo:Representation;
-	elmo:url-pattern	"/query/inspire/mapping-dcat$";
+stage:InspireFields	a	elmo:Representation;
+	elmo:url-pattern	"/query/inspire/fields$";
   elmo:contains stage:Menu;
   elmo:fragment [
     elmo:applies-to "propp";
@@ -22,7 +22,7 @@ stage:InspireMappingDcat	a	elmo:Representation;
     prefix containerlocal: <http://localhost:8080/modeling/container/>
     prefix shxl: <http://bp4mc2.org/def/shacl-xl#>
     prefix dct: <http://purl.org/dc/terms/>
-    select ?man (if(bound(?prop),?prop,rdf:nil) as ?propp) ?maninspire ?inspire ?property ?domain ?range ?note
+    select distinct ?article ?inspire ?cardinspire ?card ?maninspire ?man ?condition
     where {
       graph containerlocal:profiel {
         ?rule a sh:PropertyShape.
@@ -41,7 +41,27 @@ stage:InspireMappingDcat	a	elmo:Representation;
              "-"
           ) as ?maninspire
         )
+        OPTIONAL {?rule shxl:severityCondition ?condition}
         ?rule shxl:index ?index
+        OPTIONAL {
+          ?rule dct:subject ?reg.
+          ?reg dct:source ?art.
+          ?art rdfs:label ?article.
+          FILTER (lang(?article)="en")
+        }
+        OPTIONAL {?rule sh:minCount ?mincount}
+        OPTIONAL {?rule sh:maxCount ?maxcount}
+        BIND (if(bound(?mincount),
+                 if(bound(?maxcount),
+                    concat(?mincount,"..",?maxcount),
+                    concat(?mincount,"..n")
+                 ),
+                 if(bound(?maxcount),
+                    concat("0..",?maxcount),
+                    "0..n"
+                 )
+              ) as ?cardinspire
+        )
         FILTER EXISTS {
           ?g skos:inScheme <http://bp4mc2.org/inspire/id/scheme/Guideline>.
           ?g rdfs:seeAlso ?rule.
@@ -60,24 +80,22 @@ stage:InspireMappingDcat	a	elmo:Representation;
                "-"
             ) as ?man
           )
-          ?shape sh:property ?prop.
-          ?shape sh:name ?domain.
-          OPTIONAL {
-            ?prop skos:scopeNote ?note
-          }
-          OPTIONAL {
-            ?prop sh:class ?refclass.
-            ?refshape sh:targetClass ?refclass.
-            ?refshape sh:name ?refname
-          }
-          OPTIONAL {
-            ?prop sh:datatype ?datatype
-          }
-          BIND (concat(str(?refname),if(bound(?datatype),concat(" as xsd:",strafter(str(?datatype),"#")),"")) as ?range)
+          OPTIONAL {?prop sh:minCount ?pmincount}
+          OPTIONAL {?prop sh:maxCount ?pmaxcount}
+          BIND (if(bound(?pmincount),
+                   if(bound(?pmaxcount),
+                      concat(?pmincount,"..",?pmaxcount),
+                      concat(?pmincount,"..n")
+                   ),
+                   if(bound(?pmaxcount),
+                      concat("0..",?pmaxcount),
+                      "0..n"
+                   )
+                ) as ?card
+          )
         }
       }
     }
-#    group by ?index ?man ?rule ?inspire
     order by ?index
   '''
 .
