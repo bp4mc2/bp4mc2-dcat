@@ -22,7 +22,7 @@ stage:InspireConformance	a	elmo:Representation;
     prefix containerlocal: <http://localhost:8080/modeling/container/>
     prefix shxl: <http://bp4mc2.org/def/shacl-xl#>
     prefix dct: <http://purl.org/dc/terms/>
-    select ?index ?prop
+    select ?guideline ?prop
            (concat(if(bound(?cvocprefix),
                       ?cvocprefix,
                       if(bound(?classprefix),"?","")
@@ -64,6 +64,7 @@ stage:InspireConformance	a	elmo:Representation;
           ?concept skos:definition ?definition.
         }
         OPTIONAL {
+          ?tg rdfs:label ?guideline.
           ?tg rdfs:seeAlso ?rule.
           ?tg skos:inScheme <http://bp4mc2.org/inspire/id/scheme/Guideline>.
           ?tg rdfs:comment ?comment.

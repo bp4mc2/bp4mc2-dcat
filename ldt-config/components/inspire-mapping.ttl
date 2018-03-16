@@ -10,7 +10,8 @@ stage:InspireMappingDcat	a	elmo:Representation;
 	elmo:url-pattern	"/query/inspire/mapping-dcat$";
   elmo:contains stage:Menu;
   elmo:fragment [
-    elmo:applies-to "rule";
+    elmo:applies-to "propp";
+#    elmo:applies-to "rule";
     elmo:name "SUBJECT";
     elmo:appearance elmo:HiddenAppearance;
   ];
@@ -22,16 +23,30 @@ stage:InspireMappingDcat	a	elmo:Representation;
     prefix containerlocal: <http://localhost:8080/modeling/container/>
     prefix shxl: <http://bp4mc2.org/def/shacl-xl#>
     prefix dct: <http://purl.org/dc/terms/>
-    select distinct ?rule ?inspire
-        (group_concat(distinct ?property; separator=", ") as ?propertyg)
-        (group_concat(distinct ?domain; separator=", ") as ?domaing)
-        (group_concat(distinct ?range; separator=", ") as ?rangeg)
-        (group_concat(distinct ?usage; separator="\\n\\n") as ?usageg)
+    select ?man (if(bound(?prop),?prop,rdf:nil) as ?propp) ?maninspire ?inspire ?property ?domain ?range ?note
+#    select distinct ?man ?rule ?inspire
+#        (group_concat(distinct ?property; separator=", ") as ?propertyg)
+#        (group_concat(distinct ?domain; separator=", ") as ?domaing)
+#        (group_concat(distinct ?range; separator=", ") as ?rangeg)
+#        (group_concat(distinct ?usage; separator="\\n\\n") as ?usageg)
     where {
       graph containerlocal:profiel {
         ?rule a sh:PropertyShape.
         ?rule rdfs:label ?inspire.
         FILTER (lang(?inspire)="en")
+        OPTIONAL {?rule sh:severity ?ruleseverity}
+        BIND (
+          if(bound(?ruleseverity),
+             if(?ruleseverity=sh:Violation,"M",
+                if(?ruleseverity=sh:Warning,"R",
+                   if(?ruleseverity=sh:Info,"O",
+                      if(?ruleseverity=shxl:Conditional,"C","?")
+                   )
+                )
+             ),
+             "-"
+          ) as ?maninspire
+        )
         ?rule shxl:index ?index
         FILTER EXISTS {
           ?g skos:inScheme <http://bp4mc2.org/inspire/id/scheme/Guideline>.
@@ -40,6 +55,17 @@ stage:InspireMappingDcat	a	elmo:Representation;
         OPTIONAL {
           ?prop rdfs:seeAlso ?rule.
           ?prop sh:name ?property.
+          ?prop sh:severity ?severity
+          BIND (
+            if(bound(?severity),
+               if(?severity=sh:Violation,"M",
+                  if(?severity=sh:Warning,"R",
+                     if(?severity=sh:Info,"O","?")
+                  )
+               ),
+               "-"
+            ) as ?man
+          )
           ?shape sh:property ?prop.
           ?shape sh:name ?domain.
           OPTIONAL {
@@ -54,11 +80,11 @@ stage:InspireMappingDcat	a	elmo:Representation;
             ?prop sh:datatype ?datatype
           }
           BIND (concat(str(?refname),if(bound(?datatype),concat(" as xsd:",strafter(str(?datatype),"#")),"")) as ?range)
-          BIND (if(bound(?note),concat("**",?property,"**:\\n\\n",?note),"") as ?usage)
+#          BIND (if(bound(?note),concat("**",?property,"**:\\n\\n",?note),"") as ?usage)
         }
       }
     }
-    group by ?index ?rule ?inspire
+#    group by ?index ?man ?rule ?inspire
     order by ?index
   '''
 .

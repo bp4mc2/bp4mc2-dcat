@@ -1253,10 +1253,14 @@ inspire-shape:ResourceType a sh:PropertyShape;
   skos:example "dataset";
 .
 inspire-shape:ResourceLocator a sh:PropertyShape;
-  #MAPPING: Deze is lastig. Eigenlijk wil je ResourceLocator in basale vorm niet, maar alleen ResourceLocatorComplex
+  shxl:index 4;
   dct:subject inspire-concept:ResourceLocator;
   sh:name "locator";
-  sh:severity sh:Warning;
+  rdfs:label "Resource locator"@en;
+  rdfs:label "Resource locator"@nl;
+  sh:path dcat:distribution; #MAPPING: In case of a "simple" resource locator a dummy distribution is added
+  sh:severity shxl:Conditional;
+  shxl:severityCondition "Mandatory if a URL is available to obtain more information on the resources and/or access related services.";
   sh:datatype xsd:anyURI; #URL
   sh:node inspire-shape:URL;
   inspire-meta:isoref "397. linkage";
@@ -1295,6 +1299,8 @@ inspire-shape:ResourceLocatorComplex a sh:PropertyShape;
   sh:name "locator";
   rdfs:label "Resource locator"@en;
   rdfs:label "Resource locator"@nl;
+  sh:severity shxl:Conditional;
+  shxl:severityCondition "Mandatory if a URL is available to obtain more information on the resources and/or access related services.";
   sh:node inspire-shape:ResourceLocatorElement;
   sh:nodeKind sh:BlankNode;
   inspire-meta:xpath "distributionInfo/*/transferOptions/*/onLine/*/linkage/";
@@ -1338,7 +1344,8 @@ inspire-shape:ResourceLanguage a sh:PropertyShape;
   sh:name "language";
   rdfs:label "Resource language"@en;
   rdfs:label "Taal van de bron"@nl;
-  sh:severity sh:Warning; # Mandatory if the resource includes textual information, not applicable to services
+  sh:severity shxl:Conditional;
+  shxl:severityCondition "Mandatory if the resource includes textual information, not applicable to services";
 #  sh:datatype xsd:string; LanguageCode (ISO/TS 19139) [Inspire states a string, GEODCAT-AP states dct:LinguisticSystem]
   sh:class dct:LinguisticSystem;
   sh:node inspire-shape:LanguageCode;
@@ -1475,7 +1482,8 @@ inspire-shape:TemporalExtent a sh:PropertyShape;
   sh:name "temporalExtent";
   rdfs:label "Temporal extent"@en;
   rdfs:label "Temporele dekking"@nl;
-  sh:severity sh:Warning; #Conditional: At least one temporal reference is required
+  sh:severity shxl:Conditional;
+  shxl:severityCondition "At least one temporal reference is required";
   sh:node inspire-shape:Period; # TM_Primitive, As described in ISO 19108
   sh:nodeKind sh:BlankNode;
   inspire-meta:isoref "351. extent";
@@ -1491,7 +1499,8 @@ inspire-shape:DateOfPublication a sh:PropertyShape;
   rdfs:label "Date of publication"@en;
   rdfs:label "Datum van bekendmaking"@nl;
   sh:node inspire-shape:CIDate; #Described in ISO 19108 and ISO 8601
-  sh:severity sh:Warning; #Conditional: at least one date of publication / date of creation / date of revision is required
+  sh:severity shxl:Conditional;
+  shxl:severityCondition "At least one date of publication / date of creation / date of revision is required";
   sh:nodekind sh:BlankNode;
   inspire-meta:isoref "362. date";
   inspire-meta:xpath "identificationInfo[1]/*/citation/*/date[./*/dateType/*/text()='publication']/*/date";
@@ -1505,7 +1514,8 @@ inspire-shape:DateOfLastRevision a sh:PropertyShape;
   sh:name "dateOfLastRevision";
   rdfs:label "Date of last revision"@en;
   rdfs:label "Datum van laatste herziening"@nl;
-  sh:severity sh:Warning; #Conditional: at least one date of publication / date of creation / date of revision is required
+  sh:severity shxl:Conditional;
+  shxl:severityCondition "At least one date of publication / date of creation / date of revision is required";
   sh:maxCount 1;
   sh:node inspire-shape:CIDate; #Described in ISO 19108 and ISO 8601
   sh:nodekind sh:BlankNode;
@@ -1522,7 +1532,8 @@ inspire-shape:DateOfCreation a sh:PropertyShape;
   sh:name "dateOfCreation";
   rdfs:label "Date of creation"@en;
   rdfs:label "Aanmaakdatum"@nl;
-  sh:severity sh:Warning; #Conditional: at least one date of publication / date of creation / date of revision is required
+  sh:severity shxl:Conditional;
+  shxl:severityCondition "At least one date of publication / date of creation / date of revision is required";
   sh:maxCount 1;
   sh:node inspire-shape:CIDate; #Described in ISO 19108 and ISO 8601
   sh:nodekind sh:BlankNode;
@@ -1554,7 +1565,8 @@ inspire-shape:SpatialResolutionEquivalentScale a sh:PropertyShape;
   sh:name "spatialResolution";
   rdfs:label "Spatial resolution"@en;
   rdfs:label "Ruimtelijke resolutie"@nl;
-  sh:severity sh:Warning; #Mandatory if an equivalent scale or a resolution distance can be specified. Mandatory when there is a restriction on the spatial resolution for service.
+  sh:severity shxl:Conditional;
+  shxl:severityCondition "Mandatory if an equivalent scale or a resolution distance can be specified. Mandatory when there is a restriction on the spatial resolution for service.";
   sh:datatype xsd:integer;
   sh:node inspire-shape:Integer;
   inspire-meta:isoref "60. equivalentScale";
@@ -1570,7 +1582,8 @@ inspire-shape:SpatialResolutionDistance a sh:PropertyShape;
   rdfs:label "Spatial resolution"@en;
   rdfs:label "Ruimtelijke resolutie"@nl;
   sh:path rdfs:comment; #MAPPING: Geen goede mapping mogelijk! Het wordt "talig" opgelost, en het wordt dan ook een string!
-  sh:severity sh:Warning; #Mandatory if an equivalent scale or a resolution distance can be specified. Mandatory when there is a restriction on the spatial resolution for service.
+  sh:severity shxl:Conditional;
+  shxl:severityCondition "Mandatory if an equivalent scale or a resolution distance can be specified. Mandatory when there is a restriction on the spatial resolution for service.";
   sh:datatype xsd:integer;
   sh:node inspire-shape:Distance;
   inspire-meta:isoref "61. distance";
@@ -1636,7 +1649,8 @@ inspire-shape:ConditionsApplyingToAccessAndUse a sh:PropertyShape;
   sh:path dct:license;
   rdfs:label "Conditions applying to access and use"@en;
   rdfs:label "Voorwaarden voor toegang en gebruik"@nl;
-  sh:severity sh:Warning; #Mandatory if useConstraints is not documented.
+  sh:severity shxl:Conditional;
+  shxl:severityCondition "Mandatory if useConstraints is not documented";
   sh:class skos:Concept; #MD_RestrictionCode
   sh:node inspire-shape:AccessAndUseConditions; #Codelist (strictly limited to the value defined in B.5.24 of ISO 19115)
   inspire-meta:isoref "70. accessConstraints";
@@ -1646,7 +1660,8 @@ inspire-shape:ConditionsApplyingToAccessAndUse a sh:PropertyShape;
 inspire-shape:ConditionsApplyingToAccessAndUseOtherConstraints a sh:PropertyShape;
   dct:subject inspire-concept:ConditionsApplyingToAccessAndUse;
   sh:name "conditionsApplyingToAccessAndUse"; #MAPPING: Maar 1 van deze daadwerkelijk gemapt
-  sh:severity sh:Warning; #Mandatory if accessConstraints is set at the value "otherRestrictions"
+  sh:severity shxl:Conditional;
+  shxl:severityCondition "Mandatory if accessConstraints is set at the value 'otherRestrictions'";
   sh:node inspire-shape:FreeText;
   sh:datatype xsd:string; #CharacterString
   inspire-meta:isoref "72. otherConstraints";
@@ -1658,7 +1673,8 @@ inspire-shape:ConditionsApplyingToAccessAndUseOtherConstraints a sh:PropertyShap
 inspire-shape:ConditionsApplyingToUse a sh:Propertyshape;
   dct:subject inspire-concept:ConditionsApplyingToAccessAndUse;
   sh:name "conditionsApplyingToUse"; #MAPPING: ApplyingToUse mapt op dezelfde wijze als ApplyingToAccessAndUse
-  sh:severity sh:Warning; #Mandatory if accessConstraints is not documented.
+  sh:severity shxl:Conditional;
+  shxl:severityCondition "Mandatory if accessConstraints is not documented";
   sh:class skos:Concept; #MD_RestrictionCode
   sh:node inspire-shape:AccessAndUseConditions; #Codelist (strictly limited to the value defined in B.5.24 of ISO 19115)
   inspire-meta:isoref "71. useConstraints";
@@ -1668,7 +1684,8 @@ inspire-shape:ConditionsApplyingToUse a sh:Propertyshape;
 inspire-shape:ConditionsApplyingToUseOtherConstraints a sh:PropertyShape;
   dct:subject inspire-concept:ConditionsApplyingToAccessAndUse;
   sh:name "conditionsApplyingToUse"; #MAPPING: ApplyingToUse mapt op dezelfde wijze als ApplyingToAccessAndUse
-  sh:severity sh:Warning; #Mandatory if useConstraints is set at the value "otherRestrictions"
+  sh:severity sh:Warning;
+  shxl:severityCondition "Mandatory if useConstraints is set at the value 'otherRestrictions'";
   sh:node inspire-shape:FreeText;
   sh:datatype xsd:string; #CharacterString
   inspire-meta:isoref "72. otherConstraints";
@@ -1684,7 +1701,8 @@ inspire-shape:LimitationsOnPublicAccess a sh:PropertyShape;
   sh:name "limitationsOnPublicAccess";
   rdfs:label "Limitations on public access"@en;
   rdfs:label "Beperkingen op openbare toegang"@nl;
-  sh:severity sh:Warning; #Mandatory if classification is not documented
+  sh:severity shxl:Conditional;
+  shxl:severityCondition "Mandatory if classification is not documented";
   sh:class skos:Concept; #MD_RestrictionCode
   sh:node inspire-shape:AccessAndUseConditions; #Codelist (strictly limited to the value defined in B.5.24 of ISO 19115)
   sh:hasValue "otherConstraints";
@@ -1715,6 +1733,7 @@ inspire-shape:ResponsibleOrganisation a sh:PropertyShape;
   rdfs:label "Verantwoordelijke organisatie"@nl;
   inspire-meta:xpath "identificationInfo[1]/*/";
   sh:minCount 1;
+  sh:severity sh:Violation;
   sh:node inspire-shape:ResponsibleOrganisationElement;
   sh:nodeKind sh:BlankNode;
 .
@@ -1846,6 +1865,7 @@ inspire-shape:MetadataStandardVersion a sh:PropertyShape;
   sh:name "standardVersion";
   rdfs:label "Version of metadata standard"@en;
   rdfs:label "Versie van de metadata standaard"@nl;
+  sh:severity sh:Info;
 .
 inspire-shape:MetadataCharacterSet a sh:PropertyShape;
   shxl:index 35;
@@ -1853,12 +1873,14 @@ inspire-shape:MetadataCharacterSet a sh:PropertyShape;
   sh:name "characterEncoding";
   rdfs:label "Metadata character encoding"@en;
   rdfs:label "Metadata tekencodering"@nl;
+  sh:severity shxl:Conditional;
+  shxl:severityCondition "ISO19115 is more demanding than Inspire: mandatory if not UTF8. Not applicable to services"
 .  
 
 #
 # Section C.3 of Technical Guidance for the implementation of INSPIRE dataset and service metadata based on ISO/TS 19139:2007
 #
-inspire-shape:SpatialDatasetCoordinateReferenceSystem a sh:Propertyshape;
+inspire-shape:SpatialDatasetCoordinateReferenceSystem a sh:PropertyShape;
   shxl:index 36;
   dct:subject inspire-concept:SpatialDatasetCoordinateReferenceSystem;
   sh:path dct:conformsTo;
@@ -1881,7 +1903,8 @@ inspire-shape:SpatialDatasetTemporalReferenceSystem a sh:PropertyShape;
   sh:name "temporal reference system";
   rdfs:label "Spatial data set Temporal Reference System"@en;
   rdfs:label "Tijdsreferentiesysteem van de verzameling ruimtelijke gegevens"@nl;
-  sh:severity sh:Warning; #Only required for dataset if non-default
+  sh:severity shxl:Conditional;
+  shxl:severityCondition "Only required for dataset if non-default";
   sh:node inspire-shape:ReferenceSystem;
   sh:class inspire:TemporalReferenceSystem;
   inspire-meta:isoref "13. referenceSystemInfo";
@@ -1908,7 +1931,8 @@ inspire-shape:SpatialDatasetCharacterEncoding a sh:PropertyShape;
   shxl:index 39;
   dct:subject inspire-concept:SpatialDatasetCharacterEncoding;
   sh:path dct:conformsTo;
-  sh:severity sh:Warning; # Mandatory if not UTF8. Not applicable to services
+  sh:severity shxl:Conditional;
+  shxl:severityCondition "ISO19115 is more demanding than Inspire: mandatory if not UTF8. Not applicable to services"
   sh:name "characterEncoding";
   rdfs:label "Spatial data set character encoding"@en;
   rdfs:label "Tekencodering van de verzameling ruimtelijke gegevens"@nl;
