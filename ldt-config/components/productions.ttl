@@ -5,6 +5,37 @@
 @prefix production: <http://linkeddata.ordina.nl/modeling/update/>.
 @prefix productionlocal: <http://localhost:8080/modeling/update/>.
 
+productionlocal:copyprofile a elmo:Production;
+  elmo:contains stage:Menu;
+  elmo:contains stage:CopyProfile_scene1;
+  elmo:contains stage:CopyProfile_scene2;
+.
+stage:CopyProfile_scene1 a elmo:Scene;
+  elmo:index "1";
+  rdfs:label "Clear second profile"@en;
+  elmo:query '''
+    PREFIX container: <http://localhost:8080/modeling/container/>
+    clear graph container:secondprofile
+  '''
+.
+stage:CopyProfile_scene2 a elmo:Scene;
+  elmo:index "2";
+  rdfs:label "Copy profile"@en;
+  elmo:query '''
+    PREFIX container: <http://localhost:8080/modeling/container/>
+    INSERT {
+      GRAPH container:secondprofile {
+        ?s ?p ?o
+      }
+    }
+    WHERE {
+      GRAPH container:profiel {
+        ?s ?p ?o
+      }
+    }
+  '''
+.
+
 productionlocal:cleancodelists a elmo:Production;
   elmo:contains stage:Menu;
   elmo:contains stage:Cleancodelists_scene0;

@@ -29,6 +29,7 @@ stage:Menu elmo:appearance elmo:NavbarSearchAppearance;
       elmo:data [ elmo:index "5"; rdfs:label "Excel upload guidelines"; html:link "container/guidelines-xlsx"];
       elmo:data [ elmo:index "6"; rdfs:label "Upload and add"; html:link "container/addprofiel"];
       elmo:data [ elmo:index "7"; rdfs:label "Clean INSPIRE codelists"; html:link "update/cleancodelists"];
+      elmo:data [ elmo:index "8"; rdfs:label "Copy profile"; html:link "update/copyprofile"];
 		];
     elmo:data [
       elmo:index "2";
@@ -64,6 +65,11 @@ stage:Menu elmo:appearance elmo:NavbarSearchAppearance;
       elmo:index "5";
       rdfs:label "Downloads";
       html:link "query/downloads";
+    ];
+    elmo:data [
+      elmo:index "6";
+      rdfs:label "Compare";
+      elmo:data [ elmo:index "1"; rdfs:label "Properties"; html:link "query/compare/properties"];
     ]
 	];
 .

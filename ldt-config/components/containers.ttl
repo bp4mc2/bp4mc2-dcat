@@ -241,6 +241,25 @@ stage:PostUploadQuery a elmo:Query;
         }
       }
     }
+    DELETE {
+      GRAPH container:profiel {
+        ?node sh:name ?name
+      }
+    }
+    INSERT {
+      GRAPH container:profiel {
+        ?node sh:name ?label
+      }
+    }
+    WHERE {
+      GRAPH container:profiel {
+        ?node a sh:NodeShape.
+        ?node sh:name ?name.
+        FILTER (str(?name) = ":")
+        ?node rdfs:label ?label.
+        FILTER (lang(?label)="en")
+      }
+    }
   '''
 .
 

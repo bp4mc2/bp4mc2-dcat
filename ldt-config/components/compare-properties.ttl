@@ -1,0 +1,130 @@
+@prefix elmo: <http://bp4mc2.org/elmo/def#>.
+@prefix html: <http://www.w3.org/1999/xhtml/vocab#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix void: <http://rdfs.org/ns/void#>.
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
+@prefix stage: <http://localhost:8080/modeling/stage#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix spdx: <http://spdx.org/rdf/terms#>.
+@prefix adms: <http://www.w3.org/ns/adms#>.
+
+stage:CompareProperties	a	elmo:Representation;
+	elmo:url-pattern	"/query/compare/properties$";
+	elmo:contains	stage:Menu;
+  elmo:contains stage:CompareProperties_both;
+  elmo:contains stage:CompareProperties_first;
+  elmo:contains stage:CompareProperties_second;
+.
+
+stage:CompareProperties_both a elmo:Part;
+  elmo:index "1";
+  elmo:fragment [
+    elmo:applies-to "class1";
+    rdfs:label "class (both)";
+  ];
+  elmo:fragment [
+    elmo:applies-to "property1";
+    rdfs:label "property (both)";
+  ];
+  elmo:query '''
+    prefix shxl: <http://bp4mc2.org/def/shacl-xl#>
+    prefix containerlocal: <http://localhost:8080/modeling/container/>
+    select ?class1 ?property1
+           (if(?severity1=?severity2,"",concat(strafter(str(?severity1),"#")," - ",strafter(str(?severity2),"#"))) as ?severity)
+           (if((bound(?refnode1) or bound(?refnode2)) and ?refnode1!=?refnode2,concat(?refnode1," - ",?refnode2),"") as ?refnode)
+    where {
+      graph containerlocal:profiel {
+        ?shape1 a sh:NodeShape.
+        ?shape1 sh:name ?class1.
+        ?shape1 sh:property ?prop1.
+        ?prop1 sh:name ?property1.
+        OPTIONAL {?prop1 sh:severity ?severity1}
+        OPTIONAL {
+          ?prop1 sh:node/rdfs:label ?refnode1
+          FILTER (lang(?refnode1)="en")
+        }
+      }
+      graph containerlocal:secondprofile {
+        ?shape2 a sh:NodeShape.
+        ?shape2 sh:name ?class1.
+        ?shape2 sh:property ?prop2.
+        ?prop2 sh:name ?property1.
+        OPTIONAL {?prop2 sh:severity ?severity2}
+        OPTIONAL {
+          ?prop2 sh:node/rdfs:label ?refnode2
+          FILTER (lang(?refnode2)="en")
+        }
+      }
+    }
+  ''';
+.
+
+stage:CompareProperties_first a elmo:Part;
+  elmo:index "2";
+  elmo:fragment [
+    elmo:applies-to "class1";
+    rdfs:label "class (not in second)";
+  ];
+  elmo:fragment [
+    elmo:applies-to "property1";
+    rdfs:label "property (not in second)";
+  ];
+  elmo:query '''
+    prefix shxl: <http://bp4mc2.org/def/shacl-xl#>
+    prefix containerlocal: <http://localhost:8080/modeling/container/>
+    select ?class1 ?property1 ?severity1
+    where {
+      graph containerlocal:profiel {
+        ?shape1 a sh:NodeShape.
+        ?shape1 sh:name ?class1.
+        ?shape1 sh:property ?prop1.
+        ?prop1 sh:name ?property1.
+        OPTIONAL {?prop1 sh:severity ?severity1}
+      }
+      FILTER NOT EXISTS {
+        graph containerlocal:secondprofile {
+          ?shape2 a sh:NodeShape.
+          ?shape2 sh:name ?class1.
+          ?shape2 sh:property ?prop2.
+          ?prop2 sh:name ?property1.
+        }
+      }
+    }
+  ''';
+.
+
+stage:CompareProperties_second a elmo:Part;
+  elmo:index "3";
+  elmo:fragment [
+    elmo:applies-to "class2";
+    rdfs:label "class (not in first)";
+  ];
+  elmo:fragment [
+    elmo:applies-to "property2";
+    rdfs:label "property (not in first)";
+  ];
+  elmo:query '''
+    prefix shxl: <http://bp4mc2.org/def/shacl-xl#>
+    prefix containerlocal: <http://localhost:8080/modeling/container/>
+    select ?class2 ?property2 ?severity2
+    where {
+      graph containerlocal:secondprofile {
+        ?shape2 a sh:NodeShape.
+        ?shape2 sh:name ?class2.
+        ?shape2 sh:property ?prop2.
+        ?prop2 sh:name ?property2.
+        OPTIONAL {?prop2 sh:severity ?severity2}
+      }
+      FILTER NOT EXISTS {
+        graph containerlocal:profiel {
+          ?shape1 a sh:NodeShape.
+          ?shape1 sh:name ?class2.
+          ?shape1 sh:property ?prop1.
+          ?prop1 sh:name ?property2.
+        }
+      }
+    }
+  ''';
+.
