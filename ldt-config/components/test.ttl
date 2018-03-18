@@ -1,0 +1,151 @@
+@prefix elmo: <http://bp4mc2.org/elmo/def#>.
+@prefix html: <http://www.w3.org/1999/xhtml/vocab#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix void: <http://rdfs.org/ns/void#>.
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
+@prefix stage: <http://localhost:8080/modeling/stage#>.
+@prefix shxl: <http://bp4mc2.org/def/shacl-xl#>.
+
+stage:Test a elmo:Representation;
+  elmo:url-pattern "/query/test$";
+  elmo:appearance elmo:TurtleAppearance;
+  elmo:query '''
+    PREFIX container: <http://localhost:8080/modeling/container/>
+    CONSTRUCT {
+      ?s ?p ?o
+    }
+    WHERE {
+      GRAPH container:profieltemp {
+        ?s ?p ?o
+      }
+    }
+    ''';
+.
+
+# Creating a list of values
+# The problem is that you can't create a "real" blank node, so we need to create the list with URI's and then replace all URI's with blank nodes
+# Creating the list means that you have the next and previous member of the list to create the linked list
+# This means that you need to have something of a "position". This can be created using the position of a URI in a group concat
+# After the list is created, we need to replace the blank nodes this is done in two steps.
+# The first step is creating all blank nodes. But the rdf:rest will remain to refer to the original URI, because at that moment, we don't know this blank node
+# We can however create a a owl:sameAs link, that we use to perform step 2: replace all references in the rdf:rest, using the owl:sameAs link
+# The third step does the clean up: remove all triples that contain the original URI's.
+stage:Test9 a elmo:Representation;
+  elmo:url-pattern "/query/test-create$";
+  elmo:query '''
+    PREFIX container: <http://localhost:8080/modeling/container/>
+    PREFIX sh: <http://www.w3.org/ns/shacl#>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    # Empty the test graph
+    CLEAR GRAPH container:profieltemp
+    # Create the reference to the list
+    INSERT {
+      GRAPH container:profieltemp {
+        ?node sh:property [
+          sh:path skos:inScheme;
+          sh:in ?thelist
+        ]
+      }
+    }
+    WHERE {
+      GRAPH container:profiel {
+        {
+          SELECT ?node
+            WHERE {
+              ?node a sh:NodeShape.
+              ?node rdfs:seeAlso ?scheme.
+            }
+          GROUP BY ?node
+          HAVING (count(distinct ?scheme)!=1)
+        }
+        BIND (iri(concat("urn:list:",str(?node),":0")) as ?thelist)
+      }
+    }
+    # Create the list, using URI's
+    INSERT {
+      GRAPH container:profieltemp {
+        ?item rdf:first ?list.
+        ?item rdf:rest ?test
+      }
+    }
+    WHERE {
+      GRAPH container:profiel {
+        SELECT distinct ?node ?list
+              (iri(concat(?base,":",?pos)) as ?item)
+              (if(strbefore(?total,str(?list))="",rdf:nil,iri(concat(?base,":",?pos+1))) as ?test)
+        WHERE {
+          ?node a sh:NodeShape.
+          ?node rdfs:seeAlso ?list.
+          {
+          SELECT ?node (group_concat(?scheme; separator="|") as ?total)
+            WHERE {
+              ?node a sh:NodeShape.
+              ?node rdfs:seeAlso ?scheme.
+            }
+          GROUP BY ?node
+            HAVING (count(distinct ?scheme)!=1)
+          }
+          BIND (strlen(replace(strafter(?total,str(?list)),"[^|]","")) as ?pos)
+          BIND (concat("urn:list:",str(?node)) as ?base)
+        }
+        GROUP BY ?node
+      }
+    }
+    # Create all blank nodes for all members of the list. Create an owl:sameAs triple to link the blank node to the original URI
+    INSERT {
+      GRAPH container:profieltemp {
+        ?prev ?p [
+          rdf:first ?first;
+          rdf:rest ?rest;
+          owl:sameAs ?item
+        ]
+      }
+    }
+    WHERE {
+      GRAPH container:profieltemp {
+        ?prev ?p ?item.
+        ?item rdf:first ?first.
+        ?item rdf:rest ?rest.
+      }
+    }
+    # Replace all references to the URI with references to the blank node
+    INSERT {
+      GRAPH container:profieltemp {
+        ?bitem rdf:rest ?brest
+      }
+    }
+    WHERE {
+      GRAPH container:profieltemp {
+        ?bitem rdf:rest ?rest.
+        ?brest owl:sameAs ?rest.
+      }
+    }
+    # Delete all triples containing the original URI nodes
+    DELETE {
+      GRAPH container:profieltemp {
+        ?bitem owl:sameAs ?item.
+        ?sitem ?spitem ?item.
+        ?item ?pitem ?oitem
+      }
+    }
+    WHERE {
+      GRAPH container:profieltemp {
+        ?bitem owl:sameAs ?item.
+        ?sitem ?spitem ?item.
+        ?item ?pitem ?oitem
+      }
+    }
+    # Copy result to original container
+    INSERT {
+      GRAPH container:profiel {
+        ?s ?p ?o
+      }
+    }
+    WHERE {
+      GRAPH container:profieltemp {
+        ?s ?p ?o
+      }
+    }
+  '''
+.

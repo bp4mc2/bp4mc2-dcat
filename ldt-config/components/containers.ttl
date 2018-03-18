@@ -29,7 +29,10 @@ containerlocal:profiel a elmo:Container;
 # - Create sh:minCount from shxl:cardinality
 # - Create sh:maxCount from shxl:cardinality
 # - Set sh:nodeKind sh:BlankNode for a class of stereotype shxl:Datatype
-# - Create correct shape for waardelijsten
+# - Create correct shape for waardelijsten:
+#   - A version for the situation that sublists don't exist
+#   - A version for the situation with sublists
+# - Combine labels in case of a waardelijst with sublists.
 # - Create subclassing from shxl:parent
 stage:PostUploadQuery a elmo:Query;
   elmo:query '''
@@ -71,13 +74,146 @@ stage:PostUploadQuery a elmo:Query;
     INSERT INTO container:profiel {
       ?node sh:property [
         sh:path skos:inScheme;
-        sh:hasValue ?scheme
+        sh:hasValue ?sscheme
       ]
     }
     WHERE {
+      SELECT ?node (sample(?scheme) as ?sscheme)
+      WHERE {
+        GRAPH container:profiel {
+          ?node a sh:NodeShape.
+          ?node rdfs:seeAlso ?scheme.
+        }
+      }
+      GROUP BY ?node
+      HAVING (count(?scheme)=1)
+    }
+    CLEAR GRAPH container:profieltemp
+    INSERT {
+      GRAPH container:profieltemp {
+        ?node sh:property [
+          sh:path skos:inScheme;
+          sh:in ?thelist
+        ]
+      }
+    }
+    WHERE {
       GRAPH container:profiel {
-        ?node a sh:NodeShape.
-        ?node rdfs:seeAlso ?scheme.
+        {
+          SELECT ?node
+            WHERE {
+              ?node a sh:NodeShape.
+              ?node rdfs:seeAlso ?scheme.
+            }
+          GROUP BY ?node
+          HAVING (count(distinct ?scheme)!=1)
+        }
+        BIND (iri(concat("urn:list:",str(?node),":0")) as ?thelist)
+      }
+    }
+    INSERT {
+      GRAPH container:profieltemp {
+        ?item rdf:first ?list.
+        ?item rdf:rest ?test
+      }
+    }
+    WHERE {
+      GRAPH container:profiel {
+        SELECT distinct ?node ?list
+              (iri(concat(?base,":",?pos)) as ?item)
+              (if(strbefore(?total,str(?list))="",rdf:nil,iri(concat(?base,":",?pos+1))) as ?test)
+        WHERE {
+          ?node a sh:NodeShape.
+          ?node rdfs:seeAlso ?list.
+          {
+          SELECT ?node (group_concat(?scheme; separator="|") as ?total)
+            WHERE {
+              ?node a sh:NodeShape.
+              ?node rdfs:seeAlso ?scheme.
+            }
+          GROUP BY ?node
+            HAVING (count(distinct ?scheme)!=1)
+          }
+          BIND (strlen(replace(strafter(?total,str(?list)),"[^|]","")) as ?pos)
+          BIND (concat("urn:list:",str(?node)) as ?base)
+        }
+        GROUP BY ?node
+      }
+    }
+    INSERT {
+      GRAPH container:profieltemp {
+        ?prev ?p [
+          rdf:first ?first;
+          rdf:rest ?rest;
+          owl:sameAs ?item
+        ]
+      }
+    }
+    WHERE {
+      GRAPH container:profieltemp {
+        ?prev ?p ?item.
+        ?item rdf:first ?first.
+        ?item rdf:rest ?rest.
+      }
+    }
+    INSERT {
+      GRAPH container:profieltemp {
+        ?bitem rdf:rest ?brest
+      }
+    }
+    WHERE {
+      GRAPH container:profieltemp {
+        ?bitem rdf:rest ?rest.
+        ?brest owl:sameAs ?rest.
+      }
+    }
+    DELETE {
+      GRAPH container:profieltemp {
+        ?bitem owl:sameAs ?item.
+        ?sitem ?spitem ?item.
+        ?item ?pitem ?oitem
+      }
+    }
+    WHERE {
+      GRAPH container:profieltemp {
+        ?bitem owl:sameAs ?item.
+        ?sitem ?spitem ?item.
+        ?item ?pitem ?oitem
+      }
+    }
+    INSERT {
+      GRAPH container:profiel {
+        ?s ?p ?o
+      }
+    }
+    WHERE {
+      GRAPH container:profieltemp {
+        ?s ?p ?o
+      }
+    }
+    DELETE {
+      GRAPH container:profiel {
+        ?node rdfs:label ?orglabel
+      }
+    }
+    INSERT {
+      GRAPH container:profiel {
+        ?node rdfs:label ?glabel
+      }
+    }
+    WHERE {
+      GRAPH container:profiel {
+        ?node rdfs:label ?orglabel
+        {
+          SELECT ?node (strlang(group_concat(distinct ?label; separator=", "),"en") as ?glabel)
+          WHERE {
+            ?node a sh:NodeShape.
+            ?node rdfs:seeAlso ?scheme.
+            ?node rdfs:label ?label
+          }
+          GROUP BY ?node
+          HAVING (count(?label)!=1)
+        }
       }
     }
     DELETE FROM container:profiel {

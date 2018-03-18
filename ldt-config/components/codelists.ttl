@@ -1,0 +1,44 @@
+@prefix elmo: <http://bp4mc2.org/elmo/def#>.
+@prefix html: <http://www.w3.org/1999/xhtml/vocab#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix void: <http://rdfs.org/ns/void#>.
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
+@prefix stage: <http://localhost:8080/modeling/stage#>.
+
+stage:ProfielCodelists	a	elmo:Representation;
+	elmo:url-pattern	"/query/profiel-codelists$";
+	elmo:contains	stage:Menu;
+  elmo:fragment [
+    elmo:applies-to "codelist";
+    elmo:appearance elmo:HiddenAppearance;
+#    elmo:name "SUBJECT";
+  ];
+  elmo:query '''
+    prefix containerlocal: <http://localhost:8080/modeling/container/>
+    prefix shxl: <http://bp4mc2.org/def/shacl-xl#>
+    select ?class ?property ?codelist ?vocabulary ?url (count(?concept) as ?count)
+    where {
+      graph containerlocal:profiel {
+        ?shape a sh:NodeShape.
+        ?shape sh:name ?class.
+        ?shape sh:property ?prop.
+        ?prop sh:name ?property.
+        ?prop sh:node ?codelist.
+        ?codelist rdfs:label ?vocabulary.
+        ?codelist sh:property ?link.
+        ?link sh:path skos:inScheme.
+        {
+          {?link sh:hasValue ?url}
+          UNION
+          {?link sh:in/rdf:rest*/rdf:first ?url}
+        }
+        OPTIONAL {
+          ?concept skos:inScheme ?url
+        }
+      }
+    }
+    group by ?property ?class ?codelist ?vocabulary ?url
+    order by ?property
+  '''
+.
