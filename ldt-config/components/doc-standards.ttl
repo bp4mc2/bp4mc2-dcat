@@ -1,0 +1,49 @@
+@prefix elmo: <http://bp4mc2.org/elmo/def#>.
+@prefix html: <http://www.w3.org/1999/xhtml/vocab#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix void: <http://rdfs.org/ns/void#>.
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
+@prefix stage: <http://localhost:8080/modeling/stage#>.
+@prefix doc: <http://localhost:8080/modeling/doc#>.
+
+#
+# De inhoud van het document
+#
+doc:Standards elmo:data (
+"# Standards"
+[elmo:contains stage:DocStandards]
+)
+.
+
+#
+# Tonen van de pagina
+#
+stage:StandardsDocument a elmo:Representation;
+  elmo:url-pattern "/query/standards-doc.md$";
+  elmo:index "0";
+  elmo:contains stage:DocStandards;
+  elmo:query stage:StandardsDocumentQuery
+.
+
+stage:StandardsDocumentQuery a elmo:Query;
+  elmo:query '''
+    prefix doc: <http://localhost:8080/modeling/doc#>
+    prefix containerlocal: <http://localhost:8080/modeling/container/>
+    construct {
+      doc:Standards elmo:data ?data.
+      ?item rdf:first ?first.
+      ?item rdf:rest ?rest.
+      ?first ?p ?o
+    }
+    where {
+      graph <@STAGE@> {
+        doc:Standards elmo:data ?data.
+        ?data rdf:rest* ?item.
+        ?item rdf:first ?first.
+        ?item rdf:rest ?rest.
+        OPTIONAL {?first ?p ?o}
+      }
+    }
+  '''
+.

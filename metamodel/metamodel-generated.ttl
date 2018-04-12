@@ -1,0 +1,512 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
+dct:isPartOf a owl:ObjectProperty;
+    rdfs:label "isPartOf"
+.
+dct:source a owl:ObjectProperty;
+    rdfs:label "source"
+.
+dct:subject a owl:ObjectProperty;
+    rdfs:label "subject"
+.
+foaf:Docuent a owl:Class;
+    rdfs:label "Document"
+.
+rdf:first a owl:DatatypeProperty;
+    rdfs:label "first"
+.
+rdf:rest a owl:ObjectProperty;
+    rdfs:label "rest"
+.
+rdf:type a owl:ObjectProperty;
+    rdfs:label "type"
+.
+rdfs:comment a owl:DatatypeProperty;
+    rdfs:label "comment"
+.
+rdfs:label a owl:DatatypeProperty;
+    rdfs:label "label"
+.
+rdfs:subClassOf a owl:ObjectProperty;
+    rdfs:label "subClassOf"
+.
+owl:Class a owl:Class;
+    rdfs:label "Class"
+.
+owl:Ontology a owl:Class;
+    rdfs:label "Ontology"
+.
+skos:Collection a owl:Class;
+    rdfs:label "Collection"
+.
+skos:Concept a owl:Class;
+    rdfs:label "Concept"
+.
+skos:ConceptScheme a owl:Class;
+    rdfs:label "ConceptScheme"
+.
+skos:broader a owl:ObjectProperty;
+    rdfs:label "broader"
+.
+skos:definition a owl:DatatypeProperty;
+    rdfs:label "definition"
+.
+skos:example a owl:DatatypeProperty;
+    rdfs:label "example"
+.
+skos:member a owl:ObjectProperty;
+    rdfs:label "member"
+.
+skos:notation a owl:DatatypeProperty;
+    rdfs:label "notation"
+.
+skos:scopeNote a owl:DatatypeProperty;
+    rdfs:label "scopeNote"
+.
+sh:NodeShape a owl:Class;
+    rdfs:label "NodeShape"
+.
+sh:Nodeshape a owl:Class;
+    rdfs:label "Nodeshape"
+.
+sh:PropertyShape a owl:Class;
+    rdfs:label "PropertyShape"
+.
+sh:PropertyShape a owl:Class;
+    rdfs:label "PropertyShape"
+.
+sh:class a owl:ObjectProperty;
+    rdfs:label "class"
+.
+sh:datatype a owl:ObjectProperty;
+    rdfs:label "datatype"
+.
+sh:datetype a owl:ObjectProperty;
+    rdfs:label "datetype"
+.
+sh:hasValue a owl:DatatypeProperty, owl:ObjectProperty;
+    rdfs:label "hasValue"
+.
+sh:in a owl:ObjectProperty;
+    rdfs:label "in"
+.
+sh:inversePath a owl:ObjectProperty;
+    rdfs:label "inversePath"
+.
+sh:maxCount a owl:DatatypeProperty;
+    rdfs:label "maxCount"
+.
+sh:minCount a owl:DatatypeProperty;
+    rdfs:label "minCount"
+.
+sh:name a owl:DatatypeProperty;
+    rdfs:label "name"
+.
+sh:namespace a owl:DatatypeProperty;
+    rdfs:label "namespace"
+.
+sh:node a owl:ObjectProperty;
+    rdfs:label "node"
+.
+sh:nodeKind a owl:ObjectProperty;
+    rdfs:label "nodeKind"
+.
+sh:nodekind a owl:ObjectProperty;
+    rdfs:label "nodekind"
+.
+sh:path a owl:ObjectProperty;
+    rdfs:label "path"
+.
+sh:prefix a owl:DatatypeProperty;
+    rdfs:label "prefix"
+.
+sh:property a owl:ObjectProperty;
+    rdfs:label "property"
+.
+sh:severity a owl:ObjectProperty;
+    rdfs:label "severity"
+.
+sh:targetClass a owl:ObjectProperty;
+    rdfs:label "targetClass"
+.
+foaf:isPrimaryTopicOf a owl:ObjectProperty;
+    rdfs:label "isPrimaryTopicOf"
+.
+<urn:class6be100d081a438502013ba4e5fef3db7> a sh:NodeShape;
+    sh:name "owl:Class";
+    sh:property <urn:dtproperty:6be100d081a438502013ba4e5fef3db7.label>;
+    sh:property <urn:objproperty:Class.subject>;
+    sh:property <urn:objproperty:6be100d081a438502013ba4e5fef3db7.b6c99360a2925e4b23fcfce8a7a9758f>;
+    sh:property <urn:objproperty:6be100d081a438502013ba4e5fef3db7.c74e2b735dd8dc85ad0ee3510c33925f>;
+    sh:targetClass owl:Class
+.
+<urn:classCollection> a sh:NodeShape;
+    sh:name "Collection";
+    sh:property <urn:dtproperty:Collection.label>;
+    sh:property <urn:dtproperty:Collection.bfc55b13f7138928286f1396c29ff637>;
+    sh:property <urn:objproperty:Collection.0509b61f7a7ebedc081ee69f212b7fa0>;
+    sh:property <urn:objproperty:Collection.source>;
+    sh:property <urn:objproperty:Collection.c74e2b735dd8dc85ad0ee3510c33925f>;
+    sh:targetClass skos:Collection
+.
+<urn:class83b6089062b30a3b63f1ef1966733569> a sh:NodeShape;
+    sh:name "Nodeshape";
+    sh:property <urn:dtproperty:83b6089062b30a3b63f1ef1966733569.d3f4b7a4a0b21eb4605d65cc130a58e1>;
+    sh:property <urn:dtproperty:83b6089062b30a3b63f1ef1966733569.dacf627f3d9075d7c805ce9d42521333>;
+    sh:property <urn:objproperty:83b6089062b30a3b63f1ef1966733569.c74e2b735dd8dc85ad0ee3510c33925f>;
+    sh:targetClass sh:Nodeshape
+.
+<urn:class89df24df35df8882616112ab6a78df83> a sh:NodeShape;
+    sh:name "Ontology";
+    sh:property <urn:dtproperty:89df24df35df8882616112ab6a78df83.0490d60293f84731f9285005b21029dd>;
+    sh:property <urn:dtproperty:89df24df35df8882616112ab6a78df83.0cc8421a1368fe50e59c5476206d2f40>;
+    sh:property <urn:objproperty:89df24df35df8882616112ab6a78df83.c74e2b735dd8dc85ad0ee3510c33925f>;
+    sh:targetClass owl:Ontology
+.
+<urn:classaef1a78016b3598e01dd7671934b50b4> a sh:NodeShape;
+    sh:name "ConceptScheme";
+    sh:property <urn:dtproperty:aef1a78016b3598e01dd7671934b50b4.label>;
+    sh:property <urn:objproperty:aef1a78016b3598e01dd7671934b50b4.c74e2b735dd8dc85ad0ee3510c33925f>;
+    sh:targetClass skos:ConceptScheme
+.
+<urn:classPropertyShape> a sh:NodeShape;
+    sh:name "PropertyShape";
+    sh:property <urn:dtproperty:PropertyShape.1e75423e37af0d180b8b6a6d9a1ffd4b>;
+    sh:property <urn:dtproperty:PropertyShape.37f90dd249d34d6b2de10c6da0588e47>;
+    sh:property <urn:dtproperty:PropertyShape.label>;
+    sh:property <urn:dtproperty:PropertyShape.8b290633b515c7661b8605ba977e336a>;
+    sh:property <urn:dtproperty:PropertyShape.a50ff82b7d4d1caa277dab6640b042f2>;
+    sh:property <urn:dtproperty:PropertyShape.d3f4b7a4a0b21eb4605d65cc130a58e1>;
+    sh:property <urn:dtproperty:PropertyShape.dacf627f3d9075d7c805ce9d42521333>;
+    sh:property <urn:objproperty:PropertyShape.3f9576d9163814a962dda81f5e2d0c10>;
+    sh:property <urn:objproperty:PropertyShape.50c71b37da14d439d80406a6adf093ac>;
+    sh:property <urn:objproperty:PropertyShape.5a9b4967184e276236dcb185854865d5>;
+    sh:property <urn:objproperty:PropertyShape.6151af141260da1b05962247cca0d1ac>;
+    sh:property <urn:objproperty:PropertyShape.7a2b1e653171186682c2424e7d2150e9>;
+    sh:property <urn:objproperty:PropertyShape.ae9cccc0a0d9e3e80c5843f1b7e9ce51>;
+    sh:property <urn:objproperty:PropertyShape.c74e2b735dd8dc85ad0ee3510c33925f>;
+    sh:property <urn:objproperty:PropertyShape.ef3f8d78aa198d127cf23330eecd9c7b>;
+    sh:targetClass sh:PropertyShape
+.
+<urn:classf455feb00056a91db26c00d9253b6d4d> a sh:NodeShape;
+    sh:name "NodeShape";
+    sh:property <urn:dtproperty:f455feb00056a91db26c00d9253b6d4d.label>;
+    sh:property <urn:dtproperty:f455feb00056a91db26c00d9253b6d4d.d3f4b7a4a0b21eb4605d65cc130a58e1>;
+    sh:property <urn:dtproperty:f455feb00056a91db26c00d9253b6d4d.dacf627f3d9075d7c805ce9d42521333>;
+    sh:property <urn:objproperty:f455feb00056a91db26c00d9253b6d4d.006e3d8570ce373aff58971ab1605d3e>;
+    sh:property <urn:objproperty:f455feb00056a91db26c00d9253b6d4d.625d6b3160e90d9146dff7658a981a88>;
+    sh:property <urn:objproperty:f455feb00056a91db26c00d9253b6d4d.c74e2b735dd8dc85ad0ee3510c33925f>;
+    sh:targetClass sh:NodeShape
+.
+<urn:classConcept> a sh:NodeShape;
+    sh:name "Concept";
+    sh:property <urn:dtproperty:Concept.label>;
+    sh:property <urn:dtproperty:Concept.a21892535c4bbed9a2d4c28df481cbf0>;
+    sh:property <urn:dtproperty:Concept.aba2d384a5674d453604a65f73b02ab6>;
+    sh:property <urn:dtproperty:Concept.bfc55b13f7138928286f1396c29ff637>;
+    sh:property <urn:objproperty:Concept.09f17fcc61f87f9692f33bab42323734>;
+    sh:property <urn:objproperty:Concept.source>;
+    sh:property <urn:objproperty:Concept.c74e2b735dd8dc85ad0ee3510c33925f>;
+    sh:property <urn:objproperty:Concept.inScheme>;
+    sh:targetClass skos:Concept
+.
+<urn:dtproperty:6be100d081a438502013ba4e5fef3db7.label> a sh:PropertyShape;
+    sh:datatype xsd:string;
+    sh:name "label";
+    sh:path rdfs:label
+.
+<urn:dtproperty:Collection.label> a sh:PropertyShape;
+    sh:datatype xsd:string;
+    sh:name "label";
+    sh:path rdfs:label
+.
+<urn:dtproperty:Collection.bfc55b13f7138928286f1396c29ff637> a sh:PropertyShape;
+    sh:name "definition";
+    sh:path skos:definition
+.
+<urn:dtproperty:83b6089062b30a3b63f1ef1966733569.d3f4b7a4a0b21eb4605d65cc130a58e1> a sh:PropertyShape;
+    sh:datatype xsd:string;
+    sh:name "name";
+    sh:path sh:name
+.
+<urn:dtproperty:83b6089062b30a3b63f1ef1966733569.dacf627f3d9075d7c805ce9d42521333> a sh:PropertyShape;
+    sh:datatype xsd:string;
+    sh:name "comment";
+    sh:path rdfs:comment
+.
+<urn:dtproperty:89df24df35df8882616112ab6a78df83.0490d60293f84731f9285005b21029dd> a sh:PropertyShape;
+    sh:datatype xsd:string;
+    sh:name "namespace";
+    sh:path sh:namespace
+.
+<urn:dtproperty:89df24df35df8882616112ab6a78df83.0cc8421a1368fe50e59c5476206d2f40> a sh:PropertyShape;
+    sh:datatype xsd:string;
+    sh:name "prefix";
+    sh:path sh:prefix
+.
+<urn:dtproperty:aef1a78016b3598e01dd7671934b50b4.label> a sh:PropertyShape;
+    sh:name "label";
+    sh:path rdfs:label
+.
+<urn:dtproperty:PropertyShape.1e75423e37af0d180b8b6a6d9a1ffd4b> a sh:PropertyShape;
+    sh:datatype xsd:integer;
+    sh:name "maxCount";
+    sh:path sh:maxCount
+.
+<urn:dtproperty:PropertyShape.37f90dd249d34d6b2de10c6da0588e47> a sh:PropertyShape;
+    sh:datatype xsd:string;
+    sh:name "example";
+    sh:path skos:example
+.
+<urn:dtproperty:PropertyShape.label> a sh:PropertyShape;
+    sh:name "label";
+    sh:path rdfs:label
+.
+<urn:dtproperty:PropertyShape.8b290633b515c7661b8605ba977e336a> a sh:PropertyShape;
+    sh:datatype xsd:string;
+    sh:name "hasValue";
+    sh:path sh:hasValue
+.
+<urn:dtproperty:PropertyShape.a50ff82b7d4d1caa277dab6640b042f2> a sh:PropertyShape;
+    sh:datatype xsd:integer;
+    sh:name "minCount";
+    sh:path sh:minCount
+.
+<urn:dtproperty:PropertyShape.d3f4b7a4a0b21eb4605d65cc130a58e1> a sh:PropertyShape;
+    sh:datatype xsd:string;
+    sh:name "name";
+    sh:path sh:name
+.
+<urn:dtproperty:PropertyShape.dacf627f3d9075d7c805ce9d42521333> a sh:PropertyShape;
+    sh:datatype xsd:string;
+    sh:name "comment";
+    sh:path rdfs:comment
+.
+<urn:dtproperty:f455feb00056a91db26c00d9253b6d4d.label> a sh:PropertyShape;
+    sh:name "label";
+    sh:path rdfs:label
+.
+<urn:dtproperty:f455feb00056a91db26c00d9253b6d4d.d3f4b7a4a0b21eb4605d65cc130a58e1> a sh:PropertyShape;
+    sh:datatype xsd:string;
+    sh:name "name";
+    sh:path sh:name
+.
+<urn:dtproperty:f455feb00056a91db26c00d9253b6d4d.dacf627f3d9075d7c805ce9d42521333> a sh:PropertyShape;
+    sh:datatype xsd:string;
+    sh:name "comment";
+    sh:path rdfs:comment
+.
+<urn:dtproperty:Concept.label> a sh:PropertyShape;
+    sh:datatype xsd:string;
+    sh:name "label";
+    sh:path rdfs:label
+.
+<urn:dtproperty:Concept.a21892535c4bbed9a2d4c28df481cbf0> a sh:PropertyShape;
+    sh:datatype xsd:string;
+    sh:name "notation";
+    sh:path skos:notation
+.
+<urn:dtproperty:Concept.aba2d384a5674d453604a65f73b02ab6> a sh:PropertyShape;
+    sh:datatype xsd:string;
+    sh:name "scopeNote";
+    sh:path skos:scopeNote
+.
+<urn:dtproperty:Concept.bfc55b13f7138928286f1396c29ff637> a sh:PropertyShape;
+    sh:datatype xsd:string;
+    sh:name "definition";
+    sh:path skos:definition
+.
+<urn:objproperty:6be100d081a438502013ba4e5fef3db7.b6c99360a2925e4b23fcfce8a7a9758f> a sh:PropertyShape;
+    sh:class owl:Class;
+    sh:name "subClassOf";
+    sh:nodeKind sh:IRI;
+    sh:path rdfs:subClassOf
+.
+<urn:objproperty:6be100d081a438502013ba4e5fef3db7.c74e2b735dd8dc85ad0ee3510c33925f> a sh:PropertyShape;
+    sh:name "type";
+    sh:nodeKind sh:IRI;
+    sh:path rdf:type
+.
+<urn:objproperty:Collection.0509b61f7a7ebedc081ee69f212b7fa0> a sh:PropertyShape;
+    sh:class skos:Concept;
+    sh:name "member";
+    sh:nodeKind sh:IRI;
+    sh:path skos:member
+.
+<urn:objproperty:Collection.source> a sh:PropertyShape;
+    sh:class foaf:Document;
+    sh:name "source";
+    sh:nodeKind sh:IRI;
+    sh:path dct:source
+.
+<urn:objproperty:Collection.c74e2b735dd8dc85ad0ee3510c33925f> a sh:PropertyShape;
+    sh:name "type";
+    sh:nodeKind sh:IRI;
+    sh:path rdf:type
+.
+<urn:objproperty:83b6089062b30a3b63f1ef1966733569.c74e2b735dd8dc85ad0ee3510c33925f> a sh:PropertyShape;
+    sh:name "type";
+    sh:nodeKind sh:IRI;
+    sh:path rdf:type
+.
+<urn:objproperty:89df24df35df8882616112ab6a78df83.c74e2b735dd8dc85ad0ee3510c33925f> a sh:PropertyShape;
+    sh:name "type";
+    sh:nodeKind sh:IRI;
+    sh:path rdf:type
+.
+<urn:objproperty:aef1a78016b3598e01dd7671934b50b4.c74e2b735dd8dc85ad0ee3510c33925f> a sh:PropertyShape;
+    sh:name "type";
+    sh:nodeKind sh:IRI;
+    sh:path rdf:type
+.
+<urn:objproperty:Class.subject> a sh:PropertyShape;
+    sh:class skos:Concept;
+    sh:name "subject";
+    sh:nodeKind sh:IRI;
+    sh:path dct:subject
+.
+<urn:objproperty:PropertyShape.3f9576d9163814a962dda81f5e2d0c10> a sh:PropertyShape;
+    sh:name "severity";
+    sh:nodeKind sh:IRI;
+    sh:path sh:severity
+.
+<urn:objproperty:PropertyShape.50c71b37da14d439d80406a6adf093ac> a sh:PropertyShape;
+    sh:name "nodeKind";
+    sh:nodeKind sh:IRI;
+    sh:path sh:nodeKind
+.
+<urn:objproperty:PropertyShape.5a9b4967184e276236dcb185854865d5> a sh:PropertyShape;
+    sh:name "path";
+    sh:nodeKind sh:IRI;
+    sh:path sh:path
+.
+<urn:objproperty:PropertyShape.6151af141260da1b05962247cca0d1ac> a sh:PropertyShape;
+    sh:name "class";
+    sh:nodeKind sh:IRI;
+    sh:path sh:class
+.
+<urn:objproperty:PropertyShape.7a2b1e653171186682c2424e7d2150e9> a sh:PropertyShape;
+    sh:name "datatype";
+    sh:nodeKind sh:IRI;
+    sh:path sh:datatype
+.
+<urn:objproperty:PropertyShape.ae9cccc0a0d9e3e80c5843f1b7e9ce51> a sh:PropertyShape;
+    sh:class sh:NodeShape;
+    sh:class sh:Nodeshape;
+    sh:name "node";
+    sh:nodeKind sh:IRI;
+    sh:path sh:node
+.
+<urn:objproperty:PropertyShape.c74e2b735dd8dc85ad0ee3510c33925f> a sh:PropertyShape;
+    sh:name "type";
+    sh:nodeKind sh:IRI;
+    sh:path rdf:type
+.
+<urn:objproperty:PropertyShape.ef3f8d78aa198d127cf23330eecd9c7b> a sh:PropertyShape;
+    sh:name "nodekind";
+    sh:nodeKind sh:IRI;
+    sh:path sh:nodekind
+.
+<urn:objproperty:f455feb00056a91db26c00d9253b6d4d.006e3d8570ce373aff58971ab1605d3e> a sh:PropertyShape;
+    sh:class owl:Class;
+    sh:name "targetClass";
+    sh:nodeKind sh:IRI;
+    sh:path sh:targetClass
+.
+<urn:objproperty:f455feb00056a91db26c00d9253b6d4d.625d6b3160e90d9146dff7658a981a88> a sh:PropertyShape;
+    sh:class sh:PropertyShape;
+    sh:class sh:PropertyShape;
+    sh:name "property";
+    sh:node <urn:propertynode:f455feb00056a91db26c00d9253b6d4d625d6b3160e90d9146dff7658a981a88>;
+    sh:nodeKind sh:BlankNode;
+    sh:nodeKind sh:IRI;
+    sh:path sh:property
+.
+<urn:objproperty:f455feb00056a91db26c00d9253b6d4d.c74e2b735dd8dc85ad0ee3510c33925f> a sh:PropertyShape;
+    sh:name "type";
+    sh:nodeKind sh:IRI;
+    sh:path rdf:type
+.
+<urn:objproperty:Concept.inScheme> a sh:PropertyShape;
+    sh:class skos:ConceptScheme;
+    sh:name "skos:ConceptScheme";
+    sh:nodeKind sh:IRI;
+    sh:path skos:inScheme
+.
+<urn:objproperty:Concept.09f17fcc61f87f9692f33bab42323734> a sh:PropertyShape;
+    sh:class skos:Concept;
+    sh:name "broader";
+    sh:nodeKind sh:IRI;
+    sh:path skos:broader
+.
+<urn:objproperty:Concept.source> a sh:PropertyShape;
+    sh:class foaf:Document;
+    sh:name "source";
+    sh:nodeKind sh:IRI;
+    sh:path dct:source
+.
+<urn:objproperty:Concept.c74e2b735dd8dc85ad0ee3510c33925f> a sh:PropertyShape;
+    sh:name "type";
+    sh:nodeKind sh:IRI;
+    sh:path rdf:type
+.
+<urn:propertynode:f455feb00056a91db26c00d9253b6d4d625d6b3160e90d9146dff7658a981a88> a sh:NodeShape;
+    sh:name "Shape";
+    sh:property <urn:valueproperty014fb1a1dc34796b3f544760e2a455c3>;
+    sh:property <urn:valueproperty0ecb8405f1ca4000e24b5441859972bc>;
+    sh:property <urn:valueproperty19f22d9d7b0aa69794521bc08a273eb6>;
+    sh:property <urn:valueproperty1d9279d6f45233ea077fcb20430e51bd>;
+    sh:property <urn:valueproperty3dc911bff745beba305586bb41fe1bc1>;
+    sh:property <urn:valueproperty701fb0a65b60e5537a8c35df025d6c92>;
+    sh:property <urn:valueproperty71aa56b31e071bd6d270fa83170ffdcb>;
+    sh:property <urn:valuepropertya993090a0cfc34af7faa14765b498120>;
+    sh:property <urn:valuepropertyb2fd8c170a7944fe87de581636dfd880>;
+    sh:property <urn:valuepropertyc59d99305d1a170345222a19ba51c96c>
+.
+<urn:valueproperty014fb1a1dc34796b3f544760e2a455c3> a sh:PropertyShape;
+    sh:name "maxCount";
+    sh:path sh:maxCount
+.
+<urn:valueproperty0ecb8405f1ca4000e24b5441859972bc> a sh:PropertyShape;
+    sh:name "hasValue";
+    sh:path sh:hasValue
+.
+<urn:valueproperty19f22d9d7b0aa69794521bc08a273eb6> a sh:PropertyShape;
+    sh:name "name";
+    sh:path sh:name
+.
+<urn:valueproperty1d9279d6f45233ea077fcb20430e51bd> a sh:PropertyShape;
+    sh:name "path";
+    sh:path sh:path
+.
+<urn:valueproperty3dc911bff745beba305586bb41fe1bc1> a sh:PropertyShape;
+    sh:name "datetype";
+    sh:path sh:datetype
+.
+<urn:valueproperty701fb0a65b60e5537a8c35df025d6c92> a sh:PropertyShape;
+    sh:name "in";
+    sh:path sh:in
+.
+<urn:valueproperty71aa56b31e071bd6d270fa83170ffdcb> a sh:PropertyShape;
+    sh:name "datatype";
+    sh:path sh:datatype
+.
+<urn:valuepropertya993090a0cfc34af7faa14765b498120> a sh:PropertyShape;
+    sh:name "minCount";
+    sh:path sh:minCount
+.
+<urn:valuepropertyb2fd8c170a7944fe87de581636dfd880> a sh:PropertyShape;
+    sh:name "node";
+    sh:path sh:node
+.
+<urn:valuepropertyc59d99305d1a170345222a19ba51c96c> a sh:PropertyShape;
+    sh:name "nodeKind";
+    sh:path sh:nodeKind
+.

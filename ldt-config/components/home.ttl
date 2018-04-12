@@ -42,17 +42,20 @@ stage:Menu elmo:appearance elmo:NavbarSearchAppearance;
       elmo:data [ elmo:index "5"; rdfs:label "Profile"; html:link "query/profiel"];
       elmo:data [ elmo:index "6"; rdfs:label "Guidelines"; html:link "query/profiel-guidelines"];
       elmo:data [ elmo:index "7"; rdfs:label "Codelists"; html:link "query/profiel-codelists"];
+      elmo:data [ elmo:index "8"; rdfs:label "Standards"; html:link "query/standards"];
+      elmo:data [ elmo:index "9"; rdfs:label "Standards (visualization)"; html:link "query/standards-graph.yed"];
     ];
     elmo:data [
       elmo:index "3";
       rdfs:label "Documentatie"@nl;
       rdfs:label "Documentation"@en;
       elmo:data [ elmo:index "1"; rdfs:label "Document"; html:link "query/profiel-doc"];
-      elmo:data [ elmo:index "2"; rdfs:label "Classes"; html:link "query/doc-classes"];
-      elmo:data [ elmo:index "3"; rdfs:label "Properties"; html:link "query/doc-properties"];
-      elmo:data [ elmo:index "4"; rdfs:label "Profile"; html:link "query/doc-profile"];
-      elmo:data [ elmo:index "5"; rdfs:label "Code/value lists"; html:link "query/doc-lists"];
-      elmo:data [ elmo:index "6"; rdfs:label "Code/values"; html:link "query/doc-values"];
+      elmo:data [ elmo:index "3"; rdfs:label "Classes"; html:link "query/doc-classes"];
+      elmo:data [ elmo:index "4"; rdfs:label "Properties"; html:link "query/doc-properties"];
+      elmo:data [ elmo:index "5"; rdfs:label "Profile"; html:link "query/doc-profile"];
+      elmo:data [ elmo:index "6"; rdfs:label "Code/value lists"; html:link "query/doc-lists"];
+      elmo:data [ elmo:index "7"; rdfs:label "Code/values"; html:link "query/doc-values"];
+      elmo:data [ elmo:index "8"; rdfs:label "Standards"; html:link "query/doc-standards"];
     ];
     elmo:data [
       elmo:index "4";
@@ -97,6 +100,7 @@ stage:Downloads a elmo:Representation;
 			<div>
 				<ul>
           <li><a href="query/profiel-doc.md">Markdown specification document</a></li>
+          <li><a href="query/standards-doc.md">Markdown standards document</a></li>
           <li><a href="query/profiel-vocabulaire.ttl">SHACL turtle specification</a></li>
         </ul>
  			</div>''';

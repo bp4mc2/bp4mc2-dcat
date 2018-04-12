@@ -1,0 +1,75 @@
+@prefix elmo: <http://bp4mc2.org/elmo/def#>.
+@prefix html: <http://www.w3.org/1999/xhtml/vocab#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix void: <http://rdfs.org/ns/void#>.
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
+@prefix stage: <http://localhost:8080/modeling/stage#>.
+@prefix shxl: <http://bp4mc2.org/def/shacl-xl#>.
+
+stage:Standards a elmo:Representation;
+	elmo:url-pattern	"/query/standards$";
+  elmo:contains stage:Menu;
+  elmo:fragment [
+    elmo:applies-to "url";
+    elmo:appearance elmo:GlobalLink;
+  ];
+  elmo:query '''
+    prefix dct: <http://purl.org/dc/terms/>
+    prefix containerlocal: <http://localhost:8080/modeling/container/>
+    select ?standaard ?naam ?documentatie ?versie ?status ?publicatiedatum ?type ?vorigeversie ?specialisatievan ?afgeleidvan
+    where {
+      graph containerlocal:profiel {
+        ?standard a dct:Standard.
+        ?standard rdfs:label ?standaard.
+        ?standard dct:title ?naam.
+      }
+    }
+    order by ?standard
+  '''
+.
+
+stage:DocStandards a elmo:Representation;
+  elmo:url-pattern "/query/doc-standards$";
+  elmo:contains stage:Menu;
+  elmo:query '''
+    prefix dct: <http://purl.org/dc/terms/>
+    prefix containerlocal: <http://localhost:8080/modeling/container/>
+    select ?standaard ?naam ?documentatie
+    where {
+      graph containerlocal:profiel {
+        ?standard a dct:Standard.
+        ?standard rdfs:label ?standaard.
+        ?standard dct:title ?naam.
+        OPTIONAL {?standard foaf:isPrimaryTopicOf ?documentatie}
+      }
+    }
+    order by ?standard
+  '''
+.
+
+stage:StandardsGraph a elmo:Representation;
+  elmo:url-pattern "/query/standards-graph.yed$";
+  elmo:query '''
+    prefix dct: <http://purl.org/dc/terms/>
+    prefix containerlocal: <http://localhost:8080/modeling/container/>
+    construct {
+      ?standard a dct:Standard.
+      ?standard rdfs:label ?label.
+      ?standard ?p ?o.
+      ?o a dct:Standard.
+      ?o rdfs:label ?olabel.
+    }
+    where {
+      graph containerlocal:profiel {
+        ?standard a dct:Standard.
+        ?standard rdfs:label ?label.
+        OPTIONAL {
+          ?standard ?p ?o.
+          ?o a dct:Standard.
+          ?o rdfs:label ?olabel.
+        }
+      }
+    }
+  ''';
+.
