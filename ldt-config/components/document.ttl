@@ -42,6 +42,7 @@ stage:ProfielDocument a elmo:Representation;
 stage:ProfielDocumentQuery a elmo:Query;
   elmo:query '''
     prefix containerlocal: <http://localhost:8080/modeling/container/>
+    prefix elmo: <http://bp4mc2.org/elmo/def#>
     construct {
       ?doc elmo:data ?data.
       ?item rdf:first ?first.

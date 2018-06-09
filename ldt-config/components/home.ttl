@@ -11,7 +11,32 @@ stage:Home	a	elmo:Representation;
 	elmo:contains	stage:Menu;
 	elmo:contains	stage:Welkom;
 .
+
+stage:AdvancedHome	a	elmo:Representation;
+	elmo:url-pattern	"/modeling/advanced$";
+	elmo:contains	stage:AdvancedMenu;
+	elmo:contains	stage:AdvancedWelkom;
+.
+
 stage:Menu elmo:appearance elmo:NavbarSearchAppearance;
+  elmo:index "~";
+  elmo:data [
+    rdfs:label "Modeling"@en;
+    rdfs:label "Modelleren"@nl;
+    html:link "/modeling";
+    elmo:data [
+      elmo:index "1";
+      rdfs:label "Excel upload";
+      html:link "container/profiel-xlsx"
+    ];
+    elmo:data [
+      elmo:index "5";
+      rdfs:label "Downloads";
+      html:link "query/downloads";
+    ];
+  ]
+.
+stage:AdvancedMenu elmo:appearance elmo:NavbarSearchAppearance;
 	elmo:index "~";
 	elmo:data [
 		rdfs:label "Modeling"@en;
@@ -67,7 +92,7 @@ stage:Menu elmo:appearance elmo:NavbarSearchAppearance;
     elmo:data [
       elmo:index "5";
       rdfs:label "Downloads";
-      html:link "query/downloads";
+      html:link "query/downloads2";
     ];
     elmo:data [
       elmo:index "6";
@@ -84,7 +109,23 @@ stage:Welkom a elmo:Part;
     rdfs:label "Welkom"@nl;
 		elmo:html '''
 			<div>
-				<p>Modelling demonstration site</p>
+				<p>Welkom op de site voor het modelleren van Linked Data</p>
+        <p>De volgende acties kunt u uitvoeren:</p>
+        <ul>
+          <li>Upload van een Excel bestand met informatie die omgezet kan worden naar Linked Data</li>
+          <li>Download van het resultaat in verschillende formaten (turtle, markdown document, grafisch)</li>
+        </ul>
+ 			</div>''';
+	]
+.
+stage:AdvancedWelkom a elmo:Part;
+	elmo:appearance elmo:HtmlAppearance;
+	elmo:data [
+		rdfs:label "Welcome"@en;
+    rdfs:label "Welkom"@nl;
+		elmo:html '''
+			<div>
+				<p>Advanced menu: use it at your own peril!</p>
  			</div>''';
 	]
 .
@@ -99,9 +140,27 @@ stage:Downloads a elmo:Representation;
 		elmo:html '''
 			<div>
 				<ul>
+          <li><a href="query/profiel-doc.md">Markdown specificatie document</a></li>
+          <li><a href="query/profiel-vocabulaire.ttl">SHACL turtle specificatie</a></li>
+          <li><a href="query/profiel-vocabulaire?format=yed">Grafische weergave</a></li>
+        </ul>
+        <p>De grafische weergave vereist het gebruik van het yEd open source tool. Dat kunt u <a href="https://www.yworks.com/downloads#yEd">hier</a> vinden</p>
+ 			</div>''';
+	]
+.
+
+stage:Downloads2 a elmo:Representation;
+  elmo:url-pattern "/query/downloads2$";
+  elmo:contains stage:Menu;
+	elmo:appearance elmo:HtmlAppearance;
+	elmo:data [
+		rdfs:label "Downloads"@en;
+    rdfs:label "Downloads"@nl;
+		elmo:html '''
+			<div>
+				<ul>
           <li><a href="query/profiel-doc.md">Markdown specification document</a></li>
           <li><a href="query/standards-doc.md">Markdown standards document</a></li>
-          <li><a href="query/profiel-vocabulaire.ttl">SHACL turtle specification</a></li>
         </ul>
  			</div>''';
 	]

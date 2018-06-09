@@ -21,6 +21,10 @@ containerlocal:profiel-xlsx a elmo:Container;
   elmo:translator elmo:TableExcelTranslator;
   elmo:query stage:PostUploadQuery;
 .
+container:profiel a elmo:Container;
+  elmo:contains stage:Menu;
+  elmo:replaces containerlocal:profiel;
+.
 containerlocal:profiel a elmo:Container;
   elmo:contains stage:Menu;
 .

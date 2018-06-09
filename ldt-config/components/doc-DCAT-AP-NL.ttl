@@ -1,0 +1,37 @@
+@prefix elmo: <http://bp4mc2.org/elmo/def#>.
+@prefix html: <http://www.w3.org/1999/xhtml/vocab#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix void: <http://rdfs.org/ns/void#>.
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
+@prefix stage: <http://localhost:8080/modeling/stage#>.
+@prefix doc: <http://localhost:8080/modeling/doc#>.
+
+#
+# De inhoud van het document
+#
+doc:DCAT-AP-NL-v1.1 elmo:data (
+"# Profile documentation"
+[elmo:contains stage:DocProfile]
+"## Vocabularies and namespaces"
+"The following vocabularies are used:"
+[elmo:contains stage:ProfielVocabularies]
+[html:img "dcat-ap-nl-profile.png"]
+"## Classes"
+'''The profile contains classes that are considered core to the profile and are part of the catalog core. Other classes are only used by reference and are stable with respect to the operational data ("Master data"). And some classes are merly used as complex datatypes.'''
+"### Core classes"
+[elmo:contains stage:DocClass_Core]
+"### Reference classes"
+[elmo:contains stage:DocClass_Ref]
+"### Datatype classes"
+[elmo:contains stage:DocClass_Datatype]
+"## Catalog"
+[elmo:contains stage:DocProperties_Catalog]
+"## Catalog record"
+[elmo:contains stage:DocProperties_CatalogRecord]
+"## Dataset"
+[elmo:contains stage:DocProperties_Dataset]
+"## Distribution"
+[elmo:contains stage:DocProperties_Distribution]
+)
+.
