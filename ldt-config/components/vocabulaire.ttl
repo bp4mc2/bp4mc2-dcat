@@ -27,6 +27,7 @@ stage:ProfielVocabulaire	a	elmo:Representation;
   elmo:appearance elmo:VocabularyAppearance;
   elmo:query '''
     prefix shxl: <http://bp4mc2.org/def/shacl-xl#>
+    prefix sh: <http://www.w3.org/ns/shacl#>
     prefix containerlocal: <http://localhost:8080/modeling/container/>
     construct {
       ?s ?p ?o.

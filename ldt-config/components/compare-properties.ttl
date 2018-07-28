@@ -31,6 +31,7 @@ stage:CompareProperties_both a elmo:Part;
   elmo:query '''
     prefix shxl: <http://bp4mc2.org/def/shacl-xl#>
     prefix containerlocal: <http://localhost:8080/modeling/container/>
+		prefix sh: <http://www.w3.org/ns/shacl#>
     select ?class1 ?property1
            (if(?severity1=?severity2,"",concat(strafter(str(?severity1),"#")," - ",strafter(str(?severity2),"#"))) as ?severity)
            (if((bound(?refnode1) or bound(?refnode2)) and ?refnode1!=?refnode2,concat(?refnode1," - ",?refnode2),"") as ?refnode)
@@ -73,6 +74,7 @@ stage:CompareProperties_first a elmo:Part;
   ];
   elmo:query '''
     prefix shxl: <http://bp4mc2.org/def/shacl-xl#>
+		prefix sh: <http://www.w3.org/ns/shacl#>
     prefix containerlocal: <http://localhost:8080/modeling/container/>
     select ?class1 ?property1 ?severity1
     where {
@@ -107,6 +109,7 @@ stage:CompareProperties_second a elmo:Part;
   ];
   elmo:query '''
     prefix shxl: <http://bp4mc2.org/def/shacl-xl#>
+		prefix sh: <http://www.w3.org/ns/shacl#>
     prefix containerlocal: <http://localhost:8080/modeling/container/>
     select ?class2 ?property2 ?severity2
     where {

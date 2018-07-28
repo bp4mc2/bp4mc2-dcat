@@ -42,6 +42,7 @@ stage:DocPropertiesQuery a elmo:Query;
   elmo:query '''
     prefix containerlocal: <http://localhost:8080/modeling/container/>
     prefix shxl: <http://bp4mc2.org/def/shacl-xl#>
+		prefix sh: <http://www.w3.org/ns/shacl#>
     select ?property ?property_label ?range ?range_label ?definition
     where {
       graph <@STAGE@> {
@@ -117,6 +118,7 @@ stage:DocPropertiesSeverityQuery a elmo:Query;
   elmo:query '''
     prefix containerlocal: <http://localhost:8080/modeling/container/>
     prefix shxl: <http://bp4mc2.org/def/shacl-xl#>
+		prefix sh: <http://www.w3.org/ns/shacl#>
     select distinct
            (if(?severity=sh:Violation,
                "M",
@@ -183,6 +185,7 @@ stage:ProfielProperties	a	elmo:Representation;
   ];
   elmo:query '''
     prefix shxl: <http://bp4mc2.org/def/shacl-xl#>
+		prefix sh: <http://www.w3.org/ns/shacl#>
     prefix containerlocal: <http://localhost:8080/modeling/container/>
     select ?nr ?prop
            (strafter(str(?shape),"#") as ?class)

@@ -21,6 +21,7 @@ stage:InspireMappingDcat	a	elmo:Representation;
   elmo:query '''
     prefix containerlocal: <http://localhost:8080/modeling/container/>
     prefix shxl: <http://bp4mc2.org/def/shacl-xl#>
+		prefix sh: <http://www.w3.org/ns/shacl#>
     prefix dct: <http://purl.org/dc/terms/>
     select ?man (if(bound(?prop),?prop,rdf:nil) as ?propp) ?maninspire ?inspire ?property ?domain ?range ?note
     where {

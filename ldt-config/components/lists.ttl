@@ -34,6 +34,7 @@ stage:DocLists	a	elmo:Representation;
   ];
   elmo:query '''
     prefix containerlocal: <http://localhost:8080/modeling/container/>
+		prefix sh: <http://www.w3.org/ns/shacl#>
     select ?node ?uri ?uri_label ?class ?class_label ?vocname ?vocuri
     where {
       graph containerlocal:profiel {

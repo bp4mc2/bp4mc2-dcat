@@ -15,6 +15,7 @@ stage:ProfielVocabularies	a	elmo:Representation;
   ];
   elmo:query '''
     prefix containerlocal: <http://localhost:8080/modeling/container/>
+		prefix sh: <http://www.w3.org/ns/shacl#>
     select ?prefix ?namespace ?documentation
     where {
       graph containerlocal:profiel {

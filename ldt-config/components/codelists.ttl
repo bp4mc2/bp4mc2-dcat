@@ -17,6 +17,7 @@ stage:ProfielCodelists	a	elmo:Representation;
   elmo:query '''
     prefix containerlocal: <http://localhost:8080/modeling/container/>
     prefix shxl: <http://bp4mc2.org/def/shacl-xl#>
+		prefix sh: <http://www.w3.org/ns/shacl#>
     select ?class ?property ?codelist ?vocabulary ?url (count(?concept) as ?count)
     where {
       graph containerlocal:profiel {
