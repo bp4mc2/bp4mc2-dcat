@@ -352,3 +352,9 @@ stage:PostUploadAddQuery a elmo:Query;
     }
   ''';
 .
+
+containerlocal:excel a elmo:Container;
+  rdfs:label "Upload (Excel)";
+  elmo:contains stage:Menu;
+  elmo:translator elmo:GenericExcelTranslator;
+.

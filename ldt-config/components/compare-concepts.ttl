@@ -1,0 +1,169 @@
+@prefix elmo: <http://bp4mc2.org/elmo/def#>.
+@prefix html: <http://www.w3.org/1999/xhtml/vocab#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix void: <http://rdfs.org/ns/void#>.
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
+@prefix stage: <http://localhost:8080/modeling/stage#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix spdx: <http://spdx.org/rdf/terms#>.
+@prefix adms: <http://www.w3.org/ns/adms#>.
+
+stage:CompareConcepts	a	elmo:Representation;
+	elmo:url-pattern	"/query/compare/concepts$";
+	elmo:contains	stage:Menu;
+  elmo:contains stage:CompareConcepts_both;
+  elmo:contains stage:CompareConcepts_conceptfirst;
+	elmo:contains stage:CompareConcepts_conceptsecond;
+	elmo:contains stage:CompareConcepts_first;
+  elmo:contains stage:CompareConcepts_second;
+.
+
+stage:CompareConcepts_both a elmo:Part;
+  elmo:index "1";
+  elmo:fragment [
+    elmo:applies-to "concept";
+    rdfs:label "concept (both)";
+  ];
+  elmo:fragment [
+    elmo:applies-to "predicate";
+    rdfs:label "predicate (both)";
+  ];
+	elmo:fragment [
+    elmo:applies-to "object";
+    rdfs:label "object (both)";
+  ];
+  elmo:query '''
+    prefix containerlocal: <http://localhost:8080/modeling/container/>
+    select ?concept ?predicate ?object
+    where {
+      graph containerlocal:profiel {
+				?concept a skos:Concept.
+				?concept ?predicate ?object
+      }
+      graph containerlocal:secondprofile {
+				?concept a skos:Concept.
+				?concept ?predicate ?object
+      }
+    }
+  ''';
+.
+
+stage:CompareConcepts_conceptfirst a elmo:Part;
+  elmo:index "2";
+  elmo:fragment [
+    elmo:applies-to "concept";
+    rdfs:label "concept (not in second)";
+  ];
+  elmo:query '''
+    prefix containerlocal: <http://localhost:8080/modeling/container/>
+    select ?concept
+    where {
+      graph containerlocal:profiel {
+				?concept a skos:Concept.
+      }
+			FILTER NOT EXISTS {
+	      graph containerlocal:secondprofile {
+					?concept a skos:Concept.
+	      }
+			}
+    }
+  ''';
+.
+
+stage:CompareConcepts_conceptsecond a elmo:Part;
+  elmo:index "3";
+  elmo:fragment [
+    elmo:applies-to "concept";
+    rdfs:label "concept (not in first)";
+  ];
+  elmo:query '''
+    prefix containerlocal: <http://localhost:8080/modeling/container/>
+    select ?concept
+    where {
+      graph containerlocal:secondprofile {
+				?concept a skos:Concept.
+      }
+			FILTER NOT EXISTS {
+	      graph containerlocal:profiel {
+					?concept a skos:Concept.
+	      }
+			}
+    }
+  ''';
+.
+
+stage:CompareConcepts_first a elmo:Part;
+  elmo:index "4";
+  elmo:fragment [
+    elmo:applies-to "concept";
+    rdfs:label "concept (in both)";
+  ];
+  elmo:fragment [
+    elmo:applies-to "predicate";
+    rdfs:label "predicate (not in second)";
+  ];
+	elmo:fragment [
+    elmo:applies-to "object";
+    rdfs:label "object (not in second)";
+  ];
+  elmo:query '''
+    prefix shxl: <http://bp4mc2.org/def/shacl-xl#>
+		prefix sh: <http://www.w3.org/ns/shacl#>
+    prefix containerlocal: <http://localhost:8080/modeling/container/>
+    select ?concept ?predicate ?object
+    where {
+      graph containerlocal:profiel {
+				?concept a skos:Concept.
+				?concept ?predicate ?object
+      }
+			graph containerlocal:secondprofile {
+				?concept a skos:Concept
+			}
+      FILTER NOT EXISTS {
+        graph containerlocal:secondprofile {
+					?concept a skos:Concept.
+					?concept ?predicate ?object
+        }
+      }
+    }
+  ''';
+.
+
+stage:CompareConcepts_second a elmo:Part;
+  elmo:index "5";
+  elmo:fragment [
+    elmo:applies-to "concept";
+    rdfs:label "concept (in both)";
+  ];
+  elmo:fragment [
+    elmo:applies-to "predicate";
+    rdfs:label "predicate (not in first)";
+  ];
+	elmo:fragment [
+    elmo:applies-to "object";
+    rdfs:label "object (not in first)";
+  ];
+  elmo:query '''
+    prefix shxl: <http://bp4mc2.org/def/shacl-xl#>
+		prefix sh: <http://www.w3.org/ns/shacl#>
+    prefix containerlocal: <http://localhost:8080/modeling/container/>
+    select ?concept ?predicate ?object
+    where {
+      graph containerlocal:secondprofile {
+				?concept a skos:Concept.
+				?concept ?predicate ?object
+      }
+			graph containerlocal:profiel {
+				?concept a skos:Concept
+			}
+      FILTER NOT EXISTS {
+        graph containerlocal:profiel {
+					?concept a skos:Concept.
+					?concept ?predicate ?object
+        }
+      }
+    }
+  ''';
+.

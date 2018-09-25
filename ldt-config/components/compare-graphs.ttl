@@ -1,0 +1,139 @@
+@prefix elmo: <http://bp4mc2.org/elmo/def#>.
+@prefix html: <http://www.w3.org/1999/xhtml/vocab#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix dct: <http://purl.org/dc/terms/>.
+@prefix void: <http://rdfs.org/ns/void#>.
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>.
+@prefix stage: <http://localhost:8080/modeling/stage#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix spdx: <http://spdx.org/rdf/terms#>.
+@prefix adms: <http://www.w3.org/ns/adms#>.
+
+stage:CompareGraphs	a	elmo:Representation;
+	elmo:url-pattern	"/query/compare/graphs$";
+	elmo:contains	stage:Menu;
+	elmo:contains stage:CompareGraphs_overview;
+  elmo:contains stage:CompareGraphs_both;
+  elmo:contains stage:CompareGraphs_first;
+  elmo:contains stage:CompareGraphs_second;
+.
+
+stage:CompareGraphs_overview a elmo:Part;
+	elmo:index "0";
+	elmo:query '''
+		prefix containerlocal: <http://localhost:8080/modeling/container/>
+		select ?graph ?graphcount
+		where {
+			{
+				select ("First" as ?graph) (count(*) as ?graphcount)
+				where {
+					graph containerlocal:profiel {
+						?s?p?o
+					}
+				}
+			}
+			UNION
+			{
+				select ("Seconde" as ?graph) (count(*) as ?graphcount)
+				where {
+					graph containerlocal:secondprofile {
+						?s?p?o
+					}
+				}
+			}
+		}
+	''';
+.
+
+stage:CompareGraphs_both a elmo:Part;
+  elmo:index "1";
+  elmo:fragment [
+    elmo:applies-to "resource";
+    rdfs:label "resource (both)";
+  ];
+  elmo:fragment [
+    elmo:applies-to "predicate";
+    rdfs:label "predicate (both)";
+  ];
+	elmo:fragment [
+    elmo:applies-to "object";
+    rdfs:label "object (both)";
+  ];
+  elmo:query '''
+    prefix containerlocal: <http://localhost:8080/modeling/container/>
+    select ?resource ?predicate ?object
+    where {
+      graph containerlocal:profiel {
+				?resource ?predicate ?object
+      }
+      graph containerlocal:secondprofile {
+				?resource ?predicate ?object
+      }
+    }
+  ''';
+.
+
+stage:CompareGraphs_first a elmo:Part;
+  elmo:index "2";
+  elmo:fragment [
+    elmo:applies-to "resource";
+    rdfs:label "resource (not in second)";
+  ];
+  elmo:fragment [
+    elmo:applies-to "predicate";
+    rdfs:label "predicate (not in second)";
+  ];
+	elmo:fragment [
+    elmo:applies-to "object";
+    rdfs:label "object (not in second)";
+  ];
+  elmo:query '''
+    prefix shxl: <http://bp4mc2.org/def/shacl-xl#>
+		prefix sh: <http://www.w3.org/ns/shacl#>
+    prefix containerlocal: <http://localhost:8080/modeling/container/>
+    select ?resource ?predicate ?object
+    where {
+      graph containerlocal:profiel {
+				?resource ?predicate ?object
+      }
+      FILTER NOT EXISTS {
+        graph containerlocal:secondprofile {
+					?resource ?predicate ?object
+        }
+      }
+    }
+  ''';
+.
+
+stage:CompareGraphs_second a elmo:Part;
+  elmo:index "3";
+  elmo:fragment [
+    elmo:applies-to "resource";
+    rdfs:label "resource (not in first)";
+  ];
+  elmo:fragment [
+    elmo:applies-to "predicate";
+    rdfs:label "predicate (not in first)";
+  ];
+	elmo:fragment [
+    elmo:applies-to "object";
+    rdfs:label "object (not in first)";
+  ];
+  elmo:query '''
+    prefix shxl: <http://bp4mc2.org/def/shacl-xl#>
+		prefix sh: <http://www.w3.org/ns/shacl#>
+    prefix containerlocal: <http://localhost:8080/modeling/container/>
+    select ?resource ?predicate ?object
+    where {
+      graph containerlocal:secondprofile {
+				?resource ?predicate ?object
+      }
+      FILTER NOT EXISTS {
+        graph containerlocal:profiel {
+					?resource ?predicate ?object
+        }
+      }
+    }
+  ''';
+.
