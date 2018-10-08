@@ -41,7 +41,7 @@ stage:DocClass_Datatype a elmo:Representation;
 	elmo:url-pattern	"/query/doc-classes$";
   elmo:index "3";
 	elmo:contains	stage:Menu;
-  rdfs:seeAlso shxl:Datatype;
+  rdfs:seeAlso shxl:Datatype, shxl:Samengestelddatatype, shxl:Enkelvoudigdatatype;
   elmo:query stage:DocClassQuery
 .
 stage:DocClassQuery a elmo:Query;

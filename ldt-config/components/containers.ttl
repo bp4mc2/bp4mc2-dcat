@@ -30,9 +30,11 @@ containerlocal:profiel a elmo:Container;
 .
 
 # Post query: fix some things that can't be fixed in the excel
+# - Remove nodes with sh:targetClass that have no properties (and are probably only reference classes)
 # - Create sh:minCount from shxl:cardinality
 # - Create sh:maxCount from shxl:cardinality
 # - Set sh:nodeKind sh:BlankNode for a class of stereotype shxl:Datatype
+# - Set role value for waardelijsten
 # - Create correct shape for waardelijsten:
 #   - A version for the situation that sublists don't exist
 #   - A version for the situation with sublists
@@ -43,6 +45,17 @@ stage:PostUploadQuery a elmo:Query;
     PREFIX container: <http://localhost:8080/modeling/container/>
     PREFIX shxl: <http://bp4mc2.org/def/shacl-xl#>
     PREFIX sh: <http://www.w3.org/ns/shacl#>
+    DELETE FROM container:profiel {
+      ?node ?p ?o
+    }
+    WHERE {
+      ?node a sh:NodeShape.
+      ?node sh:targetClass ?class.
+      ?node ?p ?o.
+      FILTER NOT EXISTS {
+        ?node sh:property ?prop
+      }
+    }
     INSERT INTO container:profiel {
       ?prop sh:minCount ?mincount
     }
@@ -74,6 +87,23 @@ stage:PostUploadQuery a elmo:Query;
         ?prop sh:class ?class.
         ?datatype sh:targetClass ?class.
         ?datatype shxl:stereotype shxl:Datatype
+      }
+    }
+    INSERT INTO container:profiel {
+      ?node sh:property [
+        sh:path rdf:type;
+        sh:name "role";
+        sh:hasValue ?valueclass
+      ]
+    }
+    WHERE {
+      SELECT ?node ?valueclass
+      WHERE {
+        GRAPH container:profiel {
+          ?node a sh:NodeShape.
+          ?node rdfs:comment ?valueclass.
+          ?somenode sh:targetClass ?valueclass.
+        }
       }
     }
     INSERT INTO container:profiel {
@@ -210,13 +240,14 @@ stage:PostUploadQuery a elmo:Query;
       GRAPH container:profiel {
         ?node rdfs:label ?orglabel
         {
-          SELECT ?node (strlang(group_concat(distinct ?label; separator=", "),"en") as ?glabel)
+          SELECT ?node ?language (strlang(group_concat(distinct ?label; separator=", "),"en") as ?glabel)
           WHERE {
             ?node a sh:NodeShape.
             ?node rdfs:seeAlso ?scheme.
             ?node rdfs:label ?label
+            BIND (lang(?label) as ?language)
           }
-          GROUP BY ?node
+          GROUP BY ?node ?language
           HAVING (count(?label)!=1)
         }
       }
@@ -228,6 +259,15 @@ stage:PostUploadQuery a elmo:Query;
       GRAPH container:profiel {
         ?node a sh:NodeShape.
         ?node rdfs:seeAlso ?scheme.
+      }
+    }
+    DELETE FROM container:profiel {
+      ?node rdfs:comment ?valueclass.
+    }
+    WHERE {
+      GRAPH container:profiel {
+        ?node a sh:NodeShape.
+        ?node rdfs:comment ?valueclass.
       }
     }
     INSERT INTO container:profiel {

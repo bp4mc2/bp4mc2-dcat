@@ -1,4 +1,3 @@
-@echo off
 cd components
 zip ../config.zip *.ttl
 cd ..

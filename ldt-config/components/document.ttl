@@ -24,6 +24,13 @@ stage:ProfielDocument a elmo:Representation;
   elmo:contains stage:DocProperties_CatalogRecord;
   elmo:contains stage:DocProperties_Dataset;
   elmo:contains stage:DocProperties_Distribution;
+  elmo:contains stage:DocProperties_Agent;
+  elmo:contains stage:DocProperties_ConceptScheme;
+  elmo:contains stage:DocProperties_Concept;
+  elmo:contains stage:DocProperties_Checksum;
+  elmo:contains stage:DocProperties_Identifier;
+  elmo:contains stage:DocProperties_LicenceDocument;
+  elmo:contains stage:DocProperties_PeriodOfTime;
   elmo:contains stage:DocPropertiesSeverity_Catalog;
   elmo:contains stage:DocPropertiesSeverity_CatalogRecord;
   elmo:contains stage:DocPropertiesSeverity_Dataset;
@@ -92,17 +99,17 @@ stage:ProfielDocumentRespec a elmo:Representation;
               logos: []
             };
           </script>
-      </head>  
+      </head>
         <body>
           <section id='abstract'>
-            <p>              
+            <p>
               This a generated document for a DCAT profile.
             </p>
           </section>
           <section id='sotd'>
-            <p>        
+            <p>
             </p>
-          </section>  
+          </section>
          <section data-format="markdown" data-include="/modeling/query/profiel-doc.md"></section>
         </body>
     '''

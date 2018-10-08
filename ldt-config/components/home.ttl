@@ -46,7 +46,7 @@ stage:AdvancedMenu elmo:appearance elmo:NavbarSearchAppearance;
 			elmo:index "1";
 			rdfs:label "Beheer"@nl;
 			rdfs:label "Admin"@en;
-      elmo:data [ elmo:index "1"; rdfs:label "Excel upload"; html:link "container/profiel-xlsx"];
+      elmo:data [ elmo:index "1"; rdfs:label "Excel profiel upload"; html:link "container/profiel-xlsx"];
       elmo:data [ elmo:index "2"; rdfs:label "RDF upload"; html:link "container/profiel"];
       elmo:data [ elmo:index "2"; rdfs:label "Show uploaded data"; html:link "query/profiel-turtle"];
       elmo:data [ elmo:index "3"; rdfs:label "Excel upload vocabularies"; html:link "container/prefix-xlsx"];
@@ -55,6 +55,7 @@ stage:AdvancedMenu elmo:appearance elmo:NavbarSearchAppearance;
       elmo:data [ elmo:index "6"; rdfs:label "Upload and add"; html:link "container/addprofiel"];
       elmo:data [ elmo:index "7"; rdfs:label "Clean INSPIRE codelists"; html:link "update/cleancodelists"];
       elmo:data [ elmo:index "8"; rdfs:label "Copy profile"; html:link "update/copyprofile"];
+			elmo:data [ elmo:index "9"; rdfs:label "Upload basic tabular excel"; html:link "container/excel"];
 		];
     elmo:data [
       elmo:index "2";

@@ -38,6 +38,34 @@ stage:DocProperties_Distribution a elmo:Representation;
   rdfs:seeAlso dcat:Distribution;
   elmo:query stage:DocPropertiesQuery
 .
+stage:DocProperties_Agent a elmo:Representation;
+  rdfs:seeAlso foaf:Agent;
+  elmo:query stage:DocPropertiesQuery
+.
+stage:DocProperties_ConceptScheme a elmo:Representation;
+  rdfs:seeAlso skos:ConceptScheme;
+  elmo:query stage:DocPropertiesQuery
+.
+stage:DocProperties_Concept a elmo:Representation;
+  rdfs:seeAlso skos:Concept;
+  elmo:query stage:DocPropertiesQuery
+.
+stage:DocProperties_Checksum a elmo:Representation;
+  rdfs:seeAlso spdx:Checksum;
+  elmo:query stage:DocPropertiesQuery
+.
+stage:DocProperties_Identifier a elmo:Representation;
+  rdfs:seeAlso adms:Identifier;
+  elmo:query stage:DocPropertiesQuery
+.
+stage:DocProperties_LicenceDocument a elmo:Representation;
+  rdfs:seeAlso dct:LicenseDocument;
+  elmo:query stage:DocPropertiesQuery
+.
+
+
+
+
 stage:DocPropertiesQuery a elmo:Query;
   elmo:query '''
     prefix containerlocal: <http://localhost:8080/modeling/container/>

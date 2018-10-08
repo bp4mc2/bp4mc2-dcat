@@ -25,13 +25,27 @@ doc:DCAT-AP-NL-v1.1 elmo:data (
 [elmo:contains stage:DocClass_Ref]
 "### Datatype classes"
 [elmo:contains stage:DocClass_Datatype]
-"## Catalog"
+"## Properties per class"
+'''The properties that can be used are described in the tables below'''
+"### Catalog"
 [elmo:contains stage:DocProperties_Catalog]
-"## Catalog record"
+"### Catalog record"
 [elmo:contains stage:DocProperties_CatalogRecord]
-"## Dataset"
+"### Dataset"
 [elmo:contains stage:DocProperties_Dataset]
-"## Distribution"
+"### Distribution"
 [elmo:contains stage:DocProperties_Distribution]
+"### Agent"
+[elmo:contains stage:DocProperties_Agent]
+"### Concept scheme"
+[elmo:contains stage:DocProperties_ConceptScheme]
+"### Concept"
+[elmo:contains stage:DocProperties_Concept]
+"### Checksum"
+[elmo:contains stage:DocProperties_Checksum]
+"### Identifier"
+[elmo:contains stage:DocProperties_Identifier]
+"### Licence document"
+[elmo:contains stage:DocProperties_LicenceDocument]
 )
 .
