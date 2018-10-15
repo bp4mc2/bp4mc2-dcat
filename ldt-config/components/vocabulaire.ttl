@@ -31,23 +31,32 @@ stage:ProfielVocabulaire	a	elmo:Representation;
     prefix containerlocal: <http://localhost:8080/modeling/container/>
     construct {
       ?s ?p ?o.
+      ?ds ?dp ?do.
       ?shape sh:property [
         sh:path []
       ]
     }
     where {
-      graph containerlocal:profiel {
-        {
-          ?s ?p ?o
-          FILTER (!isLiteral(?o) || lang(?o)="en" || lang(?o)="")
-        }
-        UNION
-        {
-          ?shape a sh:NodeShape.
-          ?shape shxl:stereotype shxl:Referentiegegeven.
-          FILTER NOT EXISTS {
-            ?shape sh:property ?prop
+      {
+        graph containerlocal:profiel {
+          {
+            ?s ?p ?o
+            FILTER (!isLiteral(?o) || lang(?o)="en" || lang(?o)="")
           }
+          UNION
+          {
+            ?shape a sh:NodeShape.
+            ?shape shxl:stereotype shxl:Referentiegegeven.
+            FILTER NOT EXISTS {
+              ?shape sh:property ?prop
+            }
+          }
+        }
+      }
+      UNION
+      {
+        graph containerlocal:profiel-graphml {
+          ?ds ?dp ?do
         }
       }
     }

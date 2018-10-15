@@ -29,6 +29,20 @@ containerlocal:profiel a elmo:Container;
   elmo:contains stage:Menu;
 .
 
+container:profiel-graphml a elmo:Container;
+  rdfs:label "Upload Graphml diagram";
+  elmo:contains stage:Menu;
+  elmo:replaces containerlocal:profiel-graphml;
+  elmo:representation elmo:UploadRepresentation;
+  elmo:translator elmo:GraphmlTranslator;
+.
+containerlocal:profiel-graphml a elmo:Container;
+  rdfs:label "Upload Graphml diagram";
+  elmo:contains stage:Menu;
+  elmo:representation elmo:UploadRepresentation;
+  elmo:translator elmo:GraphmlTranslator;
+.
+
 # Post query: fix some things that can't be fixed in the excel
 # - Remove nodes with sh:targetClass that have no properties (and are probably only reference classes)
 # - Create sh:minCount from shxl:cardinality
