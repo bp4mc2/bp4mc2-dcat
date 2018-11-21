@@ -16,7 +16,7 @@ doc:GeoDCAT-AP-v1.0.1 elmo:data (
 "## Vocabularies and namespaces"
 "The following vocabularies are used:"
 [elmo:contains stage:ProfielVocabularies]
-[html:img "dcat-ap-eu-profile.png"]
+[html:img "geodcat-ap-profile.png"]
 "## Application profile classes"
 "### Mandatory classes"
 [elmo:contains stage:DocClassSeverity_Violation]
