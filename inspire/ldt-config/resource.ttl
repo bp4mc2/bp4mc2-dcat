@@ -1,0 +1,185 @@
+@prefix elmo: <http://bp4mc2.org/elmo/def#>.
+@prefix html: <http://www.w3.org/1999/xhtml/vocab#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix stage: <http://localhost:8080/inspire/stage#>.
+@prefix frbr: <http://purl.org/vocab/frbr/core#>.
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+
+stage:Resource	a	elmo:Representation;
+	elmo:url-pattern	"/resource$";
+	elmo:layer elmo:BottomLayer;
+	elmo:contains	stage:Menu;
+	elmo:contains	stage:Resource_content;
+.
+stage:Resource_content a elmo:Part;
+	elmo:index "1";
+	elmo:fragment [
+		elmo:applies-to rdf:type;
+		elmo:appearance elmo:HiddenAppearance;
+	];
+	elmo:fragment [
+		elmo:applies-to skos:member;
+		elmo:appearance elmo:HiddenAppearance;
+	];
+	elmo:fragment [
+		elmo:applies-to sh:property;
+		elmo:appearance elmo:HiddenAppearance;
+	];
+	elmo:fragment [
+		elmo:applies-to rdfs:label;
+		rdfs:label "Term";
+		elmo:index "01";
+	];
+	elmo:fragment [
+		elmo:applies-to sh:name;
+		rdfs:label "Technische naam";
+		elmo:index "02";
+	];
+	elmo:fragment [
+		elmo:applies-to skos:definition;
+		rdfs:label "Definitie";
+		elmo:index "03";
+	];
+	elmo:fragment [
+		elmo:applies-to skos:scopeNote;
+		rdfs:label "Toelichting";
+		elmo:index "04";
+	];
+	elmo:fragment [
+		elmo:applies-to dct:source;
+		rdfs:label "Bron";
+		elmo:index "05";
+	];
+	elmo:fragment [
+		elmo:applies-to dct:isPartOf;
+		rdfs:label "Onderdeel van";
+		elmo:index "06";
+	];
+	elmo:fragment [
+		elmo:applies-to frbr:realizationOf;
+		rdfs:label "Versie van";
+		elmo:index "07";
+	];
+	elmo:fragment [
+		elmo:applies-to skos:broader;
+		rdfs:label "Bredere term";
+		elmo:index "08";
+	];
+	elmo:fragment [
+		elmo:applies-to foaf:isPrimaryTopicOf;
+		rdfs:label "Online locatie";
+		elmo:appearance elmo:GlobalLink;
+		elmo:index "09";
+	];
+	elmo:fragment [
+		elmo:applies-to skos:notation;
+		rdfs:label "Code";
+		elmo:index "10";
+	];
+	elmo:query '''
+		CONSTRUCT {
+			<@SUBJECT@> ?p ?o.
+			?o rdfs:label ?olabel
+		}
+		FROM <http://localhost:8080/inspire/container/metadata>
+		FROM <http://localhost:8080/inspire/container/nlprofiel19115>
+		FROM <http://localhost:8080/inspire/container/geodcatnl>
+		WHERE {
+			<@SUBJECT@> ?p ?o
+			OPTIONAL {?o rdfs:label ?olabel}
+		}
+	''';
+.
+
+stage:Collectie	a	elmo:Representation;
+	elmo:uri-pattern	"/id/collection/";
+	elmo:contains	stage:Menu;
+	elmo:contains	stage:Resource_content;
+	elmo:contains stage:Collectie_list;
+.
+stage:Collectie_list a elmo:Part;
+	elmo:index "2";
+	elmo:query '''
+		SELECT *
+		WHERE {
+			GRAPH ?g {
+				<@SUBJECT@> skos:member ?begrip.
+				OPTIONAL {
+					?begrip rdfs:label ?begrip_label
+					FILTER (lang(?begrip_label)="en")
+				}
+				OPTIONAL {
+					?begrip rdfs:label ?nederlands
+					FILTER (lang(?nederlands)="nl")
+				}
+			}
+			FILTER (?g = <http://localhost:8080/inspire/container/metadata>)
+		}
+	''';
+.
+
+stage:Shape	a	elmo:Representation;
+	elmo:uri-pattern	"/def/inspire-shape#";
+	elmo:uri-pattern	"/def/nlprofiel-shape#";
+	elmo:contains	stage:Menu;
+	elmo:contains	stage:Resource_content;
+	elmo:contains stage:Shape_list;
+.
+stage:Shape_list a elmo:Part;
+	elmo:index "2";
+	elmo:fragment [
+		elmo:appies-to "propshape";
+		rdfs:label "Eigenschap"@nl;
+		rdfs:label "Property"@en;
+	];
+	elmo:fragment [
+		elmo:appies-to "engels";
+		rdfs:label "Engels"@nl;
+		rdfs:label "English"@en;
+	];
+	elmo:fragment [
+		elmo:appies-to "nederlands";
+		rdfs:label "Nederlands"@nl;
+		rdfs:label "Dutch"@en;
+	];
+	elmo:fragment [
+		elmo:appies-to "domein";
+		rdfs:label "Domein"@nl;
+		rdfs:label "Domain"@en;
+	];
+	elmo:query '''
+		prefix containerlocal: <http://localhost:8080/inspire/container/>
+		prefix sh: <http://www.w3.org/ns/shacl#>
+		SELECT ?propshape ?propshape_label ?engels ?nederlands ?domein
+		WHERE {
+			{
+				SELECT *
+				WHERE {
+					GRAPH ?g {
+						<@SUBJECT@> sh:property ?property.
+						BIND(if(isIri(?property),?property,iri(concat("urn:bnode:",str(?property)))) as ?propshape)
+						OPTIONAL {?property sh:name ?propshape_label}
+						OPTIONAL {
+							?property rdfs:label ?engels
+							FILTER (lang(?engels)="en")
+						}
+						OPTIONAL {
+							?property rdfs:label ?nederlands
+							FILTER (lang(?nederlands)="nl")
+						}
+						OPTIONAL {
+							?property sh:node ?domein
+						}
+					}
+				}
+			}
+			FILTER (?g = <http://localhost:8080/inspire/container/metadata>
+					||	?g = <http://localhost:8080/inspire/container/nlprofiel19115>
+					||	?g = <http://localhost:8080/inspire/container/geodcatnl>
+			)
+		}
+	''';
+.

@@ -1,0 +1,115 @@
+@prefix elmo: <http://bp4mc2.org/elmo/def#>.
+@prefix html: <http://www.w3.org/1999/xhtml/vocab#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix stage: <http://localhost:8080/inspire/stage#>.
+
+stage:Eigenschappen	a	elmo:Representation;
+	elmo:url-pattern	"/query/eigenschappen$";
+	elmo:contains	stage:Menu;
+	elmo:fragment [
+		elmo:applies-to "order";
+		rdfs:label "#";
+	];
+	elmo:fragment [
+		elmo:applies-to "shape";
+		rdfs:label "Klasse"@nl;
+	];
+	elmo:fragment [
+		elmo:applies-to "pshape";
+		rdfs:label "Eigenschap"@nl;
+	];
+	elmo:fragment [
+		elmo:applies-to "engels";
+		rdfs:label "Engels"@nl;
+	];
+	elmo:fragment [
+		elmo:applies-to "nederlands";
+		rdfs:label "Nederlands"@nl;
+	];
+	elmo:fragment [
+		elmo:applies-to "source";
+		rdfs:label "Brondocument"@nl;
+	];
+	elmo:query '''
+		prefix sh: <http://www.w3.org/ns/shacl#>
+		prefix dct: <http://purl.org/dc/terms/>
+		select ?order ?shape ?shape_label ?type ?pshape ?pshape_label ?engels ?nederlands ?source ?source_label
+		where {
+			graph <http://localhost:8080/inspire/container/@MODEL@> {
+				{
+					BIND("Resource" as ?type)
+					?pshape a sh:PropertyShape.
+					OPTIONAL {?pshape sh:name ?pshape_label}
+					OPTIONAL {?pshape sh:order ?order}
+					FILTER NOT EXISTS {?ashape sh:property ?pshape}
+					OPTIONAL {
+						?pshape rdfs:label ?engels
+						FILTER (lang(?engels)="en")
+					}
+					OPTIONAL {
+						?pshape rdfs:label ?nederlands
+						FILTER (lang(?nederlands)="nl")
+					}
+					OPTIONAL {
+						?pshape dct:source ?source.
+						?source rdfs:label ?source_label
+					}
+				}
+				UNION
+				{
+					BIND("Resource" as ?type)
+					?shape sh:property ?pshape.
+					OPTIONAL {?shape sh:name ?shape_label}
+					OPTIONAL {?pshape sh:name ?pshape_label}
+					OPTIONAL {?pshape sh:order ?order}
+					FILTER (isIri(?pshape))
+					OPTIONAL {
+						?pshape rdfs:label ?engels
+						FILTER (lang(?engels)="en")
+					}
+					OPTIONAL {
+						?pshape rdfs:label ?nederlands
+						FILTER (lang(?nederlands)="nl")
+					}
+					OPTIONAL {
+						?pshape dct:source ?source.
+						?source rdfs:label ?source_label
+					}
+				}
+				UNION
+				{
+					BIND("Blank node" as ?type)
+					?shape sh:property ?apshape.
+					OPTIONAL {?shape sh:name ?shape_label}
+					?apshape sh:name ?pshape.
+					FILTER (isBlank(?apshape))
+					OPTIONAL {
+						?apshape rdfs:label ?engels
+						FILTER (lang(?engels)="en")
+					}
+					OPTIONAL {
+						?apshape rdfs:label ?nederlands
+						FILTER (lang(?nederlands)="nl")
+					}
+				}
+				UNION
+				{
+					BIND("Nameless" as ?type)
+					?shape sh:property ?apshape.
+					OPTIONAL {?shape sh:name ?shape_label}
+					FILTER NOT EXISTS {?apshape sh:name ?pshape}
+					FILTER (isBlank(?apshape))
+					OPTIONAL {
+						?apshape rdfs:label ?engels
+						FILTER (lang(?engels)="en")
+					}
+					OPTIONAL {
+						?apshape rdfs:label ?nederlands
+						FILTER (lang(?nederlands)="nl")
+					}
+				}
+			}
+		}
+		order by ?order ?shape_label ?pshape_label
+	'''
+.

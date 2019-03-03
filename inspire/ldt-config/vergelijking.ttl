@@ -1,0 +1,54 @@
+@prefix elmo: <http://bp4mc2.org/elmo/def#>.
+@prefix html: <http://www.w3.org/1999/xhtml/vocab#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix stage: <http://localhost:8080/inspire/stage#>.
+
+stage:Vergelijking	a	elmo:Representation;
+	elmo:url-pattern	"/query/vergelijking$";
+	elmo:contains	stage:Menu;
+	elmo:fragment [
+		elmo:applies-to "order";
+		rdfs:label "#";
+	];
+	elmo:fragment [
+		elmo:applies-to "nlshape";
+		rdfs:label "NL klasse";
+	];
+	elmo:fragment [
+		elmo:applies-to "nlprop";
+		rdfs:label "NL eigenschap";
+	];
+	elmo:fragment [
+		elmo:applies-to "ishape";
+		rdfs:label "Inspire klasse";
+	];
+	elmo:fragment [
+		elmo:applies-to "iprop";
+		rdfs:label "Inspire eigenschap";
+	];
+	elmo:query '''
+		prefix containerlocal: <http://localhost:8080/inspire/container/>
+		prefix sh: <http://www.w3.org/ns/shacl#>
+		prefix inspire-meta: <http://bp4mc2.org/inspire/def/meta#>
+		select ?order ?nlshape ?nlshape_label ?ishape ?ishape_label ?nlprop ?nlprop_label ?iprop ?iprop_label ?nlxpath ?ixpath
+		where {
+			graph containerlocal:nlprofiel19115 {
+				?nlshape sh:property ?nlprop.
+				?nlshape sh:name ?nlshape_label.
+				?nlprop sh:name ?nlprop_label
+				OPTIONAL {?nlprop inspire-meta:xpath ?nlxpath}
+				OPTIONAL {?nlprop sh:order ?order}
+			}
+			OPTIONAL {
+				graph containerlocal:metadata {
+					?ishape sh:property ?iprop.
+					?ishape sh:name ?ishape_label.
+					?iprop sh:name ?iprop_label
+					OPTIONAL {?iprop inspire-meta:xpath ?ixpath}
+				}
+				FILTER (?iprop_label = ?nlprop_label)
+			}
+		}
+		order by ?order
+	'''
+.

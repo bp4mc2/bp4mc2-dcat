@@ -1,0 +1,139 @@
+@prefix elmo: <http://bp4mc2.org/elmo/def#>.
+@prefix html: <http://www.w3.org/1999/xhtml/vocab#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix stage: <http://localhost:8080/inspire/stage#>.
+
+stage:Klassen	a	elmo:Representation;
+	elmo:url-pattern	"/query/klassen$";
+	elmo:contains	stage:Menu;
+	elmo:contains stage:Klassen_classes;
+	elmo:contains stage:Klassen_codelists;
+	elmo:contains stage:Klassen_datatypes;
+.
+stage:Klassen_classes a elmo:Part;
+	elmo:index "1";
+	elmo:fragment [
+		elmo:applies-to "shape";
+		rdfs:label "Klasse"@nl;
+		rdfs:label "Class"@en;
+	];
+	elmo:fragment [
+		elmo:applies-to "engels";
+		rdfs:label "Engels"@nl;
+		rdfs:label "English"@en;
+	];
+	elmo:fragment [
+		elmo:applies-to "nederlands";
+		rdfs:label "Nederlands"@nl;
+		rdfs:label "Dutch"@en;
+	];
+	elmo:query '''
+		prefix sh: <http://www.w3.org/ns/shacl#>
+		select ?shape ?shape_label (count(?propshape) as ?shape_count) ?engels ?nederlands
+		where {
+			graph <http://localhost:8080/inspire/container/@MODEL@> {
+				?shape a sh:NodeShape.
+				?shape sh:property ?propshape.
+				OPTIONAL {?shape sh:name ?shape_label}
+				OPTIONAL {
+					?shape rdfs:label ?engels
+					FILTER (lang(?engels)="en")
+				}
+				OPTIONAL {
+					?shape rdfs:label ?nederlands
+					FILTER (lang(?nederlands)="nl")
+				}
+				FILTER NOT EXISTS {?shape sh:property/sh:path/sh:inversePath skos:member}
+			}
+		}
+		group by ?shape ?shape_label ?engels ?nederlands
+	'''
+.
+stage:Klassen_codelists a elmo:Part;
+	elmo:index "2";
+	elmo:fragment [
+		elmo:applies-to "shape";
+		rdfs:label "Klasse"@nl;
+		rdfs:label "Class"@en;
+	];
+	elmo:fragment [
+		elmo:applies-to "engels";
+		rdfs:label "Engels"@nl;
+		rdfs:label "English"@en;
+	];
+	elmo:fragment [
+		elmo:applies-to "nederlands";
+		rdfs:label "Nederlands"@nl;
+		rdfs:label "Dutch"@en;
+	];
+	elmo:fragment [
+		elmo:applies-to "codelist";
+		rdfs:label "Codelijst"@nl;
+		rdfs:label "Code list"@en;
+	];
+	elmo:query '''
+		prefix sh: <http://www.w3.org/ns/shacl#>
+		select ?shape ?shape_label ?engels ?nederlands ?codelist ?codelist_label
+		where {
+			graph <http://localhost:8080/inspire/container/@MODEL@> {
+				?shape a sh:NodeShape.
+				?shape sh:property ?property.
+				?property sh:path/sh:inversePath skos:member.
+				OPTIONAL {
+					?property sh:hasValue ?codelist.
+					OPTIONAL {
+						?codelist rdfs:label ?codelist_label.
+						FILTER (lang(?codelist_label)="en")
+					}
+				}
+				OPTIONAL {?shape sh:name ?shape_label}
+				OPTIONAL {
+					?shape rdfs:label ?engels
+					FILTER (lang(?engels)="en")
+				}
+				OPTIONAL {
+					?shape rdfs:label ?nederlands
+					FILTER (lang(?nederlands)="nl")
+				}
+			}
+		}
+		group by ?shape ?shape_label ?engels ?nederlands
+	'''
+.
+stage:Klassen_datatypes a elmo:Part;
+	elmo:index "3";
+	elmo:fragment [
+		elmo:applies-to "shape";
+		rdfs:label "Datatype"@nl;
+		rdfs:label "Datatype"@en;
+	];
+	elmo:fragment [
+		elmo:applies-to "engels";
+		rdfs:label "Engels"@nl;
+		rdfs:label "English"@en;
+	];
+	elmo:fragment [
+		elmo:applies-to "nederlands";
+		rdfs:label "Nederlands"@nl;
+		rdfs:label "Dutch"@en;
+	];
+	elmo:query '''
+		prefix sh: <http://www.w3.org/ns/shacl#>
+		select ?shape ?shape_label ?engels ?nederlands
+		where {
+			graph <http://localhost:8080/inspire/container/@MODEL@> {
+				?shape a sh:NodeShape.
+				FILTER NOT EXISTS {?shape sh:property ?propshape}
+				OPTIONAL {?shape sh:name ?shape_label}
+				OPTIONAL {
+					?shape rdfs:label ?engels
+					FILTER (lang(?engels)="en")
+				}
+				OPTIONAL {
+					?shape rdfs:label ?nederlands
+					FILTER (lang(?nederlands)="nl")
+				}
+			}
+		}
+	'''
+.

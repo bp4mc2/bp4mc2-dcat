@@ -1,0 +1,43 @@
+@prefix elmo: <http://bp4mc2.org/elmo/def#>.
+@prefix html: <http://www.w3.org/1999/xhtml/vocab#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix stage: <http://localhost:8080/inspire/stage#>.
+
+stage:Begrippen	a	elmo:Representation;
+	elmo:url-pattern	"/query/begrippen$";
+	elmo:contains	stage:Menu;
+	elmo:fragment [
+		elmo:applies-to "begrip";
+		rdfs:label "Begrip";
+	];
+	elmo:fragment [
+		elmo:applies-to "nederlands";
+		rdfs:label "Nederlands";
+	];
+	elmo:fragment [
+		elmo:applies-to "bron";
+		rdfs:label "Brondocument";
+	];
+	elmo:query '''
+		prefix containerlocal: <http://localhost:8080/inspire/container/>
+		prefix dct: <http://purl.org/dc/terms/>
+		select ?begrip ?begrip_label ?nederlands ?bron ?bron_label
+		where {
+			graph containerlocal:metadata {
+				?begrip a skos:Concept.
+				OPTIONAL {
+					?begrip rdfs:label ?begrip_label
+					FILTER (lang(?begrip_label)="en")
+				}
+				OPTIONAL {
+					?begrip rdfs:label ?nederlands
+					FILTER (lang(?nederlands)="nl")
+				}
+				OPTIONAL {
+					?begrip dct:source ?bron.
+					OPTIONAL {?bron rdfs:label ?bron_label}
+				}
+			}
+		}
+	'''
+.

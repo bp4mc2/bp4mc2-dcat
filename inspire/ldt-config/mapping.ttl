@@ -1,0 +1,72 @@
+@prefix elmo: <http://bp4mc2.org/elmo/def#>.
+@prefix html: <http://www.w3.org/1999/xhtml/vocab#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix stage: <http://localhost:8080/inspire/stage#>.
+
+stage:Mapping	a	elmo:Representation;
+	elmo:url-pattern	"/query/mapping$";
+	elmo:contains	stage:Menu;
+	elmo:fragment [
+		elmo:applies-to "order";
+		rdfs:label "#";
+	];
+	elmo:fragment [
+		elmo:applies-to "nlshape";
+		rdfs:label "NL klasse";
+	];
+	elmo:fragment [
+		elmo:applies-to "nlprop";
+		rdfs:label "NL eigenschap";
+		elmo:name "SUBJECT";
+	];
+	elmo:fragment [
+		elmo:applies-to "ishape";
+		rdfs:label "Inspire klasse";
+	];
+	elmo:fragment [
+		elmo:applies-to "iprop";
+		rdfs:label "Inspire eigenschap";
+	];
+	elmo:fragment [
+		elmo:applies-to "nlxpath";
+		rdfs:label "NL pad";
+	];
+	elmo:fragment [
+		elmo:applies-to "ixpath";
+		rdfs:label "Inspire pad";
+	];
+	elmo:query '''
+		prefix containerlocal: <http://localhost:8080/inspire/container/>
+		prefix sh: <http://www.w3.org/ns/shacl#>
+		prefix inspire-meta: <http://bp4mc2.org/inspire/def/meta#>
+		prefix prov: <http://www.w3.org/ns/prov#>
+		select ?order ?nlshape ?nlshape_label ?ishape ?ishape_label ?nlprop ?nlprop_label ?iprop ?iprop_label ?nlxpath ?ixpath ?dcatprop ?dcatprop_label
+		where {
+			graph containerlocal:nlprofiel19115 {
+				?nlshape sh:property ?nlprop.
+				?nlshape sh:name ?nlshape_label.
+				?nlprop sh:name ?nlprop_label
+				OPTIONAL {?nlprop inspire-meta:xpath ?nlxpath}
+				OPTIONAL {?nlprop sh:order ?order}
+			}
+			OPTIONAL {
+				graph containerlocal:nlprofiel19115 {
+					?nlprop prov:wasDerivedFrom ?iprop
+				}
+				graph containerlocal:metadata {
+					?ishape sh:property ?iprop.
+					?ishape sh:name ?ishape_label.
+					?iprop sh:name ?iprop_label
+					OPTIONAL {?iprop inspire-meta:xpath ?ixpath}
+				}
+			}
+			OPTIONAL {
+				graph containerlocal:geodcatnl {
+					?dcatprop prov:wasDerivedFrom ?nlprop.
+					?dcatprop sh:name ?dcatprop_label
+				}
+			}
+		}
+		order by ?order
+	'''
+.

@@ -1,0 +1,70 @@
+@prefix elmo: <http://bp4mc2.org/elmo/def#>.
+@prefix html: <http://www.w3.org/1999/xhtml/vocab#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix stage: <http://localhost:8080/inspire/stage#>.
+
+stage:Home	a	elmo:Representation;
+	elmo:url-pattern	"^http://[^/]+/inspire(|/)$";
+	elmo:contains	stage:Menu;
+	elmo:contains	stage:Welkom;
+.
+
+stage:Menu elmo:appearance elmo:NavbarSearchAppearance;
+  elmo:index "~";
+  elmo:data [
+    rdfs:label "INSPIRE"@nl;
+    html:link "/inspire";
+    elmo:data [
+      elmo:index "1";
+      rdfs:label "Upload";
+      elmo:data [elmo:index "1"; rdfs:label "Metadata"; html:link "/inspire/container/metadata"];
+			elmo:data [elmo:index "2"; rdfs:label "NL profiel 19115"; html:link "/inspire/container/nlprofiel19115"];
+    ];
+		elmo:data [
+      elmo:index "2";
+      rdfs:label "Modellen";
+      elmo:data [elmo:index "1"; rdfs:label "Inspire"; html:link "/inspire/query/model?model=metadata"];
+			elmo:data [elmo:index "2"; rdfs:label "NL profiel 19115"; html:link "/inspire/query/model?model=nlprofiel19115"];
+			elmo:data [elmo:index "3"; rdfs:label "GeoDCAT-NL"; html:link "/inspire/query/model?model=geodcatnl"];
+    ];
+    elmo:data [
+      elmo:index "3";
+      rdfs:label "Inspire";
+      elmo:data [elmo:index "1"; rdfs:label "Brondocumenten"; html:link "/inspire/query/brondocumenten"];
+      elmo:data [elmo:index "2"; rdfs:label "Begrippen"; html:link "/inspire/query/begrippen?model=metadata"];
+      elmo:data [elmo:index "3"; rdfs:label "Collecties"; html:link "/inspire/query/collecties"];
+      elmo:data [elmo:index "4"; rdfs:label "Klassen"; html:link "/inspire/query/klassen?model=metadata"];
+      elmo:data [elmo:index "5"; rdfs:label "Eigenschappen"; html:link "/inspire/query/eigenschappen?model=metadata"];
+    ];
+		elmo:data [
+      elmo:index "4";
+      rdfs:label "NL profiel 19115";
+      elmo:data [elmo:index "4"; rdfs:label "Klassen"; html:link "/inspire/query/klassen?model=nlprofiel19115"];
+			elmo:data [elmo:index "5"; rdfs:label "Eigenschappen"; html:link "/inspire/query/eigenschappen?model=nlprofiel19115"];
+    ];
+		elmo:data [
+      elmo:index "5";
+      rdfs:label "GeoDCAT-NL";
+      elmo:data [elmo:index "4"; rdfs:label "Klassen"; html:link "/inspire/query/klassen?model=geodcatnl"];
+			elmo:data [elmo:index "5"; rdfs:label "Eigenschappen"; html:link "/inspire/query/eigenschappen?model=geodcatnl"];
+    ];
+		elmo:data [
+			elmo:index "6";
+			rdfs:label "Controle";
+			elmo:data [elmo:index "1"; rdfs:label "Vergelijking"; html:link "/inspire/query/vergelijking"];
+			elmo:data [elmo:index "2"; rdfs:label "Mapping"; html:link "/inspire/query/mapping"];
+		]
+  ]
+.
+
+stage:Welkom a elmo:Part;
+	elmo:appearance elmo:HtmlAppearance;
+	elmo:data [
+		rdfs:label "Welcome"@en;
+    rdfs:label "Welkom"@nl;
+		elmo:html '''
+			<div>
+				<p>Welkom op de Linked Data site voor INSPIRE metadataprofielen</p>
+ 			</div>''';
+	]
+.

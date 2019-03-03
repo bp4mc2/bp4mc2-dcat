@@ -1,0 +1,52 @@
+@prefix elmo: <http://bp4mc2.org/elmo/def#>.
+@prefix html: <http://www.w3.org/1999/xhtml/vocab#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix stage: <http://localhost:8080/inspire/stage#>.
+@prefix frbr: <http://purl.org/vocab/frbr/core#>.
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+
+stage:Model	a	elmo:Representation;
+	elmo:url-pattern	"/query/model$";
+	elmo:appearance elmo:VocabularyAppearance;
+	elmo:contains	stage:Menu;
+	elmo:query '''
+		prefix sh: <http://www.w3.org/ns/shacl#>
+		prefix dct: <http://purl.org/dc/terms/>
+		construct {
+			?s?p?o.
+			?shape sh:targetClass ?shape.
+			?shape a owl:Class.
+			?shape rdfs:comment ?def.
+			?pshape sh:path ?shapeproperty.
+			?shapeproperty a rdf:Property.
+			?shapeproperty rdfs:label ?pname.
+			?shapeproperty dct:subject ?psubject.
+		}
+		where {
+			graph <http://localhost:8080/inspire/container/@MODEL@> {
+				{
+					?s?p?o
+					FILTER (!(isLiteral(?o)) || lang(?o)="en" || lang(?o)="")
+				}
+				UNION
+				{
+					?shape a sh:NodeShape.
+					?shape sh:property ?apshape.
+					OPTIONAL {?shape sh:name ?name}
+					FILTER NOT EXISTS {?shape sh:targetClass ?class}
+				}
+				UNION
+				{
+					?nshape sh:property ?pshape.
+					?pshape sh:name ?pname.
+					BIND (iri(concat("http://localhost:8080/def#",?pname)) as ?shapeproperty)
+					OPTIONAL {?pshape dct:subject ?psubject}
+					FILTER NOT EXISTS {?pshape sh:path ?property}
+				}
+			}
+		}
+	'''
+.

@@ -1,0 +1,84 @@
+@prefix inspire-concept: <http://bp4mc2.org/inspire/id/concept/>.
+@prefix inspire-collection: <http://bp4mc2.org/inspire/id/collection/>.
+@prefix inspire-scheme: <http://bp4mc2.org/inspire/id/conceptscheme/>.
+@prefix inspire-shape: <http://bp4mc2.org/inspire/def/inspire-shape#>.
+@prefix inspire-lex: <http://bp4mc2.org/inspire/id/regelgeving/>.
+@prefix inspire: <http://bp4mc2.org/inspire/def/inspire#>.
+@prefix inspire-meta: <http://bp4mc2.org/inspire/def/meta#>.
+@prefix inspire-voc: <http://bp4mc2.org/inspire/id/vocabulary/>.
+@prefix inspire-tg: <http://bp4mc2.org/inspire/id/guideline/>.
+
+@prefix nlprofiel: <http://bp4mc2.org/nlprofiel19115/def/nlprofiel-shape#>.
+@prefix geodcatnl: <http://bp4mc2.org/nlprofiel19115/def/geodcatnl-shape#>.
+
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix spdx: <http://spdx.org/rdf/terms#> .
+@prefix tosh: <http://topbraid.org/tosh#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix frbr: <http://purl.org/vocab/frbr/core#>.
+
+geodcatnl:Dataset a sh:NodeShape;
+  sh:name "dcat:Dataset";
+  sh:targetClass dcat:Dataset;
+  sh:property geodcatnl:TitelVanDeBron;
+  sh:property geodcatnl:DatumVanPublicatie;
+  sh:property geodcatnl:DatumVanLaatsteWijziging;
+  sh:property geodcatnl:AanmaakDatum;
+  sh:property geodcatnl:UniekeIdentifierVanDeBron;
+  sh:property geodcatnl:Samenvatting;
+.
+
+geodcatnl:TitelVanDeBron a sh:PropertyShape;
+  sh:order 1;
+  sh:name "dct:title";
+  sh:path dct:title;
+  prov:wasDerivedFrom nlprofiel:TitelVanDeBron
+.
+geodcatnl:DatumVanPublicatie a sh:PropertyShape;
+  sh:order 2.1;
+  sh:name "dct:issued";
+  sh:path dct:issued;
+  prov:wasDerivedFrom nlprofiel:DatumVanDeBron;
+.
+geodcatnl:DatumVanLaatsteWijziging a sh:PropertyShape;
+  sh:order 2.2;
+  sh:name "dct:modified";
+  sh:path dct:modified;
+  prov:wasDerivedFrom nlprofiel:DatumVanDeBron;
+.
+geodcatnl:AanmaakDatum a sh:PropertyShape;
+  sh:order 2.3;
+  sh:name "dct:created";
+  sh:path dct:created;
+  prov:wasDerivedFrom nlprofiel:DatumVanDeBron;
+.
+geodcatnl:UniekeIdentifierVanDeBron a sh:PropertyShape;
+  sh:order 4;
+  sh:name "dct:identifier";
+  sh:path dct:identifier;
+  prov:wasDerivedFrom nlprofiel:UniekeIdentifierVanDeBron
+.
+geodcatnl:Samenvatting a sh:PropertyShape;
+  sh:order 5;
+  sh:name "dct:description";
+  sh:path dct:description;
+  prov:wasDerivedFrom nlprofiel:Samenvatting
+.

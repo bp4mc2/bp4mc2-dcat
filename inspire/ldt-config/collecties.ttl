@@ -1,0 +1,47 @@
+@prefix elmo: <http://bp4mc2.org/elmo/def#>.
+@prefix html: <http://www.w3.org/1999/xhtml/vocab#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix stage: <http://localhost:8080/inspire/stage#>.
+
+stage:Collecties	a	elmo:Representation;
+	elmo:url-pattern	"/query/collecties$";
+	elmo:contains	stage:Menu;
+	elmo:fragment [
+		elmo:applies-to "collectie";
+		rdfs:label "Collectie";
+	];
+	elmo:fragment [
+		elmo:applies-to "nederlands";
+		rdfs:label "Nederlands";
+	];
+	elmo:fragment [
+		elmo:applies-to "bron";
+		rdfs:label "Brondocument";
+	];
+	elmo:query '''
+		prefix containerlocal: <http://localhost:8080/inspire/container/>
+		prefix dct: <http://purl.org/dc/terms/>
+		select ?collectie ?collectie_label (count(?begrip) as ?collectie_count) ?nederlands ?bron ?bron_label
+		where {
+			graph containerlocal:metadata {
+				?collectie a skos:Collection.
+				OPTIONAL {
+					?collectie rdfs:label ?collectie_label
+					FILTER (lang(?collectie_label)="en")
+				}
+				OPTIONAL {
+					?collectie rdfs:label ?nederlands
+					FILTER (lang(?nederlands)="nl")
+				}
+				OPTIONAL {
+					?collectie dct:source ?bron.
+					OPTIONAL {?bron rdfs:label ?bron_label}
+				}
+				OPTIONAL {
+					?collectie skos:member ?begrip
+				}
+			}
+		}
+		group by ?collectie ?collectie_label ?nederlands ?bron ?bron_label
+	'''
+.

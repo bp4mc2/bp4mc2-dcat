@@ -1,0 +1,41 @@
+@prefix stage: <http://localhost:8080/inspire/stage#>.
+@prefix elmo: <http://bp4mc2.org/elmo/def#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix container: <http://linkeddata.ordina.nl/inspire/container/>.
+@prefix containerlocal: <http://localhost:8080/inspire/container/>.
+
+container:metadata a elmo:Container;
+  rdfs:label "Upload Metadata";
+  elmo:contains stage:Menu;
+	elmo:replaces containerlocal:metadata;
+  elmo:representation elmo:UploadRepresentation;
+.
+containerlocal:metadata a elmo:Container;
+  rdfs:label "Upload Metadata";
+  elmo:contains stage:Menu;
+  elmo:representation elmo:UploadRepresentation;
+.
+
+container:nlprofiel19115 a elmo:Container;
+  rdfs:label "Upload NL profiel 19115";
+  elmo:contains stage:Menu;
+	elmo:replaces containerlocal:nlprofiel19115;
+  elmo:representation elmo:UploadRepresentation;
+.
+containerlocal:nlprofiel19115 a elmo:Container;
+  rdfs:label "Upload NL profiel 19115";
+  elmo:contains stage:Menu;
+  elmo:representation elmo:UploadRepresentation;
+.
+
+container:geodcatnl a elmo:Container;
+  rdfs:label "Upload GeoDCAT-NL";
+  elmo:contains stage:Menu;
+	elmo:replaces containerlocal:geodcatnl;
+  elmo:representation elmo:UploadRepresentation;
+.
+containerlocal:geodcatnl a elmo:Container;
+  rdfs:label "Upload GeoDCAT-NL";
+  elmo:contains stage:Menu;
+  elmo:representation elmo:UploadRepresentation;
+.

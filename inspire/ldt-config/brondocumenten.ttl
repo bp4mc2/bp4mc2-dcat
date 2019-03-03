@@ -1,0 +1,71 @@
+@prefix elmo: <http://bp4mc2.org/elmo/def#>.
+@prefix html: <http://www.w3.org/1999/xhtml/vocab#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix stage: <http://localhost:8080/inspire/stage#>.
+
+stage:Brondocumenten	a	elmo:Representation;
+	elmo:url-pattern	"/query/brondocumenten$";
+	elmo:contains	stage:Menu;
+	elmo:contains stage:Brondocumenten_tree;
+	elmo:contains stage:Brondocumenten_list;
+.
+stage:Brondocumenten_tree a elmo:Part;
+	elmo:appearance elmo:TreeAppearance;
+	elmo:query '''
+		prefix containerlocal: <http://localhost:8080/inspire/container/>
+		prefix frbr: <http://purl.org/vocab/frbr/core#>
+		prefix dct: <http://purl.org/dc/terms/>
+		construct {
+			?doc rdfs:label ?doc_label.
+			?doc dct:isPartOf ?maindoc.
+		}
+		where {
+			graph containerlocal:metadata {
+				?doc a frbr:Work.
+				OPTIONAL {?doc rdfs:label ?doc_label}
+				OPTIONAL {?doc dct:isPartOf ?maindoc}
+			}
+		}
+	'''
+.
+stage:Brondocumenten_list a elmo:Part;
+	elmo:fragment [
+		elmo:applies-to "work";
+		rdfs:label "Document";
+	];
+	elmo:fragment [
+		elmo:applies-to "expression";
+		rdfs:label "Versie";
+	];
+	elmo:fragment [
+		elmo:applies-to "expression_url";
+		rdfs:label "Locatie";
+	];
+	elmo:query '''
+		prefix containerlocal: <http://localhost:8080/inspire/container/>
+		prefix frbr: <http://purl.org/vocab/frbr/core#>
+		prefix dct: <http://purl.org/dc/terms/>
+		prefix foaf: <http://xmlns.com/foaf/0.1/>
+		select ?work ?work_label ?expression ?expression_label ?expression_url
+		where {
+			graph containerlocal:metadata {
+				{
+					?work a frbr:Work
+					OPTIONAL {?work rdfs:label ?work_label}
+					?expression frbr:realizationOf ?work.
+					OPTIONAL {?expression rdfs:label ?expression_label}
+					OPTIONAL {?expression foaf:isPrimaryTopicOf ?expression_url}
+				}
+				UNION
+				{
+					?expression a frbr:Expression
+					OPTIONAL {?expression rdfs:label ?expression_label}
+					OPTIONAL {?expression foaf:isPrimaryTopicOf ?expression_url}
+					FILTER NOT EXISTS {
+						?expression frbr:realizationOf ?work
+					}
+				}
+			}
+		}
+	'''
+.

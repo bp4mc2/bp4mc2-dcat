@@ -1,0 +1,831 @@
+@prefix inspire-concept: <http://bp4mc2.org/inspire/id/concept/>.
+@prefix inspire-collection: <http://bp4mc2.org/inspire/id/collection/>.
+@prefix inspire-scheme: <http://bp4mc2.org/inspire/id/conceptscheme/>.
+@prefix inspire-shape: <http://bp4mc2.org/inspire/def/inspire-shape#>.
+@prefix inspire-lex: <http://bp4mc2.org/inspire/id/regelgeving/>.
+@prefix inspire: <http://bp4mc2.org/inspire/def/inspire#>.
+@prefix inspire-meta: <http://bp4mc2.org/inspire/def/meta#>.
+@prefix inspire-voc: <http://bp4mc2.org/inspire/id/vocabulary/>.
+@prefix inspire-tg: <http://bp4mc2.org/inspire/id/guideline/>.
+
+@prefix nlprofiel: <http://bp4mc2.org/nlprofiel19115/def/nlprofiel-shape#>.
+@prefix wiki: <http://bp4mc2.org/nlprofiel19115/id/wiki/>.
+
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dctype: <http://purl.org/dc/dcmitype/>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix spdx: <http://spdx.org/rdf/terms#> .
+@prefix tosh: <http://topbraid.org/tosh#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix frbr: <http://purl.org/vocab/frbr/core#>.
+
+wiki:sectie5-2-1 a frbr:Work;
+  rdfs:label "5.2.1 Titel van de bron"@nl;
+  foaf:isPrimaryTopicOf <https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#titel-van-de-bron>
+.
+wiki:sectie5-2-2 a frbr:Work;
+  rdfs:label "5.2.2 Datum van de bron"@nl;
+  foaf:isPrimaryTopicOf <https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#datum-van-de-bron>
+.
+wiki:sectie5-2-3 a frbr:Work;
+  rdfs:label "5.2.3 Datum type van de bron"@nl;
+  foaf:isPrimaryTopicOf <https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#datum-type-van-de-bron>
+.
+wiki:sectie5-2-4 a frbr:Work;
+  rdfs:label "5.2.4 Unieke identifier van de bron"@nl;
+  foaf:isPrimaryTopicOf <https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#unieke-identifier-van-de-bron>
+.
+wiki:sectie5-2-5 a frbr:Work;
+  rdfs:label "5.2.5 Samenvatting"@nl;
+  foaf:isPrimaryTopicOf <https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#samenvatting>
+.
+wiki:sectie5-2-6 a frbr:Work;
+  rdfs:label "5.2.6 Status"@nl;
+  foaf:isPrimaryTopicOf <https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#status>
+.
+wiki:sectie5-2-7 a frbr:Work;
+  rdfs:label "5.2.7 Taal van de bron"@nl;
+  foaf:isPrimaryTopicOf <https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#taal-van-de-bron>
+.
+wiki:sectie5-2-8 a frbr:Work;
+  rdfs:label "5.2.8 Karakterset van de bron"@nl;
+  foaf:isPrimaryTopicOf <https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#karakterset-van-de-bron>
+.
+wiki:sectie5-2-9 a frbr:Work;
+  rdfs:label "5.2.9 Onderwerp"@nl;
+  foaf:isPrimaryTopicOf <https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#onderwerp>
+.
+wiki:sectie5-2-10 a frbr:Work;
+  rdfs:label "5.2.10 Verantwoordelijke organisatie bron"@nl;
+  foaf:isPrimaryTopicOf <https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#verantwoordelijke-organisatie-bron>
+.
+wiki:sectie5-2-11 a frbr:Work;
+  rdfs:label "5.2.11 Verantwoordelijke organisatie bron: email"@nl;
+  foaf:isPrimaryTopicOf <https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#verantwoordelijke-organisatie-bron-email>
+.
+wiki:sectie5-2-12 a frbr:Work;
+  rdfs:label "5.2.12 Verantwoordelijke organisatie bron rol"@nl;
+  foaf:isPrimaryTopicOf <https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#verantwoordelijke-organisatie-bron:-rol>
+.
+wiki:sectie5-2-13 a frbr:Work;
+  rdfs:label "5.2.13 Trefwoord"@nl;
+  foaf:isPrimaryTopicOf <https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#trefwoord>
+.
+wiki:sectie5-2-14 a frbr:Work;
+  rdfs:label "5.2.14 Thesaurus"@nl;
+  foaf:isPrimaryTopicOf <https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#thesaurus>
+.
+wiki:sectie5-2-15 a frbr:Work;
+  rdfs:label "5.2.15 Thesaurusdatum"@nl;
+  foaf:isPrimaryTopicOf <https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#thesaurusdatum>
+.
+wiki:sectie5-2-16 a frbr:Work;
+  rdfs:label "5.2.16 Thesaurusdatum type"@nl;
+  foaf:isPrimaryTopicOf <https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#thesaurusdatum-type>
+.
+wiki:sectie5-2-17 a frbr:Work;
+  rdfs:label "5.2.17 Juridische toegangsrestricties"@nl;
+  foaf:isPrimaryTopicOf <https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#juridische-toegangsrestricties>
+.
+wiki:sectie5-2-18 a frbr:Work;
+  rdfs:label "5.2.18 Overige beperkingen"@nl;
+  foaf:isPrimaryTopicOf <https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#overige-beperkingen>
+.
+wiki:sectie5-2-19 a frbr:Work;
+  rdfs:label "5.2.19 Gebruiksbeperkingen"@nl;
+  foaf:isPrimaryTopicOf <https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#gebruiksbeperkingen>
+.
+wiki:sectie5-2-20 a frbr:Work;
+  rdfs:label "5.2.20 Ruimtelijk schema van de bron"@nl;
+  foaf:isPrimaryTopicOf <https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#ruimtelijk-schema-van-de-bron>
+.
+wiki:sectie5-2-21 a frbr:Work;
+  rdfs:label "5.2.21 Toepassingsschaal"@nl;
+  foaf:isPrimaryTopicOf <https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#toepassingsschaal>
+.
+wiki:sectie5-2-22 a frbr:Work;
+  rdfs:label "5.2.22 Resolutie"@nl;
+  foaf:isPrimaryTopicOf <https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#resolutie>
+.
+wiki:sectie5-2-23 a frbr:Work;
+  rdfs:label "5.2.23 Codereferentiesysteem"@nl;
+  foaf:isPrimaryTopicOf <https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#codereferentiesysteem>
+.
+wiki:sectie5-2-24 a frbr:Work;
+  rdfs:label "5.2.24 Temporeel referentiesysteem"@nl;
+  foaf:isPrimaryTopicOf <https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#temporeel-referentiesysteem>
+.
+wiki:sectie5-2-25 a frbr:Work;
+  rdfs:label "5.2.25 Omgrenzende rechthoek"@nl;
+  foaf:isPrimaryTopicOf <https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#omgrenzende-rechthoek>
+.
+wiki:sectie5-2-26 a frbr:Work;
+  rdfs:label "5.2.26 Naam distributie formaat"@nl;
+  foaf:isPrimaryTopicOf <https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#naam-distributie-formaat>
+.
+wiki:sectie5-2-27 a frbr:Work;
+  rdfs:label "5.2.27 Versie distributie formaat"@nl;
+  foaf:isPrimaryTopicOf <https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#versie-distributie-formaat>
+.
+wiki:sectie5-2-28 a frbr:Work;
+  rdfs:label "5.2.28 Specificatie distributie formaat"@nl;
+  foaf:isPrimaryTopicOf <https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#specificatie-distributie-formaat>
+.
+wiki:sectie5-2-29 a frbr:Work;
+  rdfs:label "5.2.29 URL"@nl;
+  foaf:isPrimaryTopicOf <https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#url>
+.
+wiki:sectie5-2-30 a frbr:Work;
+  rdfs:label "5.2.30 Protocol"@nl;
+  foaf:isPrimaryTopicOf <https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#protocol>
+.
+wiki:sectie5-2-31 a frbr:Work;
+  rdfs:label "5.2.31 Naam"@nl;
+  foaf:isPrimaryTopicOf <https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#naam>
+.
+wiki:sectie5-2-32 a frbr:Work;
+  rdfs:label "5.2.32 Description"@nl;
+  foaf:isPrimaryTopicOf <https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#description>
+.
+wiki:sectie5-2-33 a frbr:Work;
+  rdfs:label "5.2.33 Niveau kwaliteitsbeschrijving"@nl;
+  foaf:isPrimaryTopicOf <https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#niveau-kwaliteitsbeschrijving>
+.
+wiki:sectie5-2-34 a frbr:Work;
+  rdfs:label "5.2.34 Algemene beschrijving herkomst"@nl;
+  foaf:isPrimaryTopicOf <https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#algemene-beschrijving-herkomst>
+.
+wiki:sectie5-2-35 a frbr:Work;
+  rdfs:label "5.2.35 Specificatie"@nl;
+  foaf:isPrimaryTopicOf <https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#specificatie>
+.
+wiki:sectie5-2-36 a frbr:Work;
+  rdfs:label "5.2.36 Specificatiedatum"@nl;
+  foaf:isPrimaryTopicOf <https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#specificatiedatum>
+.
+wiki:sectie5-2-37 a frbr:Work;
+  rdfs:label "5.2.37 Specificatiedatum type"@nl;
+  foaf:isPrimaryTopicOf <https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#specificatiedatum-type>
+.
+wiki:sectie5-2-38 a frbr:Work;
+  rdfs:label "5.2.38 Verklaring"@nl;
+  foaf:isPrimaryTopicOf <https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#verklaring>
+.
+wiki:sectie5-2-39 a frbr:Work;
+  rdfs:label "5.2.39 Conformiteit indicatie met de specificatie"@nl;
+  foaf:isPrimaryTopicOf <https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#conformiteit-indicatie-met-de-specificatie>
+.
+wiki:sectie5-2-40 a frbr:Work;
+  rdfs:label "5.2.40 Topologische samenhang"@nl;
+  foaf:isPrimaryTopicOf <https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#topologische-samenhang>
+.
+wiki:sectie5-2-41 a frbr:Work;
+  rdfs:label "5.2.41 Type waarde"@nl;
+  foaf:isPrimaryTopicOf <https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#Type-waarde>
+.
+wiki:sectie5-2-42 a frbr:Work;
+  rdfs:label "5.2.42 Metadata unieke identifier"@nl;
+  foaf:isPrimaryTopicOf <https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#metadata-unieke-identifier>
+.
+wiki:sectie5-2-43 a frbr:Work;
+  rdfs:label "5.2.43 Metadata datum"@nl;
+  foaf:isPrimaryTopicOf <https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#metadatadatum>
+.
+wiki:sectie5-2-44 a frbr:Work;
+  rdfs:label "5.2.44 Taal van de metadata"@nl;
+  foaf:isPrimaryTopicOf <https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#taal-van-de-metadata>
+.
+wiki:sectie5-2-45 a frbr:Work;
+  rdfs:label "5.2.45 Parent unieke identifier"@nl;
+  foaf:isPrimaryTopicOf <https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#parent-unieke-identifier>
+.
+wiki:sectie5-2-46 a frbr:Work;
+  rdfs:label "5.2.46 Hiërarchieniveau"@nl;
+  foaf:isPrimaryTopicOf <https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#hi%C3%ABrarchieniveau>
+.
+wiki:sectie5-2-47 a frbr:Work;
+  rdfs:label "5.2.47 Hiërarchieniveaunaam"@nl;
+  foaf:isPrimaryTopicOf <https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#hi%C3%ABrarchieniveaunaam>
+.
+wiki:sectie5-2-48 a frbr:Work;
+  rdfs:label "5.2.48 Verantwoordelijke organisatie metadata"@nl;
+  foaf:isPrimaryTopicOf <https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#verantwoordelijke-organisatie-metadata>
+.
+wiki:sectie5-2-49 a frbr:Work;
+  rdfs:label "5.2.49 Verantwoordelijke organisatie metadata rol"@nl;
+  foaf:isPrimaryTopicOf <https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#verantwoordelijke-organisatie-metadata:-rol>
+.
+wiki:sectie5-2-50 a frbr:Work;
+  rdfs:label "5.2.50 Verantwoordelijke organisatie metadata email "@nl;
+  foaf:isPrimaryTopicOf <https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#verantwoordelijke-organisatie-metadata:-e-mail>
+.
+wiki:sectie5-2-51 a frbr:Work;
+  rdfs:label "5.2.51 Metadata standaard naam "@nl;
+  foaf:isPrimaryTopicOf <https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#metadata-standaard-naam>
+.
+wiki:sectie5-2-52 a frbr:Work;
+  rdfs:label "5.2.52 Metadatastandaard versie"@nl;
+  foaf:isPrimaryTopicOf <https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#metadatastandaard-versie>
+.
+wiki:sectie5-2-53 a frbr:Work;
+  rdfs:label "5.2.53 Unieke identifier van de identificatie sectie"@nl;
+  foaf:isPrimaryTopicOf <https://docs.geostandaarden.nl/md/mdprofiel-iso19115/#unieke-identifier-van-de-identificatie-sectie>
+.
+
+nlprofiel:Bron a sh:NodeShape;
+  sh:name "+Resource";
+  rdfs:label "Bron"@nl;
+
+  #Informatie over de bron
+  sh:property nlprofiel:TitelVanDeBron;
+  sh:property nlprofiel:DatumVanDeBron;
+  sh:property nlprofiel:DatumtypeVanDeBron;
+  sh:property nlprofiel:UniekeIdentifierVanDeBron;
+  sh:property nlprofiel:Samenvatting;
+  sh:property nlprofiel:Status;
+  sh:property nlprofiel:TaalVanDeBron;
+  sh:property nlprofiel:KaraktersetVanDeBron;
+  sh:property nlprofiel:Onderwerp;
+
+  sh:property [
+    sh:name "responsibleOrganisation";
+    sh:node nlprofiel:VerantwoordelijkeOrganisatieBron;
+  ];
+  sh:property [
+    sh:name "keyword";
+    sh:node nlprofiel:Trefwoorden;
+  ];
+
+  #Beperkingen
+  sh:property nlprofiel:JuridischeToegangsrestricties;
+  sh:property nlprofiel:OverigeBeperkingen;
+  sh:property nlprofiel:Gebruiksbeperkingen;
+
+  #Ruimtelijke informatie Bron
+  sh:property nlprofiel:RuimtelijkSchemaVanDeBron;
+  sh:property nlprofiel:Toepassingsschaal;
+  sh:property nlprofiel:Resolutie;
+  sh:property nlprofiel:RuimtelijkReferentiesysteem;
+  sh:property nlprofiel:TemporeelReferentiesysteem;
+  sh:property nlprofiel:OmgrenzendeRechthoek;
+
+  sh:property [
+    sh:name "encoding";
+    sh:node nlprofiel:DistributieFormaat;
+  ];
+  sh:property [
+    sh:name "locator";
+    sh:node nlprofiel:Distributie;
+  ];
+
+  #Kwaliteits informatie
+  sh:property nlprofiel:NiveauKwaliteitsbeschrijving;
+  sh:property nlprofiel:AlgemeneBeschrijvingHerkomst;
+
+  sh:property [
+    sh:name "conformity";
+    sh:node nlprofiel:Conformiteit;
+  ];
+  sh:property [
+    sh:name "topologicalConsistency";
+    sh:node nlprofiel:TopologischeSamenhang;
+  ];
+
+  #Informatie over de metadata
+  sh:property nlprofiel:MetadataUniekeIdentifier;
+  sh:property nlprofiel:Metadatadatum;
+  sh:property nlprofiel:TaalVanDeMetadata;
+  sh:property nlprofiel:ParentUniekeIdentifier;
+  sh:property nlprofiel:Hierarchieniveau;
+  sh:property nlprofiel:HierarchieniveauNaam;
+
+  sh:property [
+    sh:name "metadataPointOfContact";
+    sh:node nlprofiel:VerantwoordelijkeOrganisatieMetadata;
+  ];
+
+  #Metadata standaard
+  sh:property nlprofiel:MetadataStandaardNaam;
+  sh:property nlprofiel:MetadataStandaardVersie;
+
+  sh:property nlprofiel:UniekeIdentifierVanDeIdentificatieSectie;
+.
+
+nlprofiel:VerantwoordelijkeOrganisatieBron a sh:NodeShape;
+  sh:name "+ResponsibleOrganisation";
+  rdfs:label "Verantwoordelijke organisatie bron"@nl;
+  sh:property nlprofiel:VerantwoordelijkeOrganisatieBronNaam;
+  sh:property nlprofiel:VerantwoordelijkeOrganisatieBronEmail;
+  sh:property nlprofiel:VerantwoordelijkeOrganisatieBronRol;
+.
+
+nlprofiel:Trefwoorden a sh:NodeShape;
+  sh:name "+Keyword";
+  rdfs:label "Trefwoorden"@nl;
+  sh:property nlprofiel:Trefwoord;
+  sh:property nlprofiel:Thesaurus;
+  sh:property nlprofiel:Thesaurusdatum;
+  sh:property nlprofiel:ThesaurusdatumType;
+.
+
+nlprofiel:OmgrenzendeRechthoekElement a sh:NodeShape;
+  sh:name "+BoudingBox";
+  rdfs:label "Omgrenzende rechthoek"@nl;
+  #TODO: De 4 eigenschappen hiervan
+.
+
+nlprofiel:DistributieFormaat a sh:NodeShape;
+  sh:name "*Format";
+  rdfs:label "Distributie formaat"@nl;
+  sh:property nlprofiel:NaamDistributieFormaat;
+  sh:property nlprofiel:VersieDistributieFormaat;
+  sh:property nlprofiel:SpecificatieDistributieFormaat;
+.
+
+nlprofiel:Distributie a sh:NodeShape;
+  sh:name "+ResourceLocatorElement";
+  rdfs:label "Distributie"@nl;
+  sh:property nlprofiel:URL;
+  sh:property nlprofiel:Protocol;
+  sh:property nlprofiel:Naam;
+  sh:property nlprofiel:Omschrijving;
+.
+
+nlprofiel:Conformiteit a sh:NodeShape;
+  sh:name "+Conformity";
+  rdfs:label "Conformiteit"@nl;
+  sh:property nlprofiel:Specificatie;
+  sh:property nlprofiel:Specificatiedatum;
+  sh:property nlprofiel:SpecificatiedatumType;
+  sh:property nlprofiel:VerklaringConformiteit;
+  sh:property nlprofiel:ConformiteitIndicatieMetDeSpecificatie;
+.
+
+nlprofiel:TopologischeSamenhang a sh:NodeShape;
+  sh:name "+ConformanceResult";
+  rdfs:label "Topologische samenhang"@nl;
+  #TODO: Lijkt niet helemaal overeen te komen met de Inspire beschrijving: how come??
+  sh:property nlprofiel:WaardeTopologischeSamenhang;
+  sh:property nlprofiel:TypeWaardeTopologischeSamenhang;
+.
+
+nlprofiel:VerantwoordelijkeOrganisatieMetadata a sh:NodeShape;
+  sh:name "+Party";
+  rdfs:label "Verantwoordelijke organisatie metadata"@nl;
+  sh:property nlprofiel:VerantwoordelijkeOrganisatieMetadataNaam;
+  sh:property nlprofiel:VerantwoordelijkeOrganisatieMetadataRol;
+  sh:property nlprofiel:VerantwoordelijkeOrganisatieMetadataEmail;
+.
+
+nlprofiel:TitelVanDeBron a sh:PropertyShape;
+  sh:order 1;
+  sh:name "title";
+  rdfs:label "Titel van de bron"@nl;
+  inspire-meta:xpath "identificationInfo[1]/*/citation/*/title";
+  dct:source wiki:sectie5-2-1;
+   prov:wasDerivedFrom inspire-shape:ResourceTitle
+.
+nlprofiel:DatumVanDeBron a sh:PropertyShape;
+  sh:order 2;
+  sh:name "date";
+  rdfs:label "Datum van de bron"@nl;
+  inspire-meta:xpath "identificationInfo[1]/*/citation/*/date/*/date";
+  dct:source wiki:sectie5-2-2;
+  prov:wasDerivedFrom inspire-shape:CIDateDate;
+  prov:wasDerivedFrom inspire-shape:DateOfPublication;
+  prov:wasDerivedFrom inspire-shape:DateOfLastRevision;
+  prov:wasDerivedFrom inspire-shape:DateOfCreation;
+.
+nlprofiel:DatumtypeVanDeBron a sh:PropertyShape;
+  sh:order 3;
+  sh:name "dateType";
+  rdfs:label "Datumtype van de bron"@nl;
+  inspire-meta:xpath "identificationInfo[1]/*/citation/*/date/*/dateType";
+  dct:source wiki:sectie5-2-3;
+   prov:wasDerivedFrom inspire-shape:CIDateDateType;
+.
+nlprofiel:UniekeIdentifierVanDeBron a sh:PropertyShape;
+  sh:order 4;
+  sh:name "identifier";
+  rdfs:label "Unieke identificatie van de bron"@nl;
+  inspire-meta:xpath "identificationInfo[1]/*/citation/*/identifier/MD_Identifier/code";
+  dct:source wiki:sectie5-2-4;
+   prov:wasDerivedFrom inspire-shape:UniqueResourceIdentifier;
+.
+nlprofiel:Samenvatting a sh:PropertyShape;
+  sh:order 5;
+  sh:name "abstract";
+  rdfs:label "Samenvatting"@nl;
+  inspire-meta:xpath "identificationInfo[1]/*/abstract";
+  dct:source wiki:sectie5-2-5;
+   prov:wasDerivedFrom inspire-shape:ResourceAbstract
+.
+nlprofiel:Status a sh:PropertyShape;
+  sh:order 6;
+  sh:name "status";
+  rdfs:label "Status"@nl;
+  inspire-meta:xpath "identificationInfo[1]/*/status";
+  dct:source wiki:sectie5-2-6;
+.
+nlprofiel:TaalVanDeBron a sh:PropertyShape;
+  sh:order 7;
+  sh:name "language";
+  rdfs:label "Taal van de bron"@nl;
+  inspire-meta:xpath "identificationInfo[1]/*/language";
+  dct:source wiki:sectie5-2-7;
+  prov:wasDerivedFrom inspire-shape:ResourceLanguage
+.
+nlprofiel:KaraktersetVanDeBron a sh:PropertyShape;
+  sh:order 8;
+  sh:name "characterEncoding";
+  rdfs:label "Karakterset van de bron"@nl;
+  inspire-meta:xpath "identificationInfo[1]/*/";
+  dct:source wiki:sectie5-2-8;
+  prov:wasDerivedFrom inspire-shape:SpatialDatasetCharacterEncoding;
+.
+nlprofiel:Onderwerp a sh:PropertyShape;
+  sh:order 9;
+  sh:name "topicCategory";
+  rdfs:label "Onderwerp"@nl;
+  inspire-meta:xpath "identificationInfo[1]/*/topicCategory";
+  dct:source wiki:sectie5-2-9;
+   prov:wasDerivedFrom inspire-shape:TopicCategory
+.
+nlprofiel:VerantwoordelijkeOrganisatieBronNaam a sh:PropertyShape;
+  sh:order 10;
+  sh:name "organisationName";
+  rdfs:label "Verantwoordelijke organisatie bron"@nl;
+  inspire-meta:xpath "identificationInfo[1]/*/pointOfContact/*/organisationName";
+  dct:source wiki:sectie5-2-10;
+  prov:wasDerivedFrom inspire-shape:ResponsibleParty;
+  prov:wasDerivedFrom inspire-shape:PartyOrganisationName
+.
+nlprofiel:VerantwoordelijkeOrganisatieBronEmail a sh:PropertyShape;
+  sh:order 11;
+  sh:name "contactInfo/electronicMailAddress";
+  rdfs:label "Verantwoordelijke organisatie bron: email"@nl;
+  inspire-meta:xpath "identificationInfo[1]/*/pointOfContact/*/contactInfo/*/address/*/electronicMailAddress";
+  dct:source wiki:sectie5-2-11;
+  prov:wasDerivedFrom inspire-shape:ResponsibleParty;
+  prov:wasDerivedFrom inspire-shape:PartyContactInfo;
+  prov:wasDerivedFrom inspire-shape:AddressElectronicMailAddress
+.
+nlprofiel:VerantwoordelijkeOrganisatieBronRol a sh:PropertyShape;
+  sh:order 12;
+  sh:name "responsiblePartyRole";
+  rdfs:label "Verantwoordelijke organisatie bron: rol"@nl;
+  inspire-meta:xpath "identificationInfo[1]/*/pointOfContact/*/role";
+  dct:source wiki:sectie5-2-12;
+  prov:wasDerivedFrom inspire-shape:ResponsiblePartyRole
+.
+nlprofiel:Trefwoord a sh:PropertyShape;
+  sh:order 13;
+  sh:name "keywordValue";
+  rdfs:label "Trefwoord"@nl;
+  inspire-meta:xpath "identificationInfo[1]/*/descriptiveKeywords/*/keyword";
+  dct:source wiki:sectie5-2-13;
+  prov:wasDerivedFrom inspire-shape:KeywordValue
+.
+nlprofiel:Thesaurus a sh:PropertyShape;
+  sh:order 14;
+  sh:name "originatingControlledVocabulary/title";
+  rdfs:label "Thesaurus"@nl;
+  inspire-meta:xpath "identificationInfo[1]/*/descriptiveKeywords/*/thesaurusName/*/title";
+  dct:source wiki:sectie5-2-14;
+  prov:wasDerivedFrom inspire-shape:KeywordOriginatingControlledVocabulary;
+  prov:wasDerivedFrom inspire-shape:CitationTitle;
+.
+nlprofiel:Thesaurusdatum a sh:PropertyShape;
+  sh:order 15;
+  sh:name "originatingControlledVocabulary/referenceDate/date";
+  rdfs:label "Thesaurusdatum"@nl;
+  inspire-meta:xpath "identificationInfo[1]/*/descriptiveKeywords/*/thesaurusName/*/date/*/date";
+  dct:source wiki:sectie5-2-15;
+  prov:wasDerivedFrom inspire-shape:KeywordOriginatingControlledVocabulary;
+  prov:wasDerivedFrom inspire-shape:CitationReferenceDate;
+  prov:wasDerivedFrom inspire-shape:CIDateDate;
+.
+nlprofiel:ThesaurusdatumType a sh:PropertyShape;
+  sh:order 16;
+  sh:name "originatingControlledVocabulary/referenceDate/dateType";
+  rdfs:label "Thesaurusdatum type"@nl;
+  inspire-meta:xpath "identificationInfo[1]/*/descriptiveKeywords/*/thesaurusName/*/date/*/dateType";
+  dct:source wiki:sectie5-2-16;
+  prov:wasDerivedFrom inspire-shape:KeywordOriginatingControlledVocabulary;
+  prov:wasDerivedFrom inspire-shape:CitationReferenceDate;
+  prov:wasDerivedFrom inspire-shape:CIDateDateType;
+.
+nlprofiel:JuridischeToegangsrestricties a sh:PropertyShape;
+  sh:order 17;
+  sh:name "accessConstraints";
+  rdfs:label "Juridische toegangsrestricties"@nl;
+  inspire-meta:xpath "identificationInfo[1]/*/resourceConstraints/*/accessConstraints";
+  dct:source wiki:sectie5-2-17;
+  prov:wasDerivedFrom inspire-shape:ConditionsApplyingToAccessAndUse;
+.
+nlprofiel:OverigeBeperkingen a sh:PropertyShape;
+  sh:order 18;
+  sh:name "otherConstraints";
+  rdfs:label "Overige beperkingen"@nl;
+  inspire-meta:xpath "identificationInfo[1]/*/resourceConstraints/*/otherConstraints";
+  dct:source wiki:sectie5-2-18;
+  prov:wasDerivedFrom inspire-shape:ConditionsApplyingToAccessAndUseOtherConstraints;
+.
+nlprofiel:Gebruiksbeperkingen a sh:PropertyShape;
+  sh:order 19;
+  sh:name "useLimitation";
+  rdfs:label "Gebruiksbeperkingen"@nl;
+  inspire-meta:xpath "identificationInfo[1]/*/resourceConstraints/*/useLimitation";
+  dct:source wiki:sectie5-2-19;
+.
+nlprofiel:RuimtelijkSchemaVanDeBron a sh:PropertyShape;
+  sh:order 20;
+  sh:name "spatialRepresentationType";
+  rdfs:label "Ruimtelijk schema van de bron"@nl;
+  inspire-meta:xpath "identificationInfo[1]/*/spatialRepresentationType/MD_SpatialRepresentationTypeCode";
+  dct:source wiki:sectie5-2-20;
+  prov:wasDerivedFrom inspire-shape:SpatialDatasetSpatialRepresentationType;
+.
+nlprofiel:Toepassingsschaal a sh:PropertyShape;
+  sh:order 21;
+  sh:name "spatialResolution";
+  rdfs:label "Toepassingsschaal"@nl;
+  inspire-meta:xpath "identificationInfo[1]/*/spatialResolution/*/equivalentScale/*/denominator";
+  dct:source wiki:sectie5-2-21;
+  prov:wasDerivedFrom inspire-shape:SpatialResolutionEquivalentScale;
+.
+nlprofiel:Resolutie a sh:PropertyShape;
+  sh:order 22;
+  sh:name "spatialResolution";
+  rdfs:label "Resolutie"@nl;
+  inspire-meta:xpath "identificationInfo[1]/*/spatialResolution/*/distance";
+  dct:source wiki:sectie5-2-22;
+  prov:wasDerivedFrom inspire-shape:SpatialResolutionDistance;
+.
+nlprofiel:RuimtelijkReferentiesysteem a sh:PropertyShape;
+  sh:order 23;
+  sh:name "coordinateReferenceSystem/code";
+  rdfs:label "Ruimtelijk referentiesysteem"@nl;
+  inspire-meta:xpath "referenceSystemInfo/*/referenceSystemIdentifier/*/code";
+  dct:source wiki:sectie5-2-23;
+  prov:wasDerivedFrom inspire-shape:SpatialDatasetCoordinateReferenceSystem;
+  prov:wasDerivedFrom inspire-shape:ReferenceSystemCode;
+.
+nlprofiel:TemporeelReferentiesysteem a sh:PropertyShape;
+  sh:order 24;
+  sh:name "temporalReferenceSystem/code";
+  rdfs:label "Temporeel referentiesysteem"@nl;
+  inspire-meta:xpath "referenceSystemInfo/*/referenceSystemIdentifier/*/code";
+  dct:source wiki:sectie5-2-24;
+  prov:wasDerivedFrom inspire-shape:SpatialDatasetTemporalReferenceSystem;
+  prov:wasDerivedFrom inspire-shape:ReferenceSystemCode;
+.
+nlprofiel:OmgrenzendeRechthoek a sh:PropertyShape;
+  sh:order 25;
+  sh:name "geographicBoundingBox";
+  rdfs:label "Omgrenzende rechthoek"@nl;
+  inspire-meta:xpath "identificationInfo[1]/*/extent/*/geographicElement/*/";
+  dct:source wiki:sectie5-2-25;
+  prov:wasDerivedFrom inspire-shape:GeographicBoundingBox;
+  sh:node nlprofiel:OmgrenzendeRechthoekElement
+.
+nlprofiel:NaamDistributieFormaat a sh:PropertyShape;
+  sh:order 26;
+  sh:name "name";
+  rdfs:label "Naam distributie formaat"@nl;
+  inspire-meta:xpath "distributionInfo/*/distributionFormat/*/name";
+  dct:source wiki:sectie5-2-26;
+  prov:wasDerivedFrom inspire-shape:SpatialDatasetEncoding;
+  prov:wasDerivedFrom inspire-shape:FormatName;
+.
+nlprofiel:VersieDistributieFormaat a sh:PropertyShape;
+  sh:order 27;
+  sh:name "version";
+  rdfs:label "Versie distributie formaat"@nl;
+  inspire-meta:xpath "distributionInfo/*/distributionFormat/*/version";
+  dct:source wiki:sectie5-2-27;
+  prov:wasDerivedFrom inspire-shape:SpatialDatasetEncoding;
+  prov:wasDerivedFrom inspire-shape:FormatVersion;
+.
+nlprofiel:SpecificatieDistributieFormaat a sh:PropertyShape;
+  sh:order 28;
+  sh:name "specification";
+  rdfs:label "Specificatie distributie formaat"@nl;
+  inspire-meta:xpath "distributionInfo/*/distributionFormat/*/specification";
+  dct:source wiki:sectie5-2-28;
+.
+nlprofiel:URL a sh:PropertyShape;
+  sh:order 29;
+  sh:name "locator";
+  rdfs:label "URL"@nl;
+  inspire-meta:xpath "distributionInfo/*/transferOptions/*/onLine/*/linkage";
+  dct:source wiki:sectie5-2-29;
+  prov:wasDerivedFrom inspire-shape:ResourceLocatorElementURL;
+.
+nlprofiel:Protocol a sh:PropertyShape;
+  sh:order 30;
+  sh:name "protocol";
+  rdfs:label "Protocol"@nl;
+  inspire-meta:xpath "distributionInfo/*/transferOptions/*/onLine/*/protocol";
+  dct:source wiki:sectie5-2-30;
+.
+nlprofiel:Naam a sh:PropertyShape;
+  sh:order 31;
+  sh:name "name";
+  rdfs:label "Naam"@nl;
+  inspire-meta:xpath "distributionInfo/*/transferOptions/*/onLine/*/name";
+  dct:source wiki:sectie5-2-31;
+  prov:wasDerivedFrom inspire-shape:ResourceLocatorElementName;
+.
+nlprofiel:Omschrijving a sh:PropertyShape;
+  sh:order 32;
+  sh:name "description";
+  rdfs:label "Omschrijving"@nl;
+  inspire-meta:xpath "distributionInfo/*/transferOptions/*/onLine/*/description";
+  dct:source wiki:sectie5-2-32;
+  prov:wasDerivedFrom inspire-shape:ResourceLocatorElementDescriptionCode;
+.
+nlprofiel:NiveauKwaliteitsbeschrijving a sh:PropertyShape;
+  sh:order 33;
+  sh:name "level";
+  rdfs:label "Niveau kwaliteitsbeschrijving"@nl;
+  inspire-meta:xpath "dataQualityInfo/*/scope/*/level";
+  dct:source wiki:sectie5-2-33;
+.
+nlprofiel:AlgemeneBeschrijvingHerkomst a sh:PropertyShape;
+  sh:order 34;
+  sh:name "lineage";
+  rdfs:label "Algemene beschrijving herkomst"@nl;
+  inspire-meta:xpath "dataQualityInfo/*/lineage/*/statement";
+  dct:source wiki:sectie5-2-34;
+  prov:wasDerivedFrom inspire-shape:Lineage;
+.
+nlprofiel:Specificatie a sh:PropertyShape;
+  sh:order 35;
+  sh:name "specification/title";
+  rdfs:label "Specificatie"@nl;
+  inspire-meta:xpath "dataQualityInfo/*/report/*/result/*/specification/*/title";
+  dct:source wiki:sectie5-2-35;
+  prov:wasDerivedFrom inspire-shape:ConformitySpecification;
+  prov:wasDerivedFrom inspire-shape:CitationTitle;
+.
+nlprofiel:Specificatiedatum a sh:PropertyShape;
+  sh:order 36;
+  sh:name "specification/date/date";
+  rdfs:label "Specificatiedatum"@nl;
+  inspire-meta:xpath "dataQualityInfo/*/report/*/result/*/specification/*/date/*/date";
+  dct:source wiki:sectie5-2-36;
+  prov:wasDerivedFrom inspire-shape:ConformitySpecification;
+  prov:wasDerivedFrom inspire-shape:CIDateDate;
+.
+nlprofiel:SpecificatiedatumType a sh:PropertyShape;
+  sh:order 37;
+  sh:name "specification/date/dateType";
+  rdfs:label "Specificatiedatum type"@nl;
+  inspire-meta:xpath "dataQualityInfo/*/report/*/result/*/specification/*/date/*/dateType";
+  dct:source wiki:sectie5-2-37;
+  prov:wasDerivedFrom inspire-shape:ConformitySpecification;
+  prov:wasDerivedFrom inspire-shape:CIDateDateType;
+.
+nlprofiel:VerklaringConformiteit a sh:PropertyShape;
+  sh:order 38;
+  sh:name "explanation";
+  rdfs:label "Verklaring conformiteit"@nl;
+  inspire-meta:xpath "dataQualityInfo/*/report/*/result/*/explanation";
+  dct:source wiki:sectie5-2-38;
+  prov:wasDerivedFrom inspire-shape:ConformanceResultExplanation;
+.
+nlprofiel:ConformiteitIndicatieMetDeSpecificatie a sh:PropertyShape;
+  sh:order 39;
+  sh:name "degree";
+  rdfs:label "Conformiteit indicatie met de specificatie"@nl;
+  inspire-meta:xpath "dataQualityInfo/*/report/*/result/*/pass";
+  dct:source wiki:sectie5-2-39;
+  prov:wasDerivedFrom inspire-shape:ConformityDegree;
+.
+nlprofiel:WaardeTopologischeSamenhang a sh:PropertyShape;
+  sh:order 40;
+  sh:name "topologicalConsistency";
+  rdfs:label "Waarde topologische samenhang"@nl;
+  inspire-meta:xpath "dataQualityInfo/*/report/*/";
+  dct:source wiki:sectie5-2-40;
+  prov:wasDerivedFrom inspire-shape:SpatialDatasetTopologicalConsistencyQuantitive;
+.
+nlprofiel:TypeWaardeTopologischeSamenhang a sh:PropertyShape;
+  sh:order 41;
+  sh:name "topologicalConsistency";
+  rdfs:label "Type waarde topologische samenhang"@nl;
+  inspire-meta:xpath "dataQualityInfo/*/report/*/";
+  dct:source wiki:sectie5-2-41;
+  prov:wasDerivedFrom inspire-shape:SpatialDatasetTopologicalConsistencyDescriptive;
+.
+nlprofiel:MetadataUniekeIdentifier a sh:PropertyShape;
+  sh:order 42;
+  sh:name "fileIdentifier";
+  rdfs:label "Metadata unieke identifier"@nl;
+  inspire-meta:xpath "fileIdentifier";
+  dct:source wiki:sectie5-2-42;
+  prov:wasDerivedFrom inspire-shape:MetadataFileIdentifier;
+.
+nlprofiel:Metadatadatum a sh:PropertyShape;
+  sh:order 43;
+  sh:name "date";
+  rdfs:label "Metadatadatum"@nl;
+  inspire-meta:xpath "dateStamp";
+  dct:source wiki:sectie5-2-43;
+  prov:wasDerivedFrom inspire-shape:MetadataDate;
+.
+nlprofiel:TaalVanDeMetadata a sh:PropertyShape;
+  sh:order 44;
+  sh:name "language";
+  rdfs:label "Taal van de metadata"@nl;
+  inspire-meta:xpath "Language";
+  dct:source wiki:sectie5-2-44;
+  prov:wasDerivedFrom inspire-shape:MetadataLanguage;
+.
+nlprofiel:ParentUniekeIdentifier a sh:PropertyShape;
+  sh:order 45;
+  sh:name "parentIdentifier";
+  rdfs:label "Parent unieke identifier"@nl;
+  inspire-meta:xpath "parentIdentifier";
+  dct:source wiki:sectie5-2-45;
+.
+nlprofiel:Hierarchieniveau a sh:PropertyShape;
+  sh:order 46;
+  sh:name "hierarchyLevel";
+  rdfs:label "Hiërarchieniveau"@nl;
+  inspire-meta:xpath "hierarchyLevel";
+  dct:source wiki:sectie5-2-46;
+.
+nlprofiel:HierarchieniveauNaam a sh:PropertyShape;
+  sh:order 47;
+  sh:name "hierarchyLevelName";
+  rdfs:label "Hiërarchieniveau naam"@nl;
+  inspire-meta:xpath "hierarchyLevelName";
+  dct:source wiki:sectie5-2-47;
+.
+nlprofiel:VerantwoordelijkeOrganisatieMetadataNaam a sh:PropertyShape;
+  sh:order 48;
+  sh:name "metadataPointOfContact/organisationName";
+  rdfs:label "Verantwoordelijke organisatie metadata"@nl;
+  inspire-meta:xpath "contact/*/organisationName";
+  dct:source wiki:sectie5-2-48;
+  prov:wasDerivedFrom inspire-shape:MetadataPointOfContact;
+  prov:wasDerivedFrom inspire-shape:PartyOrganisationName;
+.
+nlprofiel:VerantwoordelijkeOrganisatieMetadataRol a sh:PropertyShape;
+  sh:order 49;
+  sh:name "metadataPointOfContact/role";
+  rdfs:label "Verantwoordelijke organisatie metadata rol"@nl;
+  inspire-meta:xpath "contact/*/role";
+  dct:source wiki:sectie5-2-49;
+  prov:wasDerivedFrom inspire-shape:MetadataPointOfContact;
+.
+nlprofiel:VerantwoordelijkeOrganisatieMetadataEmail a sh:PropertyShape;
+  sh:order 50;
+  sh:name "metadataPointOfContact/electronicMailAddress";
+  rdfs:label "Verantwoordelijke organisatie metadata eMail"@nl;
+  inspire-meta:xpath "contact/*/contactInfo/*/address/*/electronicMailAddress";
+  dct:source wiki:sectie5-2-50;
+  prov:wasDerivedFrom inspire-shape:MetadataPointOfContact;
+  prov:wasDerivedFrom inspire-shape:AddressElectronicMailAddress;
+.
+nlprofiel:MetadataStandaardNaam a sh:PropertyShape;
+  sh:order 51;
+  sh:name "standardName";
+  rdfs:label "Metadata standaard naam"@nl;
+  inspire-meta:xpath "metadataStandardName";
+  dct:source wiki:sectie5-2-51;
+  prov:wasDerivedFrom inspire-shape:MetadataStandardName;
+.
+nlprofiel:MetadataStandaardVersie a sh:PropertyShape;
+  sh:order 52;
+  sh:name "standardVersion";
+  rdfs:label "Metadata standaard versie"@nl;
+  inspire-meta:xpath "metadataStandardVersion";
+  dct:source wiki:sectie5-2-52;
+  prov:wasDerivedFrom inspire-shape:MetadataStandardVersion;
+.
+nlprofiel:UniekeIdentifierVanDeIdentificatieSectie a sh:PropertyShape;
+  sh:order 53;
+  sh:name "dataIdentification";
+  rdfs:label "Unieke identifier van de identificatie sectie"@nl;
+  inspire-meta:xpath "identificationInfo/MD_DataIdentification[@gml:id]";
+  dct:source wiki:sectie5-2-53;
+.

@@ -35,6 +35,10 @@
 @prefix shxl: <http://bp4mc2.org/def/shacl-xl#>.
 
 #
+# NU: Mapping niet meer ondergebracht in Inspire metadata
+#
+
+#
 # Used vocabularies
 #
 inspire-voc:adms a owl:Ontology;
@@ -123,7 +127,8 @@ inspire-lex:Directive2007-2 a frbr:Work;
 .
 inspire-lex:Directive2007-2-0 a frbr:Expression;
   rdfs:label "The INSPIRE directive"@en;
-  foaf:isPrimaryTopicOf <http://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32007L0002>
+  foaf:isPrimaryTopicOf <http://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32007L0002>;
+  frbr:realizationOf inspire-lex:Directive2007-2;
 .
 inspire-lex:Article13-1-a a frbr:Work;
   rdfs:label "Article 13 clause 1.a";
@@ -137,14 +142,16 @@ inspire-lex:Regulation2008-1205 a frbr:Work;
   rdfs:label "INSPIRE regulation for metadata"@en;
   foaf:isPrimaryTopicOf <http://eur-lex.europa.eu/eli/reg/2008/1205>
 .
-inspire-lex:Regulation2008-1205 a frbr:Expression;
+inspire-lex:Regulation2008-1205-0 a frbr:Expression;
   rdfs:label "INSPIRE regulation for metadata"@en;
-  foaf:isPrimaryTopicOf <http://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32008R1205>
+  foaf:isPrimaryTopicOf <http://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32008R1205>;
+  frbr:realizationOf inspire-lex:Regulation2008-1205;
 .
-inspire-lex:Regulation2008-1205a a frbr:Expression;
+inspire-lex:Regulation2008-1205-0a a frbr:Expression;
   rdfs:label "Correction of INSPIRE regulation for metadata"@en;
   foaf:isPrimaryTopicOf <http://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32008R1205R(02)>;
-  inspire-meta:isCorrectionOf inspire-lex:Regulation2008-1205
+  frbr:realizationOf inspire-lex:Regulation2008-1205;
+  inspire-meta:isCorrectionOf inspire-lex:Regulation2008-1205-0
 .
 # Parts
 inspire-lex:PartA a frbr:Work;
@@ -155,19 +162,20 @@ inspire-lex:PartB a frbr:Work;
   rdfs:label "Part B"@en;
   dct:isPartOf inspire-lex:Regulation2008-1205
 .
+inspire-lex:PartD a frbr:Work;
+  rdfs:label "Part D"@en;
+  dct:isPartOf inspire-lex:Regulation2008-1205
+.
 inspire-lex:PartA1 a frbr:Work;
   rdfs:label "Part A 1"@en;
-  rdfs:label "Deel A 1"@nl;
   dct:isPartOf inspire-lex:PartA
 .
 inspire-lex:PartA2 a frbr:Work;
   rdfs:label "Part A 2"@en;
-  rdfs:label "Deel A 2"@nl;
   dct:isPartOf inspire-lex:PartA
 .
 inspire-lex:PartB01-1 a frbr:Work;
   rdfs:label "Part B 1.1"@en;
-  rdfs:label "Deel B 1.1"@nl;
   dct:isPartOf inspire-lex:PartB
 .
 inspire-lex:PartB01-2 a frbr:Work;
@@ -290,6 +298,22 @@ inspire-lex:PartB10-3 a frbr:Work;
   rdfs:label "Part B 10.3"@en;
   dct:isPartOf inspire-lex:PartB
 .
+inspire-lex:PartD1 a frbr:Work;
+  rdfs:label "Part D 1"@en;
+  dct:isPartOf inspire-lex:PartD
+.
+inspire-lex:PartD1-1 a frbr:Work;
+  rdfs:label "Part D 1.1"@en;
+  dct:isPartOf inspire-lex:PartD1
+.
+inspire-lex:PartD1-2 a frbr:Work;
+  rdfs:label "Part D 1.2"@en;
+  dct:isPartOf inspire-lex:PartD1
+.
+inspire-lex:PartD1-3 a frbr:Work;
+  rdfs:label "Part D 1.3"@en;
+  dct:isPartOf inspire-lex:PartD1
+.
 
 #
 # INSPIRE regulation for interoperability of spatial data sets and services
@@ -300,19 +324,23 @@ inspire-lex:Regulation2010-1089 a frbr:Work;
 .
 inspire-lex:Regulation2010-1089-0 a frbr:Expression;
   rdfs:label "INSPIRE regulation for interoperability of spatial data sets and services"@en;
-  foaf:isPrimaryTopicOf <http://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32010R1089>
+  foaf:isPrimaryTopicOf <http://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32010R1089>;
+  frbr:realizationOf inspire-lex:Regulation2010-1089
 .
 inspire-lex:Regulation2010-1089-1 a frbr:Expression;
   rdfs:label "First ammendment of INSPIRE regulation for interoperability of spatial data sets and services"@en;
-  foaf:isPrimaryTopicOf <http://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32011R0102>
+  foaf:isPrimaryTopicOf <http://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32011R0102>;
+  frbr:realizationOf inspire-lex:Regulation2010-1089
 .
 inspire-lex:Regulation2010-1089-2 a frbr:Expression;
   rdfs:label "Second ammendment of INSPIRE regulation for interoperability of spatial data sets and services"@en;
-  foaf:isPrimaryTopicOf <http://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32013R1253>
+  foaf:isPrimaryTopicOf <http://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32013R1253>;
+  frbr:realizationOf inspire-lex:Regulation2010-1089
 .
 inspire-lex:Regulation2010-1089-3 a frbr:Expression;
   rdfs:label "Third ammendment of INSPIRE regulation for interoperability of spatial data sets and services"@en;
-  foaf:isPrimaryTopicOf <http://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32014R1312>
+  foaf:isPrimaryTopicOf <http://eur-lex.europa.eu/legal-content/EN/ALL/?uri=CELEX:32014R1312>;
+  frbr:realizationOf inspire-lex:Regulation2010-1089
 .
 # Parts
 inspire-lex:Article02 a frbr:Work;
@@ -408,23 +436,26 @@ inspire-lex:AnnexVIIPartB3 a frbr:Work;
 # Begrippen uit originele wetgeving
 # =================================
 inspire-scheme:Inspire a skos:ConceptScheme;
-  rdfs:label "Inspire"@en;
+  rdfs:label "Inspire concept scheme"@en;
+  rdfs:label "Inspire begrippenkader"@nl;
 .
 #
 # Part A
 #
 inspire-concept:Resource a skos:Concept;
   dct:source inspire-lex:PartA1;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Resource"@en;
   rdfs:label "Bron"@nl;
   skos:definition "An information resource that has a direct or indirect reference to a specific location or geographic area."@en;
   skos:definition "een informatiebron die een directe of indirecte verwijzing bevat naar een specifieke plaats of geografisch gebied"@nl;
-. 
+.
 #
 # Part B
 #
 inspire-concept:ResourceTitle a skos:Concept;
   dct:source inspire-lex:PartB01-1;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Resource title"@en;
   rdfs:label "Titel van de bron"@nl;
   skos:definition "This a characteristic, and often unique, name by which the resource is known."@en;
@@ -434,6 +465,7 @@ inspire-concept:ResourceTitle a skos:Concept;
 .
 inspire-concept:ResourceAbstract a skos:Concept;
   dct:source inspire-lex:PartB01-2;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Resource abstract"@en;
   rdfs:label "Samenvatting van de bron"@nl;
   skos:definition "This is a brief narrative summary of the content of the resource."@en;
@@ -441,6 +473,7 @@ inspire-concept:ResourceAbstract a skos:Concept;
 .
 inspire-concept:ResourceType a skos:Concept;
   dct:source inspire-lex:PartB01-3;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Resource type"@en;
   rdfs:label "Type bron"@nl;
   skos:definition "This is the type of resource being described by the metadata."@en;
@@ -448,6 +481,7 @@ inspire-concept:ResourceType a skos:Concept;
 .
 inspire-concept:ResourceLocator a skos:Concept;
   dct:source inspire-lex:PartB01-4;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Resource locator"@en;
   rdfs:label "Resource locator"@nl;
   skos:definition "The resource locator defines the link(s) to the resource and/or the link to additional information about the resource."@en;
@@ -455,6 +489,7 @@ inspire-concept:ResourceLocator a skos:Concept;
 .
 inspire-concept:UniqueResourceIdentifier a skos:Concept;
   dct:source inspire-lex:PartB01-5;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Unique resource identifier"@en;
   rdfs:label "Unieke identifier van de bron"@nl;
   skos:definition "A value uniquely identifying the resource."@en;
@@ -462,6 +497,7 @@ inspire-concept:UniqueResourceIdentifier a skos:Concept;
 .
 inspire-concept:CoupledResource a skos:Concept;
   dct:source inspire-lex:PartB01-6;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Coupled resource"@en;
   rdfs:label "Coupled resource"@nl;
   skos:definition "If the resource is a spatial data service, this metadata element identifies, where relevant, the target spatial data set(s) of the service through their unique resource identifiers (URI)."@en;
@@ -469,6 +505,7 @@ inspire-concept:CoupledResource a skos:Concept;
 .
 inspire-concept:ResourceLanguage a skos:Concept;
   dct:source inspire-lex:PartB01-7;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Resource language"@en;
   rdfs:label "Taal van de bron"@nl;
   skos:definition "The language(s) used within the resource."@en;
@@ -476,6 +513,7 @@ inspire-concept:ResourceLanguage a skos:Concept;
 .
 inspire-concept:TopicCategory a skos:Concept;
   dct:source inspire-lex:PartB02-1;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Topic category"@en;
   rdfs:label "Onderwerpcategorie"@nl;
   skos:definition "The topic category is a high-level classification scheme to assist in the grouping and topic-based search of available spatial data resources."@en;
@@ -483,6 +521,7 @@ inspire-concept:TopicCategory a skos:Concept;
 .
 inspire-concept:SpatialDataServiceType a skos:Concept;
   dct:source inspire-lex:PartB02-2;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Spatial data service type"@en;
   rdfs:label "Type dienst met betrekking tot ruimtelijke gegevens"@nl;
   skos:definition "This is a classification to assist in the search of available spatial data services. A specific service shall be categorised in only one category."@en;
@@ -490,6 +529,7 @@ inspire-concept:SpatialDataServiceType a skos:Concept;
 .
 inspire-concept:Keyword a skos:Concept;
   dct:source inspire-lex:PartB03;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Keyword"@en;
   rdfs:label "Trefwoord"@nl;
   skos:definition "For each keyword, the following metadata elements shall be provided: [section 3.1 and 3.2]"@en;
@@ -498,6 +538,7 @@ inspire-concept:Keyword a skos:Concept;
 .
 inspire-concept:KeywordValue a skos:Concept;
   dct:source inspire-lex:PartB03-1;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Keyword value"@en;
   rdfs:label "Trefwoordwaarde"@nl;
   skos:definition "The keyword value is a commonly used word, formalised word or phrase used to describe the subject. While the topic category is too coarse for detailed queries, keywords help narrowing a full text search and they allow for structured keyword search."@en;
@@ -505,6 +546,7 @@ inspire-concept:KeywordValue a skos:Concept;
 .
 inspire-concept:KeywordOriginatingControlledVocabulary a skos:Concept;
   dct:source inspire-lex:PartB03-2;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Keyword originating controlled vocabulary"@en;
   rdfs:label "Origineel gecontroleerd vocabulaire van het trefwoord"@nl;
   skos:definition "If the keyword value originates from a controlled vocabulary (thesaurus, ontology), for example GEMET, the citation of the originating controlled vocabulary shall be provided."@en;
@@ -512,6 +554,7 @@ inspire-concept:KeywordOriginatingControlledVocabulary a skos:Concept;
 .
 inspire-concept:GeographicBoundingBox a skos:Concept;
   dct:source inspire-lex:PartB04-1;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Geographic bounding box"@en;
   rdfs:label "Geografische rechthoek"@nl;
   skos:definition "This is the extent of the resource in the geographic space, given as a bounding box."@en;
@@ -519,6 +562,7 @@ inspire-concept:GeographicBoundingBox a skos:Concept;
 .
 inspire-concept:TemporalReference a skos:Concept;
   dct:source inspire-lex:PartB05;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Temporal reference"@en;
   rdfs:label "Tijdsreferentie"@nl;
   skos:definition "This metadata element addresses the requirement to have information on the temporal dimension of the data as referred to in Article 8(2)(d) of Directive 2007/2/EC. At least one of the metadata elements referred to in points 5.1 to 5.4 shall be provided."@en;
@@ -526,6 +570,7 @@ inspire-concept:TemporalReference a skos:Concept;
 .
 inspire-concept:TemporalExtent a skos:Concept;
   dct:source inspire-lex:PartB05-1;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Temporal extent"@en;
   rdfs:label "Temporele dekking"@nl;
   skos:definition "The temporal extent defines the time period covered by the content of the resource."@en;
@@ -533,24 +578,28 @@ inspire-concept:TemporalExtent a skos:Concept;
 .
 inspire-concept:DateOfPublication a skos:Concept;
   dct:source inspire-lex:PartB05-2;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Date of publication"@en;
   rdfs:label "Datum van bekendmaking"@nl;
   skos:definition "This is the date of publication of the resource when available, or the date of entry into force. There may be more than one date of publication."@en;
 .
 inspire-concept:DateOfLastRevision a skos:Concept;
   dct:source inspire-lex:PartB05-3;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Date of last revision"@en;
   rdfs:label "Datum van laatste herziening"@nl;
   skos:definition "This is the date of last revision of the resource, if the resource has been revised. There shall not be more than one date of last revision."@en;
 .
 inspire-concept:DateOfCreation a skos:Concept;
   dct:source inspire-lex:PartB05-4;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Date of creation"@en;
   rdfs:label "Aanmaakdatum"@nl;
   skos:definition "This is the date of creation of the resource. There shall not be more than one date of creation."@en;
 .
 inspire-concept:Lineage a skos:Concept;
   dct:source inspire-lex:PartB06-1;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Lineage"@en;
   rdfs:label "Algemene beschrijving herkomst"@nl;
   skos:definition "This is a statement on process history and/or overall quality of the spatial data set. Where appropriate it may include a statement whether the data set has been validated or quality assured, whether it is the official version (if multiple versions exist), and whether it has legal validity."@en;
@@ -558,6 +607,7 @@ inspire-concept:Lineage a skos:Concept;
 .
 inspire-concept:SpatialResolution a skos:Concept;
   dct:source inspire-lex:PartB06-2;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Spatial resolution"@en;
   rdfs:label "Ruimtelijke resolutie"@nl;
   skos:definition "Spatial resolution refers to the level of detail of the data set. It shall be expressed as a set of zero to many resolution distances (typically for gridded data and imagery-derived products) or equivalent scales (typically for maps or map-derived products)."@en;
@@ -565,12 +615,14 @@ inspire-concept:SpatialResolution a skos:Concept;
 .
 inspire-concept:Conformity a skos:Concept;
   dct:source inspire-lex:PartB07;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Conformity"@en;
   rdfs:label "Overeenstemming"@nl;
   skos:definition "The requirements referred to in Article 5(2)(a) and Article 11(2)(d) of Directive 2007/2/EC relating to the conformity, and the degree of conformity, with implementing rules adopted under Article 7(1) of Directive 2007/2/EC shall be addressed by the following metadata elements [in sections 7.1 and 7.2]"@en;
 .
 inspire-concept:ConformitySpecification a skos:Concept;
   dct:source inspire-lex:PartB07-1;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Comformity specification"@en;
   rdfs:label "Specificatie van de overeenstemming"@nl;
   skos:definition "This is a citation of the implementing rules adopted under Article 7(1) of Directive 2007/2/EC or other specification to which a particular resource conforms."@en;
@@ -579,6 +631,7 @@ inspire-concept:ConformitySpecification a skos:Concept;
 .
 inspire-concept:ConformityDegree a skos:Concept;
   dct:source inspire-lex:PartB07-2;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Conformity degree"@en;
   rdfs:label "Conformiteitsindicatie met de specificatie"@nl;
   skos:definition "This is the degree of conformity of the resource to the implementing rules adopted under Article 7(1) of Directive 2007/2/EC or other specification."@en;
@@ -586,6 +639,7 @@ inspire-concept:ConformityDegree a skos:Concept;
 .
 inspire-concept:ConditionsApplyingToAccessAndUse a skos:Concept;
   dct:source inspire-lex:PartB08-1;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Conditions applying to access and use"@en;
   rdfs:label "Voorwaarden voor toegang en gebruik"@nl;
   skos:definition "This metadata element defines the conditions for access and use of spatial data sets and services, and where applicable, corresponding fees as required by Article 5(2)(b) and Article 11(2)(f) of Directive 2007/2/EC."@en;
@@ -600,17 +654,21 @@ inspire-collection:AccessAndUseConditions a skos:Collection;
 .
 inspire-concept:ConditionsUnknown a skos:Concept;
   rdfs:label "Conditions unknown"@en;
+  skos:inScheme inspire-scheme:Inspire;
 .
 inspire-concept:NoConditions a skos:Concept;
   rdfs:label "No conditions"@en;
+  skos:inScheme inspire-scheme:Inspire;
 .
 # The value other restrictions is used in case a "real" condition is stated as free text (see section 2.3.7 of the TG)
 inspire-concept:OtherRestrictions a skos:Concept;
   rdfs:label "Other restrictions"@en;
+  skos:inScheme inspire-scheme:Inspire;
 .
-  
+
 inspire-concept:LimitationsOnPublicAccess a skos:Concept;
   dct:source inspire-lex:PartB08-2;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Limitations on public access"@en;
   rdfs:label "Beperkingen op openbare toegang"@nl;
   skos:definition "When Member States limit public access to spatial data sets and spatial data services under Article 13 of Directive 2007/2/EC, this metadata element shall provide information on the limitations and the reasons for them."@en;
@@ -618,13 +676,15 @@ inspire-concept:LimitationsOnPublicAccess a skos:Concept;
 .
 inspire-concept:ResponsibleOrganisation a skos:Concept;
   dct:source inspire-lex:PartB09;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Responsible organisation"@en;
   rdfs:label "Verantwoordelijke organisatie"@nl;
   skos:definition "For the purposes of Article 5(2)(d) and Article 11(2)(g) of Directive 2007/2/EC, the following two metadata elements shall be provided: [in sections 9.1 and 9.2]"@en;
 .
-  
+
 inspire-concept:ResponsibleParty a skos:Concept;
   dct:source inspire-lex:PartB09-1;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Responsible party"@en;
   rdfs:label "Verantwoordelijke organisatie bron"@nl;
   skos:definition "This is the description of the organisation responsible for the establishment, management, maintenance and distribution of the resource."@en;
@@ -632,6 +692,7 @@ inspire-concept:ResponsibleParty a skos:Concept;
 .
 inspire-concept:ResponsiblePartyRole a skos:Concept;
   dct:source inspire-lex:PartB09-2;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Responsible party role"@en;
   rdfs:label "Rol van de verantwoordelijke organisatie bron"@nl;
   skos:definition "This is the role of the responsible organisation."@en;
@@ -639,6 +700,7 @@ inspire-concept:ResponsiblePartyRole a skos:Concept;
 .
 inspire-concept:MetadataPointOfContact a skos:Concept;
   dct:source inspire-lex:PartB10-1;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Metadata point of contact"@en;
   rdfs:label "Contactpunt voor metagegevens"@nl;
   skos:definition "This is the description of the organisation responsible for the creation and maintenance of the metadata."@en;
@@ -646,6 +708,7 @@ inspire-concept:MetadataPointOfContact a skos:Concept;
 .
 inspire-concept:MetadataDate a skos:Concept;
   dct:source inspire-lex:PartB10-2;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Metadata date"@en;
   rdfs:label "Datum van metagegevens"@nl;
   skos:definition "The date which specifies when the metadata record was created or updated."@en;
@@ -653,6 +716,7 @@ inspire-concept:MetadataDate a skos:Concept;
 .
 inspire-concept:MetadataLanguage a skos:Concept;
   dct:source inspire-lex:PartB10-3;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Metadata language"@en;
   rdfs:label "Taal van metagegevens"@nl;
   skos:definition "This is the language in which the metadata elements are expressed."@en;
@@ -676,6 +740,7 @@ inspire-collection:ResourceTypes a skos:Collection;
 inspire-concept:SpatialDatasetSeries a skos:Concept;
   dct:source inspire-lex:PartD1-1;
   dct:source inspire-lex:PartA1;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Spatial dataset series"@en;
   rdfs:label "Reeks verzamelingen ruimtelijke gegevens"@nl;
   skos:notation "series";
@@ -683,12 +748,14 @@ inspire-concept:SpatialDatasetSeries a skos:Concept;
 .
 inspire-concept:SpatialDataset a skos:Concept;
   dct:source inspire-lex:PartD1-2;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Spatial data set"@en;
   rdfs:label "Verzameling ruimtelijke gegevens"@nl;
   skos:notation "dataset";
 .
 inspire-concept:SpatialService a skos:Concept;
   dct:source inspire-lex:PartD1-3;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Spatial service"@en;
   rdfs:label "Dienst met betrekking tot ruimtelijke gegevens"@nl;
   skos:notation "service";
@@ -722,6 +789,7 @@ inspire-collection:TopicCategories a skos:Collection;
 .
 inspire-concept:Farming a skos:Concept;
   dct:source inspire-lex:PartD2-1;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Farming"@en;
   rdfs:label "Landbouw en veeteelt"@nl;
   skos:notation "farming";
@@ -743,6 +811,7 @@ inspire-collection:SpatialDataServiceTypes a skos:Collection;
 .
 inspire-concept:DiscoveryService a skos:Concept;
   dct:source inspire-lex:PartD3-1;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Discovery service"@en;
   rdfs:label "Zoekdienst"@nl;
   skos:definition "Services making it possible to search for spatial data sets and services on the basis of the content of the corresponding metadata and to display the content of the metadata."@en;
@@ -750,6 +819,7 @@ inspire-concept:DiscoveryService a skos:Concept;
 .
 inspire-concept:ViewService a skos:Concept;
   dct:source inspire-lex:PartD3-2;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "View service"@en;
   rdfs:label "Raadpleegdienst"@nl;
   skos:definition "Service that makes it possible, as a minimum, to display, navigate, zoom in and out, pan or overlay viewable spatial data sets and to display legend information and any relevant content of metadata."@en;
@@ -757,6 +827,7 @@ inspire-concept:ViewService a skos:Concept;
 .
 inspire-concept:DownloadService a skos:Concept;
   dct:source inspire-lex:PartD3-3;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Download service"@en;
   rdfs:label "Downloaddienst"@nl;
   skos:definition "Service that enables copies of spatial data sets, or parts of such sets, to be downloaded and, where practicable, accessed directly."@en;
@@ -764,6 +835,7 @@ inspire-concept:DownloadService a skos:Concept;
 .
 inspire-concept:TransformationService a skos:Concept;
   dct:source inspire-lex:PartD3-4;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Transformation service"@en;
   rdfs:label "Verwerkingsdienst"@nl;
   skos:definition "Service that enables spatial data sets to be transformed with a view to achieving interoperability."@en;
@@ -771,6 +843,7 @@ inspire-concept:TransformationService a skos:Concept;
 .
 inspire-concept:InvokeSpatialDataService a skos:Concept;
   dct:source inspire-lex:PartD3-5;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Invoke spatial data service"@en;
   rdfs:label "Oproepdienst"@nl;
   skos:definition "Service that allows defining both the data inputs and data outputs expected by the spatial service and a workflow or service chain combining multiple services. It also allows defining the external web service interface of the workflow or service chain."@en;
@@ -778,6 +851,7 @@ inspire-concept:InvokeSpatialDataService a skos:Concept;
 .
 inspire-concept:OtherService a skos:Concept;
   dct:source inspire-lex:PartD3-6;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Other service"@en;
   rdfs:label "Andere dienst"@nl;
   skos:definition ""@en;
@@ -799,10 +873,12 @@ inspire-collection:ClassificationOfSpatialDataServices a skos:Collection;
 .
 inspire-concept:GeographicHumanInteractionServices a skos:Concept;
   rdfs:label "Geographic human interaction services"@en;
+  skos:inScheme inspire-scheme:Inspire;
   skos:notation "humanInteractionService";
 .
 inspire-concept:CatalogueViewer a skos:Concept;
   rdfs:label "Catalogue viewer"@en;
+  skos:inScheme inspire-scheme:Inspire;
   skos:definition "Client service that allows a user to interact with a catalogue to locate, browse, and manage metadata about geographic data or geographic services."@en;
   skos:notation "humanCatalogueViewer";
   skos:broader inspire-concept:GeographicHumanInteractionServices;
@@ -819,16 +895,19 @@ inspire-collection:DegreeOfComformity a skos:Collection;
 .
 inspire-concept:Conformant a skos:Concept;
   rdfs:label "Conformant"@en;
+  skos:inScheme inspire-scheme:Inspire;
   skos:definition "The resource is fully conformant with the cited specification."@en;
   skos:notation "conformant";
 .
 inspire-concept:NotConformant a skos:Concept;
   rdfs:label "Not conformant"@en;
+  skos:inScheme inspire-scheme:Inspire;
   skos:definition "The resource does not conform to the cited specification."@en;
   skos:notation "notConformant";
 .
 inspire-concept:NotEvaluated a skos:Concept;
   rdfs:label "Not evaluated"@en;
+  skos:inScheme inspire-scheme:Inspire;
   skos:definition "Conformance has not been evaluated."@en;
   skos:notation "notEvaluated";
 .
@@ -853,83 +932,69 @@ inspire-collection:ResponsiblePartyRoles a skos:Collection;
 #TODO Compleet maken
 inspire-concept:ResourceProvider a skos:Concept;
   rdfs:label "Resource provider"@en;
+  skos:inScheme inspire-scheme:Inspire;
   skos:definition "Party that supplies the resource."@en;
   skos:notation "resourceProvider";
 .
 inspire-concept:Custodian a skos:Concept;
   rdfs:label "Custodian"@en;
+  skos:inScheme inspire-scheme:Inspire;
   skos:definition "Party that accepts accountability and responsibility for the data and ensures appropriate care and maintenance of the resource."@en;
   skos:notation "custodian";
 .
 inspire-concept:Owner a skos:Concept;
   rdfs:label "Owner"@en;
+  skos:inScheme inspire-scheme:Inspire;
   skos:definition "Party that owns the resource."@en;
   skos:notation "owner";
 .
 inspire-concept:User a skos:Concept;
   rdfs:label "User"@en;
+  skos:inScheme inspire-scheme:Inspire;
   skos:definition "Party who uses the resource."@en;
   skos:notation "user";
 .
 inspire-concept:Distributor a skos:Concept;
   rdfs:label "Distributor"@en;
+  skos:inScheme inspire-scheme:Inspire;
   skos:definition "Party who distributes the resource."@en;
   skos:notation "distributor";
 .
 inspire-concept:Originator a skos:Concept;
   rdfs:label "Originator"@en;
+  skos:inScheme inspire-scheme:Inspire;
   skos:definition "Party who created the resource"@en;
   skos:notation "originator";
 .
 inspire-concept:PointOfContact a skos:Concept;
   rdfs:label "Point of Contact"@en;
+  skos:inScheme inspire-scheme:Inspire;
   skos:definition "Party who can be contacted for acquiring knowledge about or acquisition of the resource."@en;
   skos:notation "pointOfContact";
 .
 inspire-concept:PrincipalInvestigator a skos:Concept;
   rdfs:label "Principal Investigator"@en;
+  skos:inScheme inspire-scheme:Inspire;
   skos:definition "Key party responsible for gathering information and conducting research."@en;
   skos:notation "principalInvestigator";
 .
 inspire-concept:Processor a skos:Concept;
   rdfs:label "Processor"@en;
+  skos:inScheme inspire-scheme:Inspire;
   skos:definition "Party who has processed the data in a manner such that the resource has been modified."@en;
   skos:notation "processor";
 .
 inspire-concept:Publisher a skos:Concept;
   rdfs:label "Publisher"@en;
+  skos:inScheme inspire-scheme:Inspire;
   skos:definition "Party who published the resource."@en;
   skos:notation "publisher";
 .
 inspire-concept:Author a skos:Concept;
   rdfs:label "Author"@en;
+  skos:inScheme inspire-scheme:Inspire;
   skos:definition "Party who authored the resource."@en;
   skos:notation "author";
-.
-inspire-concept: a skos:Concept;
-  rdfs:label ""@en;
-  skos:definition ""@en;
-  skos:notation "";
-.
-inspire-concept: a skos:Concept;
-  rdfs:label ""@en;
-  skos:definition ""@en;
-  skos:notation "";
-.
-inspire-concept: a skos:Concept;
-  rdfs:label ""@en;
-  skos:definition ""@en;
-  skos:notation "";
-.
-inspire-concept: a skos:Concept;
-  rdfs:label ""@en;
-  skos:definition ""@en;
-  skos:notation "";
-.
-inspire-concept: a skos:Concept;
-  rdfs:label ""@en;
-  skos:definition ""@en;
-  skos:notation "";
 .
 
 #
@@ -937,24 +1002,28 @@ inspire-concept: a skos:Concept;
 #
 inspire-concept:CodeList a skos:Concept;
   dct:source inspire-lex:Article02-05;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Code list"@en;
   rdfs:label "Codelijst"@nl;
   skos:definition "an open enumeration that can be extended";
 .
 inspire-concept:Enumeration a skos:Concept;
   dct:source inspire-lex:Article02-07;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Enumeration"@en;
   rdfs:label "Opsomming"@nl;
   skos:definition "a data type whose instances form a fixed list of named literal values. Attributes of an enumerated type may only take values from this list";
 .
 inspire-concept:EndPoint a skos:Concept;
   dct:source inspire-lex:Article02-31;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "End point"@en;
   rdfs:label "Eindpunt"@nl;
   skos:definition "the internet address used to directly call an operation provided by a spatial data service";
 .
 inspire-concept:AccessPoint a skos:Concept;
   dct:source inspire-lex:Article02-32;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Access point"@en;
   rdfs:label "Toegangspunt"@nl;
   skos:definition "an internet address containing a detailed description of a spatial data service, including a list of end points to allow its execution";
@@ -964,13 +1033,15 @@ inspire-concept:AccessPoint a skos:Concept;
 #
 inspire-concept:SpatialDatasetCoordinateReferenceSystem a skos:Concept;
   dct:source inspire-lex:Article13-1;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Spatial data set Coordinate Reference System"@en;
-  rdfs:label "Coördinaatreferentiesysteem van de verzameling ruimtelijke gegevens"@nl;
+  rdfs:label "Coï¿½rdinaatreferentiesysteem van de verzameling ruimtelijke gegevens"@nl;
   skos:definition "Description of the coordinate reference system(s) used in the data set."@en;
-  skos:definition "Beschrijving van het (de) in de gegevensverzameling gebruikte coördinaatreferentiesyste(e)m(en)."@nl;
+  skos:definition "Beschrijving van het (de) in de gegevensverzameling gebruikte coï¿½rdinaatreferentiesyste(e)m(en)."@nl;
 .
 inspire-concept:SpatialDatasetTemporalReferenceSystem a skos:Concept;
   dct:source inspire-lex:Article13-2;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Spatial data set Temporal Reference System"@en;
   rdfs:label "Tijdsreferentiesysteem van de verzameling ruimtelijke gegevens"@nl;
   skos:definition "Description of the temporal reference system(s) used in the data set."@en;
@@ -978,12 +1049,14 @@ inspire-concept:SpatialDatasetTemporalReferenceSystem a skos:Concept;
 .
 inspire-concept:SpatialDatasetEncoding a skos:Concept;
   dct:source inspire-lex:Article13-3;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Spatial data set encoding"@en;
   rdfs:label "Codering van de verzameling ruimtelijke gegevens"@nl;
   skos:definition "Description of the computer language construct(s) specifying the representation of data objects in a record, file, message, storage device or transmission channel."@en;
 .
 inspire-concept:SpatialDatasetTopologicalConsistency a skos:Concept;
   dct:source inspire-lex:Article13-4;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Spatial data set topological consistency"@en;
   rdfs:label "Topologische consistentie van de verzameling ruimtelijke gegevens"@nl;
   skos:definition "Correctness of the explicitly encoded topological characteristics of the data set as described by the scope."@en;
@@ -991,6 +1064,7 @@ inspire-concept:SpatialDatasetTopologicalConsistency a skos:Concept;
 .
 inspire-concept:SpatialDatasetCharacterEncoding a skos:Concept;
   dct:source inspire-lex:Article13-5;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Spatial data set character encoding"@en;
   rdfs:label "Tekencodering van de verzameling ruimtelijke gegevens"@nl;
   skos:definition "The character encoding used in the data set."@en;
@@ -998,6 +1072,7 @@ inspire-concept:SpatialDatasetCharacterEncoding a skos:Concept;
 .
 inspire-concept:SpatialDatasetSpatialRepresentationType a skos:Concept;
   dct:source inspire-lex:Article13-6;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Spatial data set representation type"@en;
   rdfs:label "Ruimtelijk weergavetype van de verzameling ruimtelijke gegevens"@nl;
   skos:definition "The method used to spatially represent geographic information."@en;
@@ -1008,6 +1083,7 @@ inspire-concept:SpatialDatasetSpatialRepresentationType a skos:Concept;
 #
 inspire-concept:SpatialDataServicesCategory a skos:Concept;
   dct:source inspire-lex:AnnexVPartB1;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Spatial data services category"@en;
   skos:definition "This is a citation of the status of the spatial data service versus invocability."@en;
   skos:scopeNote "The value domain of this metadata element is as follows: (a) invocabule; (b) interoperable; (c) harmonised"@en;
@@ -1021,6 +1097,7 @@ inspire-collection:SpatialDataServicesCategories a skos:Collection;
 .
 inspire-concept:Invocable a skos:Concept;
   dct:source inspire-lex:AnnexVPartB1-1;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Invocable"@en;
   rdfs:label "Aanroepbaar"@nl;
   skos:definition "The spatial data service is an invocable spatial data service."@en;
@@ -1028,6 +1105,7 @@ inspire-concept:Invocable a skos:Concept;
 .
 inspire-concept:Interoperable a skos:Concept;
   dct:source inspire-lex:AnnexVPartB1-2;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Interoperable"@en;
   rdfs:label "Interoperabel"@nl;
   skos:definition "The invocable spatial data service is an interoperable spatial data service."@en;
@@ -1036,6 +1114,7 @@ inspire-concept:Interoperable a skos:Concept;
 .
 inspire-concept:Harmonised a skos:Concept;
   dct:source inspire-lex:AnnexVPartB1-3;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Harmonised"@en;
   rdfs:label "Geharmoniseerd"@nl;
   skos:definition "The interoperable spatial data service is a harmonised spatial data service."@en;
@@ -1048,51 +1127,71 @@ inspire-concept:Harmonised a skos:Concept;
 #
 inspire-concept:CoordinateReferenceSystemIdentifier a skos:Concept;
   dct:source inspire-lex:AnnexVIPartB3;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Coordinate Reference System Identifier"@en;
   skos:definition "Where appropriate, this is the list of coordinate reference systems supported by the spatial data service."@en;
   skos:scopeNote "Each supported coordinate reference system shall be expressed using an identifier."@en;
 .
 inspire-concept:QualityOfService a skos:Concept;
   dct:source inspire-lex:AnnexVIPartB4;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Quality of Service"@en;
+  rdfs:label "Kwaliteit van de dienst"@nl;
   skos:definition "This is the minimum quality of service estimated by the spatial data service responsible party and expected to be valid over a period of time."@en;
+  skos:definition "Dit is de minimale kwaliteit van de dienst zoals ingeschat door de verantwoordelijke partij van de dienst met betrekking tot ruimtelijke gegevens, die naar verwachting gedurende een bepaalde periode geldig blijft."@nl;
 .
 inspire-concept:QualityOfServiceCriteria a skos:Concept;
   dct:source inspire-lex:AnnexVIPartB4-1;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Quality of Service Criteria"@en;
+  rdfs:label "Kwaliteit van de dienst criteria"@nl;
   skos:definition "These are the criteria to which the measurements refer."@en;
+  skos:definition "Dit zijn de criteria waarop de metingen betrekking hebben."@nl;
   skos:scopeNote "The value domain of this metadata element is as follows: [availability, performance, capacity]"@en;
+  skos:scopeNote "Het waardedomein van dit metagegevenselement is als volgt: [beschikbaarheid, prestaties, capaciteit]"@nl;
 .
 inspire-collection:QualityOfServiceCriteriaCodes a skos:Collection;
   dct:source inspire-lex:AnnexVIPartB4-1;
   rdfs:label "Quality of Service Criteria Codes"@en;
+  rdfs:label "Kwaliteit van de dienst codes"@nl;
   skos:member inspire-concept:Availability;
   skos:member inspire-concept:Performance;
   skos:member inspire-concept:Capacity;
 .
 inspire-concept:Availability a skos:Concept;
   dct:source inspire-lex:AnnexVIPartB4-1-1;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Availability"@en;
+  rdfs:label "Beschikbaarheid"@nl;
   skos:definition "It describes the percentage of time the service is available."@en;
+  skos:definition "Beschrijft het percentage van de tijd dat de dienst beschikbaar is."@nl;
 .
 inspire-concept:Performance a skos:Concept;
   dct:source inspire-lex:AnnexVIPartB4-1-2;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Performance"@en;
+  rdfs:label "Prestaties"@nl;
   skos:definition "It describes how fast a request to the spatial data service can be completed."@en;
+  skos:definition "Beschrijft hoe snel een verzoek aan de dienst met betrekking tot ruimtelijke gegevens kan worden verwerkt."@nl;
 .
 inspire-concept:Capacity a skos:Concept;
   dct:source inspire-lex:AnnexVIPartB4-1-3;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Capacity"@en;
+  rdfs:label "Capaciteit"@nl;
   skos:definition "It describes the maximum number of simultaneous requests that can be completed with the declared performance."@en;
+  skos:definition "Beschrijft het maximumaantal gelijktijdige verzoeken dat kan worden verwerkt bij de aangegeven prestaties."@nl;
 .
 inspire-concept:QualityOfServiceMeasurementDescription a skos:Concept;
   dct:source inspire-lex:AnnexVIPartB4-2-1;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Quality of Service Measurement Description"@en;
   skos:definition "It describes the measurement for each criterion."@en;
   skos:scopeNote "The value domain of this metadata element is free text."@en;
 .
 inspire-concept:QualityOfServiceMeasurementValue a skos:Concept;
   dct:source inspire-lex:AnnexVIPartB4-2-2;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Quality of Service Measurement Value"@en;
   skos:definition "It describes the value of the measurement for each criterion."@en;
   skos:scopeNote "The value domain of this metadata element is free text."@en;
@@ -1100,6 +1199,7 @@ inspire-concept:QualityOfServiceMeasurementValue a skos:Concept;
 .
 inspire-concept:QualityOfServiceMeasurementUnit a skos:Concept;
   dct:source inspire-lex:AnnexVIPartB4-2-3;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Quality of Service Measurement Unit"@en;
   skos:definition "It describes the Unit of the measurement for each criterion."@en;
   skos:scopeNote "The value domain of this metadata element is free text."@en;
@@ -1111,6 +1211,7 @@ inspire-concept:QualityOfServiceMeasurementUnit a skos:Concept;
 #
 inspire-concept:InvocationMetadata a skos:Concept;
   dct:source inspire-lex:AnnexVIIPartB3;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Invocation metadata"@en;
   skos:definition "The invocation metadata element documents the interfaces of the harmonised spatial data service and lists the end points to enable machine-to machine communication."@en;
 .
@@ -1119,25 +1220,27 @@ inspire-concept:InvocationMetadata a skos:Concept;
 # Shapes vanuit implementatie
 # =================================
 
-inspire:Resource a owl:Class;
-  rdfs:label "Resource";
-.
-dcat:Dataset a owl:Class;
-  rdfs:label "Dataset";
-  rdfs:subClassOf inspire:Resource;
-.
-inspire:Service a owl:Class;
-  rdfs:label "Service";
-  rdfs:subClassOf inspire:Resource;
-.
+# Iets anders opgelost: punning van sh:NodeShape en owl:Class
+#inspire:Resource a owl:Class;
+#  rdfs:label "Resource"@en;
+#.
+#inspire:Dataset a owl:Class;
+#  rdfs:label "Dataset"@en;
+#  rdfs:subClassOf inspire:Resource;
+#.
+#inspire:Service a owl:Class;
+#  rdfs:label "Service"@en;
+#  rdfs:subClassOf inspire:Resource;
+#.
 
 #
 # Section C.2 of Technical Guidance for the implementation of INSPIRE dataset and service metadata based on ISO/TS 19139:2007
 #
 
-inspire-shape:Resource a sh:NodeShape;
+inspire-shape:Resource a sh:NodeShape, owl:Class;
   dct:subject inspire-concept:Resource;
-  sh:targetClass inspire:Resource; #MAPPING: Deze is lastig: in dcat heb je deze niet, maar alleen 1 van de subklassen. Mogelijk via shapes doen??
+  #MAPPING: Deze is lastig: in dcat heb je deze niet, maar alleen 1 van de subklassen. Mogelijk via shapes doen??
+  sh:targetClass inspire-shape:Resource;
   sh:name "+Resource";
   rdfs:label "Resource"@en;
   rdfs:label "Bron"@nl;
@@ -1169,11 +1272,12 @@ inspire-shape:Resource a sh:NodeShape;
   sh:property inspire-shape:MetadataCharacterSet;
   sh:property inspire-shape:MetadataFileIdentifier;
 .
-inspire-shape:Dataset a sh:NodeShape;
+inspire-shape:Dataset a sh:NodeShape, owl:Class;
   dct:subject inspire-concept:Dataset;
   sh:name "+Dataset(series)";
   rdfs:label "Dataset(series)"@en;
-  sh:targetClass dcat:Dataset;
+  sh:targetClass inspire-shape:Dataset;
+  rdfs:subClassOf inspire-shape:Resource;
   inspire-meta:xpath "/";
   sh:property inspire-shape:ResourceLocator; # Lijkt erop dat dit niet voor services geldt?
   sh:property inspire-shape:ResourceLocatorComplex;
@@ -1190,9 +1294,10 @@ inspire-shape:Dataset a sh:NodeShape;
   sh:property inspire-shape:SpatialDatasetTopologicalConsistencyQuantitive;
   sh:property inspire-shape:SpatialDatasetTopologicalConsistencyDescriptive;
 .
-inspire-shape:Service a sh:NodeShape;
+inspire-shape:Service a sh:NodeShape, owl:Class;
   dct:subject inspire-concept:Service; #MAPPING: Uitdaging. Wat wordt dit? dcat:Distribution ligt voor de hand, maar GEO-DCAT-AP zegt ook dcat:Catalog en dct:Service??
-  sh:targetClass inspire:Service;
+  sh:targetClass inspire-shape:Service;
+  rdfs:subClassOf inspire-shape:Resource;
   sh:name "+Service";
   inspire-meta:xpath "/";
   sh:property inspire-shape:CoupledResource;
@@ -1205,9 +1310,9 @@ inspire-shape:Service a sh:NodeShape;
   sh:property inspire-shape:ConnectPoint;
 .
 inspire-shape:ResourceTitle a sh:PropertyShape;
-  shxl:index 1;
+   sh:order 1;
   dct:subject inspire-concept:ResourceTitle;
-  sh:path dct:title;
+#  sh:path dct:title;
   sh:name "title";
   rdfs:label "Resource title"@en;
   rdfs:label "Titel van de bron"@nl;
@@ -1221,9 +1326,9 @@ inspire-shape:ResourceTitle a sh:PropertyShape;
   skos:example "SPI: Standardized Precipitation Index";
 .
 inspire-shape:ResourceAbstract a sh:PropertyShape;
-  shxl:index 2;
+   sh:order 2;
   dct:subject inspire-concept:ResourceAbstract;
-  sh:path dct:description;
+#  sh:path dct:description;
   sh:name "abstract";
   rdfs:label "Resource abstract"@en;
   rdfs:label "Samenvatting van de bron"@nl;
@@ -1237,12 +1342,12 @@ inspire-shape:ResourceAbstract a sh:PropertyShape;
   skos:example "The Standardized Precipitation Index (SPI-n) is a statistical indicator comparing the total precipitation received at a particular location during a period of n months with the long-term rainfall distribution for the same period of time at that location. SPI is calculated on a monthly basis for a moving window of n months, where n indicates the rainfall accumulation period, which is typically 1, 3, 6, 9, 12, 24 or 48 months. The corresponding SPIs are denoted as SPI-1, SPI-3, SPI-6, etc. In order to allow for the statistical comparison of wetter and drier climates, SPI is based on a transformation of the accumulated precipitation into a standard normal variable with zero mean and variance equal to one. SPI results are given in units of standard deviation from the long-term mean of the standardized distribution. In 2010 WMO selected the SPI as a key meteorological drought indicator to be produced operationally by meteorological services";
 .
 inspire-shape:ResourceType a sh:PropertyShape;
-  shxl:index 3;
+   sh:order 3;
   dct:subject inspire-concept:ResourceType;
   sh:name "type";
   rdfs:label "Resource type"@en;
   rdfs:label "Type bron"@nl;
-  sh:path dct:type;
+#  sh:path dct:type;
   sh:severity sh:Violation;
   sh:class skos:Concept; #MD_ScopeCode
   sh:node inspire-shape:ResourceTypes;
@@ -1253,12 +1358,13 @@ inspire-shape:ResourceType a sh:PropertyShape;
   skos:example "dataset";
 .
 inspire-shape:ResourceLocator a sh:PropertyShape;
-  shxl:index 4;
+   sh:order 4;
   dct:subject inspire-concept:ResourceLocator;
   sh:name "locator";
   rdfs:label "Resource locator"@en;
   rdfs:label "Resource locator"@nl;
-  sh:path dcat:distribution; #MAPPING: In case of a "simple" resource locator a dummy distribution is added
+  #MAPPING: In case of a "simple" resource locator a dummy distribution is added
+#  sh:path dcat:distribution;
   sh:severity shxl:Conditional;
   shxl:severityCondition "Mandatory if a URL is available to obtain more information on the resources and/or access related services.";
   sh:datatype xsd:anyURI; #URL
@@ -1290,12 +1396,12 @@ inspire-shape:ResourceLocatorComplex a sh:PropertyShape;
   #- Dataset: dcat:Distribution/dcat:accessURL, bij functiecode offlineAccess
   #- Dataset: dcat:Distribution/dcat:accessURL, bij functiecode order
   #- Dataset: dcat:Dataset/foaf:page, bij functiecode search (let op: dit is dus lastig, meerdere dezelfde, dan is heen-en-terug niet meer mogelijk!!)
-  shxl:index 4;
+   sh:order 4;
   dct:subject inspire-concept:ResourceLocator;
-  sh:path foaf:homePage;
-  sh:path dcat:landingPage;
-  sh:path foaf:page;
-  sh:path dcat:accessURL;
+#  sh:path foaf:homePage;
+#  sh:path dcat:landingPage;
+#  sh:path foaf:page;
+#  sh:path dcat:accessURL;
   sh:name "locator";
   rdfs:label "Resource locator"@en;
   rdfs:label "Resource locator"@nl;
@@ -1305,11 +1411,11 @@ inspire-shape:ResourceLocatorComplex a sh:PropertyShape;
   sh:nodeKind sh:BlankNode;
   inspire-meta:xpath "distributionInfo/*/transferOptions/*/onLine/*/linkage/";
 .
-  
+
 inspire-shape:UniqueResourceIdentifier a sh:PropertyShape;
-  shxl:index 5;
+   sh:order 5;
   dct:subject inspire-concept:UniqueResourceIdentifier;
-  sh:path dct:identifier;
+#  sh:path dct:identifier;
   sh:name "identifier";
   sh:severity sh:Violation; #Only for dataset and dataset series
   rdfs:label "Unique resource identifier"@en;
@@ -1323,9 +1429,10 @@ inspire-shape:UniqueResourceIdentifier a sh:PropertyShape;
   rdfs:comment "The unique resource identifier is needed to provide a queryable information when following data-service-coupling (see also 4.1.2.4). Therefore it is necessary to have the identifier itself together with the namespace in element code. The use of RS_Identifier (with a separate element codeSpace) is not suitable here";
 .
 inspire-shape:CoupledResource a sh:PropertyShape;
-  shxl:index 6;
+   sh:order 6;
   dct:subject inspire-concept:CoupledResource;
-  sh:path dct:hasPart; #MAPPING Conform GEO-DCAT. Het idee is dat een service bestaat uit datasets
+  #MAPPING Conform GEO-DCAT. Het idee is dat een service bestaat uit datasets
+#  sh:path dct:hasPart;
   sh:name "coupledResource";
   rdfs:label "Coupled resource"@en;
   rdfs:label "Coupled resource"@nl;
@@ -1338,9 +1445,9 @@ inspire-shape:CoupledResource a sh:PropertyShape;
   rdfs:comment "The implementation of this element by reference means that the xlink:href element are pointing to a metadatarecord that contains a MD_DataIdentification object. The reference to the MD_DataIdentification object is done using the xpointer reference using the #-sign. The example above points to #lakes which is the ID of this object. Check example on xml encoding in section 0. The Unique Resource Identifier for the can be explicilty defined for the target dataset using the optional uuidref.attribute.";
 .
 inspire-shape:ResourceLanguage a sh:PropertyShape;
-  shxl:index 7;
+   sh:order 7;
   dct:subject inspire-concept:ResourceLanguage;
-  sh:path dct:language;
+#  sh:path dct:language;
   sh:name "language";
   rdfs:label "Resource language"@en;
   rdfs:label "Taal van de bron"@nl;
@@ -1354,9 +1461,10 @@ inspire-shape:ResourceLanguage a sh:PropertyShape;
   skos:example "eng";
 .
 inspire-shape:TopicCategory a sh:PropertyShape;
-  shxl:index 8;
+   sh:order 8;
   dct:subject inspire-concept:TopicCategory;
-  sh:path dct:subject; #MAPPING: Conform GEO-DCAT
+  #MAPPING: Conform GEO-DCAT
+#  sh:path dct:subject;
   sh:name "topicCategory";
   rdfs:label "Topic category"@en;
   rdfs:label "Onderwerpcategorie"@nl;
@@ -1370,9 +1478,10 @@ inspire-shape:TopicCategory a sh:PropertyShape;
   rdfs:comment "The topic categories defined in Part D 2 of [Regulation 1205/2008] are derived directly from the topic categories defined in MD_TopicCategoryCode (B.5.27 of ISO 19115)";
 .
 inspire-shape:SpatialDataServiceType a sh:PropertyShape;
-  shxl:index 9;
+   sh:order 9;
   dct:subject inspire-concept:SpatialDataServiceType;
-  sh:path dct:type; #MAPPING: services have two dct:type field: ResourceType and SpatialDataServiceType, but the second are narrower versions of the first, so this is OK
+  #MAPPING: services have two dct:type field: ResourceType and SpatialDataServiceType, but the second are narrower versions of the first, so this is OK
+#  sh:path dct:type;
   sh:name "SDStype";
   rdfs:label "Spatial data service type"@en;
   rdfs:label "Type dienst met betrekking tot ruimtelijke gegevens"@nl;
@@ -1386,13 +1495,14 @@ inspire-shape:SpatialDataServiceType a sh:PropertyShape;
   skos:example "view";
 .
 inspire-shape:Keyword a sh:PropertyShape;
-  shxl:index 10;
+   sh:order 10;
   dct:subject inspire-concept:Keyword;
   #MAPPING: er zijn twee mappings:
   #- dcat:keyword indien sprake is van een stringetje
   #- dcat:theme indien sprake is van een concept
   #Hieronder is de concept-variant uitgewerkt
-  sh:path dcat:theme; #MAPPING: Dit wordt dan 
+  #MAPPING: Dit wordt dan
+#  sh:path dcat:theme;
   sh:name "keyword";
   rdfs:label "Keyword"@en;
   rdfs:label "Trefwoord"@nl;
@@ -1402,10 +1512,11 @@ inspire-shape:Keyword a sh:PropertyShape;
   inspire-meta:xpath "identificationInfo[1]/*/descriptiveKeywords/*/";
 .
 inspire-shape:KeywordValue a sh:PropertyShape;
-  shxl:index 11;
+   sh:order 11;
   dct:subject inspire-concept:KeywordValue;
-  sh:path skos:prefLabel; #MAPPING: dit gaat uit van een echt concept
-  sh:name "keyword value";
+  #MAPPING: dit gaat uit van een echt concept
+#  sh:path skos:prefLabel;
+  sh:name "keywordValue";
   rdfs:label "Keyword value"@en;
   rdfs:label "Trefwoordwaarde"@nl;
   sh:severity sh:Violation;
@@ -1421,10 +1532,10 @@ inspire-shape:KeywordValue a sh:PropertyShape;
   rdfs:comment "Each instance of ISO 19115 keyword may originate from a controlled vocabulary described through the thesaurusName property of the instance of descriptiveKeywords to which the keyword pertains";
 .
 inspire-shape:KeywordOriginatingControlledVocabulary a sh:PropertyShape;
-  shxl:index 12;
+   sh:order 12;
   dct:subject inspire-concept:KeywordOriginatingControlledVocabulary;
-  sh:path skos:inScheme;
-  sh:name "originating controlled vocabulary";
+#  sh:path skos:inScheme;
+  sh:name "originatingControlledVocabulary";
   rdfs:label "Keyword originating controlled vocabulary"@en;
   rdfs:label "Origineel gecontroleerd vocabulaire van het trefwoord"@nl;
   sh:severity shxl:Conditional;
@@ -1451,9 +1562,9 @@ inspire-shape:KeywordOriginatingControlledVocabulary a sh:PropertyShape;
     - date: 2008-04-14''';
 .
 inspire-shape:GeographicBoundingBox a sh:PropertyShape;
-  shxl:index 13;
+   sh:order 13;
   dct:subject inspire-concept:GeographicBoundingBox;
-  sh:path dct:spatial;
+#  sh:path dct:spatial;
   sh:name "geographicBoundingBox";
   rdfs:label "Geographic bounding box"@en;
   rdfs:label "Geografische rechthoek"@nl;
@@ -1477,9 +1588,9 @@ inspire-shape:GeographicBoundingBox a sh:PropertyShape;
 - If the bounding box crosses the 180 meridian, then the value of the westBoundLongitude will be greater than the eastBoundLongitude value.'''
 .
 inspire-shape:TemporalExtent a sh:PropertyShape;
-  shxl:index 14;
+   sh:order 14;
   dct:subject inspire-concept:TemporalExtent;
-  sh:path dct:temporal;
+#  sh:path dct:temporal;
   sh:name "temporalExtent";
   rdfs:label "Temporal extent"@en;
   rdfs:label "Temporele dekking"@nl;
@@ -1493,9 +1604,9 @@ inspire-shape:TemporalExtent a sh:PropertyShape;
   rdfs:comment "The overall time period covered by the content of the resource may be composed of one or many instances";
 .
 inspire-shape:DateOfPublication a sh:PropertyShape;
-  shxl:index 15;
+   sh:order 15;
   dct:subject inspire-concept:DateOfPublication;
-  sh:path dct:issued;
+#  sh:path dct:issued;
   sh:name "dateOfPublication";
   rdfs:label "Date of publication"@en;
   rdfs:label "Datum van bekendmaking"@nl;
@@ -1509,9 +1620,9 @@ inspire-shape:DateOfPublication a sh:PropertyShape;
   skos:example "2009-03-15T11:15:00";
 .
 inspire-shape:DateOfLastRevision a sh:PropertyShape;
-  shxl:index 16;
+   sh:order 16;
   dct:subject inspire-concept:DateOfLastRevision;
-  sh:path dct:modified;
+#  sh:path dct:modified;
   sh:name "dateOfLastRevision";
   rdfs:label "Date of last revision"@en;
   rdfs:label "Datum van laatste herziening"@nl;
@@ -1527,9 +1638,9 @@ inspire-shape:DateOfLastRevision a sh:PropertyShape;
   rdfs:comment "There may be more than one revision date provided in an ISO 19115 metadata, but INSPIRE will consider as date of last revision the more recent one";
 .
 inspire-shape:DateOfCreation a sh:PropertyShape;
-  shxl:index 17;
+   sh:order 17;
   dct:subject inspire-concept:DateOfCreation;
-  sh:path dct:created;
+#  sh:path dct:created;
   sh:name "dateOfCreation";
   rdfs:label "Date of creation"@en;
   rdfs:label "Aanmaakdatum"@nl;
@@ -1544,9 +1655,9 @@ inspire-shape:DateOfCreation a sh:PropertyShape;
   skos:example "2009-02-15T11:15:00";
 .
 inspire-shape:Lineage a sh:PropertyShape;
-  shxl:index 18;
+   sh:order 18;
   dct:subject inspire-concept:Lineage;
-  sh:path dct:provenance;
+#  sh:path dct:provenance;
   sh:name "lineage";
   rdfs:label "Lineage"@en;
   rdfs:label "Algemene beschrijving herkomst"@nl;
@@ -1560,9 +1671,10 @@ inspire-shape:Lineage a sh:PropertyShape;
   skos:example "Computation of the SPI involves fitting a probability density function to a given frequency distribution of precipitation totals for a station or grid point and for an accumulation period. We use the gamma probability density function. The statistics for the frequency distribution are calculated on the basis of a reference period of at least 30 years. The parameters of the probability density function are then used to find the cumulative probability of the observed precipitation for the required month and temporal scale. This cumulative probability is then transformed to the standardised normal distribution with mean zero and variance one, which results in the value of the SPI. The SPI values are computed using the so-called MARS weather stations as rainfall input data. Refer the MARS weather catalogue for characteristics of the quality and quantity of these data. We only rely on the rainfall data input";
 .
 inspire-shape:SpatialResolutionEquivalentScale a sh:PropertyShape;
-  shxl:index 19;
+   sh:order 19;
   dct:subject inspire-concept:SpatialResolution;
-  sh:path rdfs:comment; #MAPPING: Geen goede mapping mogelijk! Het wordt "talig" opgelost, en het wordt dan ook een string!
+  #MAPPING: Geen goede mapping mogelijk! Het wordt "talig" opgelost, en het wordt dan ook een string!
+#  sh:path rdfs:comment;
   sh:name "spatialResolution";
   rdfs:label "Spatial resolution"@en;
   rdfs:label "Ruimtelijke resolutie"@nl;
@@ -1576,13 +1688,15 @@ inspire-shape:SpatialResolutionEquivalentScale a sh:PropertyShape;
   rdfs:comment "For services, it is not possible to express the restriction of a service concerning the spatial resolution in the current version of ISO 19119. While the problem is addressed by the standardization community, spatial resolution restrictions for services shall be expressed in the Abstract";
 .
 inspire-shape:SpatialResolutionDistance a sh:PropertyShape;
-  shxl:index 20;
+   sh:order 20;
   dct:subject inspire-concept:SpatialResolution;
-  sh:path rdfs:comment; #MAPPING: Geen goede mapping mogelijk! Het wordt "talig" opgelost, en het wordt dan ook een string!
+  #MAPPING: Geen goede mapping mogelijk! Het wordt "talig" opgelost, en het wordt dan ook een string!
+#  sh:path rdfs:comment;
   sh:name "spatialResolution";
   rdfs:label "Spatial resolution"@en;
   rdfs:label "Ruimtelijke resolutie"@nl;
-  sh:path rdfs:comment; #MAPPING: Geen goede mapping mogelijk! Het wordt "talig" opgelost, en het wordt dan ook een string!
+  #MAPPING: Geen goede mapping mogelijk! Het wordt "talig" opgelost, en het wordt dan ook een string!
+#  sh:path rdfs:comment;
   sh:severity shxl:Conditional;
   shxl:severityCondition "Mandatory if an equivalent scale or a resolution distance can be specified. Mandatory when there is a restriction on the spatial resolution for service.";
   sh:datatype xsd:integer;
@@ -1593,10 +1707,11 @@ inspire-shape:SpatialResolutionDistance a sh:PropertyShape;
   rdfs:comment "For services, it is not possible to express the restriction of a service concerning the spatial resolution in the current version of ISO 19119. While the problem is addressed by the standardization community, spatial resolution restrictions for services shall be expressed in the Abstract";
 .
 inspire-shape:Conformity a sh:PropertyShape;
-  shxl:index 21;
+   sh:order 21;
   dct:subject inspire-concept:Conformity;
-  sh:path dct:conformsTo; #MAPPING: Alleen als sprake is van "conformant", anders:..
-  sh:path prov:wasUsedBy;
+  #MAPPING: Alleen als sprake is van "conformant", anders de 2e..
+#  sh:path dct:conformsTo;
+#  sh:path prov:wasUsedBy;
   sh:name "conformity";
   rdfs:label "Conformity"@en;
   rdfs:label "Overeenstemming"@nl;
@@ -1608,9 +1723,10 @@ inspire-shape:Conformity a sh:PropertyShape;
   inspire-meta:xpath "dataQualityInfo/*/report/*/result/*/";
 .
 inspire-shape:ConformitySpecification a sh:PropertyShape;
-  shxl:index 22;
+   sh:order 22;
   dct:subject inspire-concept:ConformitySpecification;
-  sh:path prov:wasDerivedFrom; #MAPPING: Eigenlijk ingewikkelder: prov:qualifiedAssociation/prov:hadPlan/prov:wasDerivedFrom
+  #MAPPING: Eigenlijk ingewikkelder: prov:qualifiedAssociation/prov:hadPlan/prov:wasDerivedFrom
+#  sh:path prov:wasDerivedFrom;
   sh:name "specification";
   rdfs:label "Comformity specification"@en;
   rdfs:label "Specificatie van de overeenstemming"@nl;
@@ -1628,9 +1744,9 @@ inspire-shape:ConformitySpecification a sh:PropertyShape;
   - date: 2010-12-08'''
 .
 inspire-shape:ConformityDegree a sh:PropertyShape;
-  shxl:index 23;
+   sh:order 23;
   dct:subject inspire-concept:ConformityDegree;
-  sh:path dct:type;
+#  sh:path dct:type;
   sh:name "degree";
   rdfs:label "Conformity degree"@en;
   rdfs:label "Conformiteitsindicatie met de specificatie"@nl;
@@ -1646,10 +1762,11 @@ inspire-shape:ConformityDegree a sh:PropertyShape;
 - null (with nilReason = 'unknown') if not evaluated'''
 .
 inspire-shape:ConditionsApplyingToAccessAndUse a sh:PropertyShape;
-  shxl:index 24;
+   sh:order 24;
   dct:subject inspire-concept:ConditionsApplyingToAccessAndUse;
-  sh:name "conditionsApplyingToAccessAndUse";
-  sh:path dct:license;
+#  sh:name "conditionsApplyingToAccessAndUse";
+  sh:name "accessConstraints";
+#  sh:path dct:license;
   rdfs:label "Conditions applying to access and use"@en;
   rdfs:label "Voorwaarden voor toegang en gebruik"@nl;
   sh:severity shxl:Conditional;
@@ -1699,9 +1816,9 @@ inspire-shape:ConditionsApplyingToUseOtherConstraints a sh:PropertyShape;
   rdfs:comment '''The domain of the metadata element otherConstraints is Free text. This makes it hard to unambiguous define some common values in all official languages in the Communiy. Therefore it is required to refer to code lists in the Inspire registry for some specific values like "no conditions apply" and "conditions unknown" (see TG Requirement 8).'''
 .
 inspire-shape:LimitationsOnPublicAccess a sh:PropertyShape;
-  shxl:index 25;
+   sh:order 25;
   dct:subject inspire-concept:LimitationsOnPublicAccess;
-  sh:path dct:accessRights;
+#  sh:path dct:accessRights;
   sh:name "limitationsOnPublicAccess";
   rdfs:label "Limitations on public access"@en;
   rdfs:label "Beperkingen op openbare toegang"@nl;
@@ -1726,13 +1843,18 @@ inspire-shape:LimitationsOnPublicAccessOtherConstraints a sh:PropertyShape;
   skos:example '''<gmx:Anchor link:href=" http://inspire.ec.europa.eu/ metadata-codelist /LimitationsOnPublicAccess//NoLimitations"> no limitations</gmx:Anchor>''';
 .
 inspire-shape:ResponsibleOrganisation a sh:PropertyShape;
-  shxl:index 26;
+   sh:order 26;
   dct:subject inspire-concept:ResponsibleOrganisation;
-  sh:path dcat:contactPoint; #MAPPING: In geval van rol = "Point of contact"
-  sh:path dct:rightsHolder; #MAPPING: In geval van rol = "Owner"
-  sh:path dct:publisher; #MAPPING: In geval van rol = "Publisher"
-  sh:path dct:creator; #MAPPING: In geval van rol = "Creator"
-  sh:path prov:qualifiedAttribution; #MAPPING: Voor gevallen dat er geen rol bestaat. In dat geval moet dct:type de werkelijke rol bevatten
+  #MAPPING: In geval van rol = "Point of contact"
+#  sh:path dcat:contactPoint;
+  #MAPPING: In geval van rol = "Owner"
+#  sh:path dct:rightsHolder;
+  #MAPPING: In geval van rol = "Publisher"
+#  sh:path dct:publisher;
+  #MAPPING: In geval van rol = "Creator"
+#  sh:path dct:creator;
+  #MAPPING: Voor gevallen dat er geen rol bestaat. In dat geval moet dct:type de werkelijke rol bevatten
+#  sh:path prov:qualifiedAttribution;
   sh:name "responsibleOrganisation";
   rdfs:label "Responsible organisation"@en;
   rdfs:label "Verantwoordelijke organisatie"@nl;
@@ -1743,9 +1865,9 @@ inspire-shape:ResponsibleOrganisation a sh:PropertyShape;
   sh:nodeKind sh:BlankNode;
 .
 inspire-shape:ResponsibleParty a sh:PropertyShape;
-  shxl:index 27;
+   sh:order 27;
   dct:subject inspire-concept:ResponsibleParty;
-  sh:path prov:agent;
+#  sh:path prov:agent;
   sh:name "responsibleParty";
   rdfs:label "Responsible party"@en;
   rdfs:label "Verantwoordelijke organisatie bron"@nl;
@@ -1769,20 +1891,23 @@ inspire-shape:ResponsibleOrganisationElement a sh:NodeShape;
 inspire-shape:Party a sh:NodeShape;
   dct:subject inspire-concept:Party;
   sh:name "+Party";
-  sh:property [
-    sh:name "organisationName";
-    sh:datatype xsd:string;
-    sh:node inspire-shape:FreeText
-  ];
-  sh:property [
-    sh:name "contactInfo";
-    sh:node inspire-shape:Contact;
-  ];
+  sh:property inspire-shape:PartyOrganisationName;
+  sh:property inspire-shape:PartyContactInfo;
 .
+inspire-shape:PartyOrganisationName a sh:PropertyShape;
+  sh:name "organisationName";
+  sh:datatype xsd:string;
+  sh:node inspire-shape:FreeText
+.
+inspire-shape:PartyContactInfo a sh:PropertyShape;
+  sh:name "contactInfo";
+  sh:node inspire-shape:Contact;
+.
+
 inspire-shape:ResponsiblePartyRole a sh:PropertyShape;
-  shxl:index 28;
+   sh:order 28;
   dct:subject inspire-concept:ResponsiblePartyRole;
-  sh:path dct:type;
+#  sh:path dct:type;
   sh:name "responsiblePartyRole";
   rdfs:label "Responsible party role"@en;
   rdfs:label "Rol van de verantwoordelijke organisatie bron"@nl;
@@ -1797,9 +1922,9 @@ inspire-shape:ResponsiblePartyRole a sh:PropertyShape;
   rdfs:comment "There is a direct mapping between the responsible party roles defined in Part D 6 of [Regulation 1205/2008] and the values of the CI_RoleCode code list of ISO 19115";
 .
 inspire-shape:MetadataPointOfContact a sh:PropertyShape;
-  shxl:index 29;
+   sh:order 29;
   dct:subject inspire-concept:MetadataPointOfContact;
-  sh:path dcat:contactPoint;
+#  sh:path dcat:contactPoint;
   sh:name "metadataPointOfContact";
   rdfs:label "Metadata point of contact"@en;
   rdfs:label "Contactpunt voor metagegevens"@nl;
@@ -1815,9 +1940,9 @@ inspire-shape:MetadataPointOfContact a sh:PropertyShape;
   - electronicMailAddress: ies-contact@jrc.ec.europa.eu'''
 .
 inspire-shape:MetadataDate a sh:PropertyShape;
-  shxl:index 30;
+   sh:order 30;
   dct:subject inspire-concept:MetadataDate;
-  sh:path dct:modified;
+#  sh:path dct:modified;
   sh:name "date";
   rdfs:label "Metadata date"@en;
   rdfs:label "Datum van metagegevens"@nl;
@@ -1831,9 +1956,9 @@ inspire-shape:MetadataDate a sh:PropertyShape;
   skos:example "2012-02-20";
 .
 inspire-shape:MetadataLanguage a sh:PropertyShape;
-  shxl:index 31;
+   sh:order 31;
   dct:subject inspire-concept:MetadataLanguage;
-  sh:path dct:language;
+#  sh:path dct:language;
   sh:name "language";
   rdfs:label "Metadata language"@en;
   rdfs:label "Taal van metagegevens"@nl;
@@ -1851,8 +1976,8 @@ inspire-shape:MetadataLanguage a sh:PropertyShape;
 # Technical (Only in the TG, not in the regulation)
 #
 inspire-shape:MetadataFileIdentifier a sh:PropertyShape;
-  shxl:index 32;
-  sh:path dct:identifier;
+   sh:order 32;
+#  sh:path dct:identifier;
   sh:name "fileIdentifier";
   rdfs:label "File identifier"@en;
   rdfs:label "Bestandsidentificatie"@nl;
@@ -1860,8 +1985,9 @@ inspire-shape:MetadataFileIdentifier a sh:PropertyShape;
   sh:maxCount 1;
 .
 inspire-shape:MetadataStandardName a sh:PropertyShape;
-  shxl:index 33;
-  sh:path dct:title; #MAPPING: via dct:conformsTo/dct:title
+   sh:order 33;
+  #MAPPING: via dct:conformsTo/dct:title
+#  sh:path dct:title;
   sh:name "standardName";
   rdfs:label "Name of metadata standard"@en;
   rdfs:label "Naam van de metadata standaard"@nl;
@@ -1869,8 +1995,8 @@ inspire-shape:MetadataStandardName a sh:PropertyShape;
   sh:maxCount 1;
 .
 inspire-shape:MetadataStandardVersion a sh:PropertyShape;
-  shxl:index 34;
-  sh:path owl:versionInfo;
+   sh:order 34;
+#  sh:path owl:versionInfo;
   sh:name "standardVersion";
   rdfs:label "Version of metadata standard"@en;
   rdfs:label "Versie van de metadata standaard"@nl;
@@ -1878,26 +2004,26 @@ inspire-shape:MetadataStandardVersion a sh:PropertyShape;
   sh:maxCount 1;
 .
 inspire-shape:MetadataCharacterSet a sh:PropertyShape;
-  shxl:index 35;
-  sh:path cnt:characterEncoding;
+   sh:order 35;
+#  sh:path cnt:characterEncoding;
   sh:name "characterEncoding";
   rdfs:label "Metadata character encoding"@en;
   rdfs:label "Metadata tekencodering"@nl;
   sh:severity shxl:Conditional;
   shxl:severityCondition "ISO19115 is more demanding than Inspire: mandatory if not UTF8. Not applicable to services";
   sh:maxCount 1;
-.  
+.
 
 #
 # Section C.3 of Technical Guidance for the implementation of INSPIRE dataset and service metadata based on ISO/TS 19139:2007
 #
 inspire-shape:SpatialDatasetCoordinateReferenceSystem a sh:PropertyShape;
-  shxl:index 36;
+   sh:order 36;
   dct:subject inspire-concept:SpatialDatasetCoordinateReferenceSystem;
-  sh:path dct:conformsTo;
+#  sh:path dct:conformsTo;
   sh:name "coordinateReferenceSystem";
   rdfs:label "Spatial data set Coordinate Reference System"@en;
-  rdfs:label "Coördinaatreferentiesysteem van de verzameling ruimtelijke gegevens"@nl;
+  rdfs:label " CoÃ¶rdinaatreferentiesysteem van de verzameling ruimtelijke gegevens"@nl;
   sh:severity sh:Violation; #Mandatory for dataset and dataset series; not applicable to network services
   sh:minCount 1;
   sh:node inspire-shape:ReferenceSystem;
@@ -1908,10 +2034,10 @@ inspire-shape:SpatialDatasetCoordinateReferenceSystem a sh:PropertyShape;
   rdfs:comment "ISO 19115 lists several elements which build MD_ReferenceSystem. For the purpose of theme-specific metadata according to the INSPIRE Data specifications the element listed above is sufficient."
 .
 inspire-shape:SpatialDatasetTemporalReferenceSystem a sh:PropertyShape;
-  shxl:index 37;
+   sh:order 37;
   dct:subject inspire-concept:SpatialDatasetTemporalReferenceSystem;
-  sh:path dct:conformsTo;
-  sh:name "temporal reference system";
+#  sh:path dct:conformsTo;
+  sh:name "temporalReferenceSystem";
   rdfs:label "Spatial data set Temporal Reference System"@en;
   rdfs:label "Tijdsreferentiesysteem van de verzameling ruimtelijke gegevens"@nl;
   sh:severity shxl:Conditional;
@@ -1924,10 +2050,12 @@ inspire-shape:SpatialDatasetTemporalReferenceSystem a sh:PropertyShape;
   rdfs:comment "The primary temporal reference system for use with geographic information is the Gregorian Calendar and 24 hour local or Coordinated Universal Time (UTC), but special applications may entail the use of alternative reference systems. So this element is mandatory only if the spatial data set contains temporal information that does not refer to the default temporal reference system.";
 .
 inspire-shape:SpatialDatasetEncoding a sh:PropertyShape;
-  shxl:index 38;
+   sh:order 38;
   dct:subject inspire-concept:SpatialDatasetEncoding;
-  sh:path dct:mediaType; #MAPPING: In geval het formaat voorkomt in de INSPIRE-Mediatype lijst (= subset van IANA Mediatypes)
-  sh:path dct:format; #MAPPING: In geval het formaat voorkomt in de referentielijst
+  #MAPPING: In geval het formaat voorkomt in de INSPIRE-Mediatype lijst (= subset van IANA Mediatypes)
+#  sh:path dct:mediaType;
+  #MAPPING: In geval het formaat voorkomt in de referentielijst
+#  sh:path dct:format;
   sh:severity sh:Violation; #Only for dataset and dataset series
   sh:name "encoding";
   rdfs:label "Spatial data set encoding"@en;
@@ -1939,7 +2067,7 @@ inspire-shape:SpatialDatasetEncoding a sh:PropertyShape;
   inspire-meta:xpath "distributionInfo/MD_Distribution/distributionFormat";
 .
 inspire-shape:SpatialDatasetTopologicalConsistencyQuantitive a sh:PropertyShape;
-  shxl:index 39;
+   sh:order 39;
   dct:subject inspire-concept:SpatialDatasetTopologicalConsistency;
   sh:severity sh:Warning;
   sh:name "topologicalConsistency";
@@ -1951,9 +2079,9 @@ inspire-shape:SpatialDatasetTopologicalConsistencyQuantitive a sh:PropertyShape;
   inspire-meta:xpath "dataQualityInfo/DQ_DataQuality/report/"
 .
 inspire-shape:SpatialDatasetCharacterEncoding a sh:PropertyShape;
-  shxl:index 40;
+   sh:order 40;
   dct:subject inspire-concept:SpatialDatasetCharacterEncoding;
-  sh:path dct:conformsTo;
+#  sh:path dct:conformsTo;
   sh:severity shxl:Conditional;
   shxl:severityCondition "ISO19115 is more demanding than Inspire: mandatory if not UTF8. Not applicable to services";
   sh:name "characterEncoding";
@@ -1966,9 +2094,9 @@ inspire-shape:SpatialDatasetCharacterEncoding a sh:PropertyShape;
   skos:example "usAscii";
 .
 inspire-shape:SpatialDatasetSpatialRepresentationType a sh:PropertyShape;
-  shxl:index 41;
+   sh:order 41;
   dct:subject inspire-concept:SpatialDatasetSpatialRepresentationType;
-  sh:path adms:representationTechnique;
+#  sh:path adms:representationTechnique;
   sh:severity sh:Violation; #Only for dataset and datasetseries, not applicable to services
   sh:name "spatialRepresentationType";
   rdfs:label "Spatial data set representation type"@en;
@@ -1982,7 +2110,7 @@ inspire-shape:SpatialDatasetSpatialRepresentationType a sh:PropertyShape;
   rdfs:comment "This element is used to broadly categorise a spatial data resource being described."
 .
 inspire-shape:SpatialDatasetTopologicalConsistencyDescriptive a sh:PropertyShape;
-  shxl:index 42;
+   sh:order 42;
   dct:subject inspire-concept:SpatialDatasetTopologicalConsistency;
   sh:severity sh:Warning;
   sh:name "topologicalConsistency";
@@ -1992,7 +2120,7 @@ inspire-shape:SpatialDatasetTopologicalConsistencyDescriptive a sh:PropertyShape
   sh:nodeKind sh:BlankNode;
   inspire-meta:isoref "80. report";
   inspire-meta:xpath "dataQualityInfo/DQ_DataQuality/report/"
-.  
+.
 
 #
 # Section C.4 of Technical Guidance for the implementation of INSPIRE dataset and service metadata based on ISO/TS 19139:2007
@@ -2081,7 +2209,7 @@ inspire-shape:QualityOfServiceMeasurementUnit a sh:PropertyShape;
   sh:maxCount 1;
   skos:example "second";
 .
-  
+
 #
 # Section C.6 of Technical Guidance for the implementation of INSPIRE dataset and service metadata based on ISO/TS 19139:2007
 #
@@ -2128,9 +2256,9 @@ inspire-shape:ConnectPoint a sh:PropertyShape;
 # [This section is about specific extensions and not part of the core]
 
 inspire-shape:MaintenanceInformation a sh:PropertyShape;
-  shxl:index 41;
+   sh:order 41;
   #TODO: Niet duidelijk welk artikel uit de regelgeving dit betreft;
-  sh:path dct:accrualPeriodicity;
+#  sh:path dct:accrualPeriodicity;
   sh:name "maintenaceInformation";
   rdfs:label "Maintenance information"@en;
   rdfs:label "Onderhoudsinformatie"@nl;
@@ -2153,114 +2281,137 @@ inspire-shape:ConformityElement a sh:NodeShape;
 .
 inspire-shape:Citation a sh:NodeShape;
   sh:name "+Citation";
-  sh:property [
-    sh:name "title";
-    sh:datatype xsd:string;
-    sh:node inspire-shape:FreeText;
-    sh:minCount 1;
-    sh:maxCount 1;
-  ];
-  sh:property [
-    sh:name "referenceDate";
-    sh:node inspire-shape:Date;
-    sh:minCount 1;
-    sh:maxCount 1;
-    sh:nodeKind sh:BlankNode
-  ];
+  sh:property inspire-shape:CitationTitle;
+  sh:property inspire-shape:CitationReferenceDate;
 .
+inspire-shape:CitationTitle a sh:PropertyShape;
+  sh:name "title";
+  sh:datatype xsd:string;
+  sh:node inspire-shape:FreeText;
+  sh:minCount 1;
+  sh:maxCount 1;
+.
+inspire-shape:CitationReferenceDate a sh:PropertyShape;
+  sh:name "referenceDate";
+  sh:node inspire-shape:Date;
+  sh:minCount 1;
+  sh:maxCount 1;
+  sh:nodeKind sh:BlankNode
+.
+
 inspire-shape:CIDate a sh:NodeShape;
   sh:name "+Date";
-  sh:property [
-    sh:name "dateType";
-    sh:in ("creation" "publication" "revision");
-    sh:datatype xsd:string;
-    sh:minCount 1;
-    sh:maxCount 1;
-  ];
-  sh:property [
-    sh:name "date";
-    sh:datatype xsd:date;
-    sh:minCount 1;
-    sh:maxCount 1;
-  ]
+  sh:property inspire-shape:CIDateDateType;
+  sh:property inspire-shape:CIDateDate;
 .
+inspire-shape:CIDateDateType a sh:PropertyShape;
+  sh:name "dateType";
+  sh:in ("creation" "publication" "revision");
+  sh:datatype xsd:string;
+  sh:minCount 1;
+  sh:maxCount 1;
+.
+inspire-shape:CIDateDate a sh:PropertyShape;
+  sh:name "date";
+  sh:datatype xsd:date;
+  sh:minCount 1;
+  sh:maxCount 1;
+.
+
 inspire-shape:Period a sh:NodeShape;
   sh:name "+Period";
-  sh:property [
-    sh:name "begin";
-    sh:datetype xsd:dateTime;
-    sh:maxCount 1
-  ];
-  sh:property [
-    sh:name "end";
-    sh:datetype xsd:dateTime;
-    sh:maxCount 1
-  ]
+  sh:property inspire-shape:PeriodBegin;
+  sh:property inspire-shape:PeriodEnd
 .
+inspire-shape:PeriodBegin a sh:PropertyShape;
+  sh:name "begin";
+  sh:datetype xsd:dateTime;
+  sh:maxCount 1
+.
+inspire-shape:PeriodEnd a sh:PropertyShape;
+  sh:name "end";
+  sh:datetype xsd:dateTime;
+  sh:maxCount 1
+.
+
 inspire-shape:BoundingBox a sh:NodeShape;
   sh:name "+BoundingBox";
-  sh:property [
-    sh:name "westBoundLongitude";
-    sh:datatype xsd:decimal;
-    sh:minCount 1;
-    sh:maxCount 1
-  ];
-  sh:property [
-    sh:name "eastBoundLongitudeBoundLongitude";
-    sh:datatype xsd:decimal;
-    sh:minCount 1;
-    sh:maxCount 1
-  ];
-  sh:property [
-    sh:name "southBoundLatitudeBoundLatitude";
-    sh:datatype xsd:decimal;
-    sh:minCount 1;
-    sh:maxCount 1
-  ];
-  sh:property [
-    sh:name "northBoundLatitude";
-    sh:datatype xsd:decimal;
-    sh:minCount 1;
-    sh:maxCount 1
-  ];
+  sh:property inspire-shape:BoundingBoxWestBoundLongitude;
+  sh:property inspire-shape:BoundingBoxEastBoundLongitudeBoundLongitude;
+  sh:property inspire-shape:BoundingBoxSouthBoundLatitudeBoundLatitude;
+  sh:property inspire-shape:BoundingBoxNorthBoundLatitude;
 .
+inspire-shape:BoundingBoxWestBoundLongitude a sh:PropertyShape;
+  sh:name "westBoundLongitude";
+  sh:datatype xsd:decimal;
+  sh:minCount 1;
+  sh:maxCount 1
+.
+inspire-shape:BoundingBoxEastBoundLongitudeBoundLongitude a sh:PropertyShape;
+  sh:name "eastBoundLongitudeBoundLongitude";
+  sh:datatype xsd:decimal;
+  sh:minCount 1;
+  sh:maxCount 1
+.
+inspire-shape:BoundingBoxSouthBoundLatitudeBoundLatitude a sh:PropertyShape;
+  sh:name "southBoundLatitudeBoundLatitude";
+  sh:datatype xsd:decimal;
+  sh:minCount 1;
+  sh:maxCount 1
+.
+inspire-shape:BoundingBoxNorthBoundLatitude a sh:PropertyShape;
+  sh:name "northBoundLatitude";
+  sh:datatype xsd:decimal;
+  sh:minCount 1;
+  sh:maxCount 1
+.
+
 inspire-shape:Format a sh:NodeShape;
   sh:name "*Format";
-  sh:property [
-    sh:name "name";
-    sh:datatype xsd:string;
-    sh:minCount 1;
-    sh:maxCount 1
-  ];
-  sh:property [
-    sh:name "version";
-    sh:datatype xsd:string;
-    sh:minCount 1;
-    sh:maxCount 1
-  ]
+  sh:property inspire-shape:FormatName;
+  sh:property inspire-shape:FormatVersion
 .
+inspire-shape:FormatName a sh:PropertyShape;
+  sh:name "name";
+  sh:datatype xsd:string;
+  sh:minCount 1;
+  sh:maxCount 1
+.
+inspire-shape:FormatVersion a sh:PropertyShape;
+  sh:name "version";
+  sh:datatype xsd:string;
+  sh:minCount 1;
+  sh:maxCount 1
+.
+
 inspire-shape:DataQualityElement a sh:NodeShape;
   sh:name "+DataQualityElement";
-  sh:property [
-    sh:name "nameOfMeasure";
-  ];
-  sh:property [
-    sh:name "evaluationMethodType";
-    sh:maxCount 1;
-  ];
-  sh:property [
-    sh:name "evaluationMethodDescription";
-    sh:maxCount 1;
-  ];
-  sh:property [
-    sh:name "dateTime";
-  ];
-  sh:property [
-    sh:name "result";
-    sh:minCount 1;
-    sh:maxCount 2;
-  ];
+  sh:property inspire-shape:DataQualityElementNameOfMeasure;
+  sh:property inspire-shape:DataQualityElementEvaluationMethodType;
+  sh:property inspire-shape:DataQualityElementEvaluationMethodDescription;
+  sh:property inspire-shape:DataQualityElementDateTime;
+  sh:property inspire-shape:DataQualityElementResult;
 .
+inspire-shape:DataQualityElementNameOfMeasure a sh:PropertyShape;
+  sh:name "nameOfMeasure";
+.
+inspire-shape:DataQualityElementEvaluationMethodType a sh:PropertyShape;
+  sh:name "evaluationMethodType";
+  sh:maxCount 1;
+.
+inspire-shape:DataQualityElementEvaluationMethodDescription a sh:PropertyShape;
+  sh:name "evaluationMethodDescription";
+  sh:maxCount 1;
+.
+inspire-shape:DataQualityElementDateTime a sh:PropertyShape;
+  sh:name "dateTime";
+.
+inspire-shape:DataQualityElementResult a sh:PropertyShape;
+  sh:name "result";
+  sh:minCount 1;
+  sh:maxCount 2;
+.
+
 inspire-shape:QualityOfServiceElement a sh:NodeShape;
   sh:name "+QualityOfService";
   sh:property inspire-shape:QualityOfServiceCriteria;
@@ -2270,83 +2421,101 @@ inspire-shape:QualityOfServiceElement a sh:NodeShape;
 .
 inspire-shape:ConformanceResult a sh:NodeShape;
   sh:name "+ConformanceResult";
-  sh:property [
-    sh:name "specification";
-    sh:minCount 1;
-    sh:maxCount 1;
-    sh:node inspire-shape:Citation;
-    sh:nodeKind sh:BlankNode;
-  ];
-  sh:property [
-    sh:name "explanation";
-    sh:minCount 1;
-    sh:maxCount 1;
-  ];
-  sh:property [
-    sh:name "pass";
-    sh:minCount 1;
-    sh:maxCount 1;
-    sh:datatype xsd:boolean;
-  ];
+  sh:property inspire-shape:ConformanceResultSpecification;
+  sh:property inspire-shape:ConformanceResultExplanation;
+  sh:property inspire-shape:ConformanceResultPass;
 .
+inspire-shape:ConformanceResultSpecification a sh:PropertyShape;
+  sh:name "specification";
+  sh:minCount 1;
+  sh:maxCount 1;
+  sh:node inspire-shape:Citation;
+  sh:nodeKind sh:BlankNode;
+.
+inspire-shape:ConformanceResultExplanation a sh:PropertyShape;
+  sh:name "explanation";
+  sh:minCount 1;
+  sh:maxCount 1;
+.
+inspire-shape:ConformanceResultPass a sh:PropertyShape;
+  sh:name "pass";
+  sh:minCount 1;
+  sh:maxCount 1;
+  sh:datatype xsd:boolean;
+.
+
 inspire-shape:ResourceLocatorElement a sh:NodeShape;
   sh:name "+ResourceLocatorElement";
-  sh:property [
-    sh:name "URL";
-    sh:datatype xsd:AnyURI;
-  ];
-  sh:property [
-    sh:name "title";
-    sh:datatype xsd:string;
-  ];
-  sh:property [
-    sh:name "name";
-    sh:datatype xsd:string; #Not quite sure if it should be "name" or "title". Both are mentioned
-  ];
-  sh:property [
-    sh:name "description";
-    sh:datatype xsd:string;
-  ];
-  sh:property [
-    sh:name "description";
-    sh:node inspire-shape:OnlineDescriptionCodes;
-  ];
-  sh:property [
-    sh:name "function";
-    sh:node inspire-shape:OnlineFunctionCodes;
-  ]
+  sh:property inspire-shape:ResourceLocatorElementURL;
+  sh:property inspire-shape:ResourceLocatorElementTitle;
+  sh:property inspire-shape:ResourceLocatorElementName;
+  sh:property inspire-shape:ResourceLocatorElementDescription;
+  sh:property inspire-shape:ResourceLocatorElementDescriptionCode;
+  sh:property inspire-shape:ResourceLocatorElementFunction
 .
+inspire-shape:ResourceLocatorElementURL a sh:NodeShape;
+  sh:name "URL";
+  sh:datatype xsd:AnyURI;
+.
+inspire-shape:ResourceLocatorElementTitle a sh:NodeShape;
+  sh:name "title";
+  sh:datatype xsd:string;
+.
+inspire-shape:ResourceLocatorElementName a sh:NodeShape;
+  sh:name "name";
+  sh:datatype xsd:string; #Not quite sure if it should be "name" or "title". Both are mentioned
+.
+inspire-shape:ResourceLocatorElementDescription a sh:NodeShape;
+  sh:name "description";
+  sh:datatype xsd:string;
+.
+inspire-shape:ResourceLocatorElementDescriptionCode a sh:NodeShape;
+  sh:name "description";
+  sh:node inspire-shape:OnlineDescriptionCodes;
+.
+inspire-shape:ResourceLocatorElementFunction a sh:NodeShape;
+  sh:name "function";
+  sh:node inspire-shape:OnlineFunctionCodes;
+.
+
 inspire-shape:Contact a sh:NodeShape;
   sh:name "+Contact";
-  sh:property [
-    sh:name "address";
-    sh:node inspire-shape:Address;
-    sh:nodeKind sh:BlankNode;
-  ]
+  sh:property inspire-shape:ContactAddress
 .
+inspire-shape:ContactAddress a sh:PropertyShape;
+  sh:name "address";
+  sh:node inspire-shape:Address;
+  sh:nodeKind sh:BlankNode;
+.
+
 inspire-shape:Address a sh:NodeShape;
   sh:name "+Address";
-  sh:property [
-    sh:name "electronicMailAddress";
-    sh:minCount 1;
-    sh:datatype xsd:string;
-  ];
+  sh:property inspire-shape:AddressElectronicMailAddress;
 .
+inspire-shape:AddressElectronicMailAddress a sh:PropertyShape;
+  sh:name "electronicMailAddress";
+  sh:minCount 1;
+  sh:datatype xsd:string;
+.
+
 inspire-shape:ReferenceSystem a sh:NodeShape;
   sh:name "*ReferenceSystem";
-  sh:property [
-    sh:name "code";
-    sh:datatype xsd:string;
-    sh:minCount 1;
-    sh:maxCount 1;
-  ];
-  sh:property [
-    sh:name "description";
-    sh:datatype xsd:string;
-    sh:minCount 1;
-    sh:maxCount 1;
-  ];
+  sh:property inspire-shape:ReferenceSystemCode;
+  sh:property inspire-shape:ReferenceSystemDescription;
 .
+inspire-shape:ReferenceSystemCode a sh:PropertyShape;
+  sh:name "code";
+  sh:datatype xsd:string;
+  sh:minCount 1;
+  sh:maxCount 1;
+.
+inspire-shape:ReferenceSystemDescription a sh:PropertyShape;
+  sh:name "description";
+  sh:datatype xsd:string;
+  sh:minCount 1;
+  sh:maxCount 1;
+.
+
 inspire-shape:KeywordElement a sh:NodeShape;
   sh:name "+Keyword";
   sh:property inspire-shape:KeywordValue;
@@ -2505,13 +2674,15 @@ inspire-collection:PublicAccessLimitations a skos:Collection;
   skos:member inspire-concept:INSPIRE_Directive_Article13_1h;
 .
 inspire-concept:NoLimitations a skos:Concept;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "No limitations to public access";
   skos:definition "There are no limitations on public access to spatial data sets and services";
   skos:notation "noLimitations";
 .
 inspire-concept:INSPIRE_Directive_Article13_1a a skos:Concept;
   dct:source inspire-lex:Article13-1-a;
-  rdfs:label "public access limited according to Article 13(1)(a) of the INSPIRE Directive";
+  skos:inScheme inspire-scheme:Inspire;
+  rdfs:label "public access limited according to Article 13(1)(a) of the INSPIRE Directive"@en;
   skos:definition "Public access to spatial data sets and services would adversely affect the confidentiality of the proceedings of public authorities, where such confidentiality is provided for by law.";
   skos:notation "INSPIRE_Directive_Article13_1a"
 .
@@ -2525,22 +2696,27 @@ inspire-collection:OnlineFunctionCodes a skos:Collection;
   skos:member inspire-concept:Search;
 .
 inspire-concept:Download a skos:Concept;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Download"@en;
   skos:definition "online instructions for transferring data from one storage device or system to another"@en;
 .
 inspire-concept:Information a skos:Concept;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Information"@en;
   skos:definition "online information about the resource";
 .
 inspire-concept:OfflineAccess a skos:Concept;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Offline access"@en;
   skos:definition "online instructions for requesting the resource from the provider"@en;
 .
 inspire-concept:Order a skos:Concept;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Order"@en;
   skos:definition "online order process for obtening the resource"@en;
 .
 inspire-concept:Search a skos:Concept;
+  skos:inScheme inspire-scheme:Inspire;
   rdfs:label "Search"@en;
   skos:definition "online search interface for seeking out information about the resource"@en;
 .
@@ -2552,7 +2728,7 @@ inspire-collection:OnlineDescriptionCodes a skos:Collection;
 .
 
 inspire-collection:DCPList a skos:Collection;
-  rdfs:label "Distributed Computing Platforms";
+  rdfs:label "Distributed Computing Platforms"@en;
   skos:member inspire-concept:XML;
   skos:member inspire-concept:CORBA;
   skos:member inspire-concept:JAVA;
@@ -2561,22 +2737,28 @@ inspire-collection:DCPList a skos:Collection;
   skos:member inspire-concept:WebServices;
 .
 inspire-concept:XML a skos:Concept;
-  rdfs:label "XML";
+  skos:inScheme inspire-scheme:Inspire;
+  rdfs:label "XML"@en;
 .
 inspire-concept:CORBA a skos:Concept;
-  rdfs:label "CORBA";
+  skos:inScheme inspire-scheme:Inspire;
+  rdfs:label "CORBA"@en;
 .
 inspire-concept:JAVA a skos:Concept;
-  rdfs:label "JAVA";
+  skos:inScheme inspire-scheme:Inspire;
+  rdfs:label "JAVA"@en;
 .
 inspire-concept:COM a skos:Concept;
-  rdfs:label "COM";
+  skos:inScheme inspire-scheme:Inspire;
+  rdfs:label "COM"@en;
 .
 inspire-concept:SQL a skos:Concept;
-  rdfs:label "SQL";
+  skos:inScheme inspire-scheme:Inspire;
+  rdfs:label "SQL"@en;
 .
 inspire-concept:WebServices a skos:Concept;
-  rdfs:label "WebServices";
+  skos:inScheme inspire-scheme:Inspire;
+  rdfs:label "WebServices"@en;
 .
 
 inspire-collection:SpatialRepresentationTypeCode a skos:Collection;
