@@ -34,6 +34,7 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix frbr: <http://purl.org/vocab/frbr/core#>.
+@prefix cnt: <http://www.w3.org/2011/content#>.
 
 geodcatnl:Dataset a sh:NodeShape;
   sh:name "dcat:Dataset";
@@ -44,6 +45,54 @@ geodcatnl:Dataset a sh:NodeShape;
   sh:property geodcatnl:AanmaakDatum;
   sh:property geodcatnl:UniekeIdentifierVanDeBron;
   sh:property geodcatnl:Samenvatting;
+  sh:property geodcatnl:TaalVanDeBron;
+  sh:property geodcatnl:Onderwerp;
+  sh:property geodcatnl:VerantwoordelijkeOrganisatieBronPointOfContact;
+  sh:property geodcatnl:VerantwoordelijkeOrganisatieBronOwner;
+  sh:property geodcatnl:VerantwoordelijkeOrganisatieBronPublisher;
+  sh:property geodcatnl:VerantwoordelijkeOrganisatieBronCreator;
+  sh:property geodcatnl:VerantwoordelijkeOrganisatieBronOverig;
+  sh:property geodcatnl:Trefwoord;
+  sh:property geodcatnl:TrefwoordConcept;
+
+  sh:property [
+    sh:name "dcat:distribution";
+    sh:path dcat:distribution;
+    sh:class dcat:Distribution;
+  ];
+.
+geodcatnl:Distribution a sh:NodeShape;
+  sh:name "dcat:Distribution";
+  sh:targetClass dcat:Distribution;
+  sh:property geodcatnl:KaraktersetVanDeBron;
+.
+geodcatnl:Agent a sh:NodeShape;
+  sh:name "foaf:Agent";
+  sh:targetClass foaf:Agent;
+  sh:property geodcatnl:VerantwoordelijkeOrganisatieBronNaam;
+  sh:property geodcatnl:VerantwoordelijkeOrganisatieBronEmail;
+.
+geodcatnl:Attribution a sh:NodeShape;
+  sh:name "prov:Attribution";
+  sh:targetClass prov:Attribution;
+  sh:property geodcatnl:VerantwoordelijkeOrganisatieBronRol;
+
+  sh:property [
+    sh:name "prov:agent";
+    sh:path prov:agent;
+    sh:class foaf:Agent;
+  ]
+.
+geodcatnl:Concept a sh:NodeShape;
+  sh:name "skos:Concept";
+  sh:targetClass skos:Concept;
+  sh:property geodcatnl:TrefwoordTerm;
+  sh:property geodcatnl:Thesaurus;
+.
+geodcatnl:ConceptScheme a sh:NodeShape;
+  sh:name "skos:ConceptScheme";
+  sh:targetClass skos:ConceptScheme;
+  sh:property geodcatnl:ThesaurusName;
 .
 
 geodcatnl:TitelVanDeBron a sh:PropertyShape;
@@ -57,18 +106,24 @@ geodcatnl:DatumVanPublicatie a sh:PropertyShape;
   sh:name "dct:issued";
   sh:path dct:issued;
   prov:wasDerivedFrom nlprofiel:DatumVanDeBron;
+  prov:wasDerivedFrom nlprofiel:DatumtypeVanDeBron;
+  rdfs:comment "dateType = publication"
 .
 geodcatnl:DatumVanLaatsteWijziging a sh:PropertyShape;
   sh:order 2.2;
   sh:name "dct:modified";
   sh:path dct:modified;
   prov:wasDerivedFrom nlprofiel:DatumVanDeBron;
+  prov:wasDerivedFrom nlprofiel:DatumtypeVanDeBron;
+  rdfs:comment "dateType = revision"
 .
 geodcatnl:AanmaakDatum a sh:PropertyShape;
   sh:order 2.3;
   sh:name "dct:created";
   sh:path dct:created;
   prov:wasDerivedFrom nlprofiel:DatumVanDeBron;
+  prov:wasDerivedFrom nlprofiel:DatumtypeVanDeBron;
+  rdfs:comment "dateType = creation"
 .
 geodcatnl:UniekeIdentifierVanDeBron a sh:PropertyShape;
   sh:order 4;
@@ -81,4 +136,142 @@ geodcatnl:Samenvatting a sh:PropertyShape;
   sh:name "dct:description";
   sh:path dct:description;
   prov:wasDerivedFrom nlprofiel:Samenvatting
+.
+geodcatnl:TaalVanDeBron a sh:PropertyShape;
+  sh:order 7;
+  sh:name "dct:language";
+  sh:path dct:language;
+  prov:wasDerivedFrom nlprofiel:TaalVanDeBron
+.
+geodcatnl:KaraktersetVanDeBron a sh:PropertyShape;
+  sh:order 8;
+  sh:name "cnt:characterEncoding";
+  sh:path cnt:characterEncoding;
+  prov:wasDerivedFrom nlprofiel:KaraktersetVanDeBron;
+.
+geodcatnl:Onderwerp a sh:PropertyShape;
+  sh:order 9;
+  sh:name "dct:subject";
+  sh:path dct:subject;
+  prov:wasDerivedFrom nlprofiel:Onderwerp;
+.
+geodcatnl:VerantwoordelijkeOrganisatieBronNaam a sh:PropertyShape;
+  sh:order 10;
+  sh:name "foaf:name";
+  sh:path foaf:name;
+  prov:wasDerivedFrom nlprofiel:VerantwoordelijkeOrganisatieBronNaam;
+.
+geodcatnl:VerantwoordelijkeOrganisatieBronPointOfContact a sh:PropertyShape;
+  sh:order 10.1;
+  sh:name "dcat:contactPoint";
+  sh:path dcat:contactPoint;
+  sh:class foaf:Agent;
+  prov:wasDerivedFrom nlprofiel:VerantwoordelijkeOrganisatieBronNaam;
+  rdfs:comment "role = Point of Contact";
+.
+geodcatnl:VerantwoordelijkeOrganisatieBronOwner a sh:PropertyShape;
+  sh:order 10.2;
+  sh:name "dct:rightsHolder";
+  sh:path dct:rightsHolder;
+  sh:class foaf:Agent;
+  prov:wasDerivedFrom nlprofiel:VerantwoordelijkeOrganisatieBronNaam;
+  rdfs:comment "role = Owner";
+.
+geodcatnl:VerantwoordelijkeOrganisatieBronPublisher a sh:PropertyShape;
+  sh:order 10.3;
+  sh:name "dct:publisher";
+  sh:path dct:publisher;
+  sh:class foaf:Agent;
+  prov:wasDerivedFrom nlprofiel:VerantwoordelijkeOrganisatieBronNaam;
+  rdfs:comment "role = Publisher";
+.
+geodcatnl:VerantwoordelijkeOrganisatieBronCreator a sh:PropertyShape;
+  sh:order 10.4;
+  sh:name "dct:creator";
+  sh:path dct:creator;
+  sh:class foaf:Agent;
+  prov:wasDerivedFrom nlprofiel:VerantwoordelijkeOrganisatieBronNaam;
+  rdfs:comment "role = Creator";
+.
+geodcatnl:VerantwoordelijkeOrganisatieBronOverig a sh:PropertyShape;
+  sh:order 10.5;
+  sh:name "prov:qualifiedAttribution";
+  sh:path prov:qualifiedAttribution;
+  sh:class prov:Attribution;
+  prov:wasDerivedFrom nlprofiel:VerantwoordelijkeOrganisatieBronNaam;
+  rdfs:comment "role != Point of Contact, Owner, Publisher or Creator";
+.
+geodcatnl:VerantwoordelijkeOrganisatieBronEmail a sh:PropertyShape;
+  sh:order 11;
+  sh:name "vcard:hasEmail";
+  sh:path vcard:hasEmail;
+  prov:wasDerivedFrom nlprofiel:VerantwoordelijkeOrganisatieBronEmail
+.
+geodcatnl:VerantwoordelijkeOrganisatieBronRol a sh:PropertyShape;
+  sh:order 12;
+  sh:name "dct:type";
+  sh:path dct:type;
+  prov:wasDerivedFrom nlprofiel:VerantwoordelijkeOrganisatieBronRol;
+.
+geodcatnl:Trefwoord a sh:PropertyShape;
+  sh:order 13.1;
+  sh:name "dcat:keyword";
+  sh:path dcat:keyword;
+  prov:wasDerivedFrom nlprofiel:Trefwoord;
+  rdfs:comment "For free-text keywords";
+  prov:wasDerivedFrom nlprofiel:Trefwoord;
+.
+geodcatnl:TrefwoordConcept a sh:PropertyShape;
+  sh:order 13.2;
+  sh:name "dcat:theme";
+  sh:path dcat:theme;
+  sh:class skos:Concept;
+  prov:wasDerivedFrom nlprofiel:Trefwoord;
+  rdfs:comment "For keywords from a controlled list";
+  prov:wasDerivedFrom nlprofiel:Trefwoord;
+.
+geodcatnl:TrefwoordTerm a sh:PropertyShape;
+  sh:order 13.3;
+  sh:name "skos:prefLabel";
+  sh:path skos:prefLabel;
+  prov:wasDerivedFrom nlprofiel:Trefwoord;
+  rdfs:comment "For keywords from a controlled list";
+  prov:wasDerivedFrom nlprofiel:Trefwoord;
+.
+geodcatnl:Thesaurus a sh:PropertyShape;
+  sh:order 14.1;
+  sh:name "skos:inScheme";
+  sh:path skos:inScheme;
+  sh:class skos:ConceptScheme;
+  prov:wasDerivedFrom nlprofiel:Thesaurus;
+.
+geodcatnl:ThesaurusName a sh:PropertyShape;
+  sh:order 14.2;
+  sh:name "rdfs:label";
+  sh:path rdfs:label;
+  prov:wasDerivedFrom nlprofiel:Thesaurus;
+.
+geodcatnl:Thesaurusdatum a sh:PropertyShape;
+  sh:order 15.1;
+  sh:name "dct:created";
+  sh:path dct:created;
+  prov:wasDerivedFrom nlprofiel:Thesaurusdatum;
+  prov:wasDerivedFrom nlprofiel:ThesaurusdatumType;
+  rdfs:comment "dateType = creation";
+.
+geodcatnl:Thesaurusdatum a sh:PropertyShape;
+  sh:order 15.2;
+  sh:name "dct:modified";
+  sh:path dct:modified;
+  prov:wasDerivedFrom nlprofiel:Thesaurusdatum;
+  prov:wasDerivedFrom nlprofiel:ThesaurusdatumType;
+  rdfs:comment "dateType = revision";
+.
+geodcatnl:Thesaurusdatum a sh:PropertyShape;
+  sh:order 15.3;
+  sh:name "dct:issued";
+  sh:path dct:issued;
+  prov:wasDerivedFrom nlprofiel:Thesaurusdatum;
+  prov:wasDerivedFrom nlprofiel:ThesaurusdatumType;
+  rdfs:comment "dateType = publication";
 .

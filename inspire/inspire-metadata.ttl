@@ -1632,7 +1632,7 @@ inspire-shape:DateOfLastRevision a sh:PropertyShape;
   sh:node inspire-shape:CIDate; #Described in ISO 19108 and ISO 8601
   sh:nodekind sh:BlankNode;
   inspire-meta:isoref "362. date";
-  inspire-meta:xpath "identificationInfo[1]/*/citation/*/date[./*/dateType/*/text()='publication']/*/date";
+  inspire-meta:xpath "identificationInfo[1]/*/citation/*/date[./*/dateType/*/text()='revision']/*/date";
   skos:example "2009-04-15";
   skos:example "2009-04-15T11:15:00";
   rdfs:comment "There may be more than one revision date provided in an ISO 19115 metadata, but INSPIRE will consider as date of last revision the more recent one";
@@ -1650,7 +1650,7 @@ inspire-shape:DateOfCreation a sh:PropertyShape;
   sh:node inspire-shape:CIDate; #Described in ISO 19108 and ISO 8601
   sh:nodekind sh:BlankNode;
   inspire-meta:isoref "362. date";
-  inspire-meta:xpath "identificationInfo[1]/*/citation/*/date[./*/dateType/*/text()='publication']/*/date";
+  inspire-meta:xpath "identificationInfo[1]/*/citation/*/date[./*/dateType/*/text()='creation']/*/date";
   skos:example "2009-02-15";
   skos:example "2009-02-15T11:15:00";
 .
@@ -1791,7 +1791,7 @@ inspire-shape:ConditionsApplyingToAccessAndUseOtherConstraints a sh:PropertyShap
   skos:example "Reproduction for non-commercial purposes is authorised, provided the source is acknowledged. Commercial use is not permitted without prior written consent of the JRC. Reports, articles, papers, scientific and non-scientific works of any form, including tables, maps, or any other kind of output, in printed or electronic form, based in whole or in part on the data supplied, must contain an acknowledgement of the form: Data re-used from the European Drought Observatory (EDO) http://edo.jrc.ec.europa.eu The SPI data were created as part of JRC's research activities. Although every care has been taken in preparing and testing the data, JRC cannot guarantee that the data are correct; neither does JRC accept any liability whatsoever for any error, missing data or omission in the data, or for any loss or damage arising from its use. The JRC will not be responsible for any direct or indirect use which might be made of the data. The JRC does not provide any assistance or support in using the data";
   rdfs:comment '''The domain of the metadata element otherConstraints is Free text. This makes it hard to unambiguous define some common values in all official languages in the Communiy. Therefore it is required to refer to code lists in the Inspire registry for some specific values like "no conditions apply" and "conditions unknown" (see TG Requirement 8).'''
 .
-inspire-shape:ConditionsApplyingToUse a sh:Propertyshape;
+inspire-shape:ConditionsApplyingToUse a sh:PropertyShape;
   dct:subject inspire-concept:ConditionsApplyingToAccessAndUse;
   sh:name "conditionsApplyingToUse"; #MAPPING: ApplyingToUse mapt op dezelfde wijze als ApplyingToAccessAndUse
   sh:severity shxl:Conditional;
@@ -2525,7 +2525,7 @@ inspire-shape:KeywordElement a sh:NodeShape;
 #
 # Domain: Data types
 #
-inspire-shape:FreeText a sh:Nodeshape;
+inspire-shape:FreeText a sh:NodeShape;
   sh:name "*Free text";
 .
 inspire-shape:OnlineResource a sh:NodeShape;
@@ -2535,7 +2535,7 @@ inspire-shape:ValueDatatype a sh:NodeShape;
   sh:name "*ValueDatatype";
   rdfs:comment "Any datatype according to the specific measurement";
 .
-inspire-shape:Code a sh:Nodeshape;
+inspire-shape:Code a sh:NodeShape;
   sh:name "*Code";
   rdfs:comment "Some code identifier. In case a predefined list is not available (in such cases, codes would be part of a skos:notation element)";
 .
