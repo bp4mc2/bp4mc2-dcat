@@ -57,12 +57,22 @@ geodcatnl:Dataset a sh:NodeShape;
   sh:property geodcatnl:RuimtelijkReferentiesysteem;
   sh:property geodcatnl:TemporeelReferentiesysteem;
   sh:property geodcatnl:OmgrenzendeRechthoek;
+  sh:property geodcatnl:URL;
+  sh:property geodcatnl:URLPage;
+  sh:property geodcatnl:AlgemeneBeschrijvingHerkomst;
+  sh:property geodcatnl:MetadataUniekeIdentifier;
 
   sh:property [
     sh:name "dcat:distribution";
     sh:path dcat:distribution;
     sh:class dcat:Distribution;
   ];
+
+  sh:property [
+    sh:name "prov:wasDerivedFrom";
+    sh:path prov:wasDerivedFrom;
+    sh:class dct:Standard;
+  ]
 .
 geodcatnl:Distribution a sh:NodeShape;
   sh:name "dcat:Distribution";
@@ -72,12 +82,20 @@ geodcatnl:Distribution a sh:NodeShape;
   sh:property geodcatnl:RuimtelijkSchemaVanDeBron;
   sh:property geodcatnl:DistributieFormaatFormat;
   sh:property geodcatnl:DistributieFormaatMediaType;
+  sh:property geodcatnl:URLAccess;
+  sh:property geodcatnl:Naam;
+  sh:property geodcatnl:Omschrijving;
 .
 geodcatnl:Agent a sh:NodeShape;
   sh:name "foaf:Agent";
   sh:targetClass foaf:Agent;
   sh:property geodcatnl:VerantwoordelijkeOrganisatieBronNaam;
   sh:property geodcatnl:VerantwoordelijkeOrganisatieBronEmail;
+.
+geodcatnl:Kind a sh:NodeShape;
+  sh:name "vcard:Kind";
+  sh:targetClass vcard:Kind;
+  sh:property geodcatnl:VerantwoordelijkeOrganisatieMetadataEmail;
 .
 geodcatnl:Attribution a sh:NodeShape;
   sh:name "prov:Attribution";
@@ -104,7 +122,27 @@ geodcatnl:ConceptScheme a sh:NodeShape;
   sh:property geodcatnl:ThesaurusdatumModified;
   sh:property geodcatnl:ThesaurusdatumPublication;
 .
-
+geodcatnl:SpecificationStandard a sh:NodeShape;
+  sh:name "dct:Standard";
+  sh:targetClass dct:Standard;
+  sh:property geodcatnl:Specificatie;
+  sh:property geodcatnl:SpecificatiedatumCreated;
+  sh:property geodcatnl:SpecificatiedatumModified;
+  sh:property geodcatnl:SpecificatiedatumPublication;
+.
+geodcatnl:MetadataStandardElement a sh:NodeShape;
+  sh:name "dct:Standard";
+  sh:property geodcatnl:MetadataStandaardNaam;
+  sh:property geodcatnl:MetadataStandaardVersie;
+.
+geodcatnl:CatalogRecord a sh:NodeShape;
+  sh:name "dcat:CatalogRecord";
+  sh:targetClass dcat:CatalogRecord;
+  sh:property geodcatnl:Metadatadatum;
+  sh:property geodcatnl:TaalVanDeMetadata;
+  sh:property geodcatnl:VerantwoordelijkeOrganisatieMetadataNaam;
+  sh:property geodcatnl:MetadataStandaard;
+.
 geodcatnl:TitelVanDeBron a sh:PropertyShape;
   sh:order 1;
   sh:name "dct:title";
@@ -332,4 +370,123 @@ geodcatnl:DistributieFormaatMediaType a sh:PropertyShape;
   prov:wasDerivedFrom nlprofiel:VersieDistributieFormaat;
   prov:wasDerivedFrom nlprofiel:SpecificatieDistributieFormaat;
   rdfs:comment "For formats from the INSPIRE Mediatype list";
+.
+geodcatnl:URL a sh:PropertyShape;
+  sh:order 29.1;
+  sh:name "dcat:landingPage";
+  sh:path dcat:landingPage;
+  prov:wasDerivedFrom nlprofiel:URL;
+  rdfs:comment "Function code not provided";
+.
+geodcatnl:URLAccess a sh:PropertyShape;
+  sh:order 29.2;
+  sh:name "dcat:accessURL";
+  sh:path dcat:accessURL;
+  prov:wasDerivedFrom nlprofiel:URL;
+  rdfs:comment "Function code = download, offlineAccess or order";
+.
+geodcatnl:URLPage a sh:PropertyShape;
+  sh:order 29.3;
+  sh:name "foaf:page";
+  sh:path foaf:page;
+  prov:wasDerivedFrom nlprofiel:URL;
+  rdfs:comment "Function code = information or search";
+.
+geodcatnl:Naam a sh:PropertyShape;
+  sh:order 31;
+  sh:name "dct:title";
+  sh:path dct:title;
+  prov:wasDerivedFrom nlprofiel:Naam;
+.
+geodcatnl:Omschrijving a sh:PropertyShape;
+  sh:order 32;
+  sh:name "dct:description";
+  sh:path dct:description;
+  prov:wasDerivedFrom nlprofiel:Omschrijving;
+.
+geodcatnl:AlgemeneBeschrijvingHerkomst a sh:PropertyShape;
+  sh:order 34;
+  sh:name "dct:provenance";
+  sh:path dct:provenance;
+  prov:wasDerivedFrom nlprofiel:AlgemeneBeschrijvingHerkomst;
+.
+geodcatnl:Specificatie a sh:PropertyShape;
+  sh:order 35;
+  sh:name "dct:title";
+  sh:path "dct:title";
+  prov:wasDerivedFrom nlprofiel:Specificatie;
+.
+geodcatnl:SpecificatiedatumCreated a sh:PropertyShape;
+  sh:order 36.1;
+  sh:name "dct:created";
+  sh:path dct:created;
+  prov:wasDerivedFrom nlprofiel:Specificatiedatum;
+  prov:wasDerivedFrom nlprofiel:SpecificatiedatumType;
+  rdfs:comment "dateType = creation"
+.
+geodcatnl:SpecificatiedatumModified a sh:PropertyShape;
+  sh:order 36.2;
+  sh:name "dct:modified";
+  sh:path dct:modified;
+  prov:wasDerivedFrom nlprofiel:Specificatiedatum;
+  prov:wasDerivedFrom nlprofiel:SpecificatiedatumType;
+  rdfs:comment "dateType = revision"
+.
+geodcatnl:SpecificatiedatumPublication a sh:PropertyShape;
+  sh:order 36.3;
+  sh:name "dct:issued";
+  sh:path dct:issued;
+  prov:wasDerivedFrom nlprofiel:Specificatiedatum;
+  prov:wasDerivedFrom nlprofiel:SpecificatiedatumType;
+  rdfs:comment "dateType = publication"
+.
+geodcatnl:MetadataUniekeIdentifier a sh:PropertyShape;
+  sh:order 42;
+  sh:name "dct:identifier";
+  sh:path dct:identifier;
+  prov:wasDerivedFrom nlprofiel:MetadataUniekeIdentifier;
+.
+geodcatnl:Metadatadatum a sh:PropertyShape;
+  sh:order 43;
+  sh:name "dct:modified";
+  sh:path dct:modified;
+  prov:wasDerivedFrom nlprofiel:Metadatadatum;
+.
+geodcatnl:TaalVanDeMetadata a sh:PropertyShape;
+  sh:order 44;
+  sh:name "dct:language";
+  sh:path dct:language;
+  prov:wasDerivedFrom nlprofiel:TaalVanDeMetadata;
+.
+geodcatnl:VerantwoordelijkeOrganisatieMetadataNaam a sh:PropertyShape;
+  sh:order 48;
+  sh:name "dcat:contactPoint";
+  sh:path dcat:contactPoint;
+  sh:class vcard:Kind;
+  prov:wasDerivedFrom nlprofiel:VerantwoordelijkeOrganisatieMetadataNaam;
+.
+geodcatnl:VerantwoordelijkeOrganisatieMetadataEmail a sh:PropertyShape;
+  sh:order 50;
+  sh:name "vcard:hasEmail";
+  sh:path vcard:hasEmail;
+  prov:wasDerivedFrom nlprofiel:VerantwoordelijkeOrganisatieMetadataEmail
+.
+geodcatnl:MetadataStandaard a sh:PropertyShape;
+  sh:order 51.1;
+  sh:name "dct:conformsTo";
+  sh:path dct:conformsTo;
+  sh:node geodcatnl:MetadataStandard;
+  prov:wasDerivedFrom nlprofiel:MetadataStandaardNaam;
+.
+geodcatnl:MetadataStandaardNaam a sh:PropertyShape;
+  sh:order 51.2;
+  sh:name "dct:title";
+  sh:path dct:title;
+  prov:wasDerivedFrom nlprofiel:MetadataStandaardNaam;
+.
+geodcatnl:MetadataStandaardVersie a sh:PropertyShape;
+  sh:order 52;
+  sh:name "owl:versionInfo";
+  sh:path owl:versionInfo;
+  prov:wasDerivedFrom nlprofiel:MetadataStandaardVersie;
 .
