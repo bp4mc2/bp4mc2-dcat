@@ -60,7 +60,6 @@ geodcatnl:Dataset a sh:NodeShape;
   sh:property geodcatnl:URL;
   sh:property geodcatnl:URLPage;
   sh:property geodcatnl:AlgemeneBeschrijvingHerkomst;
-  sh:property geodcatnl:MetadataUniekeIdentifier;
 
   sh:property [
     sh:name "dcat:distribution";
@@ -130,7 +129,7 @@ geodcatnl:SpecificationStandard a sh:NodeShape;
   sh:property geodcatnl:SpecificatiedatumModified;
   sh:property geodcatnl:SpecificatiedatumPublication;
 .
-geodcatnl:MetadataStandardElement a sh:NodeShape;
+geodcatnl:MetadataStandard a sh:NodeShape;
   sh:name "dct:Standard";
   sh:property geodcatnl:MetadataStandaardNaam;
   sh:property geodcatnl:MetadataStandaardVersie;
@@ -138,10 +137,20 @@ geodcatnl:MetadataStandardElement a sh:NodeShape;
 geodcatnl:CatalogRecord a sh:NodeShape;
   sh:name "dcat:CatalogRecord";
   sh:targetClass dcat:CatalogRecord;
+  sh:property geodcatnl:MetadataUniekeIdentifier;
   sh:property geodcatnl:Metadatadatum;
   sh:property geodcatnl:TaalVanDeMetadata;
   sh:property geodcatnl:VerantwoordelijkeOrganisatieMetadataNaam;
-  sh:property geodcatnl:MetadataStandaard;
+  sh:property [
+    sh:name "dct:conformsTo";
+    sh:path dct:conformsTo;
+    sh:node geodcatnl:MetadataStandard;
+  ];
+  sh:property [
+    sh:name "dcat:dataset";
+    sh:path dcat:dataset;
+    sh:class dcat:Dataset;
+  ]
 .
 geodcatnl:TitelVanDeBron a sh:PropertyShape;
   sh:order 1;
@@ -464,6 +473,8 @@ geodcatnl:VerantwoordelijkeOrganisatieMetadataNaam a sh:PropertyShape;
   sh:path dcat:contactPoint;
   sh:class vcard:Kind;
   prov:wasDerivedFrom nlprofiel:VerantwoordelijkeOrganisatieMetadataNaam;
+  prov:wasDerivedFrom nlprofiel:VerantwoordelijkeOrganisatieMetadataRol;
+  rdfs:comment "role = pointOfContact";
 .
 geodcatnl:VerantwoordelijkeOrganisatieMetadataEmail a sh:PropertyShape;
   sh:order 50;
@@ -471,15 +482,8 @@ geodcatnl:VerantwoordelijkeOrganisatieMetadataEmail a sh:PropertyShape;
   sh:path vcard:hasEmail;
   prov:wasDerivedFrom nlprofiel:VerantwoordelijkeOrganisatieMetadataEmail
 .
-geodcatnl:MetadataStandaard a sh:PropertyShape;
-  sh:order 51.1;
-  sh:name "dct:conformsTo";
-  sh:path dct:conformsTo;
-  sh:node geodcatnl:MetadataStandard;
-  prov:wasDerivedFrom nlprofiel:MetadataStandaardNaam;
-.
 geodcatnl:MetadataStandaardNaam a sh:PropertyShape;
-  sh:order 51.2;
+  sh:order 51;
   sh:name "dct:title";
   sh:path dct:title;
   prov:wasDerivedFrom nlprofiel:MetadataStandaardNaam;
