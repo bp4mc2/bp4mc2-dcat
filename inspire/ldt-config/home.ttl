@@ -53,6 +53,7 @@ stage:Menu elmo:appearance elmo:NavbarSearchAppearance;
 			rdfs:label "Controle";
 			elmo:data [elmo:index "1"; rdfs:label "Vergelijking"; html:link "/inspire/query/vergelijking"];
 			elmo:data [elmo:index "2"; rdfs:label "Mapping"; html:link "/inspire/query/mapping"];
+			elmo:data [elmo:index "3"; rdfs:label "LD-Mapping"; html:link "/inspire/query/ld-mapping"];
 		]
   ]
 .

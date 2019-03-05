@@ -124,6 +124,7 @@ stage:Collectie_list a elmo:Part;
 stage:Shape	a	elmo:Representation;
 	elmo:uri-pattern	"/def/inspire-shape#";
 	elmo:uri-pattern	"/def/nlprofiel-shape#";
+	elmo:uri-pattern	"/def/geodcatnl-shape#";
 	elmo:contains	stage:Menu;
 	elmo:contains	stage:Resource_content;
 	elmo:contains stage:Shape_list;

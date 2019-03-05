@@ -54,6 +54,9 @@ geodcatnl:Dataset a sh:NodeShape;
   sh:property geodcatnl:VerantwoordelijkeOrganisatieBronOverig;
   sh:property geodcatnl:Trefwoord;
   sh:property geodcatnl:TrefwoordConcept;
+  sh:property geodcatnl:RuimtelijkReferentiesysteem;
+  sh:property geodcatnl:TemporeelReferentiesysteem;
+  sh:property geodcatnl:OmgrenzendeRechthoek;
 
   sh:property [
     sh:name "dcat:distribution";
@@ -65,6 +68,10 @@ geodcatnl:Distribution a sh:NodeShape;
   sh:name "dcat:Distribution";
   sh:targetClass dcat:Distribution;
   sh:property geodcatnl:KaraktersetVanDeBron;
+  sh:property geodcatnl:JuridischeToegangsrestricties;
+  sh:property geodcatnl:RuimtelijkSchemaVanDeBron;
+  sh:property geodcatnl:DistributieFormaatFormat;
+  sh:property geodcatnl:DistributieFormaatMediaType;
 .
 geodcatnl:Agent a sh:NodeShape;
   sh:name "foaf:Agent";
@@ -93,6 +100,9 @@ geodcatnl:ConceptScheme a sh:NodeShape;
   sh:name "skos:ConceptScheme";
   sh:targetClass skos:ConceptScheme;
   sh:property geodcatnl:ThesaurusName;
+  sh:property geodcatnl:ThesaurusdatumCreated;
+  sh:property geodcatnl:ThesaurusdatumModified;
+  sh:property geodcatnl:ThesaurusdatumPublication;
 .
 
 geodcatnl:TitelVanDeBron a sh:PropertyShape;
@@ -251,7 +261,7 @@ geodcatnl:ThesaurusName a sh:PropertyShape;
   sh:path rdfs:label;
   prov:wasDerivedFrom nlprofiel:Thesaurus;
 .
-geodcatnl:Thesaurusdatum a sh:PropertyShape;
+geodcatnl:ThesaurusdatumCreated a sh:PropertyShape;
   sh:order 15.1;
   sh:name "dct:created";
   sh:path dct:created;
@@ -259,7 +269,7 @@ geodcatnl:Thesaurusdatum a sh:PropertyShape;
   prov:wasDerivedFrom nlprofiel:ThesaurusdatumType;
   rdfs:comment "dateType = creation";
 .
-geodcatnl:Thesaurusdatum a sh:PropertyShape;
+geodcatnl:ThesaurusdatumModified a sh:PropertyShape;
   sh:order 15.2;
   sh:name "dct:modified";
   sh:path dct:modified;
@@ -267,11 +277,59 @@ geodcatnl:Thesaurusdatum a sh:PropertyShape;
   prov:wasDerivedFrom nlprofiel:ThesaurusdatumType;
   rdfs:comment "dateType = revision";
 .
-geodcatnl:Thesaurusdatum a sh:PropertyShape;
+geodcatnl:ThesaurusdatumPublication a sh:PropertyShape;
   sh:order 15.3;
   sh:name "dct:issued";
   sh:path dct:issued;
   prov:wasDerivedFrom nlprofiel:Thesaurusdatum;
   prov:wasDerivedFrom nlprofiel:ThesaurusdatumType;
   rdfs:comment "dateType = publication";
+.
+geodcatnl:JuridischeToegangsrestricties a sh:PropertyShape;
+  sh:order 16;
+  sh:name "dct:license";
+  sh:path dct:license;
+  prov:wasDerivedFrom nlprofiel:JuridischeToegangsrestricties;
+.
+geodcatnl:RuimtelijkSchemaVanDeBron a sh:PropertyShape;
+  sh:order 20;
+  sh:name "adms:representationTechnique";
+  sh:path adms:representationTechnique;
+  prov:wasDerivedFrom nlprofiel:RuimtelijkSchemaVanDeBron;
+.
+geodcatnl:RuimtelijkReferentiesysteem a sh:PropertyShape;
+  sh:order 23;
+  sh:name "dct:conformsTo";
+  sh:path dct:conformsTo;
+  prov:wasDerivedFrom nlprofiel:RuimtelijkReferentiesysteem;
+.
+geodcatnl:TemporeelReferentiesysteem a sh:PropertyShape;
+  sh:order 24;
+  sh:name "dct:conformsTo";
+  sh:path dct:conformsTo;
+  prov:wasDerivedFrom nlprofiel:TemporeelReferentiesysteem;
+.
+geodcatnl:OmgrenzendeRechthoek a sh:PropertyShape;
+  sh:order 25;
+  sh:name "dct:spatial";
+  sh:path dct:spatial;
+  prov:wasDerivedFrom nlprofiel:OmgrenzendeRechthoek;
+.
+geodcatnl:DistributieFormaatFormat a sh:PropertyShape;
+  sh:order 26.1;
+  sh:name "dct:format";
+  sh:path dct:format;
+  prov:wasDerivedFrom nlprofiel:NaamDistributieFormaat;
+  prov:wasDerivedFrom nlprofiel:VersieDistributieFormaat;
+  prov:wasDerivedFrom nlprofiel:SpecificatieDistributieFormaat;
+  rdfs:comment "For formats from the reference list";
+.
+geodcatnl:DistributieFormaatMediaType a sh:PropertyShape;
+  sh:order 26.2;
+  sh:name "dct:mediaType";
+  sh:path dct:mediaType;
+  prov:wasDerivedFrom nlprofiel:NaamDistributieFormaat;
+  prov:wasDerivedFrom nlprofiel:VersieDistributieFormaat;
+  prov:wasDerivedFrom nlprofiel:SpecificatieDistributieFormaat;
+  rdfs:comment "For formats from the INSPIRE Mediatype list";
 .

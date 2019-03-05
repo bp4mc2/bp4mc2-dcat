@@ -1,0 +1,61 @@
+@prefix elmo: <http://bp4mc2.org/elmo/def#>.
+@prefix html: <http://www.w3.org/1999/xhtml/vocab#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix stage: <http://localhost:8080/inspire/stage#>.
+
+stage:LDMapping	a	elmo:Representation;
+	elmo:url-pattern	"/query/ld-mapping$";
+	elmo:contains	stage:Menu;
+	elmo:fragment [
+		elmo:applies-to "order";
+		rdfs:label "#";
+		elmo:name "SUBJECT";
+	];
+	elmo:query '''
+		prefix containerlocal: <http://localhost:8080/inspire/container/>
+		prefix sh: <http://www.w3.org/ns/shacl#>
+		prefix inspire-meta: <http://bp4mc2.org/inspire/def/meta#>
+		prefix prov: <http://www.w3.org/ns/prov#>
+		select ?order ?order_label ?dcatshape ?dcatshape_label ?dcatprop ?dcatprop_label ?nlorder ?nlprop ?nlprop_label ?comment
+		where {
+			{
+				graph containerlocal:geodcatnl {
+					?dcatprop a sh:PropertyShape.
+					?dcatprop sh:name ?dcatprop_label.
+					?dcatprop sh:order ?order_label.
+					BIND(iri(concat("urn:order:",str(?order_label))) as ?order)
+					OPTIONAL {?dcatprop rdfs:comment ?comment}
+					OPTIONAL {
+						?dcatshape sh:property ?dcatprop.
+						?dcatshape sh:name ?dcatshape_label
+					}
+				}
+				OPTIONAL {
+					graph containerlocal:geodcatnl {
+						?dcatprop prov:wasDerivedFrom ?nlprop.
+					}
+					graph containerlocal:nlprofiel19115 {
+						?nlprop rdfs:label ?nlprop_label.
+						?nlprop sh:order ?nlorder.
+					}
+				}
+			}
+			UNION
+			{
+				graph containerlocal:nlprofiel19115 {
+					?nlprop a sh:PropertyShape.
+					?nlprop sh:order ?order_label.
+					?nlprop rdfs:label ?nlprop_label
+					BIND (?order_label as ?nlorder)
+					BIND(iri(concat("urn:order:",str(?order_label))) as ?order)
+				}
+				FILTER NOT EXISTS {
+					graph containerlocal:geodcatnl {
+						?aprop prov:wasDerivedFrom ?nlprop
+					}
+				}
+			}
+		}
+		order by ?order_label ?nlorder
+	'''
+.
